@@ -5,7 +5,7 @@
 | 工作流 | 触发 | 做什么 |
 |---|---|---|
 | `verify` | 每次 push / PR（涉及 docs、tools、html、CHANGELOG） | 跑 `tools/verify.py`：课页数＝成人页数、插图＝2N、占位框 0、base64 图互不重复、页码连续、根目录合览同源、单课页齐备、入口链接无死链、版本号已记入 CHANGELOG |
-| `rebuild` | 手动（Actions → rebuild → Run workflow） | 用指定装配器（默认 `build_29_36.py`）`--full` 重出单课页与合册，校验通过后自动提交 |
+| `rebuild` | 手动（Actions → rebuild → Run workflow） | 用指定装配器（默认 `build_book.py`，即总装）`--full` 重出单课页与合册，校验通过后自动提交 |
 | `live-check` | 每天 09:00（UTC+8）+ 手动 | `tools/check_live.py --all`：线上 `index.html`、`book.html`（字节数与仓库一致）、全部单课页是否 200 |
 
 ## 日常怎么用
@@ -25,5 +25,6 @@ python3 tools/check_live.py    # 线上核对（--all 含每课）
 ## 边界
 
 - `verify` 只校验结构与一致性，不判断文案内容；义理口径仍需人工过稿。
-- `rebuild` 依赖各批次装配器「以上一版合览为底」的链路，只能复用已有装配器，不能凭空从零拼合册。
+- `tools/build_book.py` 是总装：封面按课数与 CHANGELOG 版本年月生成，第 1–5 课沿用 `docs/book.html` 里的原页（已定稿，无内容模块），第 6 课起由 `tools/lessons_*.py` 逐课渲染。所以它能把第 6 课以后任意改动重拼成整本，但第 1–5 课的正文仍以那份原页为准。
+- `--check` 只比对不写盘，适合确认「内容模块是否与已发布合册一致」。
 - Pages 走 `main:/docs` 分支部署，工作流不接管部署，只做校验与重建。

@@ -6,7 +6,7 @@ on:
       builder:
         description: '装配器脚本名（tools 目录内）'
         required: true
-        default: 'build_29_36.py'
+        default: 'build_book.py'
       message:
         description: '提交说明'
         required: false
