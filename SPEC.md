@@ -89,7 +89,7 @@
 ├── 三字经·第N课样张.html          ← 单课样张（含少儿页+成人页）
 ├── 三字经·样书·五课合览.html       ← 合册（随课数增长重拼）
 ├── assets/                      ← 插图源图（jpg）
-├── tools/                       ← build.py（装配器）＋ lessons_06_10.py（内容）
+├── tools/                       ← build.py / build_11_12.py（装配器）＋ lessons_06_10.py、lessons_11_12.py（内容）
 └── _shots/                      ← 自检截图，非交付物
 ```
 
@@ -107,7 +107,7 @@
 
 ## 十、升版与同步
 
-- 每次增课：在 `tools/lessons_06_10.py` 追加内容 → `python3 tools/build.py`（重出样张、重拼合册、同步 docs）→ 跑自检 → 推 `daokedao-sanzijing` → 核验线上（加 `?v=N` 绕缓存）。
+- 每次增课：在 `tools/lessons_XX_XX.py` 追加内容 → `python3 tools/build.py` 或 `python3 tools/build_11_12.py`（重出样张、重拼合册、同步 docs）→ 跑自检 → 推 `daokedao-sanzijing` → 核验线上（加 `?v=N` 绕缓存）。
 - 改规格：本文件升版，旧课回灌，不新旧混搭。
 - 令牌走加密仓：`python3 ~/.config/runze/vault.py get github-token`；remote 只写 `https://github.com/q1z2q3-debug/daokedao-sanzijing.git`。
 
@@ -125,6 +125,8 @@
 | 8 | 养不教，父之过 | 饭上桌、孩子在门外 · 饭后话对错 | 已成 |
 | 9 | 教不严，师之惰 | 塾中指正习字 · 一起订正作业 | 已成 |
 | 10 | 子不学，非所宜 | 塾外嬉戏、书卷搁置 · 自己翻开书 | 已成 |
+| 11 | 幼不学，老何为 | 荒田里的老农 · 晨光下读书、廊下长者 | 已成 |
+| 12 | 玉不琢，不成器 | 玉工治璞 · 温言指正 | 已成 |
 
 ## 十二、勘误记录
 
