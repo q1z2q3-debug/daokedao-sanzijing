@@ -26,7 +26,7 @@ COVER = """<div class="page cover">
   <h1>三 字 经</h1>
   <div class="t2">一句一故事 · 一图一世界</div>
   <div class="line"></div>
-  <div class="info">第一课至第二十三课　·　人之初　至　千而万<br>亲子共读 4–9 岁　·　每课双页：少儿读本 ／ 成人研学<br>样书　v1.2　·　二〇二六年十一月</div>
+  <div class="info">第一课至第二十三课　·　人之初　至　千而万<br>亲子共读 4–9 岁　·　每课双页：少儿读本 ／ 成人研学<br>样书　v1.2.1　·　二〇二六年十一月</div>
 </div>"""
 
 
@@ -77,8 +77,8 @@ def build_book(css):
     body = COVER + '\n' + rest + ''.join(
         '\n<!-- 第 %s 课 -->\n%s' % (d['n'], p) for d, p in zip(LESSONS, pages))
 
-    for path, title in [(os.path.join(ROOT, '三字经·样书·二十三课合览.html'), '三字经·二十三课合览（样书 v1.2）'),
-                        (os.path.join(DOCS, 'book.html'), '三字经·二十三课合览（样书 v1.2）')]:
+    for path, title in [(os.path.join(ROOT, '三字经·样书·二十三课合览.html'), '三字经·二十三课合览（样书 v1.2.1）'),
+                        (os.path.join(DOCS, 'book.html'), '三字经·二十三课合览（样书 v1.2.1）')]:
         open(path, 'w', encoding='utf-8').write(B.head(title, '三', css) + body + B.TAIL)
         print('%-46s %8.1f MB' % (os.path.relpath(path, ROOT), os.path.getsize(path) / 1048576))
 
