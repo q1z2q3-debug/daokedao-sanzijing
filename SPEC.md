@@ -95,7 +95,7 @@
 
 仓库：`daokedao-sanzijing`，Pages 走 `main:/docs`；`docs/book.html` 为线上阅读版，`docs/index.html` 为入口。
 
-`docs/` 下另备 `lesson01.html`–`lesson23.html` 二十三份单课页（与根目录样张逐一 md5 同源），入口页每课右侧「读 单 课」直链对应页；增课时须把新样张一并复制进 `docs/`，勿只留根目录。
+`docs/` 下另备 `lesson01.html`–`lesson24.html` 二十四份单课页（与根目录样张逐一 md5 同源），入口页每课右侧「读 单 课」直链对应页；增课时须把新样张一并复制进 `docs/`，勿只留根目录。
 
 ## 九、验收清单（每课必过）
 
@@ -109,7 +109,7 @@
 
 ## 十、升版与同步
 
-- 每次增课：在 `tools/lessons_XX_XX.py` 追加内容 → `python3 tools/build.py`、`tools/build_11_12.py` 、`python3 tools/build_13_17.py --full` 或 `python3 tools/build_18_23.py --full`（重出样张、重拼合册、同步 docs）→ 跑自检 → 推 `daokedao-sanzijing` → 核验线上（加 `?v=N` 绕缓存）。
+- 每次增课：在 `tools/lessons_XX_XX.py` 追加内容 → `python3 tools/build.py`、`tools/build_11_12.py` 、`python3 tools/build_13_17.py --full` 、`python3 tools/build_18_23.py --full` 或 `python3 tools/build_24.py --full`（重出样张、重拼合册、同步 docs）→ 跑自检 → 推 `daokedao-sanzijing` → 核验线上（加 `?v=N` 绕缓存）。
 - 改规格：本文件升版，旧课回灌，不新旧混搭。
 - 令牌走加密仓：`python3 ~/.config/runze/vault.py get github-token`；remote 只写 `https://github.com/q1z2q3-debug/daokedao-sanzijing.git`。
 
@@ -140,6 +140,7 @@
 | 21 | 知某数，识某文 | 算筹与书卷并置 · 数学本与绘本同桌 | 已成 |
 | 22 | 一而十，十而百 | 算筹层层排开 · 积木累加进位 | 已成 |
 | 23 | 百而千，千而万 | 算筹积成大片 · 积木叠成阶梯 | 已成 |
+| 24 | 三才者，天地人 | 天地之间仰观俯察 · 泥土新苗与天边月色 | 已成 |
 
 ## 十二、勘误记录
 
