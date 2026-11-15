@@ -129,7 +129,7 @@ def main():
     if '--check' in sys.argv:
         cur = open(docs_book, encoding='utf-8').read() if os.path.exists(docs_book) else ''
         if cur == html:
-            print('OK 总装结果与 docs/book.html 一致（%d 课，%.2f MB）' % (n, len(html.encode()) / 1048576))
+            print('OK 总装结果与 docs/book.html 一致（%d 课，%.2f MB）' % (total, len(html.encode()) / 1048576))
             return 0
         print('DIFF 总装结果与 docs/book.html 不一致（新 %d 字节 / 旧 %d 字节）'
               % (len(html.encode()), len(cur.encode())))
