@@ -95,7 +95,7 @@
 
 仓库：`daokedao-sanzijing`，Pages 走 `main:/docs`；`docs/book.html` 为线上阅读版，`docs/index.html` 为入口。
 
-`docs/` 下另备 `lesson01.html`–`lesson28.html` 二十八份单课页（与根目录样张逐一 md5 同源），入口页每课右侧「读 单 课」直链对应页；增课时须把新样张一并复制进 `docs/`，勿只留根目录。
+`docs/` 下另备 `lesson01.html`–`lesson36.html` 三十六份单课页（与根目录样张逐一 md5 同源），入口页每课右侧「读 单 课」直链对应页；增课时须把新样张一并复制进 `docs/`，勿只留根目录。
 
 ## 九、验收清单（每课必过）
 
@@ -109,7 +109,7 @@
 
 ## 十、升版与同步
 
-- 每次增课：在 `tools/lessons_XX_XX.py` 追加内容 → `python3 tools/build.py`、`tools/build_11_12.py` 、`python3 tools/build_13_17.py --full` 、`python3 tools/build_18_23.py --full` 、`python3 tools/build_24.py --full` 或 `python3 tools/build_25_28.py --full`（重出样张、重拼合册、同步 docs）→ 跑自检 → 推 `daokedao-sanzijing` → 核验线上（加 `?v=N` 绕缓存）。
+- 每次增课：在 `tools/lessons_XX_XX.py` 追加内容 → `python3 tools/build.py`、`tools/build_11_12.py` 、`python3 tools/build_13_17.py --full` 、`python3 tools/build_18_23.py --full` 、`python3 tools/build_24.py --full` 、`python3 tools/build_25_28.py --full` 或 `python3 tools/build_29_36.py --full`（重出样张、重拼合册、同步 docs）→ 跑自检 → 推 `daokedao-sanzijing` → 核验线上（加 `?v=N` 绕缓存）。
 - 改规格：本文件升版，旧课回灌，不新旧混搭。
 - 令牌走加密仓：`python3 ~/.config/runze/vault.py get github-token`；remote 只写 `https://github.com/q1z2q3-debug/daokedao-sanzijing.git`。
 
@@ -145,6 +145,14 @@
 | 26 | 三纲者，君臣义 | 厅堂相对论事 · 同学协作整理书架 | 已成 |
 | 27 | 父子亲 | 庭院父子闲谈 · 递一杯温水给疲惫的父母 | 已成 |
 | 28 | 夫妇顺 | 夫妇并肩持家 · 父母协作做家务 | 已成 |
+| 29 | 曰春夏，曰秋冬 | 四时并列长卷 · 四季里亲近自然 | 已成 |
+| 30 | 此四时，运不穷 | 四时首尾成环 · 翻看四季相册 | 已成 |
+| 31 | 曰南北，曰西东 | 四面山川童子居中 · 摊开地图辨认方向 | 已成 |
+| 32 | 此四方，应乎中 | 圆心为枢四向舒展 · 站在房间正中辨向 | 已成 |
+| 33 | 曰水火，木金土 | 五行物象并列 · 溪边看草木水土 | 已成 |
+| 34 | 此五行，本乎数 | 五行配点位与筹棍 · 守着种子看它出芽 | 已成 |
+| 35 | 十干者，甲至癸 | 十个刻度围成一环 · 一棵树走完一整轮 | 已成 |
+| 36 | 十二支，子至亥 | 十二刻度围成一环 · 窗前四段天光 | 已成 |
 
 ## 十二、勘误记录
 
