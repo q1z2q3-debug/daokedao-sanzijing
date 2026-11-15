@@ -95,6 +95,8 @@
 
 仓库：`daokedao-sanzijing`，Pages 走 `main:/docs`；`docs/book.html` 为线上阅读版，`docs/index.html` 为入口。
 
+`docs/` 下另备 `lesson01.html`–`lesson12.html` 十二份单课页（与根目录样张逐一 md5 同源），入口页每课右侧「读 单 课」直链对应页；增课时须把新样张一并复制进 `docs/`，勿只留根目录。
+
 ## 九、验收清单（每课必过）
 
 - [ ] `python3 <html skill>/scripts/shot.py <文件>`：`consoleErrors` 为空，`horizontalOverflow` 为空
