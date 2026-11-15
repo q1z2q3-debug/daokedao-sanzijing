@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>第二十课　首孝悌，次见闻——润泽说·少儿启蒙国学读本</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A2503B'/%3E%3Ctext x='32' y='45' font-size='28' text-anchor='middle' fill='%23F8F3E6' font-family='serif'%3E本%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap">
+<style>
+:root{
+  --paper:#F8F3E6; --paper2:#FCF8EF; --ink:#2F2A24; --ink2:#4A4239;
+  --muted:#7B6E5C; --line:#DFD4BE; --ochre:#A2503B; --ochre-soft:#C9866B;
+  --qing:#6F8A86; --leaf:#7C9068;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#EFE7D8;color:var(--ink);
+  font-family:"Noto Serif SC","Songti SC",Georgia,serif;-webkit-font-smoothing:antialiased}
+.book{max-width:820px;margin:0 auto;padding:28px 18px 70px}
+.page{background:var(--paper);padding:54px 64px 46px;margin:0 0 22px;
+  box-shadow:0 1px 2px rgba(60,45,30,.06),0 12px 34px rgba(60,45,30,.07);
+  border:1px solid #E7DECB;position:relative}
+.page::after{content:"";position:absolute;inset:14px;border:1px solid rgba(162,80,59,.10);pointer-events:none}
+@media(max-width:760px){.page{padding:34px 22px 30px}.page::after{inset:8px}}
+
+/* ---------- 页眉 ---------- */
+.runhead{display:flex;flex-wrap:wrap;gap:4px 14px;justify-content:space-between;align-items:baseline;
+  font-family:"Noto Sans SC",sans-serif;font-size:11.5px;letter-spacing:.18em;
+  color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:34px}
+.runhead .c{color:var(--ochre);white-space:nowrap}
+
+/* ---------- 课题 ---------- */
+.lesson-no{font-family:"Noto Sans SC",sans-serif;font-size:12px;letter-spacing:.3em;color:var(--ochre)}
+h1{font-size:30px;font-weight:600;letter-spacing:.06em;margin:10px 0 6px;line-height:1.35}
+.sub{font-family:"Noto Sans SC",sans-serif;font-size:13px;color:var(--muted);letter-spacing:.06em}
+
+/* ---------- 田字格 ---------- */
+.grid-block{margin:30px 0 8px}
+.grid-cols{display:flex;flex-direction:row-reverse;justify-content:center;gap:46px}
+.col{display:flex;flex-direction:column;align-items:center;gap:8px}
+.colhead{font-family:"Noto Sans SC",sans-serif;font-size:10.5px;color:var(--ochre);letter-spacing:.18em;margin-bottom:2px}
+@media(max-width:520px){.grid-cols{gap:24px}}
+.cellwrap{text-align:center}
+.py{font-family:"Noto Sans SC",sans-serif;font-size:13px;color:var(--qing);letter-spacing:.04em;margin-bottom:5px;height:18px}
+.grid{width:88px;height:88px;border:1.6px solid var(--ochre-soft);background:#FFFDF7;
+  position:relative;display:flex;align-items:center;justify-content:center}
+.grid .cross{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.grid .cross line{stroke:rgba(162,80,59,.42);stroke-width:1;stroke-dasharray:4 4}
+.grid .ch{font-size:52px;line-height:1;color:var(--ink);font-weight:500}
+.strokes{font-family:"Noto Sans SC",sans-serif;font-size:10.5px;color:var(--muted);margin-top:6px;letter-spacing:.06em}
+.readnote{display:flex;align-items:center;gap:8px;justify-content:center;margin-top:18px;
+  font-family:"Noto Sans SC",sans-serif;font-size:12px;color:var(--muted);line-height:1.8}
+.readnote b{color:var(--ochre);font-weight:500}
+.readnote .ord{font-size:12.5px;color:var(--ochre);letter-spacing:.06em;border:1px solid #E2C9B9;
+  padding:2px 9px;white-space:nowrap}
+.readnote .ord b{font-weight:600}
+@media(max-width:520px){.readnote{flex-direction:column;gap:8px;text-align:center}}
+.note{margin-top:16px;font-family:"Noto Sans SC",sans-serif;font-size:12px;color:var(--muted);line-height:1.9}
+.note b{color:var(--ochre);font-weight:500}
+
+/* ---------- 章节条 ---------- */
+.band{display:flex;align-items:center;gap:12px;margin:44px 0 24px}
+.band .tag{font-family:"Noto Sans SC",sans-serif;font-size:11px;letter-spacing:.22em;
+  color:#FFF9EE;background:var(--ochre);padding:4px 11px;border-radius:2px}
+.band .tag.qing{background:var(--qing)}
+.band .rule{flex:1;height:1px;background:var(--line)}
+.band .en{font-family:"Noto Sans SC",sans-serif;font-size:10.5px;color:var(--muted);letter-spacing:.14em}
+
+/* ---------- 少儿正文 ---------- */
+.kid p{font-size:18.5px;line-height:2.05;margin:0 0 18px;text-align:justify;color:#332D26}
+.kid p:first-of-type::first-letter{font-size:34px;line-height:1;color:var(--ochre);font-weight:600;padding-right:2px}
+.kid .lead{font-size:16px;color:var(--muted);font-family:"Noto Sans SC",sans-serif;line-height:1.95;margin-bottom:22px}
+figure{margin:26px 0;text-align:center}
+figure img{width:100%;height:auto;display:block;border:1px solid #E3D9C3;background:#fff}
+figcaption{font-family:"Noto Sans SC",sans-serif;font-size:12px;color:var(--muted);margin-top:9px;letter-spacing:.05em}
+
+/* ---------- 四大天赋 ---------- */
+.gift{margin:30px 0 10px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0}
+.gift h3{font-size:16px;font-weight:600;letter-spacing:.12em;margin:0 0 4px;text-align:center}
+.gift .h3sub{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;color:var(--muted);text-align:center;letter-spacing:.1em;margin-bottom:20px}
+.gift-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.g{text-align:center;padding:2px}
+.g svg{width:100%;height:76px;display:block}
+.g .gn{font-size:15px;font-weight:600;letter-spacing:.1em;margin:8px 0 4px;color:var(--ochre)}
+.g .gt{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;line-height:1.75;color:var(--ink2)}
+@media(max-width:700px){.gift-grid{grid-template-columns:repeat(2,1fr);gap:22px 12px}}
+
+/* ---------- 启示 ---------- */
+.takeaway{margin:34px 0 6px;background:var(--paper2);border:1px solid #E7DCC5;
+  border-left:4px solid var(--ochre);padding:20px 24px}
+.takeaway .t{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;letter-spacing:.24em;color:var(--ochre);margin-bottom:10px}
+.takeaway li{font-size:16.5px;line-height:1.95;margin:0 0 6px;padding-left:2px;color:#332D26}
+.takeaway ul{margin:0;padding-left:20px;list-style:none}
+.takeaway ul li::before{content:"·";color:var(--ochre);margin-right:8px;font-weight:700}
+
+/* ---------- 亲子提示 ---------- */
+.parent-tip{margin:24px 0 0;padding:16px 18px;background:#F3EEE1;border:1px dashed #D8C9AC}
+.parent-tip .t{font-family:"Noto Sans SC",sans-serif;font-size:11px;letter-spacing:.2em;color:var(--muted);margin-bottom:6px}
+.parent-tip p{font-family:"Noto Sans SC",sans-serif;font-size:13.5px;line-height:2.0;color:#332D26;margin:0}
+
+/* ---------- 成人版 ---------- */
+.adult{background:#FBF7EC;padding:54px 64px 48px;border:1px solid #E1D6BE;
+  box-shadow:0 1px 2px rgba(60,45,30,.06),0 12px 34px rgba(60,45,30,.07)}
+@media(max-width:760px){.adult{padding:34px 22px 30px}}
+@media(max-width:640px){
+  table{border:1px solid #E0D5BE;background:#FFFDF7}
+  thead{display:none}
+  tr{display:block;padding:12px 14px;border-bottom:1px solid #E0D5BE}
+  tr:last-child{border-bottom:0}
+  td{display:block;border:0;padding:2px 0;font-size:13.5px;line-height:1.8}
+  td.k{font-size:15px;letter-spacing:.08em;margin-bottom:3px}
+}
+.adult h2{font-size:19px;font-weight:600;letter-spacing:.1em;margin:0 0 6px}
+.adult .meta{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;color:var(--muted);letter-spacing:.1em}
+.adult p{font-size:15px;line-height:1.98;margin:0 0 15px;text-align:justify;color:#37312A}
+.adult .num{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;letter-spacing:.16em;color:var(--qing);display:block;margin:26px 0 6px}
+.adult h3{font-size:15.5px;font-weight:600;margin:6px 0 8px;letter-spacing:.04em}
+.quote{margin:22px 0;padding:2px 0 2px 16px;border-left:2px solid var(--ochre-soft);color:#4A4239;font-size:14.5px}
+table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:13px;margin:18px 0}
+th,td{border:1px solid #E0D5BE;padding:9px 11px;vertical-align:top;line-height:1.75;text-align:left}
+th{background:#F1EADA;font-weight:600;letter-spacing:.06em}
+td.k{color:var(--ochre);font-weight:600;white-space:nowrap}
+.doubt{margin:26px 0 0;padding:18px 20px;background:#F2EBDC;border:1px solid #DCCFB4}
+.doubt .t{font-family:"Noto Sans SC",sans-serif;font-size:11px;letter-spacing:.22em;color:var(--ochre);margin-bottom:8px}
+.doubt p{font-size:14px;line-height:1.95;margin:0 0 8px}
+.page,.adult{position:relative}
+.folio{position:absolute;left:0;right:0;bottom:18px;text-align:center;
+  font-family:"Noto Sans SC",sans-serif;font-size:10.5px;color:#B4A88F;letter-spacing:.3em}
+.cover{background:linear-gradient(180deg,#FBF6E9 0%,#F3E9D2 100%);text-align:center;padding:96px 40px 80px}
+.cover .s{font-family:"Noto Sans SC",sans-serif;font-size:12px;letter-spacing:.34em;color:var(--ochre)}
+.cover h1{font-size:46px;letter-spacing:.12em;margin:22px 0 10px}
+.cover .t2{font-size:16px;color:var(--muted);letter-spacing:.18em}
+.cover .line{width:60px;height:1px;background:var(--ochre-soft);margin:30px auto}
+.cover .info{font-family:"Noto Sans SC",sans-serif;font-size:12px;line-height:2.1;color:var(--muted)}
+
+/* 本课新增 */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:26px 0}
+@media(max-width:640px){.two{grid-template-columns:1fr}}
+.card{background:#FFFDF7;border:1px solid #E5DAC2;padding:18px 20px}
+.card .ch2{font-size:15px;font-weight:600;letter-spacing:.1em;color:var(--ochre);margin-bottom:6px}
+.card .ch2 span{font-size:11px;letter-spacing:.16em;color:var(--muted);font-weight:400;margin-left:6px}
+.card p{font-family:"Noto Sans SC",sans-serif;font-size:13px;line-height:1.9;color:var(--ink2);margin:0}
+.age td:first-child{white-space:nowrap;color:var(--ochre);font-weight:600}
+.nodrop::first-letter{font-size:16px !important;color:var(--muted) !important;font-weight:400 !important;padding-right:0 !important}
+figure.ph .phbox{width:100%;aspect-ratio:4/3;border:1px dashed #D6C9AE;background:#FBF7EC;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
+figure.ph .phbox .k{font-family:"Noto Sans SC",sans-serif;font-size:11px;letter-spacing:.28em;color:#BCAF93}
+figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F63;letter-spacing:.12em}
+
+</style>
+</head>
+<body>
+<div class="book">
+<div class="page">
+  <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第二十课 · 首孝悌</span></div>
+  <div class="lesson-no">第 二 十 课</div>
+  <h1>首孝悌，次见闻。</h1>
+  <div class="sub">shǒu xiào tì　cì jiàn wén</div>
+
+  <div class="grid-block">
+    <div class="grid-cols">
+  <div class="col"><div class="colhead">① 先读右列</div>
+    <div class="cellwrap"><div class="py">shǒu</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">首</span></div><div class="strokes">九画</div></div><div class="cellwrap"><div class="py">xiào</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">孝</span></div><div class="strokes">七画</div></div><div class="cellwrap"><div class="py">tì</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">悌</span></div><div class="strokes">七画</div></div>
+  </div>
+  <div class="col"><div class="colhead">② 再读左列</div>
+    <div class="cellwrap"><div class="py">cì</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">次</span></div><div class="strokes">六画</div></div><div class="cellwrap"><div class="py">jiàn</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">见</span></div><div class="strokes">四画</div></div><div class="cellwrap"><div class="py">wén</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">闻</span></div><div class="strokes">九画</div></div>
+  </div>
+</div>
+    <div class="readnote">
+      <span class="ord">先 <b>↓</b> 右列　再 <b>←</b> 左列</span>
+      <span>古法竖排：<b>自右而左，自上而下</b>。先读右列「首孝悌」，再读左列「次见闻」，每列从上往下。</span>
+    </div>
+    <div class="note"><b>首</b>是次序之先　·　<b>孝悌</b>是纵向敬亲、横向敬长　·　<b>见闻</b>是向外广学</div>
+  </div>
+
+  <div class="band"><span class="tag">少儿共读</span><span class="rule"></span><span class="en">读给孩子听</span></div>
+
+  <div class="kid">
+    <p class="lead">前面我们把孝、悌两条人伦根基学完：孝敬父母，恭顺兄长前辈。这一句，给出学习的先后次序。</p>
+    <p>第一优先修好孝悌的本心，然后再去广博地见识、学习各种知识学问。</p>
+    <p>这里非常容易读偏，一定要读懂：不是不要读书、不要学知识。</p>
+    <p>它讲的是根基先后。如果一个人读了很多书，懂得很多道理，却没有体恤亲人、善待他人的心，学识就容易变成炫耀、算计的工具。</p>
+    <p>孝悌，就是稳住内心的底色；底色站稳之后，再去多看、多听、多学，所学的知识才会用来善待自己、善待旁人。</p>
+    <figure class="ph">
+      <div class="phbox" role="img" aria-label="古时屋中，童子先为母亲奉上茶盏，行礼毕，才回到书案前展卷，两件事先后分明"><span class="k">插 图 待 补</span><span class="f">课二十·先侍后读</span></div>
+      <figcaption>先做人，再读书；读书也是为了做人。</figcaption>
+    </figure>
+    <p>这也呼应我们一直讲的：本心良知如同璞玉，孝悌就是最先打磨出来的温润质地；见闻学识，是后面用来开阔这块玉的格局。</p>
+    <p>不是二者二选一，是有先后。先学会做人的分寸，再扩充见识。</p>
+    <figure class="ph">
+      <div class="phbox" role="img" aria-label="现代家中，孩子帮长辈收拾餐桌，转身回到书桌前翻开作业，两处灯光都很寻常"><span class="k">插 图 待 补</span><span class="f">课二十·家中学堂</span></div>
+      <figcaption>日常里同时长，本心先稳住。</figcaption>
+    </figure>
+    <p>知识本身没有善恶，要看持守知识的人，本心如何。</p>
+  </div>
+
+  <div class="two">
+    <div class="card">
+      <div class="ch2">博 闻 而 无 本<span>学 识 很 多，人 很 冷</span></div>
+      <p>学识不少，却自私冷漠、恃才傲物；把知识当成攀比、压倒别人的资本。</p>
+    </div>
+    <div class="card">
+      <div class="ch2">先 本 后 学<span>心 里 有 敬</span></div>
+      <p>心中存敬存体恤，再去广学见闻；用学识涵养本心，助人利他。</p>
+    </div>
+  </div>
+
+  <div class="takeaway">
+    <div class="t">成 长 小 启 示</div>
+    <ul>
+      <li>学习有次序：先养善良宽厚的心，再学各样知识。</li>
+      <li>知识本身没有善恶，要看持守知识的人，本心如何。</li>
+      <li>孝悌是根基，见闻是枝叶；根基稳固，枝叶才能长久繁茂。</li>
+      <li>读书求知，最终是为了更好地明白事理、温柔待人。</li>
+    </ul>
+  </div>
+
+  <div class="parent-tip">
+    <div class="t">给 爸 爸 妈 妈 的 一 句 话 · 平 衡 德 行 与 学 业</div>
+    <p style="margin-top:6"><b>「首」「次」两个字，最容易被读成偏废。</b>三条提示，守住平衡。</p>
+    <p style="margin-top:10"><b>一、次序不等于偏重偏废。</b>不是德行做好了才可以读书，而是同步养育、价值优先级不同。日常一边陪伴修习人伦，一边读书拓展见闻。</p>
+    <p style="margin-top:6"><b>二、警惕两种极端。</b>只抓成绩学识，忽略共情与德行；或者空谈德行，排斥知识学习。</p>
+    <p style="margin-top:6"><b>三、承接教与学的二分。</b>家长以身示范孝悌、建立稳定家风，属施教一侧；孩子自主体会仁爱、主动求学，属学习者的修习。</p>
+    <p style="margin-top:6">接上选择力练习：宽厚敬爱的底色不变，见闻的方向与兴趣，可以尊重孩子自主选择。</p>
+  </div>
+
+  <div class="folio">— 40 —</div>
+</div>
+
+<div class="adult">
+  <div class="runhead" style="border-bottom-color:#DCD0B4"><span>成人研学 · 古今汇观</span><span class="c">第二十课 · 深度页</span></div>
+  <h2>首孝悌，次见闻</h2>
+  <div class="meta">本末之辨非有无之辨　｜　《论语》行有余力则以学文　｜　德性先于思辨　｜　品格为学习基座</div>
+
+  <span class="num">一 · 字义与句读</span>
+  <p>首，先也；次，后也。见闻，目之所见、耳之所闻，泛指外求之学、经史博物、世间知识。全句：修习的次序，以孝悌仁德为首要根基，而后再广求见闻、博览学识。</p>
+  <p>这是前面孝悌一系列故事之后的总收束，把人伦实践与求知之学划分次第。</p>
+  <span class="num">二 · 命题考辨</span>
+  <p>勘误重点：后世常曲解为「德行最重要，读书不重要」，或变成重德轻智、排斥求知。</p>
+  <p>儒家的本意是本末之辨，不是有无之辨。孝悌为「本」，见闻为「末」；有本有末，才是完整的人。</p>
+  <p>《论语·学而》：「弟子入则孝，出则悌，谨而信，泛爱众，而亲仁。行有余力，则以学文。」正是本句源头，一脉相承。</p>
+  <p>换言之：人伦本分践行妥当之后，有余力再研习文典学识。不是不许学文，是不可以舍本逐末。</p>
+  <span class="num">三 · 中西对照</span>
+  <p><b>儒家</b>：仁为本，学为用；德性先立，知识后广。</p>
+  <p><b>亚里士多德</b>：实践德性优先于纯粹思辨，良好品格是一切理智活动的前提。</p>
+  <p><b>现代教育理论</b>：品格素养是底层基座，认知学习建立在安全、共情的人格基础之上。</p>
+  <p><b>反向思辨</b>：「先德后学」的次序容易被用来压制求知，也容易把孝悌教条化，用伦理束缚探索精神。德性是活的共情，不是禁锢求知的枷锁。</p>
+  <span class="num">四 · 与前后课的张力</span>
+  <p>链条收拢到学习总纲：为人子 → 亲师友；香九龄（孝之行）→ 孝于亲（守孝之本）；融四岁（悌之行）→ 弟于长（立悌之纲）→ 首孝悌，次见闻（确立本末次序）。</p>
+  <p>呼应第十三课「人不学，不知义」：孝悌就是义最根本的落地；见闻，是向外延伸，去认识更大世界里的义理。</p>
+  <p>呼应第十二课「玉不琢，不成器」：孝悌打磨玉质，见闻雕琢器用；质地纯净，器才可贵。</p>
+  <p>呼应第四课「教之道，贵以专」：稳定的教化先护持仁德本心，再引导向外求知，次序不乱。</p>
+
+  <div class="doubt">
+    <div class="t">存 疑 · 留 待 深 究</div>
+    <p>一、如果一个孩子天资聪颖、求知欲极强，但共情与人伦功课滞后，如何平衡引导？</p>
+    <p>二、本末的次序，是人生早年的安排，还是终身都要遵守的准则？</p>
+    <p>三、现代分科教育体系之下，如何落实「首孝悌，次见闻」，而不与通识教育冲突？</p>
+  </div>
+
+  <div class="folio" style="color:#B4A88F">— 41 —</div>
+</div>
+
+</div>
+
+</body>
+</html>
