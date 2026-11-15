@@ -166,16 +166,19 @@ def main(lessons):
         open(os.path.join(DOCS, 'lesson%02d.html' % int(d['n'])), 'w', encoding='utf-8').write(single)
         print('written', os.path.basename(fn))
 
-    # 合册：旧五课页面 + 新五课页面
-    old = open(BOOK_5, encoding='utf-8').read()
-    marker = '<!-- ============ 少儿页 ============ -->'
-    start = old.index(marker)
-    end = old.rindex('</body>')
-    old_body = old[start:end].rstrip()
-    if old_body.endswith('</div>'):
-        old_body = old_body[:-len('</div>')].rstrip()
+    # 合册：第 1–5 课直接取各自样张（避免自旧合册转抄造成失同步），第 6–10 课用本次生成页
+    first_pages = []
+    for cn in ('一', '二', '三', '四', '五'):
+        fp = os.path.join(ROOT, '三字经·第%s课样张.html' % cn)
+        src = open(fp, encoding='utf-8').read()
+        start = src.index('<div class="page">')
+        end = src.rindex('</body>')
+        seg = src[start:end].rstrip()
+        if seg.endswith('</div>'):
+            seg = seg[:-len('</div>')].rstrip()
+        first_pages.append(seg)
 
-    body = COVER + '\n' + old_body + '\n' + ''.join(
+    body = COVER + '\n' + '\n'.join(first_pages) + '\n' + ''.join(
         '\n<!-- 第 %s 课 -->\n%s' % (d['n'], p) for d, p in zip(lessons, new_pages))
 
     for path, title in [(os.path.join(ROOT, '三字经·样书·十课合览.html'), '三字经·十课合览（样书 v0.9）'),
