@@ -95,7 +95,7 @@
 
 仓库：`daokedao-sanzijing`，Pages 走 `main:/docs`；`docs/book.html` 为线上阅读版，`docs/index.html` 为入口。
 
-`docs/` 下另备 `lesson01.html`–`lesson12.html` 十二份单课页（与根目录样张逐一 md5 同源），入口页每课右侧「读 单 课」直链对应页；增课时须把新样张一并复制进 `docs/`，勿只留根目录。
+`docs/` 下另备 `lesson01.html`–`lesson17.html` 十七份单课页（与根目录样张逐一 md5 同源），入口页每课右侧「读 单 课」直链对应页；增课时须把新样张一并复制进 `docs/`，勿只留根目录。
 
 ## 九、验收清单（每课必过）
 
@@ -109,7 +109,7 @@
 
 ## 十、升版与同步
 
-- 每次增课：在 `tools/lessons_XX_XX.py` 追加内容 → `python3 tools/build.py` 或 `python3 tools/build_11_12.py`（重出样张、重拼合册、同步 docs）→ 跑自检 → 推 `daokedao-sanzijing` → 核验线上（加 `?v=N` 绕缓存）。
+- 每次增课：在 `tools/lessons_XX_XX.py` 追加内容 → `python3 tools/build.py`、`tools/build_11_12.py` 或 `python3 tools/build_13_17.py --full`（重出样张、重拼合册、同步 docs）→ 跑自检 → 推 `daokedao-sanzijing` → 核验线上（加 `?v=N` 绕缓存）。
 - 改规格：本文件升版，旧课回灌，不新旧混搭。
 - 令牌走加密仓：`python3 ~/.config/runze/vault.py get github-token`；remote 只写 `https://github.com/q1z2q3-debug/daokedao-sanzijing.git`。
 
@@ -129,6 +129,11 @@
 | 10 | 子不学，非所宜 | 塾外嬉戏、书卷搁置 · 自己翻开书 | 已成 |
 | 11 | 幼不学，老何为 | 荒田里的老农 · 晨光下读书、廊下长者 | 已成 |
 | 12 | 玉不琢，不成器 | 玉工治璞 · 温言指正 | 已成 |
+| 13 | 人不学，不知义 | 灯下静坐思辨 · 分歧时停下来想一想 | 已成 |
+| 14 | 为人子，方少时 | 庭院侍立父母身侧 · 傍晚分担家务 | 已成 |
+| 15 | 亲师友，习礼仪 | 同窗切磋、先生讲书 · 倾听同伴 | 已成 |
+| 16 | 香九龄，能温席 | 寒夜以身暖席 · 递温水轻扶肩 | 已成 |
+| 17 | 孝于亲，所当执 | 晨昏侍亲、日日如是 · 日复一日分担 | 已成 |
 
 ## 十二、勘误记录
 
