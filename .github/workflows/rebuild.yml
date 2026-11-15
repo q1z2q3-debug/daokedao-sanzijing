@@ -1,0 +1,39 @@
+name: rebuild
+
+on:
+  workflow_dispatch:
+    inputs:
+      builder:
+        description: '装配器脚本名（tools 目录内）'
+        required: true
+        default: 'build_29_36.py'
+      message:
+        description: '提交说明'
+        required: false
+        default: 'chore: 重新装配单课页与合览'
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: 重新装配
+        run: python3 tools/${{ inputs.builder }} --full
+      - name: 校验
+        run: python3 tools/verify.py
+      - name: 提交变更
+        run: |
+          git config user.name "runze-bot"
+          git config user.email "bot@users.noreply.github.com"
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "无变更，跳过提交"; exit 0
+          fi
+          git add -A docs tools '三字经·样书'*.html '三字经·'*课样张.html 2>/dev/null || git add -A
+          git commit -m "${{ inputs.message }} [skip ci]"
+          git push
