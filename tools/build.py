@@ -22,6 +22,12 @@ ASSETS = os.path.join(ROOT, 'assets')
 FAV = "<link rel=\"icon\" type=\"image/svg+xml\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A2503B'/%3E%3Ctext x='32' y='45' font-size='28' text-anchor='middle' fill='%23F8F3E6' font-family='serif'%3E{ch}%3C/text%3E%3C/svg%3E\">"
 FONTS = "<link rel=\"stylesheet\" href=\"https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap\">"
 
+EXTRA_CSS = ("\n.grid-cols.tight{gap:34px}\n"
+             ".tight .grid{width:74px;height:74px}\n"
+             ".tight .grid .ch{font-size:44px}\n"
+             ".tight .colhead{margin-bottom:0}\n"
+             ".tight + .readnote{margin-top:12px}")
+
 CROSS = ('<svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">'
          '<line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg>')
 
@@ -35,8 +41,9 @@ def read_css():
 def head(title, fav_char, css):
     return ('<!DOCTYPE html>\n<html lang="zh-Hans">\n<head>\n<meta charset="utf-8">\n'
             '<meta name="viewport" content="width=device-width,initial-scale=1">\n'
-            '<title>%s</title>\n%s\n%s\n<style>\n%s\n</style>\n</head>\n<body>\n<div class="book">\n'
-            % (title, FAV.format(ch=fav_char), FONTS, css))
+            '<title>%s</title>\n%s\n%s\n<style>\n%s%s\n</style>\n</head>\n<body>\n<div class="book">\n'
+            % (title, FAV.format(ch=fav_char), FONTS, css, EXTRA_CSS))
+
 
 
 TAIL = '\n</div>\n\n</body>\n</html>\n'
@@ -60,8 +67,10 @@ def grid_col(idx, words):
 
 
 def kid_page(d, folio):
-    cols = [grid_col('① 先读右列', d['col_r']),
-            grid_col('② 再读左列', d['col_l'])]
+    cols = []
+    if d.get('col_r'):
+        cols = [grid_col('① 先读右列', d['col_r']),
+                grid_col('② 再读左列', d['col_l'])]
     body = []
     for block in d['kid']:
         kind = block[0]
@@ -81,6 +90,20 @@ def kid_page(d, folio):
     if d.get('note2'):
         note2 = ('\n    <div class="note" style="font-size:12.5px;color:#6B6157">%s</div>'
                  % d['note2'])
+
+    if d.get('grid_split'):
+        segs = []
+        for i, (rk, r, lk, l, rn) in enumerate(d['grid_split']):
+            mt = ' style="margin-top:26px"' if i else ''
+            segs.append('  <div class="grid-cols tight"%s>\n%s\n%s\n  </div>\n'
+                        '  <div class="readnote">%s</div>' % (mt, grid_col(rk, r), grid_col(lk, l), rn))
+        grid_html = ('\n'.join(segs) + '\n    <div class="note">%s</div>%s' % (d['note'], note2))
+    else:
+        grid_html = ('<div class="grid-cols">\n%s\n%s\n</div>\n'
+                     '    <div class="readnote">\n      <span class="ord">先 <b>↓</b> 右列　再 <b>←</b> 左列</span>\n'
+                     '      <span>%s</span>\n    </div>\n'
+                     '    <div class="note">%s</div>%s'
+                     % (cols[0], cols[1], d['readnote'], d['note'], note2))
     return f"""<div class="page">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">{d['runhead']}</span></div>
   <div class="lesson-no">{d['no_cn']}</div>
@@ -88,15 +111,7 @@ def kid_page(d, folio):
   <div class="sub">{d['pinyin_line']}</div>
 
   <div class="grid-block">
-    <div class="grid-cols">
-{cols[0]}
-{cols[1]}
-</div>
-    <div class="readnote">
-      <span class="ord">先 <b>↓</b> 右列　再 <b>←</b> 左列</span>
-      <span>{d['readnote']}</span>
-    </div>
-    <div class="note">{d['note']}</div>{note2}
+    {grid_html}
   </div>
 
   <div class="band"><span class="tag">少儿共读</span><span class="rule"></span><span class="en">读给孩子听</span></div>

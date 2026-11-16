@@ -110,7 +110,7 @@
 
 ## 十、升版与同步
 
-- 每次增课：在 `tools/lessons_XX_XX.py` 追加内容 → `python3 tools/build.py`、`tools/build_11_12.py` 、`python3 tools/build_13_17.py --full` 、`python3 tools/build_18_23.py --full` 、`python3 tools/build_24.py --full` 、`python3 tools/build_25_28.py --full` 、`python3 tools/build_29_36.py --full`、`python3 tools/build_37_46.py`、`python3 tools/build_47_58.py`、`python3 tools/build_59_60.py`（重出样张、重拼合册、同步 docs）→ 跑自检 → 推 `daokedao-sanzijing` → 核验线上（加 `?v=N` 绕缓存）。
+- 每次增课：在 `tools/lessons_XX_XX.py` 追加内容 → `python3 tools/build.py`、`tools/build_11_12.py` 、`python3 tools/build_13_17.py --full` 、`python3 tools/build_18_23.py --full` 、`python3 tools/build_24.py --full` 、`python3 tools/build_25_28.py --full` 、`python3 tools/build_29_36.py --full`、`python3 tools/build_37_46.py`、`python3 tools/build_47_58.py`、`python3 tools/build_59_60.py`、`python3 tools/build_61.py`（重出样张、重拼合册、同步 docs）→ 跑自检 → 推 `daokedao-sanzijing` → 核验线上（加 `?v=N` 绕缓存）。
 - 改规格：本文件升版，旧课回灌，不新旧混搭。
 - 令牌走加密仓：`python3 ~/.config/runze/vault.py get github-token`；remote 只写 `https://github.com/q1z2q3-debug/daokedao-sanzijing.git`。
 
@@ -178,6 +178,7 @@
 | 58 | 此六畜，人所饲 | 一把草料，一日照料 / 手里一把草，桌上一座小小牧场 | 已成 |
 | 59 | 曰喜怒，曰哀惧 | 四重墨气绕身，一叶将落 / 一叶落水，涟漪自散 | 已成 |
 | 60 | 爱恶欲，七情具 | 枝子探向水面，伸而不取 / 盆里两茎新芽，看而不摘 | 已成 |
+| 61 | 匏土革，木石金。丝与竹，乃八音 | 坡前平列的九件古乐器 / 纸上器物链走到水纹 | 已成 |
 
 ## 十二、勘误记录
 
@@ -192,6 +193,15 @@
 - 体例：成人页次第链条缩为「…… → 前两课 → 本课」；家长栏统一为「一、二、三 ＋ 承接教与学 ＋ 接上选择力」。
 - 口径：第 46 课按东北九省口径固定，旧建制不压缩、全列；第 44 课「名是假名」一层保留在少儿页。
 
+
+### v1.9 — 第六十一课校订
+- 八音补出处《周礼·春官·大师》「皆播之以八音：金、石、土、革、丝、木、匏、竹」及郑玄注；经文改序（匏土革、木石金、丝与竹）注为协韵，与《周礼》旧序不同。
+- 《金刚经》无「一切音声如幻、如响」之句，改引偈「一切有为法，如梦幻泡影，如露亦如电，应作如是观」。
+- 「天台止观有闻声观法」改标为参引《楞严经》观音耳根圆通「初于闻中，入流亡所」。
+- 存疑一原「天籁无声，人籁有声」与《齐物论》相反，天籁是「吹万不同，而使其自己也」；改为「天籁、地籁、人籁之分，落在气动，还是在分别心？」并加注。
+- 笔画逐字核：匏 11、土 3、革 9、丝 5、与 3、竹 6、木 4、石 5、金 8、乃 2、八 2、音 9。
+- 版式：十二字合联一课的田字格改两段式（上段匏土革／木石金，下段丝与竹／乃八音，各三格一列，守先右后左），格子 74px、字 44px；`build.py` 增 `grid_split` 与 `.tight`。
+- 图注按实：图一「八类材质，九件器物，排成一列。」（琴为一具竖板，不写成八音八器齐列）；图二「一串器物，走到水纹。」（链中缺革与丝）。两图按原样留用。
 
 ### v1.8 — 第五十九至六十课校订
 - 59 课原稿未标七情出处，补《礼记·礼运》「何谓人情？喜、怒、哀、惧、爱、恶、欲，七者弗学而能」，并注「七情」二字为后起统称。
