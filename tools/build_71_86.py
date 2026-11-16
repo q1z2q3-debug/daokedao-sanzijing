@@ -5,12 +5,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import build as B
-from lessons_71_74 import LESSONS as L1
-from lessons_75_78 import LESSONS as L2
-from lessons_79_82 import LESSONS as L3
-from lessons_83_86 import LESSONS as L4
-
-LESSONS = L1 + L2 + L3 + L4
+from lessons_71_86 import LESSONS
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
