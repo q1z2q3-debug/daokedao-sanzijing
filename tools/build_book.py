@@ -9,7 +9,9 @@
   python3 tools/build_book.py --full     同时重出 docs/lesson06..N.html
   python3 tools/build_book.py --check    只在生成结果与现有 book.html 不一致时报错退出
 """
+import base64
 import glob
+import hashlib
 import importlib
 import os
 import re
@@ -278,7 +280,10 @@ def head_pages(count=5):
     页内注释保留，页间批次注释与空行剥掉。
     """
     src = os.path.join(DOCS, 'book.html')
-    text = open(src if os.path.exists(src) else BASE, encoding='utf-8').read()
+    text = open(src, encoding='utf-8').read() if os.path.exists(src) else ''
+    if 'base64' not in text:      # 轻册已把图外置，头五课回五课合览取原页
+        src = BASE
+        text = open(src, encoding='utf-8').read()
     starts = [m.start() for m in re.finditer(r'<div class="page"(?: id="k\d+")?>', text)]
     if len(starts) < count:
         raise SystemExit('五课合览中课页不足 %d 个' % count)
@@ -295,6 +300,41 @@ def head_pages(count=5):
         block = re.sub(r'<div class="page" id="k\d+">', '<div class="page">', block, count=1)
         blocks.append(block)
     return '\n'.join(blocks)
+
+
+ASSET_DIR = os.path.join(DOCS, 'assets')
+
+
+def externalize(html, prefix='assets/'):
+    """把 base64 图落成 docs/assets/ 的共用 jpg，正文改相对路径。
+
+    文件名取内容哈希，同一张图在不同课页、合册、单课页只存一份。
+    """
+    os.makedirs(ASSET_DIR, exist_ok=True)
+    used = set()
+    # 头五课取自旧 book.html，可能已是相对路径：先归一前缀，并把它们算作在用
+    html = re.sub(r'src="(?:docs/)?assets/', 'src="%s' % prefix, html)
+    used |= set(re.findall(r'src="%s([^"]+)"' % re.escape(prefix), html))
+
+    def rep(m):
+        data = m.group(1)
+        raw = base64.b64decode(data)
+        name = 'p%s.jpg' % hashlib.md5(raw).hexdigest()[:12]
+        path = os.path.join(ASSET_DIR, name)
+        if not os.path.exists(path):
+            with open(path, 'wb') as f:
+                f.write(raw)
+        used.add(name)
+        return 'src="%s%s"' % (prefix, name)
+
+    out = re.sub(r'src="data:image/jpeg;base64,([A-Za-z0-9+/=]+)"', rep, html)
+    return out, used
+
+
+def prune_assets(used):
+    for name in os.listdir(ASSET_DIR):
+        if name.endswith('.jpg') and name not in used:
+            os.remove(os.path.join(ASSET_DIR, name))
 
 
 def render_pages(lessons):
@@ -334,25 +374,43 @@ def main():
     out_book = os.path.join(ROOT, name)
     docs_book = os.path.join(DOCS, 'book.html')
 
+    # 站点轻册：图落 docs/assets/，正文只写相对路径
+    light, used = externalize(html, 'assets/')
+    # 根目录合览：同一份内容，图片指到 docs/assets/，本地双击也能看图
+    twin, _ = externalize(html, 'docs/assets/')
+    prune_assets(used)
+
     if '--check' in sys.argv:
         cur = open(docs_book, encoding='utf-8').read() if os.path.exists(docs_book) else ''
-        if cur == html:
-            print('OK 总装结果与 docs/book.html 一致（%d 课，%.2f MB）' % (total, len(html.encode()) / 1048576))
+        if cur == light:
+            print('OK 总装结果与 docs/book.html 一致（%d 课，正文 %.2f MB，图 %d 张）'
+                  % (total, len(light.encode()) / 1048576, len(used)))
             return 0
         print('DIFF 总装结果与 docs/book.html 不一致（新 %d 字节 / 旧 %d 字节）'
-              % (len(html.encode()), len(cur.encode())))
+              % (len(light.encode()), len(cur.encode())))
         return 1
 
-    open(out_book, 'w', encoding='utf-8').write(html)
-    open(docs_book, 'w', encoding='utf-8').write(html)
-    print('%-46s %8.1f MB' % (os.path.relpath(out_book, ROOT), os.path.getsize(out_book) / 1048576))
+    open(out_book, 'w', encoding='utf-8').write(twin)
+    open(docs_book, 'w', encoding='utf-8').write(light)
+    print('%-46s %8.1f MB（图外置 %d 张）'
+          % (os.path.relpath(out_book, ROOT), os.path.getsize(out_book) / 1048576, len(used)))
+
+    # 单文件离线版：base64 全内嵌，供转发，不进仓
+    offline = os.path.join(ROOT, '三字经·样书·%s课合览（单文件）.html' % cn_num(total))
+    open(offline, 'w', encoding='utf-8').write(html)
+    print('%-46s %8.1f MB（离线转发用）'
+          % (os.path.relpath(offline, ROOT), os.path.getsize(offline) / 1048576))
 
     if '--full' in sys.argv:
+        all_used = set(used)
         for d in lessons:
             p = os.path.join(DOCS, 'lesson%02d.html' % int(d['n']))
-            open(p, 'w', encoding='utf-8').write(
-                B.head('%s　%s——润泽说·少儿启蒙国学读本' % (d['no_short'], d['line_plain']), d['fav'], css)
-                + B.kid_page(d, 2 * int(d['n'])) + '\n' + B.adult_page(d, 2 * int(d['n']) + 1) + B.TAIL)
+            page = (B.head('%s　%s——润泽说·少儿启蒙国学读本' % (d['no_short'], d['line_plain']), d['fav'], css)
+                    + B.kid_page(d, 2 * int(d['n'])) + '\n' + B.adult_page(d, 2 * int(d['n']) + 1) + B.TAIL)
+            page, u = externalize(page, 'assets/')
+            all_used |= u
+            open(p, 'w', encoding='utf-8').write(page)
+        prune_assets(all_used)
         print('单课页已重出：lesson%02d–lesson%02d' % (int(lessons[0]['n']), int(lessons[-1]['n'])))
     return 0
 

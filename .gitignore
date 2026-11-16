@@ -6,3 +6,7 @@ _shots/
 # Python 缓存
 __pycache__/
 *.pyc
+
+# 离线单文件版（构建产物，不进仓）
+*（单文件）.html
+_backup/

@@ -58,9 +58,15 @@ def main():
     check(figures + ph == 2 * n, '插图＋占位框 %d ≠ 2N(%d)' % (figures + ph, 2 * n))
 
     imgs = re.findall(r'data:image/jpeg;base64,([A-Za-z0-9+/=]+)', book)
-    uniq = len({hashlib.md5(x.encode()).hexdigest() for x in imgs})
-    check(len(imgs) == 2 * n - ph, 'base64 图 %d ≠ 2N−占位(%d)' % (len(imgs), 2 * n - ph))
-    check(uniq == len(imgs), 'base64 图有重复：%d 张仅 %d 种' % (len(imgs), uniq))
+    refs = re.findall(r'src="assets/([^"]+)"', book)
+    if imgs:
+        uniq = len({hashlib.md5(x.encode()).hexdigest() for x in imgs})
+        check(len(imgs) == 2 * n - ph, 'base64 图 %d ≠ 2N−占位(%d)' % (len(imgs), 2 * n - ph))
+        check(uniq == len(imgs), 'base64 图有重复：%d 张仅 %d 种' % (len(imgs), uniq))
+    else:
+        check(len(refs) == 2 * n - ph, '外置图引用 %d ≠ 2N−占位(%d)' % (len(refs), 2 * n - ph))
+        missing = [x for x in refs if not os.path.exists(os.path.join(DOCS, 'assets', x))]
+        check(not missing, '外置图缺文件：%s' % ', '.join(sorted(set(missing))[:5]))
 
     folios = [int(x) for x in re.findall(r'— (\d+) —', book)]
     check(folios == list(range(2, 2 * n + 2)), '页码序列不连续（首 %s 尾 %s 共 %d 个）'
@@ -69,10 +75,12 @@ def main():
     book_md5 = md5(book_path)
     twins = []
     for name in os.listdir(ROOT):
-        if '合览' in name and name.endswith('.html'):
+        if '合览' in name and name.endswith('.html') and '单文件' not in name:
             p = os.path.join(ROOT, name)
-            if md5(p) == book_md5:
-                twins.append((name, len(re.findall(page_re, open(p, encoding='utf-8').read()))))
+            txt = open(p, encoding='utf-8').read()
+            norm = txt.replace('src="docs/assets/', 'src="assets/')
+            if md5(p) == book_md5 or norm == book:
+                twins.append((name, len(re.findall(page_re, txt))))
     check(bool(twins), '根目录没有与 docs/book.html 同内容的合览')
     for name, pages in twins:
         check(pages == n, '合览 %s 页数 %d ≠ %d' % (name, pages, n))
@@ -86,7 +94,8 @@ def main():
             continue
         s = open(p, encoding='utf-8').read()
         if (len(re.findall(page_re, s)) != 1 or s.count('<div class="adult">') != 1
-                or s.count('<figure>') + s.count('<figure class="ph">') != 2):
+                or (s.count('<figure>') + s.count('<figure class="ph">') != 2
+                    and len(re.findall(r'<figure>', s)) + len(re.findall(r'<figure class="ph">', s)) != 2)):
             fails.append('docs/lesson%02d.html 结构异常（页 %d／成人 %d／图 %d＋占位 %d）'
                          % (i, len(re.findall(page_re, s)), s.count('<div class="adult">'),
                             s.count('<figure>'), s.count('<figure class="ph">')))
