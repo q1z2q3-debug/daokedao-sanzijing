@@ -77,6 +77,10 @@ def kid_page(d, folio):
     takes = ''.join('      <li>%s</li>\n' % t for t in d['takeaways'])
     tips = ''.join('    <p%s>%s</p>\n' % (' style="margin-top:%s"' % s if s else '', t)
                    for (s, t) in d['tips'])
+    note2 = ''
+    if d.get('note2'):
+        note2 = ('\n    <div class="note" style="font-size:12.5px;color:#6B6157">%s</div>'
+                 % d['note2'])
     return f"""<div class="page">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">{d['runhead']}</span></div>
   <div class="lesson-no">{d['no_cn']}</div>
@@ -92,7 +96,7 @@ def kid_page(d, folio):
       <span class="ord">先 <b>↓</b> 右列　再 <b>←</b> 左列</span>
       <span>{d['readnote']}</span>
     </div>
-    <div class="note">{d['note']}</div>
+    <div class="note">{d['note']}</div>{note2}
   </div>
 
   <div class="band"><span class="tag">少儿共读</span><span class="rule"></span><span class="en">读给孩子听</span></div>
