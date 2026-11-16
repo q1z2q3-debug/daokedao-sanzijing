@@ -27,6 +27,9 @@ PH_CSS = """
 figure.ph .phbox{width:100%;aspect-ratio:4/3;border:1px dashed #D6C9AE;background:#FBF7EC;
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
 figure.ph .phbox .k{font-family:"Noto Sans SC",sans-serif;font-size:11px;letter-spacing:.28em;color:#BCAF93}
+.page.long .kid p{margin:0 0 10px;line-height:1.92;font-size:17.5px}
+.page.long .kid .lead{margin-bottom:14px}
+.page.long .kid figure{margin:10px 0}
 figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F63;letter-spacing:.12em}
 """
 
@@ -155,11 +158,22 @@ CN = '〇一二三四五六七八九'
 
 
 def cn_num(n):
+    """1–999 的口语式汉字数字：十一、八十六、一百一十一。"""
     if n < 10:
         return CN[n]
     if n < 20:
         return '十' + (CN[n % 10] if n % 10 else '')
-    return CN[n // 10] + '十' + (CN[n % 10] if n % 10 else '')
+    if n < 100:
+        return CN[n // 10] + '十' + (CN[n % 10] if n % 10 else '')
+    h, r = divmod(n, 100)
+    head = CN[h] + '百'
+    if not r:
+        return head
+    if r < 10:
+        return head + '零' + CN[r]
+    if r < 20:
+        return head + '一' + cn_num(r)
+    return head + cn_num(r)
 
 
 def load_lessons():
@@ -225,14 +239,14 @@ def toc_page(lessons):
     return ('<div class="page toc" id="toc">\n'
             '  <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">目 录</span></div>\n'
             '  <h1>目 录</h1>\n'
-            '  <div class="tl">八十六课，一课两页。点课号到该课少儿页，成人页在后一页；题下数字为该课少儿页页码。</div>\n'
+            '  <div class="tl">%s课，一课两页。点课号到该课少儿页，成人页在后一页；题下数字为该课少儿页页码。</div>\n'
             '  <div class="qbar"><input id="q" type="search" autocomplete="off" '
             'placeholder="搜原文、字词、人名、典名（含续编存目）　如：中庸／断机杼／项橐" aria-label="查册">'
             '<span class="hint">回车到第一处</span></div>\n'
             '  <div id="hits"></div>\n'
             '%s\n'
-            '  <div class="note2">分段只是读法上的分段，课次照旧一贯到底。续编（第八十七课起）另页存目，尚未成课。</div>\n'
-            '</div>' % '\n'.join(grp))
+            '  <div class="note2">分段只是读法上的分段，课次照旧一贯到底。续编（第%s课起）另页存目，尚未成课。</div>\n'
+            '</div>' % (cn_num(int(lessons[-1]['n'])), cn_num(T.NEXT_START), '\n'.join(grp)))
 
 
 def toc_page_next():
@@ -252,7 +266,7 @@ def toc_page_next():
     return ('<div class="page toc2" id="toc2">\n'
             '  <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">续 编 存 目</span></div>\n'
             '  <h1>续 编 存 目</h1>\n'
-            '  <div class="tl">「考世系，知终始」之后，三字经还有读史与勤学两大段。全段尚未成课，先按通行本四句一组占位排号，留出位置；成课时以校定底本为定，课次可整体重排。</div>\n'
+            '  <div class="tl">「考世系，知终始」之后，三字经还有读史与勤学两大段。尚未成课的部分，按通行本一句一课占位排号，留出位置；成课时以校定底本为定，课次可整体重排。</div>\n'
             '%s\n'
             '  <div class="note2">存目句依通行本录，未校异文；课次为占位，不作准。</div>\n'
             '</div>' % '\n'.join(grp))

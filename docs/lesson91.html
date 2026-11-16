@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>第一百零七课　夏有禹，商有汤——润泽说·少儿启蒙国学读本</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A2503B'/%3E%3Ctext x='32' y='45' font-size='28' text-anchor='middle' fill='%23F8F3E6' font-family='serif'%3E夏%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap">
+<style>
+:root{
+  --paper:#F8F3E6; --paper2:#FCF8EF; --ink:#2F2A24; --ink2:#4A4239;
+  --muted:#7B6E5C; --line:#DFD4BE; --ochre:#A2503B; --ochre-soft:#C9866B;
+  --qing:#6F8A86; --leaf:#7C9068;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#EFE7D8;color:var(--ink);
+  font-family:"Noto Serif SC","Songti SC",Georgia,serif;-webkit-font-smoothing:antialiased}
+.book{max-width:820px;margin:0 auto;padding:28px 18px 70px}
+.page{background:var(--paper);padding:54px 64px 46px;margin:0 0 22px;
+  box-shadow:0 1px 2px rgba(60,45,30,.06),0 12px 34px rgba(60,45,30,.07);
+  border:1px solid #E7DECB;position:relative}
+.page::after{content:"";position:absolute;inset:14px;border:1px solid rgba(162,80,59,.10);pointer-events:none}
+@media(max-width:760px){.page{padding:34px 22px 30px}.page::after{inset:8px}}
+
+/* ---------- 页眉 ---------- */
+.runhead{display:flex;flex-wrap:wrap;gap:4px 14px;justify-content:space-between;align-items:baseline;
+  font-family:"Noto Sans SC",sans-serif;font-size:11.5px;letter-spacing:.18em;
+  color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:34px}
+.runhead .c{color:var(--ochre);white-space:nowrap}
+
+/* ---------- 课题 ---------- */
+.lesson-no{font-family:"Noto Sans SC",sans-serif;font-size:12px;letter-spacing:.3em;color:var(--ochre)}
+h1{font-size:30px;font-weight:600;letter-spacing:.06em;margin:10px 0 6px;line-height:1.35}
+.sub{font-family:"Noto Sans SC",sans-serif;font-size:13px;color:var(--muted);letter-spacing:.06em}
+
+/* ---------- 田字格 ---------- */
+.grid-block{margin:30px 0 8px}
+.grid-cols{display:flex;flex-direction:row-reverse;justify-content:center;gap:46px}
+.col{display:flex;flex-direction:column;align-items:center;gap:8px}
+.colhead{font-family:"Noto Sans SC",sans-serif;font-size:10.5px;color:var(--ochre);letter-spacing:.18em;margin-bottom:2px}
+@media(max-width:520px){.grid-cols{gap:24px}}
+.cellwrap{text-align:center}
+.py{font-family:"Noto Sans SC",sans-serif;font-size:13px;color:var(--qing);letter-spacing:.04em;margin-bottom:5px;height:18px}
+.grid{width:88px;height:88px;border:1.6px solid var(--ochre-soft);background:#FFFDF7;
+  position:relative;display:flex;align-items:center;justify-content:center}
+.grid .cross{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.grid .cross line{stroke:rgba(162,80,59,.42);stroke-width:1;stroke-dasharray:4 4}
+.grid .ch{font-size:52px;line-height:1;color:var(--ink);font-weight:500}
+.strokes{font-family:"Noto Sans SC",sans-serif;font-size:10.5px;color:var(--muted);margin-top:6px;letter-spacing:.06em}
+.readnote{display:flex;align-items:center;gap:8px;justify-content:center;margin-top:18px;
+  font-family:"Noto Sans SC",sans-serif;font-size:12px;color:var(--muted);line-height:1.8}
+.readnote b{color:var(--ochre);font-weight:500}
+.readnote .ord{font-size:12.5px;color:var(--ochre);letter-spacing:.06em;border:1px solid #E2C9B9;
+  padding:2px 9px;white-space:nowrap}
+.readnote .ord b{font-weight:600}
+@media(max-width:520px){.readnote{flex-direction:column;gap:8px;text-align:center}}
+.note{margin-top:16px;font-family:"Noto Sans SC",sans-serif;font-size:12px;color:var(--muted);line-height:1.9}
+.note b{color:var(--ochre);font-weight:500}
+
+/* ---------- 章节条 ---------- */
+.band{display:flex;align-items:center;gap:12px;margin:44px 0 24px}
+.band .tag{font-family:"Noto Sans SC",sans-serif;font-size:11px;letter-spacing:.22em;
+  color:#FFF9EE;background:var(--ochre);padding:4px 11px;border-radius:2px}
+.band .tag.qing{background:var(--qing)}
+.band .rule{flex:1;height:1px;background:var(--line)}
+.band .en{font-family:"Noto Sans SC",sans-serif;font-size:10.5px;color:var(--muted);letter-spacing:.14em}
+
+/* ---------- 少儿正文 ---------- */
+.kid p{font-size:18.5px;line-height:2.05;margin:0 0 18px;text-align:justify;color:#332D26}
+.kid p:first-of-type::first-letter{font-size:34px;line-height:1;color:var(--ochre);font-weight:600;padding-right:2px}
+.kid .lead{font-size:16px;color:var(--muted);font-family:"Noto Sans SC",sans-serif;line-height:1.95;margin-bottom:22px}
+figure{margin:26px 0;text-align:center}
+figure img{width:100%;height:auto;display:block;border:1px solid #E3D9C3;background:#fff}
+figcaption{font-family:"Noto Sans SC",sans-serif;font-size:12px;color:var(--muted);margin-top:9px;letter-spacing:.05em}
+
+/* ---------- 四大天赋 ---------- */
+.gift{margin:30px 0 10px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0}
+.gift h3{font-size:16px;font-weight:600;letter-spacing:.12em;margin:0 0 4px;text-align:center}
+.gift .h3sub{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;color:var(--muted);text-align:center;letter-spacing:.1em;margin-bottom:20px}
+.gift-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.g{text-align:center;padding:2px}
+.g svg{width:100%;height:76px;display:block}
+.g .gn{font-size:15px;font-weight:600;letter-spacing:.1em;margin:8px 0 4px;color:var(--ochre)}
+.g .gt{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;line-height:1.75;color:var(--ink2)}
+@media(max-width:700px){.gift-grid{grid-template-columns:repeat(2,1fr);gap:22px 12px}}
+
+/* ---------- 启示 ---------- */
+.takeaway{margin:34px 0 6px;background:var(--paper2);border:1px solid #E7DCC5;
+  border-left:4px solid var(--ochre);padding:20px 24px}
+.takeaway .t{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;letter-spacing:.24em;color:var(--ochre);margin-bottom:10px}
+.takeaway li{font-size:16.5px;line-height:1.95;margin:0 0 6px;padding-left:2px;color:#332D26}
+.takeaway ul{margin:0;padding-left:20px;list-style:none}
+.takeaway ul li::before{content:"·";color:var(--ochre);margin-right:8px;font-weight:700}
+
+/* ---------- 亲子提示 ---------- */
+.parent-tip{margin:24px 0 0;padding:16px 18px;background:#F3EEE1;border:1px dashed #D8C9AC}
+.parent-tip .t{font-family:"Noto Sans SC",sans-serif;font-size:11px;letter-spacing:.2em;color:var(--muted);margin-bottom:6px}
+.parent-tip p{font-family:"Noto Sans SC",sans-serif;font-size:13.5px;line-height:2.0;color:#332D26;margin:0}
+
+/* ---------- 成人版 ---------- */
+.adult{background:#FBF7EC;padding:54px 64px 48px;border:1px solid #E1D6BE;
+  box-shadow:0 1px 2px rgba(60,45,30,.06),0 12px 34px rgba(60,45,30,.07)}
+@media(max-width:760px){.adult{padding:34px 22px 30px}}
+@media(max-width:640px){
+  table{border:1px solid #E0D5BE;background:#FFFDF7}
+  thead{display:none}
+  tr{display:block;padding:12px 14px;border-bottom:1px solid #E0D5BE}
+  tr:last-child{border-bottom:0}
+  td{display:block;border:0;padding:2px 0;font-size:13.5px;line-height:1.8}
+  td.k{font-size:15px;letter-spacing:.08em;margin-bottom:3px}
+}
+.adult h2{font-size:19px;font-weight:600;letter-spacing:.1em;margin:0 0 6px}
+.adult .meta{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;color:var(--muted);letter-spacing:.1em}
+.adult p{font-size:15px;line-height:1.98;margin:0 0 15px;text-align:justify;color:#37312A}
+.adult .num{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;letter-spacing:.16em;color:var(--qing);display:block;margin:26px 0 6px}
+.adult h3{font-size:15.5px;font-weight:600;margin:6px 0 8px;letter-spacing:.04em}
+.quote{margin:22px 0;padding:2px 0 2px 16px;border-left:2px solid var(--ochre-soft);color:#4A4239;font-size:14.5px}
+table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:13px;margin:18px 0}
+th,td{border:1px solid #E0D5BE;padding:9px 11px;vertical-align:top;line-height:1.75;text-align:left}
+th{background:#F1EADA;font-weight:600;letter-spacing:.06em}
+td.k{color:var(--ochre);font-weight:600;white-space:nowrap}
+.doubt{margin:26px 0 0;padding:18px 20px;background:#F2EBDC;border:1px solid #DCCFB4}
+.doubt .t{font-family:"Noto Sans SC",sans-serif;font-size:11px;letter-spacing:.22em;color:var(--ochre);margin-bottom:8px}
+.doubt p{font-size:14px;line-height:1.95;margin:0 0 8px}
+.page,.adult{position:relative}
+.folio{position:absolute;left:0;right:0;bottom:18px;text-align:center;
+  font-family:"Noto Sans SC",sans-serif;font-size:10.5px;color:#B4A88F;letter-spacing:.3em}
+.cover{background:linear-gradient(180deg,#FBF6E9 0%,#F3E9D2 100%);text-align:center;padding:96px 40px 80px}
+.cover .s{font-family:"Noto Sans SC",sans-serif;font-size:12px;letter-spacing:.34em;color:var(--ochre)}
+.cover h1{font-size:46px;letter-spacing:.12em;margin:22px 0 10px}
+.cover .t2{font-size:16px;color:var(--muted);letter-spacing:.18em}
+.cover .line{width:60px;height:1px;background:var(--ochre-soft);margin:30px auto}
+.cover .info{font-family:"Noto Sans SC",sans-serif;font-size:12px;line-height:2.1;color:var(--muted)}
+
+/* 本课新增 */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:26px 0}
+@media(max-width:640px){.two{grid-template-columns:1fr}}
+.card{background:#FFFDF7;border:1px solid #E5DAC2;padding:18px 20px}
+.card .ch2{font-size:15px;font-weight:600;letter-spacing:.1em;color:var(--ochre);margin-bottom:6px}
+.card .ch2 span{font-size:11px;letter-spacing:.16em;color:var(--muted);font-weight:400;margin-left:6px}
+.card p{font-family:"Noto Sans SC",sans-serif;font-size:13px;line-height:1.9;color:var(--ink2);margin:0}
+.age td:first-child{white-space:nowrap;color:var(--ochre);font-weight:600}
+.nodrop::first-letter{font-size:16px !important;color:var(--muted) !important;font-weight:400 !important;padding-right:0 !important}
+figure.ph .phbox{width:100%;aspect-ratio:4/3;border:1px dashed #D6C9AE;background:#FBF7EC;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
+figure.ph .phbox .k{font-family:"Noto Sans SC",sans-serif;font-size:11px;letter-spacing:.28em;color:#BCAF93}
+.page.long .kid p{margin:0 0 10px;line-height:1.92;font-size:17.5px}
+.page.long .kid .lead{margin-bottom:14px}
+.page.long .kid figure{margin:10px 0}
+figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F63;letter-spacing:.12em}
+
+.page.toc,.page.toc2{padding:64px 64px 54px}
+.toc h1,.toc2 h1{font-size:34px;font-weight:600;letter-spacing:.28em;margin:0 0 10px}
+.toc .tl,.toc2 .tl{font-family:"Noto Sans SC",sans-serif;font-size:12.5px;color:var(--muted);line-height:2;letter-spacing:.04em;margin-bottom:26px}
+.toc .qbar{display:flex;align-items:center;gap:12px;margin:0 0 22px;flex-wrap:wrap}
+.toc .qbar input{flex:1 1 300px;padding:11px 14px;border:1px solid var(--line);background:#FCF8EF;font-family:"Noto Serif SC",serif;font-size:16px;color:var(--ink);outline:none;min-width:0}
+.toc .qbar input:focus{border-color:var(--ochre)}
+.toc .qbar .hint{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;color:var(--muted);white-space:nowrap;letter-spacing:.06em}
+#hits{display:none;margin:0 0 24px;font-family:"Noto Sans SC",sans-serif;font-size:12.5px;line-height:1.9;color:var(--ink2)}
+#hits a{display:block;padding:5px 0;border-bottom:1px dashed var(--line);color:var(--ink2);text-decoration:none}
+#hits a:hover{color:var(--ochre)}
+#hits .none{color:var(--muted)}
+.toc .grp{margin-top:20px}
+.toc .gh{display:flex;align-items:baseline;gap:12px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.toc .gn{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;letter-spacing:.24em;color:var(--ochre)}
+.toc .gt{font-family:"Noto Sans SC",sans-serif;font-size:12px;color:var(--muted);letter-spacing:.06em}
+.toc .cols{column-count:2;column-gap:38px;margin-top:8px}
+.toc a.it{display:flex;align-items:baseline;padding:5px 0;font-size:14px;color:var(--ink);text-decoration:none;break-inside:avoid;line-height:1.7}
+.toc a.it:hover .ln{color:var(--ochre)}
+.toc .no{font-family:"Noto Sans SC",sans-serif;font-size:10.5px;color:var(--muted);flex:0 0 28px;letter-spacing:.04em}
+.toc .ln{flex:0 1 auto}
+.toc .dots{flex:1 1 12px;margin:0 6px;border-bottom:1px dotted #D9CDB4;transform:translateY(-3px)}
+.toc .pg{font-family:"Noto Sans SC",sans-serif;font-size:11px;color:var(--muted);flex:0 0 28px;text-align:right}
+.toc2 .cols{column-count:2;column-gap:36px;margin-top:8px}
+.toc2 .it{display:flex;align-items:baseline;padding:5px 0;font-size:13.5px;color:#8C7F63;break-inside:avoid;line-height:1.7}
+.toc2 .no{font-family:"Noto Sans SC",sans-serif;font-size:10.5px;color:#BCAF93;flex:0 0 28px}
+.toc2 .tag{font-family:"Noto Sans SC",sans-serif;font-size:10px;color:#B7A88B;border:1px solid #E6DBC4;padding:0 4px;margin-left:auto;flex:0 0 auto;letter-spacing:.08em}
+.toc .note2,.toc2 .note2{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;color:var(--muted);line-height:2;margin-top:28px;border-top:1px solid var(--line);padding-top:14px}
+.go-toc{position:fixed;right:16px;bottom:16px;z-index:9;display:flex;font-family:"Noto Sans SC",sans-serif;font-size:11.5px}
+.go-toc a{padding:8px 11px;background:#FBF6E9;border:1px solid #E0D5BD;color:var(--ink2);text-decoration:none;letter-spacing:.14em;box-shadow:0 4px 14px rgba(60,45,30,.10)}
+.go-toc a+a{border-left:0}
+.go-toc a:hover{color:var(--ochre)}
+@media(max-width:760px){.toc,.toc2{padding:40px 22px 34px}.toc .cols,.toc2 .cols{column-count:1}.go-toc{right:8px;bottom:8px}}
+
+.page.land{outline:2px solid rgba(162,80,59,.45);outline-offset:1px}
+
+.grid-cols.tight{gap:34px}
+.tight .grid{width:74px;height:74px}
+.tight .grid .ch{font-size:44px}
+.tight .colhead{margin-bottom:0}
+.tight + .readnote{margin-top:12px}
+</style>
+</head>
+<body>
+<div class="book">
+<div class="page">
+  <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第一百零七课 · 夏有禹</span></div>
+  <div class="lesson-no">第 一 百 零 七 课</div>
+  <h1>夏有禹，商有汤</h1>
+  <div class="sub">xià yǒu yǔ　shāng yǒu tāng</div>
+
+  <div class="grid-block">
+      <div class="grid-cols tight">
+  <div class="col"><div class="colhead">① 先读右列</div>
+    <div class="cellwrap"><div class="py">xià</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">夏</span></div><div class="strokes">十画</div></div><div class="cellwrap"><div class="py">yǒu</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">有</span></div><div class="strokes">六画</div></div><div class="cellwrap"><div class="py">yǔ</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">禹</span></div><div class="strokes">九画</div></div>
+  </div>
+  <div class="col"><div class="colhead">② 再读左列</div>
+    <div class="cellwrap"><div class="py">shāng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">商</span></div><div class="strokes">十一画</div></div><div class="cellwrap"><div class="py">yǒu</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">有</span></div><div class="strokes">六画</div></div><div class="cellwrap"><div class="py">tāng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">汤</span></div><div class="strokes">六画</div></div>
+  </div>
+  </div>
+  <div class="readnote">古法竖排：<b>自右而左，自上而下</b>。先读右列「夏有禹」，再读左列「商有汤」。</div>
+  </div>
+
+  <div class="band"><span class="tag">少儿共读</span><span class="rule"></span><span class="en">读给孩子听</span></div>
+
+  <div class="kid">
+    <p class="lead">承接上句“相揖逊，称盛世”，世系由二帝揖逊的公天下，转入家天下之始。</p>
+    <p>禹建夏，汤立商，开启三代的前两朝。</p>
+    <p>延续阴阳框架：禹【阳】，承揖逊之余风，以大功定水土，劳身开基业，虽受禅而传子，是阳之盛极而转；汤【阴】，顺天应人，革夏之弊，收敛纷乱、重立纲纪，是阴之肃定。</p>
+    <p>一启一承，一开一敛，由公天下的揖让，转入以天命更迭的王朝循环。</p>
+    <p>对比：<b>相揖逊，称盛世 / 夏有禹，商有汤</b></p>
+    <p>尧舜是公天下，重心在“逊、让、公”；禹、汤之后，天下传于子嗣，家天下格局成型。</p>
+    <p>禹【阳】：主开创、疏决、劳苦。洪水滔天，禹踏遍九州，定水土、划九州，立下旷世大功。原本承接舜的揖让，却在身后不传贤而传启，阳德盛大，而制度悄悄转向私系传承，是阳极而变；</p>
+    <p>汤【阴】：主革故、肃敛、归正。夏桀荒乱，法度崩坏，汤顺天而伐，平定乱世，收敛天下涣散的秩序，重新立定君臣、天命之纲，以肃静收敛之功，安定四海，是阴之承定。</p>
+    <p>尧舜的揖逊，是权位以德流动；禹汤开启的世代，是天命随治乱循环。阳开功业，阴定纲常，阴阳更迭，王朝兴替的节律自此显现。</p>
+    <p>对比前文阴阳太和：阳开大功而藏转变之机，阴革乱局而守天命之序；不再是相让太和，而是治乱相替的阴阳往复。</p>
+    <p>勘破俗见：两类偏执。其一，单纯褒扬大禹而淡化“传家”这一制度转向；其二，简单把商汤伐桀看作单纯的武力征伐，忽略其背后“革弊复正”的义理内核。契合般若范式：佛说夏有禹商有汤，即非夏有禹商有汤，是名夏有禹商有汤。禹、汤、夏商皆是教化取象之筏；本心之中正才是本体，不执着于“圣王恒善”的固定相。</p>
+    <p>大禹建立夏朝，商汤建立商朝。</p>
+    <p>禹历尽辛劳，治理洪水，开启夏代；</p>
+    <p>汤革除夏的乱政，安定天下，立定商的纲纪。</p>
+    <p>一阳开创，一阴肃定，开启三代治乱循环的开端。</p>
+    <figure class="ph"><div class="phbox"><span class="k">图 位</span><span class="f">图一 · 待补</span></div></figure>
+    <figure class="ph"><div class="phbox"><span class="k">图 位</span><span class="f">图二 · 待补</span></div></figure>
+    <p>落到心上理解</p>
+    <p>揖逊的盛世，怎会一转就出现禹、汤这样以功业开国的人物？</p>
+    <p>承接前面阴阳节律反观自心。</p>
+    <p>禹之阳，是奋发开创、攻坚克难，付出巨大辛劳，打通阻滞、建立格局；功业既成，容易生出“我所开创，当归属于我”的执念，便是阳极转私的伏笔。</p>
+    <p>汤之阴，是旧有格局败坏之后，勘破弊病、除乱归正，收敛涣散，重新建立稳定的边界与秩序。</p>
+    <p>能开创，也要知开创之后的执念风险；能除乱扶正，也要明白法度本身也会随时间慢慢腐化。知兴替，不执功业，不恋旧制，不住于治乱之相，即是无住而行。</p>
+  </div>
+
+  <div class="two">
+    <div class="card">
+      <div class="ch2">俗 见<span>其 一</span></div>
+      <p>一味神化大禹，回避传子带来的制度转向</p>
+    </div>
+    <div class="card">
+      <div class="ch2">正 解<span>其 一</span></div>
+      <p>重点观察阳盛之后，从“公”向“家”的流变</p>
+    </div>
+    <div class="card">
+      <div class="ch2">俗 见<span>其 二</span></div>
+      <p>只看成征伐杀伐，忽略商汤“革弊复正”的内核</p>
+    </div>
+    <div class="card">
+      <div class="ch2">正 解<span>其 二</span></div>
+      <p>革命本义：革去失序，复归中道秩序</p>
+    </div>
+    <div class="card">
+      <div class="ch2">俗 见<span>其 三</span></div>
+      <p>只喜开创，看不到功业背后附着的占有之念</p>
+    </div>
+    <div class="card">
+      <div class="ch2">正 解<span>其 三</span></div>
+      <p>开创与守制，同含阴阳生灭的循环</p>
+    </div>
+  </div>
+
+  <div class="takeaway">
+    <div class="t">成 长 小 启 示</div>
+    <ul>
+      <li>禹【阳】：劳苦开山，平定水土，大功昭著，阳极而制度潜移；</li>
+      <li>汤【阴】：顺天革乱，收敛涣散，重立纲纪，肃乱以归正；</li>
+      <li>时代节律：公天下转为家天下，开启治乱循环；</li>
+      <li>读史心法不变：考世系，知终始，体察“阳开立业，阴革安邦”的循环节律。</li>
+    </ul>
+  </div>
+
+  <div class="parent-tip">
+    <div class="t">给 爸 爸 妈 妈 的 一 句 话 · 这 一 课 讲 什 么，慢 慢 说 给 孩 子 听</div>
+    <p><b>一、勘俗见。</b>辛苦开创、做出成绩之后，要警惕把成果牢牢占为己有的执念；旧的秩序腐朽时，要有勇气修正、重整。</p>
+    <p style="margin-top:6"><b>二、现代对照。</b>攻坚克难打开局面之后，不生占有之心；当原有规则弊病丛生，懂得及时调整纠偏。</p>
+    <p style="margin-top:6"><b>三、承接常变主线。</b>中正本心恒常不变（常）；禹汤立国、天命治乱，是因缘生灭显发的事相（可变之相）。</p>
+    <p style="margin-top:6"><b>四、承接教与学二分。</b>师长示范禹阳汤阴、开创革故的结构，属于施教一侧；学人以此觉察自心，学开拓，学勘弊扶正，是自主修习。</p>
+    <p style="margin-top:12">承接选择力练习：阳以开难立业，阴以革乱安邦，循治乱之节律。</p>
+  </div>
+
+  <div class="folio">— 182 —</div>
+</div>
+
+<div class="adult">
+  <div class="runhead" style="border-bottom-color:#DCD0B4"><span>成人研学 · 古今汇观</span><span class="c">第一百零七课 · 深度页</span></div>
+  <h2>夏有禹，商有汤</h2>
+  <div class="meta">夏有禹，商有汤 ｜ 少儿页＋成人页</div>
+
+  <span class="num">一</span>
+  <p><b class="sec">字义与句读</b></p>
+  <p>夏有禹：大禹，夏朝开国之君；商有汤：成汤，商朝开国之君。</p>
+  <p>全句释义：大禹开创夏，成汤建立商。禹以阳功定九州水土，功业极盛而天下转入家传；汤以阴肃革除夏桀之乱，重新安定天下，立纲纪秩序。</p>
+  <span class="num">二</span>
+  <p><b class="sec">命题考辨</b></p>
+  <p><b>（1）阴阳结构推演</b></p>
+  <p>禹属阳：疏通洪水、划九州，是向外开拓、疏通阻滞。舜传禹，仍是揖逊之形，而禹不传贤、传其子启，公天下的通道自此闭合。阳德盛大，而附着了“功业属我”的取着，是阳极之变。</p>
+  <p>汤属阴：夏桀法度崩坏，天下散乱，汤起而革之。伐桀不是为一己私欲，是收拾崩坏，收敛乱象，重建稳定的中道秩序，是阴德肃敛之用。</p>
+  <p>尧舜的循环是“相让”；夏商开启的循环是“治乱、天命更替”。一治一乱，一盛一衰，阴阳往复。</p>
+  <p><b>（2）与全书体系互参</b></p>
+  <p>对照般若：生大功、立大业而不住功业之相；革旧乱立新法，亦不住新秩序之相。《金刚经》应无所住而生其心，正是在兴替之中不被兴衰牵动。</p>
+  <p>对照老庄：老子“物壮则老”，禹之阳极而转私，正是物壮之象；汤的革乱，便是在衰败之时，重新回调平衡。</p>
+  <p><b>（3）对照当下现代语境</b></p>
+  <p>一个团队、一个体系：有人攻坚克难打开局面（禹阳），局面稳定之后，容易形成利益固化；等到体系弊病累积、秩序涣散，便需要有人勘破沉疴、重整框架（汤阴）。开创之后难在不私，守制之后难在知弊。</p>
+  <p><b>（4）般若范式互参</b></p>
+  <p>禹、夏、汤、商，是指月之筏。</p>
+  <p>联动三才五蕴太极空杯模型：中正自性是空杯本具之体；开创、革乱、治乱交替，都是缘起层面阴阳生灭的显现。明白循环之理，而不被兴衰困住。</p>
+  <p>呼应“本乎数”：一阳一阴，一开一革，治乱循环。</p>
+  <p>延伸义理：</p>
+  <p>《金刚经》应无所住而生其心：禹汤兴作，行济世之事，不住圣王、王朝之相。</p>
+  <p>《道德经》物壮则老，谓之不道，不道早已：禹阳极而私生，正是壮极而衰的开端。</p>
+  <p>《坛经》本来无一物：王朝、功业、天命，皆是外缘流转，本心不受其缚。</p>
+  <span class="num">三</span>
+  <p><b class="sec">跨典互参（老庄、般若对照）</b></p>
+  <p>《道德经》祸兮福之所倚，福兮祸之所伏：治乱循环，正是祸福倚伏的显现。</p>
+  <p>《庄子》一治一乱：直接点出三代之后，天下落入这个阴阳往复的大节律。</p>
+  <p>串联前文：长线考世系，三皇开基、二帝揖逊成公世；禹汤开启家天下，治乱更替的大轮自此运转。</p>
+  <span class="num">四</span>
+  <p><b class="sec">和前面课程的张力</b></p>
+  <p>次第链条继续延伸：</p>
+  <p>首孝悌 → 次见闻 → 知某数，识某文 → 一而十，十而百 → 百而千，千而万 → 三才者，天地人 → 三光者，日月星 → 曰春夏，曰秋冬 → 此四时，运不穷 → 曰南北，曰西东 → 此四方，应乎中 → 曰水火，木金土 → 此五行，本乎数 → 十干者，甲至癸 → 十二支，子至亥 → 曰黄道，日所躔 → 曰赤道，当中权 → 赤道下，温暖极 → 我中华，在东北 → 曰江河，曰淮济 → 此四渎，水之纪 → 曰岱华，嵩恒衡 → 此五岳，山之名 → 古九州，今改制 → 称行省，三十五 → 曰仁义，礼智信 → 此五常，不容紊 → 地所生，有草木 → 此植物，遍水陆 → 有虫鱼，有鸟兽 → 此动物，能飞走 → 稻粱菽，麦黍稷 → 此六谷，人所食 → 马牛羊，鸡犬豕 → 此六畜，人所饲 → 曰喜怒，曰哀惧 → 爱恶欲，七情具 → 匏土革，木石金。丝与竹，乃八音 → 高曾祖，父而身 → 身而子，子而孙 → 自子孙，至玄曾 → 乃九族，人之伦 → 父子恩，夫妇从 → 兄则友，弟则恭 → 长幼序，友与朋 → 君则敬，臣则忠 → 此十义，人所同 → 凡训蒙，须讲究 → 详训诂，明句读 → 为学者，必有初 → 小学终，至四书 → 论语者，二十篇 → 群弟子，记善言 → 孟子者，七篇止 → 讲道德，说仁义 → 作中庸，子思笔 → 中不偏，庸不易 → 作大学，乃曾子 → 自修齐，至平治 → 孝经通，四书熟 → 如六经，始可读 → 诗书易，礼春秋 → 号六经，当讲求 → 有连山，有归藏 → 有周易，三易详 → 典谟训，诰誓命 → 号周书，七十篇 → 有国风，有雅颂 → 号四诗，当讽咏 → 诗既亡，春秋作 → 寓褒贬，别善恶 → 三传者，有公羊 → 有左氏，有谷梁 → 经既明，方读子 → 撮其要，记其事 → 五子者，有荀扬 → 文中子，及老庄 → 经子通，读诸史 → 考世系，知终始 → 自羲农，至黄帝 → 号三皇，居上世 → 唐有虞，号二帝 → 相揖逊，称盛世 → <b>夏有禹，商有汤</b></p>
+  <p>呼应“人不学，不知义”：知禹阳开功、汤阴革乱，家天下开启、治乱循环之义；</p>
+  <p>呼应“玉不琢，不成器”：以治乱往复打磨自心，建功而不执，见衰而不惊；</p>
+  <p>呼应“教之道，贵以专”：专守中正，循世系长线，体察王朝兴替的阴阳节律。</p>
+
+
+  <div class="folio" style="color:#B4A88F">— 183 —</div>
+</div>
+
+</div>
+
+</body>
+</html>

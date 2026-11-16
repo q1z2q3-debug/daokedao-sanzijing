@@ -6,8 +6,8 @@
   python3 tools/verify.py --quiet    # 只在失败时输出
 
 校验项：
-  1 课页数 N、成人页 N、插图 2N、占位框 0
-  2 base64 图 2N 张且互不重复
+  1 课页数 N、成人页 N、插图＋占位框 2N（新段图位留空，虚线框计位）
+  2 base64 图 2N−占位框 张且互不重复
   3 页码 2..2N+1 连续
   4 根目录存在同内容的「N 课合览」，且其页数同为 N
   5 docs/lessonNN.html 齐备，每份恰含 1 少儿页 + 1 成人页 + 2 图
@@ -47,7 +47,7 @@ def main():
         print('FAIL: docs/book.html 不存在')
         return 1
     book = open(book_path, encoding='utf-8').read()
-    page_re = r'<div class="page"(?: id="k\d+")?>'
+    page_re = r'<div class="page(?: long)?"(?: id="k\d+")?>'
     n = len(re.findall(page_re, book))
     check(n > 0, '课页数为 0')
     check(book.count('class="page cover"') == 1, '封面页数不为 1')
@@ -55,12 +55,11 @@ def main():
 
     figures = book.count('<figure>')
     ph = book.count('<figure class="ph">')
-    check(figures == 2 * n, '插图 %d ≠ 2N(%d)' % (figures, 2 * n))
-    check(ph == 0, '仍有 %d 个占位框未替换' % ph)
+    check(figures + ph == 2 * n, '插图＋占位框 %d ≠ 2N(%d)' % (figures + ph, 2 * n))
 
     imgs = re.findall(r'data:image/jpeg;base64,([A-Za-z0-9+/=]+)', book)
     uniq = len({hashlib.md5(x.encode()).hexdigest() for x in imgs})
-    check(len(imgs) == 2 * n, 'base64 图 %d ≠ 2N(%d)' % (len(imgs), 2 * n))
+    check(len(imgs) == 2 * n - ph, 'base64 图 %d ≠ 2N−占位(%d)' % (len(imgs), 2 * n - ph))
     check(uniq == len(imgs), 'base64 图有重复：%d 张仅 %d 种' % (len(imgs), uniq))
 
     folios = [int(x) for x in re.findall(r'— (\d+) —', book)]
@@ -86,9 +85,11 @@ def main():
             fails.append('缺少 docs/lesson%02d.html' % i)
             continue
         s = open(p, encoding='utf-8').read()
-        if len(re.findall(page_re, s)) != 1 or s.count('<div class="adult">') != 1 or s.count('<figure>') != 2:
-            fails.append('docs/lesson%02d.html 结构异常（页 %d／成人 %d／图 %d）'
-                         % (i, len(re.findall(page_re, s)), s.count('<div class="adult">'), s.count('<figure>')))
+        if (len(re.findall(page_re, s)) != 1 or s.count('<div class="adult">') != 1
+                or s.count('<figure>') + s.count('<figure class="ph">') != 2):
+            fails.append('docs/lesson%02d.html 结构异常（页 %d／成人 %d／图 %d＋占位 %d）'
+                         % (i, len(re.findall(page_re, s)), s.count('<div class="adult">'),
+                            s.count('<figure>'), s.count('<figure class="ph">')))
 
     index_path = os.path.join(DOCS, 'index.html')
     check(os.path.exists(index_path), '缺少 docs/index.html')
@@ -107,6 +108,8 @@ def main():
             check(('v' + ver) in cl, '入口版本 v%s 未记入 CHANGELOG' % ver)
             notes.append('站点版本 v%s' % ver)
 
+    if ph:
+        notes.append('图位待补 %d 处' % ph)
     notes.append('课页 %d ／ 插图 %d ／ 页码 2–%d ／ %.2f MB' % (n, figures, 2 * n + 1, len(book.encode()) / 1048576))
     quiet = '--quiet' in sys.argv
     if fails:

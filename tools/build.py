@@ -80,6 +80,9 @@ def kid_page(d, folio):
             body.append('    <p class="lead">%s</p>' % block[1])
         elif kind == 'fig':
             body.append('    ' + img_tag(block[1], block[2], block[3]))
+        elif kind == 'ph':
+            body.append('    <figure class="ph"><div class="phbox">'
+                        '<span class="k">图 位</span><span class="f">%s</span></div></figure>' % block[1])
     cards = ''.join(
         '    <div class="card">\n      <div class="ch2">%s<span>%s</span></div>\n      <p>%s</p>\n    </div>\n'
         % (c[0], c[1], c[2]) for c in d['cards'])
@@ -97,14 +100,17 @@ def kid_page(d, folio):
             mt = ' style="margin-top:26px"' if i else ''
             segs.append('  <div class="grid-cols tight"%s>\n%s\n%s\n  </div>\n'
                         '  <div class="readnote">%s</div>' % (mt, grid_col(rk, r), grid_col(lk, l), rn))
-        grid_html = ('\n'.join(segs) + '\n    <div class="note">%s</div>%s' % (d['note'], note2))
+        grid_html = ('\n'.join(segs)
+                     + ('\n    <div class="note">%s</div>' % d['note'] if d.get('note') else '')
+                     + note2)
     else:
         grid_html = ('<div class="grid-cols">\n%s\n%s\n</div>\n'
                      '    <div class="readnote">\n      <span class="ord">先 <b>↓</b> 右列　再 <b>←</b> 左列</span>\n'
                      '      <span>%s</span>\n    </div>\n'
                      '    <div class="note">%s</div>%s'
                      % (cols[0], cols[1], d['readnote'], d['note'], note2))
-    return f"""<div class="page">
+    long = ' long' if len([b for b in d['kid'] if b[0] == 'p']) >= 24 else ''
+    return f"""<div class="page{long}">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">{d['runhead']}</span></div>
   <div class="lesson-no">{d['no_cn']}</div>
   <h1>{d['line']}</h1>
@@ -145,16 +151,15 @@ def adult_page(d, folio):
         for p in paras:
             secs.append('  <p>%s</p>\n' % p)
     doubts = ''.join('    <p>%s</p>\n' % x for x in d['doubt'])
+    doubt_block = ('  <div class="doubt">\n    <div class="t">存 疑 · 留 待 深 究</div>\n%s  </div>\n\n'
+                   % doubts) if d['doubt'] else ''
     return f"""<div class="adult">
   <div class="runhead" style="border-bottom-color:#DCD0B4"><span>成人研学 · 古今汇观</span><span class="c">{d['no_short']} · 深度页</span></div>
   <h2>{d['h2']}</h2>
   <div class="meta">{d['meta']}</div>
 
 {''.join(secs)}
-  <div class="doubt">
-    <div class="t">存 疑 · 留 待 深 究</div>
-{doubts}  </div>
-
+{doubt_block}
   <div class="folio" style="color:#B4A88F">— {folio} —</div>
 </div>
 """
