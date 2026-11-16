@@ -185,7 +185,18 @@ def load_lessons():
         out.extend(importlib.import_module(name).LESSONS)
     import polish_71_86 as PL
     out = [PL.polish(d) if 71 <= int(d['n']) <= 86 else d for d in out]
-    return sorted(out, key=lambda d: int(d['n']))
+    out = sorted(out, key=lambda d: int(d['n']))
+    # 统一按书内课次显示：早期模块存的是合稿编号（第103课起），页眉、页脚会与目录错位
+    for d in out:
+        n = int(d['n'])
+        cn = cn_num(n)
+        d['no_short'] = '第%s课' % cn
+        d['no_cn'] = ' '.join(list('第%s课' % cn))
+        for k in ('line', 'line_plain', 'h2'):
+            d[k] = d[k].rstrip('。').strip()
+        if ' · ' in d.get('runhead', ''):
+            d['runhead'] = d['no_short'] + d['runhead'][d['runhead'].index(' · '):]
+    return out
 
 
 def meta_from_changelog():
