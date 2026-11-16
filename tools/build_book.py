@@ -48,6 +48,11 @@ TOC_CSS = """
 #hits a:hover{color:var(--ochre)}
 #hits .none{color:var(--muted)}
 .toc .grp{margin-top:20px}
+.toc .cls+.cls{margin-top:30px;padding-top:24px;border-top:1px solid var(--line)}
+.toc .ch{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.toc .cn{font-size:21px;letter-spacing:.22em;color:var(--ink)}
+.toc .cq{font-family:"Noto Sans SC",sans-serif;font-size:12px;letter-spacing:.14em;color:var(--ochre)}
+.toc .cc{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;color:var(--muted);letter-spacing:.06em;margin-left:auto}
 .toc .gh{display:flex;align-items:baseline;gap:12px;border-bottom:1px solid var(--line);padding-bottom:8px}
 .toc .gn{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;letter-spacing:.24em;color:var(--ochre)}
 .toc .gt{font-family:"Noto Sans SC",sans-serif;font-size:12px;color:var(--muted);letter-spacing:.06em}
@@ -68,6 +73,26 @@ TOC_CSS = """
 .go-toc a+a{border-left:0}
 .go-toc a:hover{color:var(--ochre)}
 @media(max-width:760px){.toc,.toc2{padding:40px 22px 34px}.toc .cols,.toc2 .cols{column-count:1}.go-toc{right:8px;bottom:8px}}
+"""
+
+CLASS_CSS = """
+.page.guide{padding:64px 64px 54px}
+.guide h1{font-size:34px;font-weight:600;letter-spacing:.28em;margin:0 0 12px}
+.guide .tl{font-family:"Noto Sans SC",sans-serif;font-size:12.5px;color:var(--muted);line-height:2;letter-spacing:.04em;margin-bottom:30px}
+.guide .gc{padding:4px 0 4px 18px;margin-bottom:26px;border-left:3px solid var(--ochre)}
+.guide .g1{border-left-color:#A2503B}
+.guide .g2{border-left-color:#6F8A86}
+.guide .g3{border-left-color:#7C9068}
+.guide .gh2{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.guide .nm{font-size:23px;letter-spacing:.26em;color:var(--ink)}
+.guide .rq{font-family:"Noto Sans SC",sans-serif;font-size:12px;letter-spacing:.12em;color:var(--ink2)}
+.guide .rq em{font-style:normal;color:var(--ochre)}
+.guide .gd{font-size:15px;line-height:2.1;margin-top:10px;color:var(--ink)}
+.guide .gd b{font-weight:600}
+.guide .gs{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;color:var(--muted);line-height:2;margin-top:10px;letter-spacing:.04em}
+.guide .gn2{font-size:13.5px;line-height:2;margin-top:9px;color:var(--ink2);opacity:.82}
+.guide .note2{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;color:var(--muted);line-height:2;margin-top:30px;border-top:1px solid var(--line);padding-top:14px}
+@media(max-width:760px){.guide{padding:40px 22px 34px}.guide .nm{font-size:19px}.guide .gd{font-size:14.5px}}
 """
 
 SEARCH_JS = r"""
@@ -234,34 +259,85 @@ def toc_entries(lessons):
     return [(n, lines[n], 2 * n) for n in sorted(lines)]
 
 
+def _toc_group(no, name, a, b, by_n):
+    items = []
+    for n in range(a, b + 1):
+        line, folio = by_n[n]
+        items.append('      <a class="it" href="#k%d"><span class="no">%d</span>'
+                     '<span class="ln">%s</span><span class="dots"></span>'
+                     '<span class="pg">%d</span></a>' % (n, n, line, folio))
+    return ('    <div class="grp">\n      <div class="gh"><span class="gn">%s</span>'
+            '<span class="gt">%s　第 %d–%d 课</span></div>\n'
+            '      <div class="cols">\n%s\n      </div>\n    </div>'
+            % (no, name, a, b, '\n'.join(items)))
+
+
 def toc_page(lessons):
     rows = toc_entries(lessons)
     by_n = {n: (line, folio) for (n, line, folio) in rows}
-    grp = []
-    for (no, name, a, b) in T.GROUPS:
-        items = []
-        for n in range(a, b + 1):
-            line, folio = by_n[n]
-            items.append('      <a class="it" href="#k%d"><span class="no">%d</span>'
-                         '<span class="ln">%s</span><span class="dots"></span>'
-                         '<span class="pg">%d</span></a>' % (n, n, line, folio))
-        grp.append('    <div class="grp">\n      <div class="gh"><span class="gn">%s</span>'
-                   '<span class="gt">%s　第 %d–%d 课</span></div>\n'
-                   '      <div class="cols">\n%s\n      </div>\n    </div>'
-                   % (no, name, a, b, '\n'.join(items)))
+    blocks = []
+    for (cname, ckey, a, b) in T.CLASSES:
+        inner = [_toc_group(no, name, ga, gb, by_n) for (no, name, ga, gb) in T.GROUPS
+                 if a <= ga and gb <= b]
+        blocks.append('  <div class="cls">\n'
+                      '    <div class="ch"><span class="cn">%s</span><span class="cq">%s</span>'
+                      '<span class="cc">第 %d–%d 课 · %d 课</span></div>\n%s\n  </div>'
+                      % (cname, ckey, a, b, b - a + 1, '\n'.join(inner)))
     return ('<div class="page toc" id="toc">\n'
             '  <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">目 录</span></div>\n'
             '  <h1>目 录</h1>\n'
-            '  <div class="tl">%s课，一课两页。点课号到该课少儿页，成人页在后一页；题下数字为该课少儿页页码。</div>\n'
+            '  <div class="tl">%s课，一课两页。点课号到该课少儿页，成人页在后一页；题下数字为该课少儿页页码。'
+            '三段分作三大类：立人、知世、劝学；每一类下的小节，是读法上的细目。</div>\n'
             '  <div class="qbar"><input id="q" type="search" autocomplete="off" '
             'placeholder="搜原文、字词、人名、典名（全书一百八十六课）　如：中庸／断机杼／项橐" aria-label="查册">'
             '<span class="hint">回车到第一处</span></div>\n'
             '  <div id="hits"></div>\n'
             '%s\n'
             '  <div class="note2">%s</div>\n'
-            '</div>' % (cn_num(int(lessons[-1]['n'])), '\n'.join(grp),
+            '</div>' % (cn_num(int(lessons[-1]['n'])), '\n'.join(blocks),
             ('分段只是读法上的分段，课次照旧一贯到底。续编（第%s课起）另页存目，尚未成课。' % cn_num(T.NEXT_START))
-            if T.NEXT else '分段只是读法上的分段，课次照旧一贯到底。全书读史续编、勤学劝勉两段至此写定，末课为「戒之哉，宜勉力」。'))
+            if T.NEXT else '分段只是读法上的分段，课次照旧一贯到底。全书三类：立人（1–70）、知世（71–139）、'
+                           '劝学（140–186）；十二段为其下细目，末课为「戒之哉，宜勉力」。'))
+
+
+GUIDE = [
+    ('g1', '立人', '何以为人', 1, 70,
+     '从「人之初，性本善」起，先把一个人立住：先孝悌，次见闻，再数文名物、伦常十义，一层一层铺上去。'
+     '到「此十义，人所同」，人的底子算是打好了。',
+     '数文名物一段不是闲笔——天地、四时、五行、六谷、六畜、七情、八音、九族、十义一一数过，'
+     '是让孩子先知道自己在天地人群里站在哪儿。'),
+    ('g2', '知世', '何以知世', 71, 139,
+     '从「凡训蒙，须讲究」起，先立治学次第、再列四书六经，然后一部一部史书读下来：上古世系、周室东迁、'
+     '秦汉六朝、隋唐五代、宋元明清，末了四课讲读史之法。到「通古今，若亲目」，世道的来路算是看清了。',
+     '这一段最容易被读成「背朝代」。其实要紧的不是记住谁在哪年，而是看清治乱为何交替、'
+     '同一套制度为何有时养人、有时伤人。'),
+    ('g3', '劝学', '如何成人', 140, 186,
+     '从「口而诵，心而惟」起，四十七课全是人的实例：仲尼师项橐、赵普读鲁论、囊萤映雪、刘晏七岁、'
+     '梁灏八十二。到「戒之哉，宜勉力」，把前面一百四十课的理，收到自己身上。',
+     '这四十七课占全书四分之一，是全书最重的落点：道理都讲完了，最后问的是——你肯不肯走。'),
+]
+
+
+def guide_page(lessons):
+    rows = []
+    for (cls, name, key, a, b, gd, note) in GUIDE:
+        segs = ['%s %d–%d' % (gn, ga, gb) for (no, gn, ga, gb) in T.GROUPS if a <= ga and gb <= b]
+        rows.append('  <div class="gc %s">\n'
+                    '    <div class="gh2"><span class="nm">%s</span><span class="rq"><em>%s</em>'
+                    '　第 %d–%d 课 · %d 课</span></div>\n'
+                    '    <div class="gd">%s</div>\n'
+                    '    <div class="gn2">%s</div>\n'
+                    '    <div class="gs">%s</div>\n'
+                    '  </div>' % (cls, name, key, a, b, b - a + 1, gd, note, '　'.join(segs)))
+    return ('<div class="page guide" id="guide">\n'
+            '  <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">三 类 读 法</span></div>\n'
+            '  <h1>三 类 读 法</h1>\n'
+            '  <div class="tl">全书一百八十六课，按「读法」分三类，不按篇幅平分：立人七十课，知世六十九课，劝学四十七课。'
+            '三类不是三种内容，是三重任务——先把人立住，再把世看清，最后自己肯走。</div>\n'
+            '%s\n'
+            '  <div class="note2">十二段仍作目录级细目，照着原文次序走；五类（启蒙立身／名物常识／伦常日用／经史世系／勤学劝勉）'
+            '只作编稿内部查用，不入正式目录。三类与十二段并不冲突：类是骨架，段是关节。</div>\n'
+            '</div>' % '\n'.join(rows))
 
 
 def toc_page_next():
@@ -363,7 +439,7 @@ def render_pages(lessons):
 def assemble(lessons, css):
     head = head_pages()
     pages = render_pages(lessons)
-    parts = [cover_for(lessons), toc_page(lessons), toc_page_next(), head]
+    parts = [cover_for(lessons), toc_page(lessons), guide_page(lessons), toc_page_next(), head]
     body = '\n'.join(p for p in parts if p) + ''.join(
         '\n\n<!-- 第 %s 课 -->\n%s' % (d['n'], pages[d['n']]) for d in lessons)
     body = re.sub(r'\n{3,}(?=<!-- 第 \d+ 课 -->)', '\n\n', body)

@@ -34,12 +34,22 @@ a.btn{display:inline-block;padding:14px 26px;background:var(--ochre);color:var(-
 a.btn.ghost{background:transparent;color:var(--ochre);border:1px solid var(--ochre)}
 .spec{margin-top:16px;font-family:"Noto Sans SC",sans-serif;font-size:12.5px;color:var(--muted);line-height:2}
 .spec a{color:var(--ink2)}
+.cls3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:18px}
+.cls3 .c{padding:2px 0 2px 14px;border-left:3px solid var(--ochre)}
+.cls3 .c1{border-left-color:#A2503B}
+.cls3 .c2{border-left-color:#6F8A86}
+.cls3 .c3{border-left-color:#7C9068}
+.cls3 .nm{display:block;font-size:19px;letter-spacing:.2em}
+.cls3 .rg{display:block;font-family:"Noto Sans SC",sans-serif;font-size:11.5px;color:var(--muted);letter-spacing:.06em;margin-top:4px}
+.cls3 .q{font-size:13px;color:var(--ochre);line-height:1.9;margin:8px 0 0;letter-spacing:.02em}
+.cls3 .d{font-size:14px;color:var(--ink2);line-height:1.95;margin:4px 0 0}
 .foot{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);font-family:"Noto Sans SC",sans-serif;font-size:11.5px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;letter-spacing:.06em}
 @media(max-width:640px){
  h1{font-size:30px;letter-spacing:.1em}
  li.lesson{grid-template-columns:1fr;gap:6px}
  .wrap{padding:36px 20px 60px}
  .lede{text-align:left;font-size:15px}
+ .cls3{grid-template-columns:1fr;gap:16px}
 }
 
 .find{display:flex;gap:12px;align-items:center;margin:18px 0 2px;flex-wrap:wrap}
@@ -63,6 +73,16 @@ a.btn.ghost{background:transparent;color:var(--ochre);border:1px solid var(--och
   </div>
 
   <p class="lede">一课一句，一句两页。左页给孩子读——大字、田字格、水墨小画；右页给大人读——字义、出处、中西对照、存疑。<b>同一册书，两种深度。</b>孩子读到画面与故事，大人读到义理与分寸。</p>
+
+  <div class="sec">
+    <h2>三 类 读 法</h2>
+    <div class="cls3">
+      <div class="c c1"><span class="nm">立 人</span><span class="rg">第 1–70 课 · 70 课</span><p class="q">人之初，性本善 → 此十义，人所同</p><p class="d">蒙养、孝悌、数文名物、伦常——先把一个人立住。</p></div>
+      <div class="c c2"><span class="nm">知 世</span><span class="rg">第 71–139 课 · 69 课</span><p class="q">凡训蒙，须讲究 → 通古今，若亲目</p><p class="d">典籍、六经、一部一部史书——再把世道的来路看清。</p></div>
+      <div class="c c3"><span class="nm">劝 学</span><span class="rg">第 140–186 课 · 47 课</span><p class="q">口而诵，心而惟 → 戒之哉，宜勉力</p><p class="d">四十七个实例——最后把理收到自己身上，肯不肯走。</p></div>
+    </div>
+    <div class="spec">三类不是三种内容，是三重任务：立住人、看清世、自己肯走。十二段（蒙以养正…勤学劝勉）仍作目录级细目，照着原文次序走；<a href="book.html">样书目录</a>即按三类分栏，大类之下才是小节。五类（启蒙立身／名物常识／伦常日用／经史世系／勤学劝勉）只作编稿内部查用，不入正式目录。</div>
+  </div>
 
   <div class="sec">
     <h2>已 成 课 次</h2>
@@ -1572,7 +1592,7 @@ a.btn.ghost{background:transparent;color:var(--ochre);border:1px solid var(--och
   </div>
 
   <div class="foot">
-    <span>润泽说 · 少儿启蒙国学读本　v3.0</span>
+    <span>润泽说 · 少儿启蒙国学读本　v3.1</span>
     <span>二〇二六年十一月　·　一课一句，一课两页</span>
   </div>
 

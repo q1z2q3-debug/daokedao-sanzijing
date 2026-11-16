@@ -72,6 +72,21 @@ def main():
     check(folios == list(range(2, 2 * n + 2)), '页码序列不连续（首 %s 尾 %s 共 %d 个）'
           % (folios[:2], folios[-2:], len(folios)))
 
+    # 三大类（读法骨架）：三块须从第 1 课接续到第 n 课，课数自洽，且导读页齐备
+    classes = re.findall(r'<span class="cc">第 (\d+)–(\d+) 课 · (\d+) 课</span>', book)
+    check(len(classes) == 3, '目录大类 %d 个 ≠ 3' % len(classes))
+    if len(classes) == 3:
+        spans = [(int(a), int(b), int(c)) for (a, b, c) in classes]
+        check(spans[0][0] == 1 and spans[-1][1] == n, '大类未覆盖全课（首 %d 尾 %d／N=%d）'
+              % (spans[0][0], spans[-1][1], n))
+        for i in range(2):
+            check(spans[i][1] + 1 == spans[i + 1][0], '大类断续：%d → %d' % (spans[i][1], spans[i + 1][0]))
+        for (a, b, c) in spans:
+            check(b - a + 1 == c, '大类课数不符：第 %d–%d 标记 %d 课' % (a, b, c))
+        check(sum(c for (_, _, c) in spans) == n, '三类课数合计 %d ≠ %d' % (sum(c for (_, _, c) in spans), n))
+        notes.append('三类 %s' % '／'.join('%d' % c for (_, _, c) in spans))
+    check(book.count('<div class="page guide"') == 1, '三类导读页缺失或重复')
+
     book_md5 = md5(book_path)
     twins = []
     for name in os.listdir(ROOT):
