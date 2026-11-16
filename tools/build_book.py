@@ -210,6 +210,9 @@ def load_lessons():
         out.extend(importlib.import_module(name).LESSONS)
     import polish_71_86 as PL
     out = [PL.polish(d) if 71 <= int(d['n']) <= 86 else d for d in out]
+    # v3.2 校勘重排：删 27/28/135、并入 26、替 26/80/136、补 18 课 → 全书 201 课
+    import patch_201 as P2
+    out = P2.apply(out)
     out = sorted(out, key=lambda d: int(d['n']))
     # 统一按书内课次显示：早期模块存的是合稿编号（第103课起），页眉、页脚会与目录错位
     for d in out:
