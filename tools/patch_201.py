@@ -49,13 +49,34 @@ def _adult(secs):
     return out
 
 
+FIGS = json.load(open(os.path.join(ROOT, 'tools', 'figs_patch.json'), encoding='utf-8'))
+
+
+def _figs(d):
+    """改写课沿用原有配图：把 ph 占位换成 fig 块（图随原课走）。"""
+    fixed = FIGS.get(str(d['anchor']))
+    if not fixed:
+        return d['kid']
+    ph = [b for b in d['kid'] if b[0] == 'ph']
+    if not ph:
+        return d['kid']
+    out = []
+    for b in d['kid']:
+        if b[0] == 'ph' and fixed:
+            f = fixed.pop(0)
+            out.append(('fig', f[0], f[1], f[2]))
+        else:
+            out.append(b)
+    return out
+
+
 def _wrap(d):
     return dict(
         n=d.get('n', '0'), no_cn=d.get('no_cn', ''), no_short=d.get('no_short', ''), runhead=d.get('runhead', ''),
         fav=d['fav'], line=d['line'], line_plain=d['line_plain'], pinyin_line=d['pinyin'],
         grid_split=d['grid_split'], readnote=d.get('readnote', ''), note=d.get('note', ''),
         note2=d.get('note2', ''),
-        kid=d['kid'], cards=d['cards'], takeaways=d['takes'],
+        kid=_figs(d), cards=d['cards'], takeaways=d['takes'],
         tip_title='给 爸 爸 妈 妈 的 一 句 话 · 这 一 课 讲 什 么，慢 慢 说 给 孩 子 听',
         tips=d['tips'],
         h2=d['h2'], meta=d['meta'], adult=_adult(d['adult']), doubt=d['doubt'],
