@@ -1,6 +1,11 @@
 name: rebuild
 
 on:
+  push:
+    paths:
+      - 'tools/lessons_*.py'
+      - 'assets/**'
+      - 'tools/build.py'
   workflow_dispatch:
     inputs:
       builder:
@@ -15,6 +20,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: rebuild-book
+  cancel-in-progress: true
+
 jobs:
   rebuild:
     runs-on: ubuntu-latest
@@ -24,7 +33,9 @@ jobs:
         with:
           python-version: '3.12'
       - name: 重新装配
-        run: python3 tools/${{ inputs.builder }} --full
+        run: |
+          BUILDER="${{ inputs.builder }}"
+          python3 "tools/${BUILDER:-build_book.py}" --full
       - name: 校验
         run: python3 tools/verify.py
       - name: 提交变更
