@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>三字经·八十六课合览（样书 v2.2）</title>
+<title>三字经·八十六课合览（样书 v2.3）</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A2503B'/%3E%3Ctext x='32' y='45' font-size='28' text-anchor='middle' fill='%23F8F3E6' font-family='serif'%3E三%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap">
 <style>
@@ -146,6 +146,39 @@ figure.ph .phbox{width:100%;aspect-ratio:4/3;border:1px dashed #D6C9AE;backgroun
 figure.ph .phbox .k{font-family:"Noto Sans SC",sans-serif;font-size:11px;letter-spacing:.28em;color:#BCAF93}
 figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F63;letter-spacing:.12em}
 
+.page.toc,.page.toc2{padding:64px 64px 54px}
+.toc h1,.toc2 h1{font-size:34px;font-weight:600;letter-spacing:.28em;margin:0 0 10px}
+.toc .tl,.toc2 .tl{font-family:"Noto Sans SC",sans-serif;font-size:12.5px;color:var(--muted);line-height:2;letter-spacing:.04em;margin-bottom:26px}
+.toc .qbar{display:flex;align-items:center;gap:12px;margin:0 0 22px;flex-wrap:wrap}
+.toc .qbar input{flex:1 1 300px;padding:11px 14px;border:1px solid var(--line);background:#FCF8EF;font-family:"Noto Serif SC",serif;font-size:16px;color:var(--ink);outline:none;min-width:0}
+.toc .qbar input:focus{border-color:var(--ochre)}
+.toc .qbar .hint{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;color:var(--muted);white-space:nowrap;letter-spacing:.06em}
+#hits{display:none;margin:0 0 24px;font-family:"Noto Sans SC",sans-serif;font-size:12.5px;line-height:1.9;color:var(--ink2)}
+#hits a{display:block;padding:5px 0;border-bottom:1px dashed var(--line);color:var(--ink2);text-decoration:none}
+#hits a:hover{color:var(--ochre)}
+#hits .none{color:var(--muted)}
+.toc .grp{margin-top:20px}
+.toc .gh{display:flex;align-items:baseline;gap:12px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.toc .gn{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;letter-spacing:.24em;color:var(--ochre)}
+.toc .gt{font-family:"Noto Sans SC",sans-serif;font-size:12px;color:var(--muted);letter-spacing:.06em}
+.toc .cols{column-count:2;column-gap:38px;margin-top:8px}
+.toc a.it{display:flex;align-items:baseline;padding:5px 0;font-size:14px;color:var(--ink);text-decoration:none;break-inside:avoid;line-height:1.7}
+.toc a.it:hover .ln{color:var(--ochre)}
+.toc .no{font-family:"Noto Sans SC",sans-serif;font-size:10.5px;color:var(--muted);flex:0 0 28px;letter-spacing:.04em}
+.toc .ln{flex:0 1 auto}
+.toc .dots{flex:1 1 12px;margin:0 6px;border-bottom:1px dotted #D9CDB4;transform:translateY(-3px)}
+.toc .pg{font-family:"Noto Sans SC",sans-serif;font-size:11px;color:var(--muted);flex:0 0 28px;text-align:right}
+.toc2 .cols{column-count:2;column-gap:36px;margin-top:8px}
+.toc2 .it{display:flex;align-items:baseline;padding:5px 0;font-size:13.5px;color:#8C7F63;break-inside:avoid;line-height:1.7}
+.toc2 .no{font-family:"Noto Sans SC",sans-serif;font-size:10.5px;color:#BCAF93;flex:0 0 28px}
+.toc2 .tag{font-family:"Noto Sans SC",sans-serif;font-size:10px;color:#B7A88B;border:1px solid #E6DBC4;padding:0 4px;margin-left:auto;flex:0 0 auto;letter-spacing:.08em}
+.toc .note2,.toc2 .note2{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;color:var(--muted);line-height:2;margin-top:28px;border-top:1px solid var(--line);padding-top:14px}
+.go-toc{position:fixed;right:16px;bottom:16px;z-index:9;display:flex;font-family:"Noto Sans SC",sans-serif;font-size:11.5px}
+.go-toc a{padding:8px 11px;background:#FBF6E9;border:1px solid #E0D5BD;color:var(--ink2);text-decoration:none;letter-spacing:.14em;box-shadow:0 4px 14px rgba(60,45,30,.10)}
+.go-toc a+a{border-left:0}
+.go-toc a:hover{color:var(--ochre)}
+@media(max-width:760px){.toc,.toc2{padding:40px 22px 34px}.toc .cols,.toc2 .cols{column-count:1}.go-toc{right:8px;bottom:8px}}
+
 .grid-cols.tight{gap:34px}
 .tight .grid{width:74px;height:74px}
 .tight .grid .ch{font-size:44px}
@@ -160,9 +193,195 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
   <h1>三 字 经</h1>
   <div class="t2">一句一故事 · 一图一世界</div>
   <div class="line"></div>
-  <div class="info">第一课至第八十六课　·　人之初　至　知终始<br>亲子共读 4–9 岁　·　每课双页：少儿读本 ／ 成人研学<br>样书　v2.2　·　二〇二六年十一月</div>
+  <div class="info">第一课至第八十六课　·　人之初　至　知终始<br>亲子共读 4–9 岁　·　每课双页：少儿读本 ／ 成人研学<br>样书　v2.3　·　二〇二六年十一月</div>
 </div>
-<div class="page">
+<div class="page toc" id="toc">
+  <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">目 录</span></div>
+  <h1>目 录</h1>
+  <div class="tl">八十六课，一课两页。点课号到该课少儿页，成人页在后一页；题下数字为该课少儿页页码。</div>
+  <div class="qbar"><input id="q" type="search" autocomplete="off" placeholder="搜原文、字词、人名、典名（含续编存目）　如：中庸／断机杼／项橐" aria-label="查册"><span class="hint">回车到第一处</span></div>
+  <div id="hits"></div>
+    <div class="grp">
+      <div class="gh"><span class="gn">一</span><span class="gt">蒙以养正　第 1–13 课</span></div>
+      <div class="cols">
+      <a class="it" href="#k1"><span class="no">1</span><span class="ln">人之初，性本善</span><span class="dots"></span><span class="pg">2</span></a>
+      <a class="it" href="#k2"><span class="no">2</span><span class="ln">性相近，习相远</span><span class="dots"></span><span class="pg">4</span></a>
+      <a class="it" href="#k3"><span class="no">3</span><span class="ln">苟不教，性乃迁</span><span class="dots"></span><span class="pg">6</span></a>
+      <a class="it" href="#k4"><span class="no">4</span><span class="ln">教之道，贵以专</span><span class="dots"></span><span class="pg">8</span></a>
+      <a class="it" href="#k5"><span class="no">5</span><span class="ln">昔孟母，择邻处。子不学，断机杼</span><span class="dots"></span><span class="pg">10</span></a>
+      <a class="it" href="#k6"><span class="no">6</span><span class="ln">窦燕山，有义方</span><span class="dots"></span><span class="pg">12</span></a>
+      <a class="it" href="#k7"><span class="no">7</span><span class="ln">教五子，名俱扬</span><span class="dots"></span><span class="pg">14</span></a>
+      <a class="it" href="#k8"><span class="no">8</span><span class="ln">养不教，父之过</span><span class="dots"></span><span class="pg">16</span></a>
+      <a class="it" href="#k9"><span class="no">9</span><span class="ln">教不严，师之惰</span><span class="dots"></span><span class="pg">18</span></a>
+      <a class="it" href="#k10"><span class="no">10</span><span class="ln">子不学，非所宜</span><span class="dots"></span><span class="pg">20</span></a>
+      <a class="it" href="#k11"><span class="no">11</span><span class="ln">幼不学，老何为</span><span class="dots"></span><span class="pg">22</span></a>
+      <a class="it" href="#k12"><span class="no">12</span><span class="ln">玉不琢，不成器</span><span class="dots"></span><span class="pg">24</span></a>
+      <a class="it" href="#k13"><span class="no">13</span><span class="ln">人不学，不知义</span><span class="dots"></span><span class="pg">26</span></a>
+      </div>
+    </div>
+    <div class="grp">
+      <div class="gh"><span class="gn">二</span><span class="gt">孝悌为先　第 14–20 课</span></div>
+      <div class="cols">
+      <a class="it" href="#k14"><span class="no">14</span><span class="ln">为人子，方少时</span><span class="dots"></span><span class="pg">28</span></a>
+      <a class="it" href="#k15"><span class="no">15</span><span class="ln">亲师友，习礼仪</span><span class="dots"></span><span class="pg">30</span></a>
+      <a class="it" href="#k16"><span class="no">16</span><span class="ln">香九龄，能温席</span><span class="dots"></span><span class="pg">32</span></a>
+      <a class="it" href="#k17"><span class="no">17</span><span class="ln">孝于亲，所当执</span><span class="dots"></span><span class="pg">34</span></a>
+      <a class="it" href="#k18"><span class="no">18</span><span class="ln">融四岁，能让梨</span><span class="dots"></span><span class="pg">36</span></a>
+      <a class="it" href="#k19"><span class="no">19</span><span class="ln">弟于长，宜先知</span><span class="dots"></span><span class="pg">38</span></a>
+      <a class="it" href="#k20"><span class="no">20</span><span class="ln">首孝悌，次见闻</span><span class="dots"></span><span class="pg">40</span></a>
+      </div>
+    </div>
+    <div class="grp">
+      <div class="gh"><span class="gn">三</span><span class="gt">数文名物　第 21–46 课</span></div>
+      <div class="cols">
+      <a class="it" href="#k21"><span class="no">21</span><span class="ln">知某数，识某文</span><span class="dots"></span><span class="pg">42</span></a>
+      <a class="it" href="#k22"><span class="no">22</span><span class="ln">一而十，十而百</span><span class="dots"></span><span class="pg">44</span></a>
+      <a class="it" href="#k23"><span class="no">23</span><span class="ln">百而千，千而万</span><span class="dots"></span><span class="pg">46</span></a>
+      <a class="it" href="#k24"><span class="no">24</span><span class="ln">三才者，天地人</span><span class="dots"></span><span class="pg">48</span></a>
+      <a class="it" href="#k25"><span class="no">25</span><span class="ln">三光者，日月星</span><span class="dots"></span><span class="pg">50</span></a>
+      <a class="it" href="#k26"><span class="no">26</span><span class="ln">三纲者，君臣义</span><span class="dots"></span><span class="pg">52</span></a>
+      <a class="it" href="#k27"><span class="no">27</span><span class="ln">父子亲</span><span class="dots"></span><span class="pg">54</span></a>
+      <a class="it" href="#k28"><span class="no">28</span><span class="ln">夫妇顺</span><span class="dots"></span><span class="pg">56</span></a>
+      <a class="it" href="#k29"><span class="no">29</span><span class="ln">曰春夏，曰秋冬</span><span class="dots"></span><span class="pg">58</span></a>
+      <a class="it" href="#k30"><span class="no">30</span><span class="ln">此四时，运不穷</span><span class="dots"></span><span class="pg">60</span></a>
+      <a class="it" href="#k31"><span class="no">31</span><span class="ln">曰南北，曰西东</span><span class="dots"></span><span class="pg">62</span></a>
+      <a class="it" href="#k32"><span class="no">32</span><span class="ln">此四方，应乎中</span><span class="dots"></span><span class="pg">64</span></a>
+      <a class="it" href="#k33"><span class="no">33</span><span class="ln">曰水火，木金土</span><span class="dots"></span><span class="pg">66</span></a>
+      <a class="it" href="#k34"><span class="no">34</span><span class="ln">此五行，本乎数</span><span class="dots"></span><span class="pg">68</span></a>
+      <a class="it" href="#k35"><span class="no">35</span><span class="ln">十干者，甲至癸</span><span class="dots"></span><span class="pg">70</span></a>
+      <a class="it" href="#k36"><span class="no">36</span><span class="ln">十二支，子至亥</span><span class="dots"></span><span class="pg">72</span></a>
+      <a class="it" href="#k37"><span class="no">37</span><span class="ln">曰黄道，日所躔</span><span class="dots"></span><span class="pg">74</span></a>
+      <a class="it" href="#k38"><span class="no">38</span><span class="ln">曰赤道，当中权</span><span class="dots"></span><span class="pg">76</span></a>
+      <a class="it" href="#k39"><span class="no">39</span><span class="ln">赤道下，温暖极</span><span class="dots"></span><span class="pg">78</span></a>
+      <a class="it" href="#k40"><span class="no">40</span><span class="ln">我中华，在东北</span><span class="dots"></span><span class="pg">80</span></a>
+      <a class="it" href="#k41"><span class="no">41</span><span class="ln">曰江河，曰淮济</span><span class="dots"></span><span class="pg">82</span></a>
+      <a class="it" href="#k42"><span class="no">42</span><span class="ln">此四渎，水之纪</span><span class="dots"></span><span class="pg">84</span></a>
+      <a class="it" href="#k43"><span class="no">43</span><span class="ln">曰岱华，嵩恒衡</span><span class="dots"></span><span class="pg">86</span></a>
+      <a class="it" href="#k44"><span class="no">44</span><span class="ln">此五岳，山之名</span><span class="dots"></span><span class="pg">88</span></a>
+      <a class="it" href="#k45"><span class="no">45</span><span class="ln">古九州，今改制</span><span class="dots"></span><span class="pg">90</span></a>
+      <a class="it" href="#k46"><span class="no">46</span><span class="ln">称行省，三十五</span><span class="dots"></span><span class="pg">92</span></a>
+      </div>
+    </div>
+    <div class="grp">
+      <div class="gh"><span class="gn">四</span><span class="gt">伦常日用　第 47–70 课</span></div>
+      <div class="cols">
+      <a class="it" href="#k47"><span class="no">47</span><span class="ln">曰士农，曰工商</span><span class="dots"></span><span class="pg">94</span></a>
+      <a class="it" href="#k48"><span class="no">48</span><span class="ln">此四民，国之良</span><span class="dots"></span><span class="pg">96</span></a>
+      <a class="it" href="#k49"><span class="no">49</span><span class="ln">曰仁义，礼智信</span><span class="dots"></span><span class="pg">98</span></a>
+      <a class="it" href="#k50"><span class="no">50</span><span class="ln">此五常，不容紊</span><span class="dots"></span><span class="pg">100</span></a>
+      <a class="it" href="#k51"><span class="no">51</span><span class="ln">地所生，有草木</span><span class="dots"></span><span class="pg">102</span></a>
+      <a class="it" href="#k52"><span class="no">52</span><span class="ln">此植物，遍水陆</span><span class="dots"></span><span class="pg">104</span></a>
+      <a class="it" href="#k53"><span class="no">53</span><span class="ln">有虫鱼，有鸟兽</span><span class="dots"></span><span class="pg">106</span></a>
+      <a class="it" href="#k54"><span class="no">54</span><span class="ln">此动物，能飞走</span><span class="dots"></span><span class="pg">108</span></a>
+      <a class="it" href="#k55"><span class="no">55</span><span class="ln">稻粱菽，麦黍稷</span><span class="dots"></span><span class="pg">110</span></a>
+      <a class="it" href="#k56"><span class="no">56</span><span class="ln">此六谷，人所食</span><span class="dots"></span><span class="pg">112</span></a>
+      <a class="it" href="#k57"><span class="no">57</span><span class="ln">马牛羊，鸡犬豕</span><span class="dots"></span><span class="pg">114</span></a>
+      <a class="it" href="#k58"><span class="no">58</span><span class="ln">此六畜，人所饲</span><span class="dots"></span><span class="pg">116</span></a>
+      <a class="it" href="#k59"><span class="no">59</span><span class="ln">曰喜怒，曰哀惧</span><span class="dots"></span><span class="pg">118</span></a>
+      <a class="it" href="#k60"><span class="no">60</span><span class="ln">爱恶欲，七情具</span><span class="dots"></span><span class="pg">120</span></a>
+      <a class="it" href="#k61"><span class="no">61</span><span class="ln">匏土革，木石金。丝与竹，乃八音</span><span class="dots"></span><span class="pg">122</span></a>
+      <a class="it" href="#k62"><span class="no">62</span><span class="ln">高曾祖，父而身</span><span class="dots"></span><span class="pg">124</span></a>
+      <a class="it" href="#k63"><span class="no">63</span><span class="ln">身而子，子而孙</span><span class="dots"></span><span class="pg">126</span></a>
+      <a class="it" href="#k64"><span class="no">64</span><span class="ln">自子孙，至玄曾</span><span class="dots"></span><span class="pg">128</span></a>
+      <a class="it" href="#k65"><span class="no">65</span><span class="ln">乃九族，人之伦</span><span class="dots"></span><span class="pg">130</span></a>
+      <a class="it" href="#k66"><span class="no">66</span><span class="ln">父子恩，夫妇从</span><span class="dots"></span><span class="pg">132</span></a>
+      <a class="it" href="#k67"><span class="no">67</span><span class="ln">兄则友，弟则恭</span><span class="dots"></span><span class="pg">134</span></a>
+      <a class="it" href="#k68"><span class="no">68</span><span class="ln">长幼序，友与朋</span><span class="dots"></span><span class="pg">136</span></a>
+      <a class="it" href="#k69"><span class="no">69</span><span class="ln">君则敬，臣则忠</span><span class="dots"></span><span class="pg">138</span></a>
+      <a class="it" href="#k70"><span class="no">70</span><span class="ln">此十义，人所同</span><span class="dots"></span><span class="pg">140</span></a>
+      </div>
+    </div>
+    <div class="grp">
+      <div class="gh"><span class="gn">五</span><span class="gt">典籍经史　第 71–86 课</span></div>
+      <div class="cols">
+      <a class="it" href="#k71"><span class="no">71</span><span class="ln">凡训蒙，须讲究。详训诂，明句读</span><span class="dots"></span><span class="pg">142</span></a>
+      <a class="it" href="#k72"><span class="no">72</span><span class="ln">为学者，必有初。小学终，至四书</span><span class="dots"></span><span class="pg">144</span></a>
+      <a class="it" href="#k73"><span class="no">73</span><span class="ln">论语者，二十篇。群弟子，记善言</span><span class="dots"></span><span class="pg">146</span></a>
+      <a class="it" href="#k74"><span class="no">74</span><span class="ln">孟子者，七篇止。讲道德，说仁义</span><span class="dots"></span><span class="pg">148</span></a>
+      <a class="it" href="#k75"><span class="no">75</span><span class="ln">作中庸，子思笔。中不偏，庸不易</span><span class="dots"></span><span class="pg">150</span></a>
+      <a class="it" href="#k76"><span class="no">76</span><span class="ln">作大学，乃曾子。自修齐，至平治</span><span class="dots"></span><span class="pg">152</span></a>
+      <a class="it" href="#k77"><span class="no">77</span><span class="ln">孝经通，四书熟。如六经，始可读</span><span class="dots"></span><span class="pg">154</span></a>
+      <a class="it" href="#k78"><span class="no">78</span><span class="ln">诗书易，礼春秋。号六经，当讲求</span><span class="dots"></span><span class="pg">156</span></a>
+      <a class="it" href="#k79"><span class="no">79</span><span class="ln">有连山，有归藏。有周易，三易详</span><span class="dots"></span><span class="pg">158</span></a>
+      <a class="it" href="#k80"><span class="no">80</span><span class="ln">典谟训，诰誓命。号周书，七十篇</span><span class="dots"></span><span class="pg">160</span></a>
+      <a class="it" href="#k81"><span class="no">81</span><span class="ln">有国风，有雅颂。号四诗，当讽咏</span><span class="dots"></span><span class="pg">162</span></a>
+      <a class="it" href="#k82"><span class="no">82</span><span class="ln">诗既亡，春秋作。寓褒贬，别善恶</span><span class="dots"></span><span class="pg">164</span></a>
+      <a class="it" href="#k83"><span class="no">83</span><span class="ln">三传者，有公羊。有左氏，有谷梁</span><span class="dots"></span><span class="pg">166</span></a>
+      <a class="it" href="#k84"><span class="no">84</span><span class="ln">经既明，方读子。撮其要，记其事</span><span class="dots"></span><span class="pg">168</span></a>
+      <a class="it" href="#k85"><span class="no">85</span><span class="ln">五子者，有荀扬。文中子，及老庄</span><span class="dots"></span><span class="pg">170</span></a>
+      <a class="it" href="#k86"><span class="no">86</span><span class="ln">经子通，读诸史。考世系，知终始</span><span class="dots"></span><span class="pg">172</span></a>
+      </div>
+    </div>
+  <div class="note2">分段只是读法上的分段，课次照旧一贯到底。续编（第八十七课起）另页存目，尚未成课。</div>
+</div>
+<div class="page toc2" id="toc2">
+  <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">续 编 存 目</span></div>
+  <h1>续 编 存 目</h1>
+  <div class="tl">「考世系，知终始」之后，三字经还有读史与勤学两大段。全段尚未成课，先按通行本四句一组占位排号，留出位置；成课时以校定底本为定，课次可整体重排。</div>
+    <div class="grp">
+      <div class="gh"><span class="gn">六</span><span class="gt">读史续编　第 87–113 课</span></div>
+      <div class="cols">
+      <div class="it"><span class="no">87</span><span class="ln">自羲农，至黄帝。号三皇，居上世</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">88</span><span class="ln">唐有虞，号二帝。相揖逊，称盛世</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">89</span><span class="ln">夏有禹，商有汤。周文武，称三王</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">90</span><span class="ln">夏传子，家天下。四百载，迁夏社</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">91</span><span class="ln">汤伐夏，国号商。六百载，至纣亡</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">92</span><span class="ln">周武王，始诛纣。八百载，最长久</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">93</span><span class="ln">周辙东，王纲坠。逞干戈，尚游说</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">94</span><span class="ln">始春秋，终战国。五霸强，七雄出</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">95</span><span class="ln">嬴秦氏，始兼并。传二世，楚汉争</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">96</span><span class="ln">高祖兴，汉业建。至孝平，王莽篡</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">97</span><span class="ln">光武兴，为东汉。四百年，终于献</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">98</span><span class="ln">魏蜀吴，争汉鼎。号三国，迄两晋</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">99</span><span class="ln">宋齐继，梁陈承。为南朝，都金陵</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">100</span><span class="ln">北元魏，分东西。宇文周，与高齐</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">101</span><span class="ln">迨至隋，一土宇。不再传，失统绪</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">102</span><span class="ln">唐高祖，起义师。除隋乱，创国基</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">103</span><span class="ln">二十传，三百载。梁灭之，国乃改</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">104</span><span class="ln">梁唐晋，及汉周。称五代，皆有由</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">105</span><span class="ln">炎宋兴，受周禅。十八传，南北混</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">106</span><span class="ln">辽与金，帝号纷。迨灭辽，宋犹存</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">107</span><span class="ln">至元兴，金绪歇。有宋世，一同灭</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">108</span><span class="ln">并中国，兼戎狄。九十年，国祚废</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">109</span><span class="ln">明太祖，久亲师。传建文，方四祀</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">110</span><span class="ln">迁北京，永乐嗣。迨崇祯，煤山逝</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">111</span><span class="ln">清太祖，膺景命。靖四方，克大定</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">112</span><span class="ln">至世祖，乃大同。十二世，清祚终</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">113</span><span class="ln">廿二史，全在兹。载治乱，知兴衰</span><span class="tag">待写</span></div>
+      </div>
+    </div>
+    <div class="grp">
+      <div class="gh"><span class="gn">七</span><span class="gt">勤学劝勉　第 114–137 课</span></div>
+      <div class="cols">
+      <div class="it"><span class="no">114</span><span class="ln">读史者，考实录。通古今，若亲目</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">115</span><span class="ln">口而诵，心而惟。朝于斯，夕于斯</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">116</span><span class="ln">昔仲尼，师项橐。古圣贤，尚勤学</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">117</span><span class="ln">赵中令，读鲁论。彼既仕，学且勤</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">118</span><span class="ln">披蒲编，削竹简。彼无书，且知勉</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">119</span><span class="ln">头悬梁，锥刺股。彼不教，自勤苦</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">120</span><span class="ln">如囊萤，如映雪。家虽贫，学不辍</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">121</span><span class="ln">如负薪，如挂角。身虽劳，犹苦卓</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">122</span><span class="ln">苏老泉，二十七。始发愤，读书籍</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">123</span><span class="ln">彼既老，犹悔迟。尔小生，宜早思</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">124</span><span class="ln">若梁灏，八十二。对大廷，魁多士</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">125</span><span class="ln">彼既成，众称异。尔小生，宜立志</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">126</span><span class="ln">莹八岁，能咏诗。泌七岁，能赋棋</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">127</span><span class="ln">彼颖悟，人称奇。尔幼学，当效之</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">128</span><span class="ln">蔡文姬，能辨琴。谢道韫，能咏吟</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">129</span><span class="ln">彼女子，且聪敏。尔男子，当自警</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">130</span><span class="ln">唐刘晏，方七岁。举神童，作正字</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">131</span><span class="ln">彼虽幼，身已仕。尔幼学，勉而致。有为者，亦若是</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">132</span><span class="ln">犬守夜，鸡司晨。苟不学，曷为人</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">133</span><span class="ln">蚕吐丝，蜂酿蜜。人不学，不如物</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">134</span><span class="ln">幼而学，壮而行。上致君，下泽民</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">135</span><span class="ln">扬名声，显父母。光于前，裕于后</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">136</span><span class="ln">人遗子，金满籯。我教子，唯一经</span><span class="tag">待写</span></div>
+      <div class="it"><span class="no">137</span><span class="ln">勤有功，戏无益。戒之哉，宜勉力</span><span class="tag">待写</span></div>
+      </div>
+    </div>
+  <div class="note2">存目句依通行本录，未校异文；课次为占位，不作准。</div>
+</div>
+<div class="page" id="k1">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第一课 · 人之初</span></div>
 
   <div class="lesson-no">第 一 课</div>
@@ -332,7 +551,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 
   <div class="folio" style="color:#B4A88F">— 3 —</div>
 </div>
-<div class="page">
+<div class="page" id="k2">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第 二 课</span></div>
 
   <div class="lesson-no">第 二 课</div>
@@ -477,7 +696,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 
   <div class="folio">— 5 —</div>
 </div>
-<div class="page">
+<div class="page" id="k3">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第 三 课</span></div>
 
   <div class="lesson-no">第 三 课</div>
@@ -609,7 +828,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 
   <div class="folio" style="color:#B4A88F">— 7 —</div>
 </div>
-<div class="page">
+<div class="page" id="k4">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第 四 课</span></div>
   <div class="lesson-no">第 四 课</div>
   <h1>教之道，贵以专。</h1>
@@ -758,7 +977,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 
   <div class="folio" style="color:#B4A88F">— 9 —</div>
 </div>
-<div class="page">
+<div class="page" id="k5">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第 五 课</span></div>
   <div class="lesson-no">第 五 课</div>
   <h1>昔孟母，择邻处。<br>子不学，断机杼。</h1>
@@ -890,7 +1109,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 6 课 -->
-<div class="page">
+<div class="page" id="k6">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第六课 · 窦燕山</span></div>
   <div class="lesson-no">第 六 课</div>
   <h1>窦燕山，有义方。</h1>
@@ -1000,7 +1219,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 7 课 -->
-<div class="page">
+<div class="page" id="k7">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第七课 · 教五子</span></div>
   <div class="lesson-no">第 七 课</div>
   <h1>教五子，名俱扬。</h1>
@@ -1109,7 +1328,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 8 课 -->
-<div class="page">
+<div class="page" id="k8">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第八课 · 养不教</span></div>
   <div class="lesson-no">第 八 课</div>
   <h1>养不教，父之过。</h1>
@@ -1219,7 +1438,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 9 课 -->
-<div class="page">
+<div class="page" id="k9">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第九课 · 教不严</span></div>
   <div class="lesson-no">第 九 课</div>
   <h1>教不严，师之惰。</h1>
@@ -1328,7 +1547,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 10 课 -->
-<div class="page">
+<div class="page" id="k10">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第十课 · 子不学</span></div>
   <div class="lesson-no">第 十 课</div>
   <h1>子不学，非所宜。</h1>
@@ -1437,7 +1656,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 11 课 -->
-<div class="page">
+<div class="page" id="k11">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第十一课 · 幼不学</span></div>
   <div class="lesson-no">第 十 一 课</div>
   <h1>幼不学，老何为。</h1>
@@ -1546,7 +1765,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 12 课 -->
-<div class="page">
+<div class="page" id="k12">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第十二课 · 玉不琢</span></div>
   <div class="lesson-no">第 十 二 课</div>
   <h1>玉不琢，不成器。</h1>
@@ -1656,7 +1875,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 13 课 -->
-<div class="page">
+<div class="page" id="k13">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第十三课 · 人不学</span></div>
   <div class="lesson-no">第 十 三 课</div>
   <h1>人不学，不知义。</h1>
@@ -1764,7 +1983,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 14 课 -->
-<div class="page">
+<div class="page" id="k14">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第十四课 · 为人子</span></div>
   <div class="lesson-no">第 十 四 课</div>
   <h1>为人子，方少时。</h1>
@@ -1869,7 +2088,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 15 课 -->
-<div class="page">
+<div class="page" id="k15">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第十五课 · 亲师友</span></div>
   <div class="lesson-no">第 十 五 课</div>
   <h1>亲师友，习礼仪。</h1>
@@ -1978,7 +2197,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 16 课 -->
-<div class="page">
+<div class="page" id="k16">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第十六课 · 香九龄</span></div>
   <div class="lesson-no">第 十 六 课</div>
   <h1>香九龄，能温席。</h1>
@@ -2092,7 +2311,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 17 课 -->
-<div class="page">
+<div class="page" id="k17">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第十七课 · 孝于亲</span></div>
   <div class="lesson-no">第 十 七 课</div>
   <h1>孝于亲，所当执。</h1>
@@ -2203,7 +2422,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 18 课 -->
-<div class="page">
+<div class="page" id="k18">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第十八课 · 融四岁</span></div>
   <div class="lesson-no">第 十 八 课</div>
   <h1>融四岁，能让梨。</h1>
@@ -2315,7 +2534,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 19 课 -->
-<div class="page">
+<div class="page" id="k19">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第十九课 · 弟于长</span></div>
   <div class="lesson-no">第 十 九 课</div>
   <h1>弟于长，宜先知。</h1>
@@ -2424,7 +2643,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 20 课 -->
-<div class="page">
+<div class="page" id="k20">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第二十课 · 首孝悌</span></div>
   <div class="lesson-no">第 二 十 课</div>
   <h1>首孝悌，次见闻。</h1>
@@ -2534,7 +2753,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 21 课 -->
-<div class="page">
+<div class="page" id="k21">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第二十一课 · 知某数</span></div>
   <div class="lesson-no">第 二 十 一 课</div>
   <h1>知某数，识某文。</h1>
@@ -2645,7 +2864,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 22 课 -->
-<div class="page">
+<div class="page" id="k22">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第二十二课 · 一而十</span></div>
   <div class="lesson-no">第 二 十 二 课</div>
   <h1>一而十，十而百。</h1>
@@ -2755,7 +2974,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 23 课 -->
-<div class="page">
+<div class="page" id="k23">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第二十三课 · 百而千</span></div>
   <div class="lesson-no">第 二 十 三 课</div>
   <h1>百而千，千而万。</h1>
@@ -2866,7 +3085,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 24 课 -->
-<div class="page">
+<div class="page" id="k24">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第二十四课 · 三才者</span></div>
   <div class="lesson-no">第 二 十 四 课</div>
   <h1>三才者，天地人。</h1>
@@ -2979,7 +3198,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 25 课 -->
-<div class="page">
+<div class="page" id="k25">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第二十五课 · 三光者</span></div>
   <div class="lesson-no">第 二 十 五 课</div>
   <h1>三光者，日月星。</h1>
@@ -3090,7 +3309,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 26 课 -->
-<div class="page">
+<div class="page" id="k26">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第二十六课 · 三纲者</span></div>
   <div class="lesson-no">第 二 十 六 课</div>
   <h1>三纲者，君臣义。</h1>
@@ -3200,7 +3419,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 27 课 -->
-<div class="page">
+<div class="page" id="k27">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第二十七课 · 父子亲</span></div>
   <div class="lesson-no">第 二 十 七 课</div>
   <h1>父子亲。</h1>
@@ -3311,7 +3530,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 28 课 -->
-<div class="page">
+<div class="page" id="k28">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第二十八课 · 夫妇顺</span></div>
   <div class="lesson-no">第 二 十 八 课</div>
   <h1>夫妇顺。</h1>
@@ -3421,7 +3640,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 29 课 -->
-<div class="page">
+<div class="page" id="k29">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第二十九课 · 曰春夏</span></div>
   <div class="lesson-no">第 二 十 九 课</div>
   <h1>曰春夏，曰秋冬。</h1>
@@ -3535,7 +3754,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 30 课 -->
-<div class="page">
+<div class="page" id="k30">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第三十课 · 此四时</span></div>
   <div class="lesson-no">第 三 十 课</div>
   <h1>此四时，运不穷。</h1>
@@ -3644,7 +3863,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 31 课 -->
-<div class="page">
+<div class="page" id="k31">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第三十一课 · 曰南北</span></div>
   <div class="lesson-no">第 三 十 一 课</div>
   <h1>曰南北，曰西东。</h1>
@@ -3753,7 +3972,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 32 课 -->
-<div class="page">
+<div class="page" id="k32">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第三十二课 · 此四方</span></div>
   <div class="lesson-no">第 三 十 二 课</div>
   <h1>此四方，应乎中。</h1>
@@ -3862,7 +4081,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 33 课 -->
-<div class="page">
+<div class="page" id="k33">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第三十三课 · 曰水火</span></div>
   <div class="lesson-no">第 三 十 三 课</div>
   <h1>曰水火，木金土。</h1>
@@ -3973,7 +4192,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 34 课 -->
-<div class="page">
+<div class="page" id="k34">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第三十四课 · 此五行</span></div>
   <div class="lesson-no">第 三 十 四 课</div>
   <h1>此五行，本乎数。</h1>
@@ -4082,7 +4301,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 35 课 -->
-<div class="page">
+<div class="page" id="k35">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第三十五课 · 十干者</span></div>
   <div class="lesson-no">第 三 十 五 课</div>
   <h1>十干者，甲至癸。</h1>
@@ -4193,7 +4412,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 36 课 -->
-<div class="page">
+<div class="page" id="k36">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第三十六课 · 十二支</span></div>
   <div class="lesson-no">第 三 十 六 课</div>
   <h1>十二支，子至亥。</h1>
@@ -4304,7 +4523,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 37 课 -->
-<div class="page">
+<div class="page" id="k37">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第三十七课 · 曰黄道</span></div>
   <div class="lesson-no">第 三 十 七 课</div>
   <h1>曰黄道，日所躔。</h1>
@@ -4410,7 +4629,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 38 课 -->
-<div class="page">
+<div class="page" id="k38">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第三十八课 · 曰赤道</span></div>
   <div class="lesson-no">第 三 十 八 课</div>
   <h1>曰赤道，当中权。</h1>
@@ -4518,7 +4737,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 39 课 -->
-<div class="page">
+<div class="page" id="k39">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第三十九课 · 赤道下</span></div>
   <div class="lesson-no">第 三 十 九 课</div>
   <h1>赤道下，温暖极。</h1>
@@ -4625,7 +4844,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 40 课 -->
-<div class="page">
+<div class="page" id="k40">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第四十课 · 我中华</span></div>
   <div class="lesson-no">第 四 十 课</div>
   <h1>我中华，在东北。</h1>
@@ -4733,7 +4952,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 41 课 -->
-<div class="page">
+<div class="page" id="k41">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第四十一课 · 曰江河</span></div>
   <div class="lesson-no">第 四 十 一 课</div>
   <h1>曰江河，曰淮济。</h1>
@@ -4840,7 +5059,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 42 课 -->
-<div class="page">
+<div class="page" id="k42">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第四十二课 · 此四渎</span></div>
   <div class="lesson-no">第 四 十 二 课</div>
   <h1>此四渎，水之纪。</h1>
@@ -4947,7 +5166,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 43 课 -->
-<div class="page">
+<div class="page" id="k43">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第四十三课 · 曰岱华</span></div>
   <div class="lesson-no">第 四 十 三 课</div>
   <h1>曰岱华，嵩恒衡。</h1>
@@ -5056,7 +5275,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 44 课 -->
-<div class="page">
+<div class="page" id="k44">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第四十四课 · 此五岳</span></div>
   <div class="lesson-no">第 四 十 四 课</div>
   <h1>此五岳，山之名。</h1>
@@ -5163,7 +5382,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 45 课 -->
-<div class="page">
+<div class="page" id="k45">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第四十五课 · 古九州</span></div>
   <div class="lesson-no">第 四 十 五 课</div>
   <h1>古九州，今改制。</h1>
@@ -5271,7 +5490,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 46 课 -->
-<div class="page">
+<div class="page" id="k46">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第四十六课 · 称行省</span></div>
   <div class="lesson-no">第 四 十 六 课</div>
   <h1>称行省，三十五。</h1>
@@ -5387,7 +5606,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 47 课 -->
-<div class="page">
+<div class="page" id="k47">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第四十七课 · 曰士农</span></div>
   <div class="lesson-no">第 四 十 七 课</div>
   <h1>曰士农，曰工商。</h1>
@@ -5500,7 +5719,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 48 课 -->
-<div class="page">
+<div class="page" id="k48">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第四十八课 · 此四民</span></div>
   <div class="lesson-no">第 四 十 八 课</div>
   <h1>此四民，国之良。</h1>
@@ -5610,7 +5829,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 49 课 -->
-<div class="page">
+<div class="page" id="k49">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第四十九课 · 曰仁义</span></div>
   <div class="lesson-no">第 四 十 九 课</div>
   <h1>曰仁义，礼智信。</h1>
@@ -5721,7 +5940,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 50 课 -->
-<div class="page">
+<div class="page" id="k50">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第五十课 · 此五常</span></div>
   <div class="lesson-no">第 五 十 课</div>
   <h1>此五常，不容紊。</h1>
@@ -5832,7 +6051,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 51 课 -->
-<div class="page">
+<div class="page" id="k51">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第五十一课 · 地所生</span></div>
   <div class="lesson-no">第 五 十 一 课</div>
   <h1>地所生，有草木。</h1>
@@ -5942,7 +6161,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 52 课 -->
-<div class="page">
+<div class="page" id="k52">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第五十二课 · 此植物</span></div>
   <div class="lesson-no">第 五 十 二 课</div>
   <h1>此植物，遍水陆。</h1>
@@ -6052,7 +6271,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 53 课 -->
-<div class="page">
+<div class="page" id="k53">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第五十三课 · 有虫鱼</span></div>
   <div class="lesson-no">第 五 十 三 课</div>
   <h1>有虫鱼，有鸟兽。</h1>
@@ -6162,7 +6381,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 54 课 -->
-<div class="page">
+<div class="page" id="k54">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第五十四课 · 此动物</span></div>
   <div class="lesson-no">第 五 十 四 课</div>
   <h1>此动物，能飞走。</h1>
@@ -6271,7 +6490,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 55 课 -->
-<div class="page">
+<div class="page" id="k55">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第五十五课 · 稻粱菽</span></div>
   <div class="lesson-no">第 五 十 五 课</div>
   <h1>稻粱菽，麦黍稷。</h1>
@@ -6382,7 +6601,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 56 课 -->
-<div class="page">
+<div class="page" id="k56">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第五十六课 · 此六谷</span></div>
   <div class="lesson-no">第 五 十 六 课</div>
   <h1>此六谷，人所食。</h1>
@@ -6491,7 +6710,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 57 课 -->
-<div class="page">
+<div class="page" id="k57">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第五十七课 · 马牛羊</span></div>
   <div class="lesson-no">第 五 十 七 课</div>
   <h1>马牛羊，鸡犬豕。</h1>
@@ -6600,7 +6819,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 58 课 -->
-<div class="page">
+<div class="page" id="k58">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第五十八课 · 此六畜</span></div>
   <div class="lesson-no">第 五 十 八 课</div>
   <h1>此六畜，人所饲。</h1>
@@ -6709,7 +6928,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 59 课 -->
-<div class="page">
+<div class="page" id="k59">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第五十九课 · 曰喜怒</span></div>
   <div class="lesson-no">第 五 十 九 课</div>
   <h1>曰喜怒，曰哀惧。</h1>
@@ -6820,7 +7039,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 60 课 -->
-<div class="page">
+<div class="page" id="k60">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第六十课 · 爱恶欲</span></div>
   <div class="lesson-no">第 六 十 课</div>
   <h1>爱恶欲，七情具。</h1>
@@ -6931,7 +7150,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 61 课 -->
-<div class="page">
+<div class="page" id="k61">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第六十一课 · 匏土革</span></div>
   <div class="lesson-no">第 六 十 一 课</div>
   <h1>匏土革，木石金。丝与竹，乃八音。</h1>
@@ -7049,7 +7268,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 62 课 -->
-<div class="page">
+<div class="page" id="k62">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第六十二课 · 高曾祖</span></div>
   <div class="lesson-no">第 六 十 二 课</div>
   <h1>高曾祖，父而身。</h1>
@@ -7160,7 +7379,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 63 课 -->
-<div class="page">
+<div class="page" id="k63">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第六十三课 · 身而子</span></div>
   <div class="lesson-no">第 六 十 三 课</div>
   <h1>身而子，子而孙。</h1>
@@ -7271,7 +7490,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 64 课 -->
-<div class="page">
+<div class="page" id="k64">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第六十四课 · 自子孙</span></div>
   <div class="lesson-no">第 六 十 四 课</div>
   <h1>自子孙，至玄曾。</h1>
@@ -7384,7 +7603,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 65 课 -->
-<div class="page">
+<div class="page" id="k65">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第六十五课 · 乃九族</span></div>
   <div class="lesson-no">第 六 十 五 课</div>
   <h1>乃九族，人之伦。</h1>
@@ -7494,7 +7713,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 66 课 -->
-<div class="page">
+<div class="page" id="k66">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第六十六课 · 父子恩</span></div>
   <div class="lesson-no">第 六 十 六 课</div>
   <h1>父子恩，夫妇从。</h1>
@@ -7604,7 +7823,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 67 课 -->
-<div class="page">
+<div class="page" id="k67">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第六十七课 · 兄则友</span></div>
   <div class="lesson-no">第 六 十 七 课</div>
   <h1>兄则友，弟则恭。</h1>
@@ -7715,7 +7934,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 68 课 -->
-<div class="page">
+<div class="page" id="k68">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第六十八课 · 长幼序</span></div>
   <div class="lesson-no">第 六 十 八 课</div>
   <h1>长幼序，友与朋。</h1>
@@ -7825,7 +8044,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 69 课 -->
-<div class="page">
+<div class="page" id="k69">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第六十九课 · 君则敬</span></div>
   <div class="lesson-no">第 六 十 九 课</div>
   <h1>君则敬，臣则忠。</h1>
@@ -7935,7 +8154,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 70 课 -->
-<div class="page">
+<div class="page" id="k70">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第七十课 · 此十义</span></div>
   <div class="lesson-no">第 七 十 课</div>
   <h1>此十义，人所同。</h1>
@@ -8046,7 +8265,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 71 课 -->
-<div class="page">
+<div class="page" id="k71">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第七十一课 · 凡训蒙</span></div>
   <div class="lesson-no">第 七 十 一 课</div>
   <h1>凡训蒙，须讲究。详训诂，明句读。</h1>
@@ -8163,7 +8382,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 72 课 -->
-<div class="page">
+<div class="page" id="k72">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第七十二课 · 为学者</span></div>
   <div class="lesson-no">第 七 十 二 课</div>
   <h1>为学者，必有初。小学终，至四书。</h1>
@@ -8280,7 +8499,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 73 课 -->
-<div class="page">
+<div class="page" id="k73">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第七十三课 · 论语者</span></div>
   <div class="lesson-no">第 七 十 三 课</div>
   <h1>论语者，二十篇。群弟子，记善言。</h1>
@@ -8397,7 +8616,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 74 课 -->
-<div class="page">
+<div class="page" id="k74">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第七十四课 · 孟子者</span></div>
   <div class="lesson-no">第 七 十 四 课</div>
   <h1>孟子者，七篇止。讲道德，说仁义。</h1>
@@ -8514,7 +8733,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 75 课 -->
-<div class="page">
+<div class="page" id="k75">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第七十五课 · 作中庸</span></div>
   <div class="lesson-no">第 七 十 五 课</div>
   <h1>作中庸，子思笔。中不偏，庸不易。</h1>
@@ -8632,7 +8851,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 76 课 -->
-<div class="page">
+<div class="page" id="k76">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第七十六课 · 作大学</span></div>
   <div class="lesson-no">第 七 十 六 课</div>
   <h1>作大学，乃曾子。自修齐，至平治。</h1>
@@ -8750,7 +8969,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 77 课 -->
-<div class="page">
+<div class="page" id="k77">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第七十七课 · 孝经通</span></div>
   <div class="lesson-no">第 七 十 七 课</div>
   <h1>孝经通，四书熟。如六经，始可读。</h1>
@@ -8866,7 +9085,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 78 课 -->
-<div class="page">
+<div class="page" id="k78">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第七十八课 · 诗书易</span></div>
   <div class="lesson-no">第 七 十 八 课</div>
   <h1>诗书易，礼春秋。号六经，当讲求。</h1>
@@ -8982,7 +9201,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 79 课 -->
-<div class="page">
+<div class="page" id="k79">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第七十九课 · 有连山</span></div>
   <div class="lesson-no">第 七 十 九 课</div>
   <h1>有连山，有归藏。有周易，三易详。</h1>
@@ -9099,7 +9318,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 80 课 -->
-<div class="page">
+<div class="page" id="k80">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第八十课 · 典谟训</span></div>
   <div class="lesson-no">第 八 十 课</div>
   <h1>典谟训，诰誓命。号周书，七十篇。</h1>
@@ -9215,7 +9434,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 81 课 -->
-<div class="page">
+<div class="page" id="k81">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第八十一课 · 有国风</span></div>
   <div class="lesson-no">第 八 十 一 课</div>
   <h1>有国风，有雅颂。号四诗，当讽咏。</h1>
@@ -9333,7 +9552,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 82 课 -->
-<div class="page">
+<div class="page" id="k82">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第八十二课 · 诗既亡</span></div>
   <div class="lesson-no">第 八 十 二 课</div>
   <h1>诗既亡，春秋作。寓褒贬，别善恶。</h1>
@@ -9450,7 +9669,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 83 课 -->
-<div class="page">
+<div class="page" id="k83">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第八十三课 · 三传者</span></div>
   <div class="lesson-no">第 八 十 三 课</div>
   <h1>三传者，有公羊。有左氏，有谷梁。</h1>
@@ -9568,7 +9787,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 84 课 -->
-<div class="page">
+<div class="page" id="k84">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第八十四课 · 经既明</span></div>
   <div class="lesson-no">第 八 十 四 课</div>
   <h1>经既明，方读子。撮其要，记其事。</h1>
@@ -9686,7 +9905,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 85 课 -->
-<div class="page">
+<div class="page" id="k85">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第八十五课 · 五子者</span></div>
   <div class="lesson-no">第 八 十 五 课</div>
   <h1>五子者，有荀扬。文中子，及老庄。</h1>
@@ -9804,7 +10023,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 </div>
 
 <!-- 第 86 课 -->
-<div class="page">
+<div class="page" id="k86">
   <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第八十六课 · 经子通</span></div>
   <div class="lesson-no">第 八 十 六 课</div>
   <h1>经子通，读诸史。考世系，知终始。</h1>
@@ -9918,6 +10137,55 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 
   <div class="folio" style="color:#B4A88F">— 173 —</div>
 </div>
+
+<div class="go-toc"><a href="#toc">目 录</a><a href="#toc2">续 编</a><a href="#k81">末 课</a></div>
+
+<script>
+(function(){
+  var q=document.getElementById('q'),hits=document.getElementById('hits'),idx=null;
+  if(!q||!hits)return;
+  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function build(){
+    idx=[];
+    var ps=document.querySelectorAll('.page[id^="k"]');
+    for(var i=0;i<ps.length;i++){
+      var p=ps[i],n=parseInt(p.id.slice(1),10),t=p.textContent.replace(/\s+/g,' ');
+      var nx=p.nextElementSibling;
+      if(nx&&nx.classList&&nx.classList.contains('adult')) t+=' '+nx.textContent.replace(/\s+/g,' ');
+      idx.push({n:n,t:t,href:'#k'+p.id.slice(1),next:0});
+    }
+    var nxt=document.querySelectorAll('.toc2 .it');
+    for(var j=0;j<nxt.length;j++){
+      var it=nxt[j],no=it.querySelector('.no');
+      if(!no)continue;
+      idx.push({n:parseInt(no.textContent,10),t:it.textContent.replace('待写','').replace(/\s+/g,' '),
+                href:'#toc2',next:1});
+    }
+    idx.sort(function(a,b){return a.n-b.n;});
+  }
+  function run(){
+    var v=q.value.trim();
+    if(!v){hits.style.display='none';hits.innerHTML='';return;}
+    if(!idx)build();
+    var out=[],k;
+    for(k=0;k<idx.length&&out.length<16;k++){
+      if(idx[k].t.indexOf(v)>-1){
+        var pos=idx[k].t.indexOf(v);
+        var sn=idx[k].t.slice(Math.max(0,pos-16),pos+v.length+34);
+        var lab=idx[k].next?('续 '+idx[k].n+' 课·待写'):('第 '+idx[k].n+' 课');
+        var tail=idx[k].next?'　（续编存目）':'';
+        out.push('<a href="'+idx[k].href+'">'+lab+'　…'+esc(sn)+'…'+tail+'</a>');
+      }
+    }
+    hits.style.display='block';
+    hits.innerHTML=out.length?out.join(''):'<div class="none">没有找到。换个词，或只搜两个字。</div>';
+  }
+  q.addEventListener('input',run);
+  q.addEventListener('keydown',function(e){
+    if(e.key==='Enter'){var a=hits.querySelector('a');if(a){location.hash=a.getAttribute('href');}}
+  });
+})();
+</script>
 
 </div>
 

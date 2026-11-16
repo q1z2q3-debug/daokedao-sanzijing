@@ -47,7 +47,8 @@ def main():
         print('FAIL: docs/book.html 不存在')
         return 1
     book = open(book_path, encoding='utf-8').read()
-    n = book.count('<div class="page">')
+    page_re = r'<div class="page"(?: id="k\d+")?>'
+    n = len(re.findall(page_re, book))
     check(n > 0, '课页数为 0')
     check(book.count('class="page cover"') == 1, '封面页数不为 1')
     check(book.count('<div class="adult">') == n, '成人页数 %d ≠ 课页数 %d' % (book.count('<div class="adult">'), n))
@@ -72,7 +73,7 @@ def main():
         if '合览' in name and name.endswith('.html'):
             p = os.path.join(ROOT, name)
             if md5(p) == book_md5:
-                twins.append((name, open(p, encoding='utf-8').read().count('<div class="page">')))
+                twins.append((name, len(re.findall(page_re, open(p, encoding='utf-8').read()))))
     check(bool(twins), '根目录没有与 docs/book.html 同内容的合览')
     for name, pages in twins:
         check(pages == n, '合览 %s 页数 %d ≠ %d' % (name, pages, n))
@@ -85,9 +86,9 @@ def main():
             fails.append('缺少 docs/lesson%02d.html' % i)
             continue
         s = open(p, encoding='utf-8').read()
-        if s.count('<div class="page">') != 1 or s.count('<div class="adult">') != 1 or s.count('<figure>') != 2:
+        if len(re.findall(page_re, s)) != 1 or s.count('<div class="adult">') != 1 or s.count('<figure>') != 2:
             fails.append('docs/lesson%02d.html 结构异常（页 %d／成人 %d／图 %d）'
-                         % (i, s.count('<div class="page">'), s.count('<div class="adult">'), s.count('<figure>')))
+                         % (i, len(re.findall(page_re, s)), s.count('<div class="adult">'), s.count('<figure>')))
 
     index_path = os.path.join(DOCS, 'index.html')
     check(os.path.exists(index_path), '缺少 docs/index.html')

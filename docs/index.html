@@ -41,6 +41,15 @@ a.btn.ghost{background:transparent;color:var(--ochre);border:1px solid var(--och
  .wrap{padding:36px 20px 60px}
  .lede{text-align:left;font-size:15px}
 }
+
+.find{display:flex;gap:12px;align-items:center;margin:18px 0 2px;flex-wrap:wrap}
+.find input{flex:1 1 280px;min-width:0;padding:10px 13px;border:1px solid var(--line);background:var(--paper2);font-family:"Noto Serif SC",serif;font-size:16px;color:var(--ink);outline:none}
+.find input:focus{border-color:var(--ochre)}
+.find .fc{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;color:var(--muted);letter-spacing:.06em}
+.sec.next .nextgrid{display:grid;grid-template-columns:1fr 1fr;gap:4px 26px;margin-top:14px;font-family:"Noto Serif SC",serif;font-size:12.5px;color:#8C7F63;line-height:1.9}
+.sec.next .nextgrid span{display:flex;gap:8px}
+.sec.next .nextgrid .no{font-family:"Noto Sans SC",sans-serif;font-size:10.5px;color:#BCAF93;flex:0 0 26px}
+@media(max-width:640px){.sec.next .nextgrid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -57,6 +66,7 @@ a.btn.ghost{background:transparent;color:var(--ochre);border:1px solid var(--och
 
   <div class="sec">
     <h2>已 成 课 次</h2>
+    <div class="find"><input id="fq" type="search" autocomplete="off" placeholder="搜课号、原句、字词　如：中庸／断机杼／孝"><span class="fc" id="fc">共 86 课</span></div>
     <ul class="lessons">
       <li class="lesson">
         <div class="no">第 一 课</div>
@@ -747,6 +757,63 @@ a.btn.ghost{background:transparent;color:var(--ochre);border:1px solid var(--och
         <a class="st" href="lesson86.html">读 单 课</a>
       </li>
     </ul>
+    <div class="sec next">
+      <h2>续 编 存 目 · 第 87–137 课（尚未成课，仅留位置）</h2>
+      <div class="nextgrid">
+        <span><span class="no">87</span>自羲农，至黄帝。号三皇，居上世</span>
+        <span><span class="no">88</span>唐有虞，号二帝。相揖逊，称盛世</span>
+        <span><span class="no">89</span>夏有禹，商有汤。周文武，称三王</span>
+        <span><span class="no">90</span>夏传子，家天下。四百载，迁夏社</span>
+        <span><span class="no">91</span>汤伐夏，国号商。六百载，至纣亡</span>
+        <span><span class="no">92</span>周武王，始诛纣。八百载，最长久</span>
+        <span><span class="no">93</span>周辙东，王纲坠。逞干戈，尚游说</span>
+        <span><span class="no">94</span>始春秋，终战国。五霸强，七雄出</span>
+        <span><span class="no">95</span>嬴秦氏，始兼并。传二世，楚汉争</span>
+        <span><span class="no">96</span>高祖兴，汉业建。至孝平，王莽篡</span>
+        <span><span class="no">97</span>光武兴，为东汉。四百年，终于献</span>
+        <span><span class="no">98</span>魏蜀吴，争汉鼎。号三国，迄两晋</span>
+        <span><span class="no">99</span>宋齐继，梁陈承。为南朝，都金陵</span>
+        <span><span class="no">100</span>北元魏，分东西。宇文周，与高齐</span>
+        <span><span class="no">101</span>迨至隋，一土宇。不再传，失统绪</span>
+        <span><span class="no">102</span>唐高祖，起义师。除隋乱，创国基</span>
+        <span><span class="no">103</span>二十传，三百载。梁灭之，国乃改</span>
+        <span><span class="no">104</span>梁唐晋，及汉周。称五代，皆有由</span>
+        <span><span class="no">105</span>炎宋兴，受周禅。十八传，南北混</span>
+        <span><span class="no">106</span>辽与金，帝号纷。迨灭辽，宋犹存</span>
+        <span><span class="no">107</span>至元兴，金绪歇。有宋世，一同灭</span>
+        <span><span class="no">108</span>并中国，兼戎狄。九十年，国祚废</span>
+        <span><span class="no">109</span>明太祖，久亲师。传建文，方四祀</span>
+        <span><span class="no">110</span>迁北京，永乐嗣。迨崇祯，煤山逝</span>
+        <span><span class="no">111</span>清太祖，膺景命。靖四方，克大定</span>
+        <span><span class="no">112</span>至世祖，乃大同。十二世，清祚终</span>
+        <span><span class="no">113</span>廿二史，全在兹。载治乱，知兴衰</span>
+        <span><span class="no">114</span>读史者，考实录。通古今，若亲目</span>
+        <span><span class="no">115</span>口而诵，心而惟。朝于斯，夕于斯</span>
+        <span><span class="no">116</span>昔仲尼，师项橐。古圣贤，尚勤学</span>
+        <span><span class="no">117</span>赵中令，读鲁论。彼既仕，学且勤</span>
+        <span><span class="no">118</span>披蒲编，削竹简。彼无书，且知勉</span>
+        <span><span class="no">119</span>头悬梁，锥刺股。彼不教，自勤苦</span>
+        <span><span class="no">120</span>如囊萤，如映雪。家虽贫，学不辍</span>
+        <span><span class="no">121</span>如负薪，如挂角。身虽劳，犹苦卓</span>
+        <span><span class="no">122</span>苏老泉，二十七。始发愤，读书籍</span>
+        <span><span class="no">123</span>彼既老，犹悔迟。尔小生，宜早思</span>
+        <span><span class="no">124</span>若梁灏，八十二。对大廷，魁多士</span>
+        <span><span class="no">125</span>彼既成，众称异。尔小生，宜立志</span>
+        <span><span class="no">126</span>莹八岁，能咏诗。泌七岁，能赋棋</span>
+        <span><span class="no">127</span>彼颖悟，人称奇。尔幼学，当效之</span>
+        <span><span class="no">128</span>蔡文姬，能辨琴。谢道韫，能咏吟</span>
+        <span><span class="no">129</span>彼女子，且聪敏。尔男子，当自警</span>
+        <span><span class="no">130</span>唐刘晏，方七岁。举神童，作正字</span>
+        <span><span class="no">131</span>彼虽幼，身已仕。尔幼学，勉而致。有为者，亦若是</span>
+        <span><span class="no">132</span>犬守夜，鸡司晨。苟不学，曷为人</span>
+        <span><span class="no">133</span>蚕吐丝，蜂酿蜜。人不学，不如物</span>
+        <span><span class="no">134</span>幼而学，壮而行。上致君，下泽民</span>
+        <span><span class="no">135</span>扬名声，显父母。光于前，裕于后</span>
+        <span><span class="no">136</span>人遗子，金满籯。我教子，唯一经</span>
+        <span><span class="no">137</span>勤有功，戏无益。戒之哉，宜勉力</span>
+      </div>
+      <p class="spec">「考世系，知终始」之后尚有读史与勤学两大段，按通行本四句一组占位排号，留出位置；成课时以校定底本为定，课次可整体重排。</p>
+    </div>
     <div class="cta">
       <a class="btn" href="book.html">读 样 书（八十六课合览）</a>
       <a class="btn ghost" href="SPEC.md">看 体 例 规 格</a>
@@ -758,10 +825,27 @@ a.btn.ghost{background:transparent;color:var(--ochre);border:1px solid var(--och
   </div>
 
   <div class="foot">
-    <span>润泽说 · 少儿启蒙国学读本　v2.2</span>
+    <span>润泽说 · 少儿启蒙国学读本　v2.3</span>
     <span>二〇二六年十一月　·　一课一句，一课两页</span>
   </div>
 
 </div>
+
+<script>
+(function(){
+  var q=document.getElementById('fq'),fc=document.getElementById('fc'),ul=document.querySelector('ul.lessons');
+  if(!q||!ul)return;
+  var items=[].slice.call(ul.querySelectorAll('li.lesson'));
+  items.forEach(function(li){li.dataset.t=li.textContent.replace(/\s+/g,' ');});
+  q.addEventListener('input',function(){
+    var v=q.value.trim(),hit=0;
+    items.forEach(function(li){
+      var ok=!v||li.dataset.t.indexOf(v)>-1;
+      li.style.display=ok?'':'none'; if(ok)hit++;
+    });
+    fc.textContent=v?('找到 '+hit+' 课'):'共 '+items.length+' 课';
+  });
+})();
+</script>
 </body>
 </html>
