@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>第一百七十二课　彼既老，犹悔迟——润泽说·少儿启蒙国学读本</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A2503B'/%3E%3Ctext x='32' y='45' font-size='28' text-anchor='middle' fill='%23F8F3E6' font-family='serif'%3E彼%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap">
+<style>
+:root{
+  --paper:#F8F3E6; --paper2:#FCF8EF; --ink:#2F2A24; --ink2:#4A4239;
+  --muted:#7B6E5C; --line:#DFD4BE; --ochre:#A2503B; --ochre-soft:#C9866B;
+  --qing:#6F8A86; --leaf:#7C9068;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#EFE7D8;color:var(--ink);
+  font-family:"Noto Serif SC","Songti SC",Georgia,serif;-webkit-font-smoothing:antialiased}
+.book{max-width:820px;margin:0 auto;padding:28px 18px 70px}
+.page{background:var(--paper);padding:54px 64px 46px;margin:0 0 22px;
+  box-shadow:0 1px 2px rgba(60,45,30,.06),0 12px 34px rgba(60,45,30,.07);
+  border:1px solid #E7DECB;position:relative}
+.page::after{content:"";position:absolute;inset:14px;border:1px solid rgba(162,80,59,.10);pointer-events:none}
+@media(max-width:760px){.page{padding:34px 22px 30px}.page::after{inset:8px}}
+
+/* ---------- 页眉 ---------- */
+.runhead{display:flex;flex-wrap:wrap;gap:4px 14px;justify-content:space-between;align-items:baseline;
+  font-family:"Noto Sans SC",sans-serif;font-size:11.5px;letter-spacing:.18em;
+  color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:34px}
+.runhead .c{color:var(--ochre);white-space:nowrap}
+
+/* ---------- 课题 ---------- */
+.lesson-no{font-family:"Noto Sans SC",sans-serif;font-size:12px;letter-spacing:.3em;color:var(--ochre)}
+h1{font-size:30px;font-weight:600;letter-spacing:.06em;margin:10px 0 6px;line-height:1.35}
+.sub{font-family:"Noto Sans SC",sans-serif;font-size:13px;color:var(--muted);letter-spacing:.06em}
+
+/* ---------- 田字格 ---------- */
+.grid-block{margin:30px 0 8px}
+.grid-cols{display:flex;flex-direction:row-reverse;justify-content:center;gap:46px}
+.col{display:flex;flex-direction:column;align-items:center;gap:8px}
+.colhead{font-family:"Noto Sans SC",sans-serif;font-size:10.5px;color:var(--ochre);letter-spacing:.18em;margin-bottom:2px}
+@media(max-width:520px){.grid-cols{gap:24px}}
+.cellwrap{text-align:center}
+.py{font-family:"Noto Sans SC",sans-serif;font-size:13px;color:var(--qing);letter-spacing:.04em;margin-bottom:5px;height:18px}
+.grid{width:88px;height:88px;border:1.6px solid var(--ochre-soft);background:#FFFDF7;
+  position:relative;display:flex;align-items:center;justify-content:center}
+.grid .cross{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.grid .cross line{stroke:rgba(162,80,59,.42);stroke-width:1;stroke-dasharray:4 4}
+.grid .ch{font-size:52px;line-height:1;color:var(--ink);font-weight:500}
+.strokes{font-family:"Noto Sans SC",sans-serif;font-size:10.5px;color:var(--muted);margin-top:6px;letter-spacing:.06em}
+.readnote{display:flex;align-items:center;gap:8px;justify-content:center;margin-top:18px;
+  font-family:"Noto Sans SC",sans-serif;font-size:12px;color:var(--muted);line-height:1.8}
+.readnote b{color:var(--ochre);font-weight:500}
+.readnote .ord{font-size:12.5px;color:var(--ochre);letter-spacing:.06em;border:1px solid #E2C9B9;
+  padding:2px 9px;white-space:nowrap}
+.readnote .ord b{font-weight:600}
+@media(max-width:520px){.readnote{flex-direction:column;gap:8px;text-align:center}}
+.note{margin-top:16px;font-family:"Noto Sans SC",sans-serif;font-size:12px;color:var(--muted);line-height:1.9}
+.note b{color:var(--ochre);font-weight:500}
+
+/* ---------- 章节条 ---------- */
+.band{display:flex;align-items:center;gap:12px;margin:44px 0 24px}
+.band .tag{font-family:"Noto Sans SC",sans-serif;font-size:11px;letter-spacing:.22em;
+  color:#FFF9EE;background:var(--ochre);padding:4px 11px;border-radius:2px}
+.band .tag.qing{background:var(--qing)}
+.band .rule{flex:1;height:1px;background:var(--line)}
+.band .en{font-family:"Noto Sans SC",sans-serif;font-size:10.5px;color:var(--muted);letter-spacing:.14em}
+
+/* ---------- 少儿正文 ---------- */
+.kid p{font-size:18.5px;line-height:2.05;margin:0 0 18px;text-align:justify;color:#332D26}
+.kid p:first-of-type::first-letter{font-size:34px;line-height:1;color:var(--ochre);font-weight:600;padding-right:2px}
+.kid .lead{font-size:16px;color:var(--muted);font-family:"Noto Sans SC",sans-serif;line-height:1.95;margin-bottom:22px}
+figure{margin:26px 0;text-align:center}
+figure img{width:100%;height:auto;display:block;border:1px solid #E3D9C3;background:#fff}
+figcaption{font-family:"Noto Sans SC",sans-serif;font-size:12px;color:var(--muted);margin-top:9px;letter-spacing:.05em}
+
+/* ---------- 四大天赋 ---------- */
+.gift{margin:30px 0 10px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0}
+.gift h3{font-size:16px;font-weight:600;letter-spacing:.12em;margin:0 0 4px;text-align:center}
+.gift .h3sub{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;color:var(--muted);text-align:center;letter-spacing:.1em;margin-bottom:20px}
+.gift-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.g{text-align:center;padding:2px}
+.g svg{width:100%;height:76px;display:block}
+.g .gn{font-size:15px;font-weight:600;letter-spacing:.1em;margin:8px 0 4px;color:var(--ochre)}
+.g .gt{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;line-height:1.75;color:var(--ink2)}
+@media(max-width:700px){.gift-grid{grid-template-columns:repeat(2,1fr);gap:22px 12px}}
+
+/* ---------- 启示 ---------- */
+.takeaway{margin:34px 0 6px;background:var(--paper2);border:1px solid #E7DCC5;
+  border-left:4px solid var(--ochre);padding:20px 24px}
+.takeaway .t{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;letter-spacing:.24em;color:var(--ochre);margin-bottom:10px}
+.takeaway li{font-size:16.5px;line-height:1.95;margin:0 0 6px;padding-left:2px;color:#332D26}
+.takeaway ul{margin:0;padding-left:20px;list-style:none}
+.takeaway ul li::before{content:"·";color:var(--ochre);margin-right:8px;font-weight:700}
+
+/* ---------- 亲子提示 ---------- */
+.parent-tip{margin:24px 0 0;padding:16px 18px;background:#F3EEE1;border:1px dashed #D8C9AC}
+.parent-tip .t{font-family:"Noto Sans SC",sans-serif;font-size:11px;letter-spacing:.2em;color:var(--muted);margin-bottom:6px}
+.parent-tip p{font-family:"Noto Sans SC",sans-serif;font-size:13.5px;line-height:2.0;color:#332D26;margin:0}
+
+/* ---------- 成人版 ---------- */
+.adult{background:#FBF7EC;padding:54px 64px 48px;border:1px solid #E1D6BE;
+  box-shadow:0 1px 2px rgba(60,45,30,.06),0 12px 34px rgba(60,45,30,.07)}
+@media(max-width:760px){.adult{padding:34px 22px 30px}}
+@media(max-width:640px){
+  table{border:1px solid #E0D5BE;background:#FFFDF7}
+  thead{display:none}
+  tr{display:block;padding:12px 14px;border-bottom:1px solid #E0D5BE}
+  tr:last-child{border-bottom:0}
+  td{display:block;border:0;padding:2px 0;font-size:13.5px;line-height:1.8}
+  td.k{font-size:15px;letter-spacing:.08em;margin-bottom:3px}
+}
+.adult h2{font-size:19px;font-weight:600;letter-spacing:.1em;margin:0 0 6px}
+.adult .meta{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;color:var(--muted);letter-spacing:.1em}
+.adult p{font-size:15px;line-height:1.98;margin:0 0 15px;text-align:justify;color:#37312A}
+.adult .num{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;letter-spacing:.16em;color:var(--qing);display:block;margin:26px 0 6px}
+.adult h3{font-size:15.5px;font-weight:600;margin:6px 0 8px;letter-spacing:.04em}
+.quote{margin:22px 0;padding:2px 0 2px 16px;border-left:2px solid var(--ochre-soft);color:#4A4239;font-size:14.5px}
+table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:13px;margin:18px 0}
+th,td{border:1px solid #E0D5BE;padding:9px 11px;vertical-align:top;line-height:1.75;text-align:left}
+th{background:#F1EADA;font-weight:600;letter-spacing:.06em}
+td.k{color:var(--ochre);font-weight:600;white-space:nowrap}
+.doubt{margin:26px 0 0;padding:18px 20px;background:#F2EBDC;border:1px solid #DCCFB4}
+.doubt .t{font-family:"Noto Sans SC",sans-serif;font-size:11px;letter-spacing:.22em;color:var(--ochre);margin-bottom:8px}
+.doubt p{font-size:14px;line-height:1.95;margin:0 0 8px}
+.page,.adult{position:relative}
+.folio{position:absolute;left:0;right:0;bottom:18px;text-align:center;
+  font-family:"Noto Sans SC",sans-serif;font-size:10.5px;color:#B4A88F;letter-spacing:.3em}
+.cover{background:linear-gradient(180deg,#FBF6E9 0%,#F3E9D2 100%);text-align:center;padding:96px 40px 80px}
+.cover .s{font-family:"Noto Sans SC",sans-serif;font-size:12px;letter-spacing:.34em;color:var(--ochre)}
+.cover h1{font-size:46px;letter-spacing:.12em;margin:22px 0 10px}
+.cover .t2{font-size:16px;color:var(--muted);letter-spacing:.18em}
+.cover .line{width:60px;height:1px;background:var(--ochre-soft);margin:30px auto}
+.cover .info{font-family:"Noto Sans SC",sans-serif;font-size:12px;line-height:2.1;color:var(--muted)}
+
+/* 本课新增 */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:26px 0}
+@media(max-width:640px){.two{grid-template-columns:1fr}}
+.card{background:#FFFDF7;border:1px solid #E5DAC2;padding:18px 20px}
+.card .ch2{font-size:15px;font-weight:600;letter-spacing:.1em;color:var(--ochre);margin-bottom:6px}
+.card .ch2 span{font-size:11px;letter-spacing:.16em;color:var(--muted);font-weight:400;margin-left:6px}
+.card p{font-family:"Noto Sans SC",sans-serif;font-size:13px;line-height:1.9;color:var(--ink2);margin:0}
+.age td:first-child{white-space:nowrap;color:var(--ochre);font-weight:600}
+.nodrop::first-letter{font-size:16px !important;color:var(--muted) !important;font-weight:400 !important;padding-right:0 !important}
+figure.ph .phbox{width:100%;aspect-ratio:4/3;border:1px dashed #D6C9AE;background:#FBF7EC;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
+figure.ph .phbox .k{font-family:"Noto Sans SC",sans-serif;font-size:11px;letter-spacing:.28em;color:#BCAF93}
+.page.long .kid p{margin:0 0 10px;line-height:1.92;font-size:17.5px}
+.page.long .kid .lead{margin-bottom:14px}
+.page.long .kid figure{margin:10px 0}
+figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F63;letter-spacing:.12em}
+
+.page.toc,.page.toc2{padding:64px 64px 54px}
+.toc h1,.toc2 h1{font-size:34px;font-weight:600;letter-spacing:.28em;margin:0 0 10px}
+.toc .tl,.toc2 .tl{font-family:"Noto Sans SC",sans-serif;font-size:12.5px;color:var(--muted);line-height:2;letter-spacing:.04em;margin-bottom:26px}
+.toc .qbar{display:flex;align-items:center;gap:12px;margin:0 0 22px;flex-wrap:wrap}
+.toc .qbar input{flex:1 1 300px;padding:11px 14px;border:1px solid var(--line);background:#FCF8EF;font-family:"Noto Serif SC",serif;font-size:16px;color:var(--ink);outline:none;min-width:0}
+.toc .qbar input:focus{border-color:var(--ochre)}
+.toc .qbar .hint{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;color:var(--muted);white-space:nowrap;letter-spacing:.06em}
+#hits{display:none;margin:0 0 24px;font-family:"Noto Sans SC",sans-serif;font-size:12.5px;line-height:1.9;color:var(--ink2)}
+#hits a{display:block;padding:5px 0;border-bottom:1px dashed var(--line);color:var(--ink2);text-decoration:none}
+#hits a:hover{color:var(--ochre)}
+#hits .none{color:var(--muted)}
+.toc .grp{margin-top:20px}
+.toc .gh{display:flex;align-items:baseline;gap:12px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.toc .gn{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;letter-spacing:.24em;color:var(--ochre)}
+.toc .gt{font-family:"Noto Sans SC",sans-serif;font-size:12px;color:var(--muted);letter-spacing:.06em}
+.toc .cols{column-count:2;column-gap:38px;margin-top:8px}
+.toc a.it{display:flex;align-items:baseline;padding:5px 0;font-size:14px;color:var(--ink);text-decoration:none;break-inside:avoid;line-height:1.7}
+.toc a.it:hover .ln{color:var(--ochre)}
+.toc .no{font-family:"Noto Sans SC",sans-serif;font-size:10.5px;color:var(--muted);flex:0 0 28px;letter-spacing:.04em}
+.toc .ln{flex:0 1 auto}
+.toc .dots{flex:1 1 12px;margin:0 6px;border-bottom:1px dotted #D9CDB4;transform:translateY(-3px)}
+.toc .pg{font-family:"Noto Sans SC",sans-serif;font-size:11px;color:var(--muted);flex:0 0 28px;text-align:right}
+.toc2 .cols{column-count:2;column-gap:36px;margin-top:8px}
+.toc2 .it{display:flex;align-items:baseline;padding:5px 0;font-size:13.5px;color:#8C7F63;break-inside:avoid;line-height:1.7}
+.toc2 .no{font-family:"Noto Sans SC",sans-serif;font-size:10.5px;color:#BCAF93;flex:0 0 28px}
+.toc2 .tag{font-family:"Noto Sans SC",sans-serif;font-size:10px;color:#B7A88B;border:1px solid #E6DBC4;padding:0 4px;margin-left:auto;flex:0 0 auto;letter-spacing:.08em}
+.toc .note2,.toc2 .note2{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;color:var(--muted);line-height:2;margin-top:28px;border-top:1px solid var(--line);padding-top:14px}
+.go-toc{position:fixed;right:16px;bottom:16px;z-index:9;display:flex;font-family:"Noto Sans SC",sans-serif;font-size:11.5px}
+.go-toc a{padding:8px 11px;background:#FBF6E9;border:1px solid #E0D5BD;color:var(--ink2);text-decoration:none;letter-spacing:.14em;box-shadow:0 4px 14px rgba(60,45,30,.10)}
+.go-toc a+a{border-left:0}
+.go-toc a:hover{color:var(--ochre)}
+@media(max-width:760px){.toc,.toc2{padding:40px 22px 34px}.toc .cols,.toc2 .cols{column-count:1}.go-toc{right:8px;bottom:8px}}
+
+.page.land{outline:2px solid rgba(162,80,59,.45);outline-offset:1px}
+
+.grid-cols.tight{gap:34px}
+.tight .grid{width:74px;height:74px}
+.tight .grid .ch{font-size:44px}
+.tight .colhead{margin-bottom:0}
+.tight + .readnote{margin-top:12px}
+</style>
+</head>
+<body>
+<div class="book">
+<div class="page">
+  <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第一百七十二课 · 彼既老</span></div>
+  <div class="lesson-no">第 一 百 七 十 二 课</div>
+  <h1>彼既老，犹悔迟</h1>
+  <div class="sub">bǐ jì lǎo　yóu huǐ chí</div>
+
+  <div class="grid-block">
+      <div class="grid-cols tight">
+  <div class="col"><div class="colhead">① 先读右列</div>
+    <div class="cellwrap"><div class="py">bǐ</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">彼</span></div><div class="strokes">八画</div></div><div class="cellwrap"><div class="py">jì</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">既</span></div><div class="strokes">九画</div></div><div class="cellwrap"><div class="py">lǎo</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">老</span></div><div class="strokes">六画</div></div>
+  </div>
+  <div class="col"><div class="colhead">② 再读左列</div>
+    <div class="cellwrap"><div class="py">yóu</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">犹</span></div><div class="strokes">七画</div></div><div class="cellwrap"><div class="py">huǐ</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">悔</span></div><div class="strokes">十画</div></div><div class="cellwrap"><div class="py">chí</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">迟</span></div><div class="strokes">七画</div></div>
+  </div>
+  </div>
+  <div class="readnote">古法竖排：<b>自右而左，自上而下</b>。先读右列「彼既老」，再读左列「犹悔迟」。</div>
+  </div>
+
+  <div class="band"><span class="tag">少儿共读</span><span class="rule"></span><span class="en">读给孩子听</span></div>
+
+  <div class="kid">
+    <p class="lead">彼既老，犹悔迟：承接上一课「始发愤，读书籍」而作评断。</p>
+    <p>彼，指苏洵；既老，年已长；犹，仍然；悔迟，悔恨自己起得太晚。</p>
+    <p>悔不是懊丧，是「知道自己错过了什么」的清醒。</p>
+    <p>老为阴、为已成之局，悔为阳、为反转之机。</p>
+    <p>对比：始发愤，读书籍 / 彼既老，犹悔迟</p>
+    <p>上句说他做了，此句说他仍觉不足。做了而仍悔，是「越学越见其晚」；不学者不悔，因其不知失去什么。</p>
+    <p>对比前文阴阳太和：「悔」若止于情，则成自伤；若转为行，则成自警。转得动，阴阳相济；转不动，阴自沉。</p>
+    <p>勘破俗见：两类常见偏差。其一，以为悔无用，过去不可追，故不必悔；其二，把悔当美德，日日自责以自证诚恳。契合般若范式：佛说悔，即非悔，是名悔。悔是心所现之相，相起则明，相滞则缚；能转即用，不转即苦。</p>
+    <p>苏洵读到后来，常说自己起得太晚。</p>
+    <p>他不是抱怨，是明白错过了多少。</p>
+    <p>这一分「明白」，让他读得更紧。</p>
+    <p>后悔如果能变成行动，就有用。</p>
+    <p>后悔只放在心里，就只是难受。</p>
+    <figure class="ph"><div class="phbox"><span class="k">图 位</span><span class="f">图一 · 待补</span></div></figure>
+    <figure class="ph"><div class="phbox"><span class="k">图 位</span><span class="f">图二 · 待补</span></div></figure>
+    <p>落到心上理解</p>
+    <p>「发愤」之力可用几时？</p>
+    <p>可用到「愤」转成「惯」为止。愤是启动，惯是维持；启动之后若不在日常里落脚，三月之内必熄。</p>
+    <p>悔的价值，在给「惯」加一点重量：知道自己曾经错过，便不肯再轻放当下。重量适度则稳，过量则压垮。</p>
+    <p>不沉于悔，不废于悔；转悔为行，即是无住。</p>
+  </div>
+
+  <div class="two">
+    <div class="card">
+      <div class="ch2">俗 见<span>其 一</span></div>
+      <p>悔没有用，过去追不回来</p>
+    </div>
+    <div class="card">
+      <div class="ch2">正 解<span>其 一</span></div>
+      <p>悔若转为行则有用，转为自责则无用</p>
+    </div>
+    <div class="card">
+      <div class="ch2">俗 见<span>其 二</span></div>
+      <p>常常自责才算诚恳</p>
+    </div>
+    <div class="card">
+      <div class="ch2">正 解<span>其 二</span></div>
+      <p>诚恳在于改动日程，不在于反复懊恼</p>
+    </div>
+    <div class="card">
+      <div class="ch2">俗 见<span>其 三</span></div>
+      <p>越学越觉得自己起步晚，是坏事</p>
+    </div>
+    <div class="card">
+      <div class="ch2">正 解<span>其 三</span></div>
+      <p>那是眼界打开的证据，只要不滞在其中</p>
+    </div>
+  </div>
+
+  <div class="takeaway">
+    <div class="t">成 长 小 启 示</div>
+    <ul>
+      <li>苏洵后来常说自己起得太晚。</li>
+      <li>这不是抱怨，是他明白了错过了什么。</li>
+      <li>这份明白，让他读得更紧。</li>
+      <li>后悔能变成行动，就有用。</li>
+    </ul>
+  </div>
+
+  <div class="parent-tip">
+    <div class="t">给 爸 爸 妈 妈 的 一 句 话 · 这 一 课 讲 什 么，慢 慢 说 给 孩 子 听</div>
+    <p><b>一、勘俗见。</b>不要禁止孩子后悔，也不要鼓励他沉在后悔里。教他把「早知道」改成「从现在起」。</p>
+    <p style="margin-top:6"><b>二、现代对照。</b>成年人常说「早十年学就好了」，说一次可以，说十次就成了逃避当下的借口。</p>
+    <p style="margin-top:6"><b>三、承接常变主线。</b>已逝之时、既成之局（可变之相）；随时可起、转悔为行（不变之常）。</p>
+    <p style="margin-top:6"><b>四、承接教与学二分。</b>师长可点出「你已错过什么」，如何转身，仍须学者自决。</p>
+    <p style="margin-top:12">承接选择力练习：想「早知道」时，紧接着写一句「所以今天做什么」。</p>
+  </div>
+
+  <div class="folio">— 312 —</div>
+</div>
+
+<div class="adult">
+  <div class="runhead" style="border-bottom-color:#DCD0B4"><span>成人研学 · 古今汇观</span><span class="c">第一百七十二课 · 深度页</span></div>
+  <h2>彼既老，犹悔迟</h2>
+  <div class="meta">彼既老，犹悔迟 ｜ 少儿页＋成人页</div>
+
+  <span class="num">一</span>
+  <p><b class="sec">字义与句读</b></p>
+  <p>彼：指苏洵。既：已经。老：年长。犹：仍然。悔迟：悔恨起步太晚。</p>
+  <p>全句释义：他年纪已长，仍常悔恨自己读书起步太迟。</p>
+  <span class="num">二</span>
+  <p><b class="sec">命题考辨</b></p>
+  <p><b>表层因缘</b></p>
+  <p>此句不作褒贬，只写心境。蒙学取之，是要在孩子年幼时先埋一句「将来会悔」，以待其年长时自证。</p>
+  <p><b>深层因缘</b></p>
+  <p>悔有二用：一为「知失」，二为「促行」。知失者，明白时间之贵；促行者，把贵转为紧。若只有知失而无促行，悔即成自罚；自罚者表面恳切，实为卸责。</p>
+  <p><b>现代对照认知</b></p>
+  <p>「早知道」三字，是成年人最常见的自我叙事。它的价值全在下一句接什么：接「所以现在」，则有力；接「所以算了」，则自弃。</p>
+  <p><b>般若范式互参</b></p>
+  <p>老、迟、悔、憾，皆是因缘假名。</p>
+  <p>联动三才五蕴太极空杯模型：觉醒之心是杯中之空，空则能转；往事与憾恨是器相，器已成而不可改。器不可改，空可转向。</p>
+  <p>呼应「本乎数」：已失之年，其数不可复；当起之年，其数方新。算旧账者困，算新账者行。</p>
+  <p>延伸义理：</p>
+  <p>《金刚经》：过去心不可得。悔所对者，正是不可得之心。</p>
+  <p>《坛经》：改过必生智慧。悔而能改，方是智慧；悔而不改，只是烦恼。</p>
+  <span class="num">三</span>
+  <p><b class="sec">跨典互参（老庄、般若对照）</b></p>
+  <p>《道德经》：其安易持，其未兆易谋。年少正是「未兆」之时，故宜早。</p>
+  <p>《庄子》：来世不可待，往世不可追。往者不可追，来者犹可待。</p>
+  <p>串联前文：上一课写「起」，此课写「悔」；起而后知悔，悔而后愈起。</p>
+  <span class="num">四</span>
+  <p><b class="sec">和前面课程的张力</b></p>
+  <p>次第链条继续延伸：</p>
+  <p>……始发愤，读书籍 → 彼既老，犹悔迟</p>
+  <p>呼应「曰仁义，礼智信」：知悔而不自弃，是对己守信；</p>
+  <p>呼应「教之道，贵以专」：悔迟则愈不敢旁骛，专乃加深；</p>
+  <p>呼应「玉不琢，不成器」：悔是磨石上的水——<b>有水则磨得顺，无水则磨得涩</b>。</p>
+
+  <div class="doubt">
+    <div class="t">存 疑 · 留 待 深 究</div>
+    <p>悔的教育价值与心理负担，界线在哪里？</p>
+    <p>孩子尚年幼，讲「将来会悔」是否有效？会不会只是制造焦虑？</p>
+    <p>「悔迟」若成终身叙事，如何截断？</p>
+  </div>
+
+
+  <div class="folio" style="color:#B4A88F">— 313 —</div>
+</div>
+
+</div>
+
+</body>
+</html>

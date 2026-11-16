@@ -243,15 +243,19 @@ def toc_page(lessons):
             '  <h1>目 录</h1>\n'
             '  <div class="tl">%s课，一课两页。点课号到该课少儿页，成人页在后一页；题下数字为该课少儿页页码。</div>\n'
             '  <div class="qbar"><input id="q" type="search" autocomplete="off" '
-            'placeholder="搜原文、字词、人名、典名（含续编存目）　如：中庸／断机杼／项橐" aria-label="查册">'
+            'placeholder="搜原文、字词、人名、典名（全书一百八十六课）　如：中庸／断机杼／项橐" aria-label="查册">'
             '<span class="hint">回车到第一处</span></div>\n'
             '  <div id="hits"></div>\n'
             '%s\n'
-            '  <div class="note2">分段只是读法上的分段，课次照旧一贯到底。续编（第%s课起）另页存目，尚未成课。</div>\n'
-            '</div>' % (cn_num(int(lessons[-1]['n'])), cn_num(T.NEXT_START), '\n'.join(grp)))
+            '  <div class="note2">%s</div>\n'
+            '</div>' % (cn_num(int(lessons[-1]['n'])), '\n'.join(grp),
+            ('分段只是读法上的分段，课次照旧一贯到底。续编（第%s课起）另页存目，尚未成课。' % cn_num(T.NEXT_START))
+            if T.NEXT else '分段只是读法上的分段，课次照旧一贯到底。全书读史续编、勤学劝勉两段至此写定，末课为「戒之哉，宜勉力」。'))
 
 
 def toc_page_next():
+    if not T.NEXT:
+        return ''
     rows = []
     for i, line in enumerate(T.NEXT):
         n = T.NEXT_START + i
@@ -348,7 +352,8 @@ def render_pages(lessons):
 def assemble(lessons, css):
     head = head_pages()
     pages = render_pages(lessons)
-    body = cover_for(lessons) + '\n' + toc_page(lessons) + '\n' + toc_page_next() + '\n' + head + ''.join(
+    parts = [cover_for(lessons), toc_page(lessons), toc_page_next(), head]
+    body = '\n'.join(p for p in parts if p) + ''.join(
         '\n\n<!-- 第 %s 课 -->\n%s' % (d['n'], pages[d['n']]) for d in lessons)
     body = re.sub(r'\n{3,}(?=<!-- 第 \d+ 课 -->)', '\n\n', body)
     # 给每一课少儿页挂锚点 k1..kN（封面与目录页类名不同，不入此列）
@@ -359,8 +364,8 @@ def assemble(lessons, css):
         return '<div class="page" id="k%d">' % cnt['i']
 
     body = re.sub(r'<div class="page">', _anch, body)
-    body += ('\n<div class="go-toc"><a href="#toc">目 录</a><a href="#toc2">续 编</a>'
-             '<a href="#k%d">末 课</a></div>\n' % int(lessons[-1]['n'])) + SEARCH_JS + NAV_JS
+    body += ('\n<div class="go-toc"><a href="#toc">目 录</a>%s<a href="#k%d">末 课</a></div>\n'
+             % ('<a href="#toc2">续 编</a>' if T.NEXT else '', int(lessons[-1]['n'])) + SEARCH_JS + NAV_JS)
     return B.head('三字经·%s课合览（样书 %s）' % (cn_num(len(lessons) + 5), meta_from_changelog()[0]), '三', css) + body + B.TAIL
 
 
