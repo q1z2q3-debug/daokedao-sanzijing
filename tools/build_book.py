@@ -167,6 +167,8 @@ def load_lessons():
     for path in sorted(glob.glob(os.path.join(ROOT, 'tools', 'lessons_*.py'))):
         name = os.path.splitext(os.path.basename(path))[0]
         out.extend(importlib.import_module(name).LESSONS)
+    import polish_71_86 as PL
+    out = [PL.polish(d) if 71 <= int(d['n']) <= 86 else d for d in out]
     return sorted(out, key=lambda d: int(d['n']))
 
 

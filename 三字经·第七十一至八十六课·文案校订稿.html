@@ -1,0 +1,2737 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>三字经·第七十一至八十六课·文案校订稿</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23A2503B'/%3E%3Ctext x='32' y='45' font-size='28' text-anchor='middle' fill='%23F8F3E6' font-family='serif'%3E经%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap">
+<style>
+:root{
+  --paper:#F8F3E6; --paper2:#FCF8EF; --ink:#2F2A24; --ink2:#4A4239;
+  --muted:#7B6E5C; --line:#DFD4BE; --ochre:#A2503B; --ochre-soft:#C9866B;
+  --qing:#6F8A86; --leaf:#7C9068;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#EFE7D8;color:var(--ink);
+  font-family:"Noto Serif SC","Songti SC",Georgia,serif;-webkit-font-smoothing:antialiased}
+.book{max-width:820px;margin:0 auto;padding:28px 18px 70px}
+.page{background:var(--paper);padding:54px 64px 46px;margin:0 0 22px;
+  box-shadow:0 1px 2px rgba(60,45,30,.06),0 12px 34px rgba(60,45,30,.07);
+  border:1px solid #E7DECB;position:relative}
+.page::after{content:"";position:absolute;inset:14px;border:1px solid rgba(162,80,59,.10);pointer-events:none}
+@media(max-width:760px){.page{padding:34px 22px 30px}.page::after{inset:8px}}
+
+/* ---------- 页眉 ---------- */
+.runhead{display:flex;flex-wrap:wrap;gap:4px 14px;justify-content:space-between;align-items:baseline;
+  font-family:"Noto Sans SC",sans-serif;font-size:11.5px;letter-spacing:.18em;
+  color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:34px}
+.runhead .c{color:var(--ochre);white-space:nowrap}
+
+/* ---------- 课题 ---------- */
+.lesson-no{font-family:"Noto Sans SC",sans-serif;font-size:12px;letter-spacing:.3em;color:var(--ochre)}
+h1{font-size:30px;font-weight:600;letter-spacing:.06em;margin:10px 0 6px;line-height:1.35}
+.sub{font-family:"Noto Sans SC",sans-serif;font-size:13px;color:var(--muted);letter-spacing:.06em}
+
+/* ---------- 田字格 ---------- */
+.grid-block{margin:30px 0 8px}
+.grid-cols{display:flex;flex-direction:row-reverse;justify-content:center;gap:46px}
+.col{display:flex;flex-direction:column;align-items:center;gap:8px}
+.colhead{font-family:"Noto Sans SC",sans-serif;font-size:10.5px;color:var(--ochre);letter-spacing:.18em;margin-bottom:2px}
+@media(max-width:520px){.grid-cols{gap:24px}}
+.cellwrap{text-align:center}
+.py{font-family:"Noto Sans SC",sans-serif;font-size:13px;color:var(--qing);letter-spacing:.04em;margin-bottom:5px;height:18px}
+.grid{width:88px;height:88px;border:1.6px solid var(--ochre-soft);background:#FFFDF7;
+  position:relative;display:flex;align-items:center;justify-content:center}
+.grid .cross{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.grid .cross line{stroke:rgba(162,80,59,.42);stroke-width:1;stroke-dasharray:4 4}
+.grid .ch{font-size:52px;line-height:1;color:var(--ink);font-weight:500}
+.strokes{font-family:"Noto Sans SC",sans-serif;font-size:10.5px;color:var(--muted);margin-top:6px;letter-spacing:.06em}
+.readnote{display:flex;align-items:center;gap:8px;justify-content:center;margin-top:18px;
+  font-family:"Noto Sans SC",sans-serif;font-size:12px;color:var(--muted);line-height:1.8}
+.readnote b{color:var(--ochre);font-weight:500}
+.readnote .ord{font-size:12.5px;color:var(--ochre);letter-spacing:.06em;border:1px solid #E2C9B9;
+  padding:2px 9px;white-space:nowrap}
+.readnote .ord b{font-weight:600}
+@media(max-width:520px){.readnote{flex-direction:column;gap:8px;text-align:center}}
+.note{margin-top:16px;font-family:"Noto Sans SC",sans-serif;font-size:12px;color:var(--muted);line-height:1.9}
+.note b{color:var(--ochre);font-weight:500}
+
+/* ---------- 章节条 ---------- */
+.band{display:flex;align-items:center;gap:12px;margin:44px 0 24px}
+.band .tag{font-family:"Noto Sans SC",sans-serif;font-size:11px;letter-spacing:.22em;
+  color:#FFF9EE;background:var(--ochre);padding:4px 11px;border-radius:2px}
+.band .tag.qing{background:var(--qing)}
+.band .rule{flex:1;height:1px;background:var(--line)}
+.band .en{font-family:"Noto Sans SC",sans-serif;font-size:10.5px;color:var(--muted);letter-spacing:.14em}
+
+/* ---------- 少儿正文 ---------- */
+.kid p{font-size:18.5px;line-height:2.05;margin:0 0 18px;text-align:justify;color:#332D26}
+.kid p:first-of-type::first-letter{font-size:34px;line-height:1;color:var(--ochre);font-weight:600;padding-right:2px}
+.kid .lead{font-size:16px;color:var(--muted);font-family:"Noto Sans SC",sans-serif;line-height:1.95;margin-bottom:22px}
+figure{margin:26px 0;text-align:center}
+figure img{width:100%;height:auto;display:block;border:1px solid #E3D9C3;background:#fff}
+figcaption{font-family:"Noto Sans SC",sans-serif;font-size:12px;color:var(--muted);margin-top:9px;letter-spacing:.05em}
+
+/* ---------- 四大天赋 ---------- */
+.gift{margin:30px 0 10px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0}
+.gift h3{font-size:16px;font-weight:600;letter-spacing:.12em;margin:0 0 4px;text-align:center}
+.gift .h3sub{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;color:var(--muted);text-align:center;letter-spacing:.1em;margin-bottom:20px}
+.gift-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.g{text-align:center;padding:2px}
+.g svg{width:100%;height:76px;display:block}
+.g .gn{font-size:15px;font-weight:600;letter-spacing:.1em;margin:8px 0 4px;color:var(--ochre)}
+.g .gt{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;line-height:1.75;color:var(--ink2)}
+@media(max-width:700px){.gift-grid{grid-template-columns:repeat(2,1fr);gap:22px 12px}}
+
+/* ---------- 启示 ---------- */
+.takeaway{margin:34px 0 6px;background:var(--paper2);border:1px solid #E7DCC5;
+  border-left:4px solid var(--ochre);padding:20px 24px}
+.takeaway .t{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;letter-spacing:.24em;color:var(--ochre);margin-bottom:10px}
+.takeaway li{font-size:16.5px;line-height:1.95;margin:0 0 6px;padding-left:2px;color:#332D26}
+.takeaway ul{margin:0;padding-left:20px;list-style:none}
+.takeaway ul li::before{content:"·";color:var(--ochre);margin-right:8px;font-weight:700}
+
+/* ---------- 亲子提示 ---------- */
+.parent-tip{margin:24px 0 0;padding:16px 18px;background:#F3EEE1;border:1px dashed #D8C9AC}
+.parent-tip .t{font-family:"Noto Sans SC",sans-serif;font-size:11px;letter-spacing:.2em;color:var(--muted);margin-bottom:6px}
+.parent-tip p{font-family:"Noto Sans SC",sans-serif;font-size:13.5px;line-height:2.0;color:#332D26;margin:0}
+
+/* ---------- 成人版 ---------- */
+.adult{background:#FBF7EC;padding:54px 64px 48px;border:1px solid #E1D6BE;
+  box-shadow:0 1px 2px rgba(60,45,30,.06),0 12px 34px rgba(60,45,30,.07)}
+@media(max-width:760px){.adult{padding:34px 22px 30px}}
+@media(max-width:640px){
+  table{border:1px solid #E0D5BE;background:#FFFDF7}
+  thead{display:none}
+  tr{display:block;padding:12px 14px;border-bottom:1px solid #E0D5BE}
+  tr:last-child{border-bottom:0}
+  td{display:block;border:0;padding:2px 0;font-size:13.5px;line-height:1.8}
+  td.k{font-size:15px;letter-spacing:.08em;margin-bottom:3px}
+}
+.adult h2{font-size:19px;font-weight:600;letter-spacing:.1em;margin:0 0 6px}
+.adult .meta{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;color:var(--muted);letter-spacing:.1em}
+.adult p{font-size:15px;line-height:1.98;margin:0 0 15px;text-align:justify;color:#37312A}
+.adult .num{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;letter-spacing:.16em;color:var(--qing);display:block;margin:26px 0 6px}
+.adult h3{font-size:15.5px;font-weight:600;margin:6px 0 8px;letter-spacing:.04em}
+.quote{margin:22px 0;padding:2px 0 2px 16px;border-left:2px solid var(--ochre-soft);color:#4A4239;font-size:14.5px}
+table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:13px;margin:18px 0}
+th,td{border:1px solid #E0D5BE;padding:9px 11px;vertical-align:top;line-height:1.75;text-align:left}
+th{background:#F1EADA;font-weight:600;letter-spacing:.06em}
+td.k{color:var(--ochre);font-weight:600;white-space:nowrap}
+.doubt{margin:26px 0 0;padding:18px 20px;background:#F2EBDC;border:1px solid #DCCFB4}
+.doubt .t{font-family:"Noto Sans SC",sans-serif;font-size:11px;letter-spacing:.22em;color:var(--ochre);margin-bottom:8px}
+.doubt p{font-size:14px;line-height:1.95;margin:0 0 8px}
+.page,.adult{position:relative}
+.folio{position:absolute;left:0;right:0;bottom:18px;text-align:center;
+  font-family:"Noto Sans SC",sans-serif;font-size:10.5px;color:#B4A88F;letter-spacing:.3em}
+.cover{background:linear-gradient(180deg,#FBF6E9 0%,#F3E9D2 100%);text-align:center;padding:96px 40px 80px}
+.cover .s{font-family:"Noto Sans SC",sans-serif;font-size:12px;letter-spacing:.34em;color:var(--ochre)}
+.cover h1{font-size:46px;letter-spacing:.12em;margin:22px 0 10px}
+.cover .t2{font-size:16px;color:var(--muted);letter-spacing:.18em}
+.cover .line{width:60px;height:1px;background:var(--ochre-soft);margin:30px auto}
+.cover .info{font-family:"Noto Sans SC",sans-serif;font-size:12px;line-height:2.1;color:var(--muted)}
+
+/* 本课新增 */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:26px 0}
+@media(max-width:640px){.two{grid-template-columns:1fr}}
+.card{background:#FFFDF7;border:1px solid #E5DAC2;padding:18px 20px}
+.card .ch2{font-size:15px;font-weight:600;letter-spacing:.1em;color:var(--ochre);margin-bottom:6px}
+.card .ch2 span{font-size:11px;letter-spacing:.16em;color:var(--muted);font-weight:400;margin-left:6px}
+.card p{font-family:"Noto Sans SC",sans-serif;font-size:13px;line-height:1.9;color:var(--ink2);margin:0}
+.age td:first-child{white-space:nowrap;color:var(--ochre);font-weight:600}
+.nodrop::first-letter{font-size:16px !important;color:var(--muted) !important;font-weight:400 !important;padding-right:0 !important}
+.grid-cols.tight{gap:34px}
+.tight .grid{width:74px;height:74px}
+.tight .grid .ch{font-size:44px}
+.tight .colhead{margin-bottom:0}
+.tight + .readnote{margin-top:12px}
+.figempty .ph{margin:14px 0 0;border:1px dashed #D8CBB2;background:#FBF7EC;color:#9A8C77;
+  font-size:13px;letter-spacing:.12em;padding:64px 0;text-align:center;border-radius:2px}
+.figempty .ph .f{display:block;margin-top:8px;font-size:11px;color:#B4A88F;letter-spacing:.04em}
+
+.grid-cols.tight{gap:34px}
+.tight .grid{width:74px;height:74px}
+.tight .grid .ch{font-size:44px}
+.tight .colhead{margin-bottom:0}
+.tight + .readnote{margin-top:12px}
+</style>
+</head>
+<body>
+<div class="book">
+<div class="page">
+  <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">文案校订稿</span></div>
+  <div class="lesson-no">校 订 说 明</div>
+  <h1>第七十一至八十六课　文案校订</h1>
+  <div class="sub">图位暂空，先看文；确认后再并回正本</div>
+  <div class="kid" style="margin-top:34px">
+    <p class="lead">这一稿只动文字，不动版面骨架，图位留空，等你看完文再决定图。</p>
+    <p><b>一、少儿页。</b>原来每课是两段并成，两段各带一句「承接上一课存疑」。现只保留前一句，后一句改作「另有一问」，不致同一句话在同一页里重复两遍。</p>
+    <p><b>二、家长栏。</b>原为九条：一至四、五至八，四个小标题各出现两次（勘俗见、现代对照、常变主线、教与学二分）。现按同名标题并作四条，末尾承接条不动。</p>
+    <p><b>三、双卡。</b>原四张（俗见上段／正解上段／俗见下段／正解下段），并为两张：俗见、正解各收上下两段的说法。</p>
+    <p><b>四、成人页。</b>「命题考辨」原六小节，其中「对照当下现代语境」「般若范式互参」各两遍；现同名并节，重排为（1）至（4）（第八十六课两段节数不等，并为五节）。「和前面课程的张力」里重复的次第链条并成一条，同名「呼应」并成一句。</p>
+    <p><b>五、图注。</b>按实改了四处字（课七十一、七十二、七十九、八十五），图本身未动。课八十六三只手、课七十二五踩书、课三十五绿块、课四十六两张，仍等你发话再重出。</p>
+  </div>
+  <div class="folio">— 1 —</div>
+</div>
+<div class="page">
+  <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第七十一课 · 凡训蒙</span></div>
+  <div class="lesson-no">第 七 十 一 课</div>
+  <h1>凡训蒙，须讲究。详训诂，明句读。</h1>
+  <div class="sub">fán xùn méng　xū jiǎng jiū　xiáng xùn gǔ　míng jù dòu</div>
+
+  <div class="grid-block">
+      <div class="grid-cols tight">
+  <div class="col"><div class="colhead">① 先读右列</div>
+    <div class="cellwrap"><div class="py">fán</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">凡</span></div><div class="strokes">三画</div></div><div class="cellwrap"><div class="py">xùn</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">训</span></div><div class="strokes">五画</div></div><div class="cellwrap"><div class="py">méng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">蒙</span></div><div class="strokes">十三画</div></div>
+  </div>
+  <div class="col"><div class="colhead">② 再读左列</div>
+    <div class="cellwrap"><div class="py">xū</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">须</span></div><div class="strokes">九画</div></div><div class="cellwrap"><div class="py">jiǎng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">讲</span></div><div class="strokes">六画</div></div><div class="cellwrap"><div class="py">jiū</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">究</span></div><div class="strokes">七画</div></div>
+  </div>
+  </div>
+  <div class="readnote">古法竖排：<b>自右而左，自上而下</b>。上段先读右列「凡训蒙」，再读左列「须讲究」。</div>
+  <div class="grid-cols tight" style="margin-top:26px">
+  <div class="col"><div class="colhead">③ 续读右列</div>
+    <div class="cellwrap"><div class="py">xiáng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">详</span></div><div class="strokes">十一画</div></div><div class="cellwrap"><div class="py">xùn</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">训</span></div><div class="strokes">五画</div></div><div class="cellwrap"><div class="py">gǔ</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">诂</span></div><div class="strokes">七画</div></div>
+  </div>
+  <div class="col"><div class="colhead">④ 再读左列</div>
+    <div class="cellwrap"><div class="py">míng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">明</span></div><div class="strokes">八画</div></div><div class="cellwrap"><div class="py">jù</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">句</span></div><div class="strokes">五画</div></div><div class="cellwrap"><div class="py">dòu</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">读</span></div><div class="strokes">十画</div></div>
+  </div>
+  </div>
+  <div class="readnote">下段续读：先读右列「详训诂」，再读左列「明句读」。</div>
+    <div class="note">十义收束人伦，经文一转，回到教化的本源。训，是训导、启导；蒙，是蒙昧未开之心，对应孩童初学，也泛指一切被习气遮蔽、本心未明之人。讲究，不是空谈文辞、考据炫博，而是要讲明义理、深究本源，辨明本末、分清表里。</div>
+    <div class="note" style="font-size:12.5px;color:#6B6157">承接上句“凡训蒙，须讲究”，落到讲究的第一层基本功。训诂，考究字义、字源、古训，厘清文字本来的含义；句读，是断句、分节，读懂文句的节奏与边界。详，不是漫无边界的繁琐堆砌；明，是分清起止、不令文义淆乱。这是读古典的入门阶梯，先通文字载体，再向上通达义理心性。</div>
+  </div>
+
+  <div class="band"><span class="tag">少儿共读</span><span class="rule"></span><span class="en">读给孩子听</span></div>
+
+  <div class="kid">
+    <p class="lead">我们知道，善待、敬重、尽责的本心，人人本来都有。</p>
+    <p>但这份本心，容易被杂念、习气盖住，就像明珠蒙上尘土。</p>
+    <p>所以启蒙教导，一定要细细讲清道理，探究根本，分清什么是内核本心，什么是外在形式。</p>
+    <p>读书学古，不是死背字句，要懂得背后的用心；教法只是方便，我们的本心本来清明。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课七十一·一笔点卷</span></div>
+      <figcaption>一笔点下去，卷上落一点红。</figcaption>
+    </figure>
+    <p>想要深究经典的道理，先要读懂文字本身。</p>
+    <p>训诂，就是细细弄清每个字原本是什么意思；句读，就是分清一句话在哪里停顿、在哪里收尾。</p>
+    <p>古书中没有现代标点，断错了，理解就会跑偏。</p>
+    <p>但也要记得：认字、断句，只是入门的工具。工具好用，是为了读懂背后的本心义理，不要一辈子困在文字考据里。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课七十一·母亲在侧</span></div>
+      <figcaption>男孩写字，母亲在旁看。</figcaption>
+    </figure>
+    <p>落到心上理解</p>
+    <p>承接上一课存疑：十义既说人所同、本心既本自具足，为何还要另立启蒙训导？</p>
+    <p>蒙，不是愚笨，是无明覆蔽。</p>
+    <p>讲究，有两层次第：一是文字训诂，厘清名相；二是义理深探，直达心性本源。</p>
+    <p>教学的大忌，是以文字相、教条相替代本心。依理启蒙，而不执着任何固定教法、固定讲法，便是教化层面的无住。</p>
+    <p>另有一问：讲究说到什么程度才算够，深浅如何拿捏而不落入文字知见。</p>
+    <p>利根之人，句读训诂够用即可，快速透入义理；钝根、初学之人，必须从训诂句读一步步夯实根基，否则义理全是想象、附会。</p>
+    <p>详，是当详则详；明，是当明则明。根基不足，不可跳脱文字空谈心性；根基已稳，则不可长年纠缠文字考据，滞于理障。</p>
+  </div>
+
+  <div class="two">
+    <div class="card">
+      <div class="ch2">俗 见<span>这 一 课 的 读 法</span></div>
+      <p>训蒙等于填鸭灌输，讲究流于文字考据；沉溺训诂考据，以字解为究竟</p>
+    </div>
+    <div class="card">
+      <div class="ch2">正 解<span>这 一 课 的 读 法</span></div>
+      <p>训蒙为拂尘显性，讲究本末兼顾，不执教法名相；训诂句读为入门阶梯，够用即转向义理</p>
+    </div>
+  </div>
+
+  <div class="takeaway">
+    <div class="t">成 长 小 启 示</div>
+    <ul>
+      <li>人人本具清明本心，但是容易被杂念习气遮蔽，故需要启蒙。</li>
+      <li>启蒙教学，应当深究义理本源，不能只停留在背诵文字。</li>
+      <li>讲究包含两层：辨明文字，通达义理，本末不可颠倒。</li>
+      <li>教法是方便手段，本心本来具足，教化不会凭空给我们增加智慧。</li>
+      <li>训诂，考究字源古训，明白文字本义；句读，分清文句停顿起止。</li>
+      <li>这是读古书、研经典的基础功夫，是“讲究”的第一步。</li>
+      <li>根基不够，不能跳过文字空谈大道；根基成熟，不可长久滞留在文字功夫里。</li>
+      <li>文字是载道的工具，工具是方便，本心觉悟才是目的地。</li>
+    </ul>
+  </div>
+
+  <div class="parent-tip">
+    <div class="t">给 爸 爸 妈 妈 的 一 句 话 · 这 一 课 讲 什 么，慢 慢 说 给 孩 子 听</div>
+    <p><b>一、勘俗见。</b>文脉由人伦归宿转入教化方法论。十义是“教之所期”，讲究是“教之所由”。纠正一个普遍误区：蒙学不等于低幼简单，蒙，是一切无明遮蔽的代称，成人的习气蒙蔽，同样属于“蒙”，同样需要讲究、反思。文脉由教化总纲，下沉到实操治学次第。纠正两种常见学法：一是考据成瘾，把学问变成文字竞赛；二是好高骛远，不识字义就空谈感悟。</p>
+    <p style="margin-top:6"><b>二、现代对照。</b>放到当下家庭教育、阅读学习，就是重理解、重溯源，反对机械背诵。不是不要文字基础，而是文字为表，心性义理为里。放到今天，就是字词注释、原文断句、查证出处。读古籍，先扫清字面障碍，再谈感悟。</p>
+    <p style="margin-top:6"><b>三、承接常变主线。</b>讲解的方式、教材、话术，随时代、根器调整（可变之相）；启发本心、辨明本末的教化内核不变（常）。文字读音、释义、断句方案，会随版本、文献考证更新（可变之相）；由文字通达义理、不执文字的治学内核不变（常）。</p>
+    <p style="margin-top:6"><b>四、承接教与学二分。</b>家长自身先做到考究义理、不盲从俗说，属于施教一侧；学习者学会追问根源、不盲从听闻，是自主修习。师长示范严谨查考字义、审慎断句，属于施教一侧；学习者养成不望文生义的习惯，是自主修习。</p>
+    <p style="margin-top:6">承接选择力练习：善用讲究之法启蒙，明教法为筏，不困于文字教条。</p>
+  </div>
+
+  <div class="folio">— 142 —</div>
+</div>
+<div class="adult">
+  <div class="runhead" style="border-bottom-color:#DCD0B4"><span>成人研学 · 古今汇观</span><span class="c">第七十一课 · 深度页</span></div>
+  <h2>凡训蒙，须讲究。详训诂，明句读</h2>
+  <div class="meta">凡训蒙，须讲究。详训诂，明句读 ｜ 少儿页＋成人页</div>
+
+  <span class="num">一</span>
+  <p><b class="sec">字义与句读</b></p>
+  <p>训，训导启沃；蒙，《易经》蒙卦，蒙昧未明、本心为尘所覆。讲究：讲则疏通文义，究则穷究根源，辨析是非、勘破俗解。</p>
+  <p>上句释义：但凡启蒙教化，必要讲明文义、深究义理本源，分清本末表里，不可囫囵吞枣、盲从俗传。</p>
+  <p>训诂：训者顺也，顺其文意；诂者故也，求古人之本言。句读，句为语意完结之处，读为语气停顿之处。</p>
+  <p>下句释义：启蒙治学，要详究文字古训本义，理清文句的停顿与分界，扫清文字层面的障碍，而后义理可明。</p>
+  <span class="num">二</span>
+  <p><b class="sec">命题考辨</b></p>
+  <p><b>（1）十义之后，转入教化方法论</b></p>
+  <p>前文证“人心同，本有良知”，此处一转：既然本有，为何还要学习训导？</p>
+  <p>答案就是“蒙”——无明习气覆盖，虽有而不显。</p>
+  <p>整个润泽说的体系在这里可以呼应：自性本自具足，不是不需要修学；修学、讲究，是去蔽，不是增益。和《坛经》“何其自性本自清净”一脉贯通。</p>
+  <p><b>（2）对照当下现代语境</b></p>
+  <p>当下教育两种极端：一端是唯知识论，堆砌信息、背诵考点；一端是放任自流，认为本性自足不必学习。</p>
+  <p>“凡训蒙，须讲究”守持中道：承认本心本具，同时承认习气覆蔽的现实，以讲究为手段，层层剥离遮蔽。</p>
+  <p>讲究不是玄谈，包含扎实的名相、史料、义理考证，先把概念勘正，再往心性上归。</p>
+  <p>当代读古籍，两类通病：</p>
+  <p>一类是现代快餐式阅读，不看注释、不校版本，凭主观感受随意解读经典；</p>
+  <p>一类是学院式考据，穷尽异文、罗列众说，一辈子停留在文献层面，不见心性之旨。</p>
+  <p>“详训诂，明句读”的中道：该详则详，该明则明，目的是通达义理，不是积累考据见闻。</p>
+  <p><b>（3）般若范式互参</b></p>
+  <p>教化、训蒙、讲说，都是因缘层面建立的善巧方便。</p>
+  <p>文字、字义、断句，全部属于缘起假名，是载道之筏。</p>
+  <p>联动三才五蕴太极空杯模型：虚空自性为本，习气尘垢为外缘遮蔽；讲究、讲说如同擦拭，擦拭动作是假名，虚空本体不曾增减。虚空自性为本，文字为外缘载体。借文字、句读疏通路径，令义理显发，载体本身不是虚空。</p>
+  <p>呼应“本乎数”：蒙为始，讲究为开启之功，由暗向明，一阴一阳。字有定训，文有起止，是秩序之象；由秩序而入无住，是治学的阴阳转换。</p>
+  <p>延伸义理：</p>
+  <p>《金刚经》：无有法可说，不是废弃言说教化，是言说用来破执，说完即舍，不执言说为实。讲究正是这个道理。所言“知我说法，如筏喻者”，正合于此。训诂句读即是筏，渡河之后，不必背负木筏而行。</p>
+  <p>《道德经》：涤除玄览。讲究，就是涤除的教学版本，扫除尘翳，令玄鉴自明。道可道，非常道。文字能描述道，但是文字本身不是道。</p>
+  <p>《坛经》：迷时师度，悟了自度。训蒙讲究，即是师度；目标不是依附师长讲说，是唤醒自度的觉性。经文字句，只是接引；若识自性，不执经文。</p>
+  <p><b>（4）治学次第：由粗入细，由器向道</b></p>
+  <p>凡训蒙须讲究，是总纲领；详训诂、明句读，是第一层下手功夫。</p>
+  <p>这套次第，刚好对应两种根器的施教分寸：</p>
+  <p>利根，闻一知十，训诂句读点到为止，不耗过多心力，直趋义理；</p>
+  <p>钝根初学，必须字字考究、句句厘清，防止错解生根，变成难以拔除的知见障碍。</p>
+  <p>不是考据本身有错，是要知其为阶梯，而非殿堂。</p>
+  <span class="num">三</span>
+  <p><b class="sec">跨典互参（老庄、般若对照）</b></p>
+  <p>· 《道德经》：为学日益，为道日损。训蒙讲究，为学与为道并举；考究文义是日益，扫执去蔽是日损。少则得，多则惑。训诂详而不滥，便是守少，过多异说反生迷惑。</p>
+  <p>· 《庄子》：吾生也有涯，而知也无涯，以有涯随无涯，殆已。讲究贵在知本，不向外追逐无穷文辞考据。得意而忘言。训诂句读，为了得意；得意之后，可忘言。</p>
+  <p>· 串联前文：自天地四时、五行万物、七情八音、九族、五伦十义，完成“人伦本心本同”的立论，继而转向：如何破除蒙蔽，显发本心？便是讲究、训蒙的教化路径。自天地万物、七情八音、九族五伦十义，确立人伦本心；转入教化讲究，再落地为文字训诂、句读的基础功夫，搭建一条由文字通往心性的实修路径。</p>
+  <span class="num">四</span>
+  <p><b class="sec">和前面课程的张力</b></p>
+  <p>次第链条：……→ 此十义，人所同 → 凡训蒙，须讲究 → 详训诂，明句读（完整链条见附录）</p>
+  <p>呼应“人不学，不知义”：不学则蒙，讲究正是学的正途，考究义理，不困表层；学的起点，先读懂文字，不令文义扭曲；</p>
+  <p>呼应“玉不琢，不成器”：讲究就是琢磨，磨去习气尘蒙，本心光明方显；训诂句读，就是打磨文字这层外壳，里面义理方能显露；</p>
+  <p>呼应“教之道，贵以专”：讲究不是散乱泛览，专一穷究本源，是教的核心准则。专一在本义文脉上用功，不泛滥追逐旁支异说。</p>
+  <span class="num">五</span>
+
+  <div class="doubt">
+    <div class="t">存 疑 · 留 待 深 究</div>
+    <p>1. 讲究考究，容易落入文字知见、理障，如何在讲究的同时，不增长我慢、不困于知解？</p>
+    <p>2. 根器不同，有的人适合少言直入，有的人需要层层考究，如何拿捏讲究的分寸？</p>
+    <p>3. 训蒙以唤醒本心为目标，那讲究、考据，到什么时候该放下？</p>
+    <p>4. 多家训诂释义不同、版本句读互异，如何抉择，而不陷入众说纷争？</p>
+    <p>5. 如何区分“审慎考证”和“贪多猎奇的考据我慢”？边界怎么把握？</p>
+    <p>6. 已经通训诂、明句读之后，以什么标准判断自己可以放下文字，向内观照？</p>
+  </div>
+
+  <div class="folio" style="color:#B4A88F">— 143 —</div>
+</div>
+<div class="page">
+  <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第七十二课 · 为学者</span></div>
+  <div class="lesson-no">第 七 十 二 课</div>
+  <h1>为学者，必有初。小学终，至四书。</h1>
+  <div class="sub">wéi xué zhě　bì yǒu chū　xiǎo xué zhōng　zhì sì shū</div>
+
+  <div class="grid-block">
+      <div class="grid-cols tight">
+  <div class="col"><div class="colhead">① 先读右列</div>
+    <div class="cellwrap"><div class="py">wéi</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">为</span></div><div class="strokes">四画</div></div><div class="cellwrap"><div class="py">xué</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">学</span></div><div class="strokes">八画</div></div><div class="cellwrap"><div class="py">zhě</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">者</span></div><div class="strokes">八画</div></div>
+  </div>
+  <div class="col"><div class="colhead">② 再读左列</div>
+    <div class="cellwrap"><div class="py">bì</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">必</span></div><div class="strokes">五画</div></div><div class="cellwrap"><div class="py">yǒu</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">有</span></div><div class="strokes">六画</div></div><div class="cellwrap"><div class="py">chū</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">初</span></div><div class="strokes">七画</div></div>
+  </div>
+  </div>
+  <div class="readnote">古法竖排：<b>自右而左，自上而下</b>。上段先读右列「为学者」，再读左列「必有初」。</div>
+  <div class="grid-cols tight" style="margin-top:26px">
+  <div class="col"><div class="colhead">③ 续读右列</div>
+    <div class="cellwrap"><div class="py">xiǎo</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">小</span></div><div class="strokes">三画</div></div><div class="cellwrap"><div class="py">xué</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">学</span></div><div class="strokes">八画</div></div><div class="cellwrap"><div class="py">zhōng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">终</span></div><div class="strokes">八画</div></div>
+  </div>
+  <div class="col"><div class="colhead">④ 再读左列</div>
+    <div class="cellwrap"><div class="py">zhì</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">至</span></div><div class="strokes">六画</div></div><div class="cellwrap"><div class="py">sì</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">四</span></div><div class="strokes">五画</div></div><div class="cellwrap"><div class="py">shū</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">书</span></div><div class="strokes">四画</div></div>
+  </div>
+  </div>
+  <div class="readnote">下段续读：先读右列「小学终」，再读左列「至四书」。</div>
+    <div class="note">承接训诂、句读的治学功夫，立求学的次第准则。为学，向内明心性、向外穷事理的修学；初，不是粗浅、低等，是根基、起点，是次第的源头。任何修学，都有起步之处，不可躐等而进、凌空跳跃。</div>
+    <div class="note" style="font-size:12.5px;color:#6B6157">承接“为学者，必有初”，给出古人成型的治学升阶路径。此处的小学，不是现代的小学校，是古之基础之学：文字、训诂、音韵、名物、洒扫应对、人伦日用，是承载义理的根基之学；终，不是学完就丢弃，是基础功课圆满扎实，不再困于文字名物；至四书，就是进阶进入《大学》《中庸》《论语》《孟子》，直探修心、为政、性命的核心义理。</div>
+  </div>
+
+  <div class="band"><span class="tag">少儿共读</span><span class="rule"></span><span class="en">读给孩子听</span></div>
+
+  <div class="kid">
+    <p class="lead">凡是求学问道，一定有起步的起点。</p>
+    <p>就像种树，先要养好树根；读书学道，先要把根基打好。</p>
+    <p>前面的训诂、断句，就是求学之初。不要嫌基础简单就跳过，直接去追逐玄妙的道理。</p>
+    <p>次第是方便，本心不分先后；但我们习气深重，需要一步一步，慢慢往里面深入。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课七十二·书阶两级</span></div>
+      <figcaption>案分数级，书搁在级上。</figcaption>
+    </figure>
+    <p>古人求学，先把小学的功夫做扎实：认字、辨音、明字义、懂待人处事。</p>
+    <p>小学的功夫扎实安稳之后，再去研读四书。</p>
+    <p>小学是铺路筑基，四书是向着本心明德去深入。</p>
+    <p>次第是方便安排，不是说四书就更高贵；只是根基不稳的时候，很容易把四书读成自己空想的道理。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课七十二·书排成列</span></div>
+      <figcaption>一本一本，排成一列。</figcaption>
+    </figure>
+    <p>落到心上理解</p>
+    <p>承接上一课存疑：版本、句读异说纷繁，以何为标尺抉择？</p>
+    <p>答案是先守住次第，再谈异说；次第就是标尺。</p>
+    <p>初，是治学的原点：先立次第，再做考究。先把入门根基夯实，再逐步向上；根基不稳时，卷入各家异说、纷繁考据，只会徒增散乱与我慢。</p>
+    <p>利根也不废初，只是在“初”上一点即透，不必长久滞留；钝根更要护好这个初，久久扎根，稳步上行。知次第而不执着次第，便是无住。</p>
+    <p>另有一问：初阶修到哪一步，才算可以向上转进？</p>
+    <p>此句给出的，正是这个标尺。</p>
+    <p>小学之“终”，不是穷尽所有名物异说，而是具备独立读典、辨明文句、守住人伦本分的能力，不再被文字障碍卡住。到此地步，便可转进四书，向内求明德良知。</p>
+    <p>利根之人，小学功夫一点即通，快速过渡；钝根学人，需要长久熏习打磨。但无论利钝，都绕不开这个关口；同时，也不可把小学当成毕生归宿。知次第而不执次第，便是无住。</p>
+  </div>
+
+  <div class="two">
+    <div class="card">
+      <div class="ch2">俗 见<span>这 一 课 的 读 法</span></div>
+      <p>轻视初学根基，躐等求高，空谈妙理；弃小学根基，直读四书，空谈性命</p>
+    </div>
+    <div class="card">
+      <div class="ch2">正 解<span>这 一 课 的 读 法</span></div>
+      <p>深知为学有初，扎根固本，循序深入；循序筑基，小学功夫完备，再入四书穷究义理</p>
+    </div>
+  </div>
+
+  <div class="takeaway">
+    <div class="t">成 长 小 启 示</div>
+    <ul>
+      <li>但凡求学修学，一定有起步的根基、先后的次序。</li>
+      <li>训诂、句读，就是经典研读最初的功课。</li>
+      <li>根基扎实，后面的义理才稳；跳过根基去谈玄妙，容易落入空想。</li>
+      <li>次第是接引的路径，不是固化的台阶，悟处不在阶位高低。</li>
+      <li>古学次第：先修小学（文字音韵、名物、日用伦常），根基成熟，再研读四书。</li>
+      <li>小学是基础工具与日常涵养，四书是心性义理的主干。</li>
+      <li>“终”是过关、够用，不是穷尽一切细碎考据。</li>
+      <li>阶次是接引的路标，本心没有高低，学人依自身根器稳步前行。</li>
+    </ul>
+  </div>
+
+  <div class="parent-tip">
+    <div class="t">给 爸 爸 妈 妈 的 一 句 话 · 这 一 课 讲 什 么，慢 慢 说 给 孩 子 听</div>
+    <p><b>一、勘俗见。</b>文脉由读书技法，转入治学架构。纠正两种习气：躐等、滞留。很多学习者，要么急于求成，要么长久卡在基础，二者都是偏颇。本段是蒙学治学路线的核心转场。区分古今“小学”的概念，避免望文生义。同时平衡两端：不废基础，不困基础。</p>
+    <p style="margin-top:6"><b>二、现代对照。</b>学习任何学问都有入门，学经典、学技艺皆是如此。不是基础低级，基础是承载一切的底层土壤。放到今天，对应先掌握阅读、文字、常识、待人的基本功，再进入经典义理研读。基本功不是不重要，而是它的定位是过渡。</p>
+    <p style="margin-top:6"><b>三、承接常变主线。</b>入门的教材、学习方式可以随时代调整（可变之相）；循序渐进、固本求深的治学原则不变（常）。小学包含的内容、学习的材料，可以随时代调整（可变之相）；先筑基、后穷理的进学次序不变（常）。</p>
+    <p style="margin-top:6"><b>四、承接教与学二分。</b>师长为学人铺设合理的入门次第，属于施教一侧；学习者安住当下根基，不躁进、不荒废，是自主修习。师长规划由基础到经典的学习路径，属于施教一侧；学习者不躁进、不滞留，踏实转进，是自主修习。</p>
+    <p style="margin-top:6">承接选择力练习：安立初学根基，循次而进，不躐等、不滞留，善用次第而不执阶位。</p>
+  </div>
+
+  <div class="folio">— 144 —</div>
+</div>
+<div class="adult">
+  <div class="runhead" style="border-bottom-color:#DCD0B4"><span>成人研学 · 古今汇观</span><span class="c">第七十二课 · 深度页</span></div>
+  <h2>为学者，必有初。小学终，至四书</h2>
+  <div class="meta">为学者，必有初。小学终，至四书 ｜ 少儿页＋成人页</div>
+
+  <span class="num">一</span>
+  <p><b class="sec">字义与句读</b></p>
+  <p>为学，修学、求学；初，始也，根基、入道之首阶。</p>
+  <p>上句释义：但凡修学问道之人，必有起步的根基与先后次第，不可凭空超阶，一蹴而就。</p>
+  <p>小学：古之基础学，包含文字训诂、音韵、名物、礼则、洒扫应对；终，有成、够用，障难渐消；四书：《大学》《中庸》《论语》《孟子》，宋儒定为义理核心典籍。</p>
+  <p>下句释义：基础的小学功夫修习有成，能够独立读懂文句、明辨名物、安守伦常，而后方可进至四书，深究明德、性命、仁义之旨。</p>
+  <span class="num">二</span>
+  <p><b class="sec">命题考辨</b></p>
+  <p><b>（1）次第与顿悟的中道平衡</b></p>
+  <p>本体系一贯兼容顿渐：自性无先后，是顿；修行安立次第，是渐。</p>
+  <p>“为学者，必有初”，就是渐修的总原则。即便六祖门下顿悟法门，也不是废弃根基；只是利根之人，根基在一念之间顿显，不是没有“初”。</p>
+  <p>反过来，渐修之人，久久扎根，也不可把次第当成实有层级，执着“我在初地、我还未到高处”，生出阶位分别。</p>
+  <p><b>（2）对照当下现代语境</b></p>
+  <p>当下学习圈盛行“速成”：求快速开悟、快速读懂古籍、跳过基础直取心法。</p>
+  <p>这句恰是对治：速成大多是虚浮的影子。没有根基的感悟，很容易变成自我感动的知见，遇到异说、疑问，立刻崩塌。</p>
+  <p>不是反对顿悟，是顿悟不可以作为逃避基础功夫的借口。</p>
+  <p>今人读四书两大通病：</p>
+  <p>一是零基础上手，依靠白话译文、短视频解说，拿四书句子做鸡汤，义理浮在表面，遇到版本异文、古字歧义，完全无力分辨；</p>
+  <p>二是长期埋在文献考据，博闻多识，却从未往心性、践行上落实，知识越厚，我慢越重。</p>
+  <p>“小学终，至四书”给出中道：先具备独立读典的能力，再以四书为纲领，向内观照、落地践行。</p>
+  <p><b>（3）般若范式互参</b></p>
+  <p>次第、初学、阶位，都是因缘假名，是教化的方便。</p>
+  <p>小学、四书的先后次序，都是教化假名，为对治习气而设立。</p>
+  <p>联动三才五蕴太极空杯模型：虚空自性无初无后；为对治众生习气，安立初学、进阶的次第路径。如同杯子空间本无远近，我们自设入口，循序而入。虚空自性本无先后；为破除学人“躐等好高”的习气，安立先小学、后四书的路标。如同入杯观空，先扫清杯壁遮蔽，再体会虚空本体。</p>
+  <p>呼应“本乎数”：万物生必有始，数起于一，一即是初，由一推演万千，治学同此理。由一而进，由器入道，数序递进，由繁文名物，收摄于心性之一。</p>
+  <p>延伸义理：</p>
+  <p>《金刚经》：一切法如筏喻。次第就是筏，用来载渡学人，渡河之后不必执着阶位。筏喻，小学是前一段筏程，四书是向彼岸的主航，筏非彼岸，渡河当舍。</p>
+  <p>《道德经》：合抱之木，生于毫末；九层之台，起于累土，正是“必有初”。为学日益，为道日损。小学属于日益，积累文字名物；四书导向日损，省察私欲、复归明德。</p>
+  <p>《坛经》：迷时渐修，悟即刹那。刹那之悟，也不能否定渐修扎根的价值。佛法在世间，不离世间觉。小学的日用伦常，就是世间；四书明德良知，就是觉，本不相离。</p>
+  <p><b>（4）次第的转关：向外积累，转向向内明心</b></p>
+  <p>前面训诂、句读，都属于小学范畴。小学解决“看得懂”；四书解决“做得到、明本心”。</p>
+  <p>这不是割裂两段学问：小学里面也含人伦，四书里面也离不开训诂。二者是侧重不同：小学重在器、文、事；四书重在体、心、德。</p>
+  <p>“终”是一个关键分寸：不是要穷尽所有异文冷僻名相，而是不再被文字卡住，有能力去辨析义理。这就回答上一课的疑问：初阶完成，以“读典无障碍、伦常有本分”为标尺，而非见闻数量。</p>
+  <span class="num">三</span>
+  <p><b class="sec">跨典互参（老庄、般若对照）</b></p>
+  <p>· 《道德经》：天下难事，必作于易；天下大事，必作于细。初学，就是易、细的开端。九层之台，起于累土。小学就是累土，四书是高台明德。</p>
+  <p>· 《庄子》：积厚者，负大舟。初学扎根，即是积厚。道行之而成。小学是行的基础，四书是道的归向。</p>
+  <p>· 串联前文：自天地人伦，立本心大同；转入教化讲究，落地训诂句读；再确立治学根本原则——为学必有初，完成一套由理到法、由高到落地的修学架构。自天地万物、七情八音、九族五伦十义，建立人伦本心；转入教化讲究，落地训诂句读；立定“必有初”的原则；至此给出完整进学路线——小学筑基，而后进四书，完成由文字到心性的通路搭建。</p>
+  <span class="num">四</span>
+  <p><b class="sec">和前面课程的张力</b></p>
+  <p>次第链条：……→ 详训诂，明句读 → 为学者，必有初 → 小学终，至四书（完整链条见附录）</p>
+  <p>呼应“人不学，不知义”：学从初起，由根基慢慢通达义理；小学铺路，到四书，才深入仁义明德的本义；</p>
+  <p>呼应“玉不琢，不成器”：初学打磨，就是最初的雕琢功夫；小学是粗琢，四书是细磨心性；</p>
+  <p>呼应“教之道，贵以专”：专一守住初学之本，不向外散乱追逐高妙名目。专一沿着次第推进，不旁骛猎奇、不凌空求妙。</p>
+  <span class="num">五</span>
+
+  <div class="doubt">
+    <div class="t">存 疑 · 留 待 深 究</div>
+    <p>1. 根基到何种程度，才算“初”的阶段完成，能够向上进阶？有没有客观标尺？</p>
+    <p>2. 有的人早年没有打好文字根基，中年之后才治学，如何补这个“初”，而不耗散一生？</p>
+    <p>3. 顿根学人一念回光，看似无初无阶，这和“为学者必有初”如何圆融？</p>
+    <p>4. 今人很难复刻古人全套小学训练，如何在现代条件下，等效完成“小学终”这个关口？</p>
+    <p>5. 四书本身内部，又以何者为先？《大学》定为入门，道理何在？</p>
+    <p>6. 已经通达四书义理之后，回头再看小学名物训诂，视角会发生什么样的转变？</p>
+  </div>
+
+  <div class="folio" style="color:#B4A88F">— 145 —</div>
+</div>
+<div class="page">
+  <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第七十三课 · 论语者</span></div>
+  <div class="lesson-no">第 七 十 三 课</div>
+  <h1>论语者，二十篇。群弟子，记善言。</h1>
+  <div class="sub">lún yǔ zhě　èr shí piān　qún dì zǐ　jì shàn yán</div>
+
+  <div class="grid-block">
+      <div class="grid-cols tight">
+  <div class="col"><div class="colhead">① 先读右列</div>
+    <div class="cellwrap"><div class="py">lún</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">论</span></div><div class="strokes">六画</div></div><div class="cellwrap"><div class="py">yǔ</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">语</span></div><div class="strokes">九画</div></div><div class="cellwrap"><div class="py">zhě</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">者</span></div><div class="strokes">八画</div></div>
+  </div>
+  <div class="col"><div class="colhead">② 再读左列</div>
+    <div class="cellwrap"><div class="py">èr</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">二</span></div><div class="strokes">二画</div></div><div class="cellwrap"><div class="py">shí</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">十</span></div><div class="strokes">二画</div></div><div class="cellwrap"><div class="py">piān</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">篇</span></div><div class="strokes">十五画</div></div>
+  </div>
+  </div>
+  <div class="readnote">古法竖排：<b>自右而左，自上而下</b>。上段先读右列「论语者」，再读左列「二十篇」。</div>
+  <div class="grid-cols tight" style="margin-top:26px">
+  <div class="col"><div class="colhead">③ 续读右列</div>
+    <div class="cellwrap"><div class="py">qún</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">群</span></div><div class="strokes">十三画</div></div><div class="cellwrap"><div class="py">dì</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">弟</span></div><div class="strokes">七画</div></div><div class="cellwrap"><div class="py">zǐ</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">子</span></div><div class="strokes">三画</div></div>
+  </div>
+  <div class="col"><div class="colhead">④ 再读左列</div>
+    <div class="cellwrap"><div class="py">jì</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">记</span></div><div class="strokes">五画</div></div><div class="cellwrap"><div class="py">shàn</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">善</span></div><div class="strokes">十二画</div></div><div class="cellwrap"><div class="py">yán</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">言</span></div><div class="strokes">七画</div></div>
+  </div>
+  </div>
+  <div class="readnote">下段续读：先读右列「群弟子」，再读左列「记善言」。</div>
+    <div class="note">承接“小学终，至四书”，依次开解四书。首举《论语》。论，是论次、论纂；语，是言语、应答。《论语》，是孔子弟子及再传弟子，辑录夫子平日应答、教诲之语，共二十篇。它不是孔子亲笔著作，是随问而答、随机施教的语录汇编。</div>
+    <div class="note" style="font-size:12.5px;color:#6B6157">承接上句「论语者，二十篇」，讲明《论语》文本的由来。群弟子，不单指在场亲聆教诲的及门弟子，也包含再传后学；善言，不是华丽辞藻、巧辩之语，是夫子契合本心、合于仁道、对症解惑之言。不是孔子执笔著书，是弟子们亲身领受之后，用心记下这些契机之语，汇集成篇，流传后世。</div>
+  </div>
+
+  <div class="band"><span class="tag">少儿共读</span><span class="rule"></span><span class="en">读给孩子听</span></div>
+
+  <div class="kid">
+    <p class="lead">《论语》，是孔子和弟子们对话的记录，一共二十篇。</p>
+    <p>不是夫子预先写好的长篇文章，是有人提问，夫子随机点拨。</p>
+    <p>每一段对话，都对应当时的人和事，不能单独抽一句话，随便套在所有场景里。</p>
+    <p>文字是载体，里面藏着“仁”的本心，我们读的时候，要体会这份存心，而不只是背句子。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课七十三·一案竹简</span></div>
+      <figcaption>一案的竹简，一群人各自落笔。</figcaption>
+    </figure>
+    <p>《论语》里面的话，不是孔子提前写好的文章。</p>
+    <p>是一众弟子，跟着夫子求学，听见夫子开导的善言，心里有所触动，就记录下来，慢慢汇编成二十篇。</p>
+    <p>善言，是对症的提点，不是死板的规矩。</p>
+    <p>言语用来启发我们的本心，听完、读懂之后，还要回到自己身上省察践行。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课七十三·五人记句</span></div>
+      <figcaption>五个人围一张桌，各写各的句子。</figcaption>
+    </figure>
+    <p>落到心上理解</p>
+    <p>承接上一课存疑：四书内部以《大学》为入德之门，而蒙学多先读《论语》。</p>
+    <p>《大学》是纲领框架，立明德止至善的总轨道；《论语》是落在日用、人事、问答里的活示范。框架先立，再看无数应机问答，义理才不会僵死。</p>
+    <p>二十篇只是编辑归类，不必执着篇次有秘传次序；但也不可轻视文本脉络，断章取义。依文入观，体会忠恕仁心，得意而不执言语篇章，即是无住。</p>
+    <p>另有一问：问答之语，本身就带着应机属性。</p>
+    <p>弟子记录之时，已经以自己的领会做取舍，文本不是镜面一样无差别的复刻。所以我们读《论语》，既要尊重记录下来的文辞，做训诂句读的考证；又要明白，文字只是路标，要顺着路标去体会夫子当下的本心，而不是死守字句。</p>
+    <p>善言可贵，贵在能破当下的迷惑；时移境迁，同样一句话，未必还适合直接照搬。得意忘言，便是无住。</p>
+  </div>
+
+  <div class="two">
+    <div class="card">
+      <div class="ch2">俗 见<span>这 一 课 的 读 法</span></div>
+      <p>摘句割裂，脱离语境，当作现成格言使用；视善言为永恒不变的教条，直接照搬套用</p>
+    </div>
+    <div class="card">
+      <div class="ch2">正 解<span>这 一 课 的 读 法</span></div>
+      <p>通读篇章、体察问答机缘，领会应机施教的仁心；善言是应机解惑的提点，随因缘而显，重在领会仁心</p>
+    </div>
+  </div>
+
+  <div class="takeaway">
+    <div class="t">成 长 小 启 示</div>
+    <ul>
+      <li>《论语》是孔子弟子辑录的师生问答，全书分为二十篇。</li>
+      <li>属于四书之一，文辞亲切，多是对机点拨，不是刻板论文。</li>
+      <li>读《论语》忌断章取义，要看懂当时问答的背景。</li>
+      <li>篇章文字是舟筏，最终要回归自身的仁心、自省与践行。</li>
+      <li>《论语》是众多弟子、后学，记录孔子的善言汇编而成。</li>
+      <li>善言，是契合仁道、解开当下困惑的教诲，不是浮华言辞。</li>
+      <li>记录承载教化，但记录不等于本心本身。</li>
+      <li>读善言，重在向内省察，而不是把句子当成不变的铁律。</li>
+    </ul>
+  </div>
+
+  <div class="parent-tip">
+    <div class="t">给 爸 爸 妈 妈 的 一 句 话 · 这 一 课 讲 什 么，慢 慢 说 给 孩 子 听</div>
+    <p><b>一、勘俗见。</b>文脉正式开启四书分释。厘清《论语》成书性质：语录汇编，应机而发。重点破除“一句放四海皆准”的摘句思维。补全《论语》成书脉络，纠正“孔子写了论语”这个常见误会。同时区分：善言的价值在启发，不是万能公式。</p>
+    <p style="margin-top:6"><b>二、现代对照。</b>类似前辈长者的谈话记录，每一段回答，都针对特定人的困惑。换一个人、换一个处境，教法也会不同。如同听课笔记。再好的笔记，也只是老师讲解的转述，笔记不等于老师当下全部的心意，阅读笔记要还原场景、体会本意。</p>
+    <p style="margin-top:6"><b>三、承接常变主线。</b>篇目分章、版本异文可以校订调整（可变之相）；以仁恕自省、以诚待人的核心宗旨不变（常）。文字传抄、版本字句会在流传中发生变动（可变之相）；善言启发人回归仁心自省的教化内核不变（常）。</p>
+    <p style="margin-top:6"><b>四、承接教与学二分。</b>师长讲解时还原问答场景，属于施教一侧；学习者读句反观自身，不拿字句去苛责他人，是自主修习。师长传递善言、启发觉知，属于施教一侧；学人听闻记录、反躬自省，是自主修习。</p>
+    <p style="margin-top:6">承接选择力练习：读论语，察机缘、明本心，善用章句而不被单句束缚。</p>
+  </div>
+
+  <div class="folio">— 146 —</div>
+</div>
+<div class="adult">
+  <div class="runhead" style="border-bottom-color:#DCD0B4"><span>成人研学 · 古今汇观</span><span class="c">第七十三课 · 深度页</span></div>
+  <h2>论语者，二十篇。群弟子，记善言</h2>
+  <div class="meta">论语者，二十篇。群弟子，记善言 ｜ 少儿页＋成人页</div>
+
+  <span class="num">一</span>
+  <p><b class="sec">字义与句读</b></p>
+  <p>论（lún），论纂、编排次第；语，言语答问。弟子相与辑而论纂，故称《论语》，凡二十篇。</p>
+  <p>上句释义：《论语》这部典籍，由孔门弟子、再传弟子汇集夫子应答教诲之语，编排为二十篇，是四书之中极重要的一部。</p>
+  <p>群弟子，孔门及门弟子、再传后学；善言，善化之言，契合仁道、对治迷情的教诲。</p>
+  <p>下句释义：《论语》所载，出自一众弟子，亲闻夫子教诲之后，记录下这些应机启悟的善言，汇集成书，传之后世。</p>
+  <span class="num">二</span>
+  <p><b class="sec">命题考辨</b></p>
+  <p><b>（1）四书阅读次序的两种传统</b></p>
+  <p>宋儒定四书次第：《大学》→《论语》→《孟子》→《中庸》。以《大学》立规模，再以《论语》见日用功夫。</p>
+  <p>蒙学诵读，常先取《论语》：长短错落、故事问答丰富，门槛更低，适合初学。二者并不冲突：先立格局，再看活的践履示范。</p>
+  <p>二十篇，是后世整理归类，并非孔子预设的写作大纲。每篇篇题，只是取开篇二三字，不代表全篇总主旨，这也是读此书容易忽略的要点。</p>
+  <p><b>（2）对照当下现代语境</b></p>
+  <p>当下网络上大量《论语》解读，最大弊病就是断章取义，脱离问答语境，改造为心灵鸡汤或者权谋口诀。</p>
+  <p>“论语者，二十篇”一句，暗含提醒：它是一部对话集。义理不是悬浮的公理，是面对具体人、具体困惑的对症开示。离开对象与场景，道理就容易僵化。</p>
+  <p>今天很多人读经典，有两种极端：一种是文本原教旨，一字不可疑；一种是随意发挥，脱离原文空谈感悟。</p>
+  <p>“群弟子，记善言”给出中道：文本是弟子传承的记录，值得严谨考据；记录是中转，不是本源，义理体悟不能困死在文字里。</p>
+  <p><b>（3）般若范式互参</b></p>
+  <p>篇章、问答、文字言说，都是教化假名。</p>
+  <p>善言、笔录、简册文本，全是因缘假名。</p>
+  <p>联动三才五蕴太极空杯模型：仁心自性如杯中空性，本自一如；问答言语、二十篇文字，如同因缘显现的种种影像，用来指引人返归空性本心。影像不是虚空，借影像可以识虚空，不可执影像为虚空。仁心自性如同杯中之空，本自圆满；善言如同指点虚空的手指，弟子记录，是把手指的样貌留存下来。指不是月，借指望月，不可执指为月。</p>
+  <p>呼应“本乎数”：二十为偶数，两两相对，一问一答，阴阳相感，显发仁道。群为多，记为存，一多相摄，众缘汇聚，方有典籍流传。</p>
+  <p>延伸义理：</p>
+  <p>《金刚经》：无有定法可说。孔子也无固定一套死法，随弟子根器差别而答，与般若“应机说法”同构。如来有所说法耶？无有定法如来可说。孔子善言，同样无定法，因人而说。</p>
+  <p>《道德经》：善行无辙迹。夫子应答，也是随方解缚，不留下固定教条的桎梏。希言自然。夫子不多言，只在当惑之时出善言，正是不多言而契自然。</p>
+  <p>《坛经》：惠能随机开示，和《论语》杏坛问答，同为对机施教，不落定相。经诵三千部，曹溪一句亡。善言舟筏，渡己即舍。</p>
+  <p><b>（4）言说、听闻、笔录的三重边界</b></p>
+  <p>夫子无心著书，只是随缘开示；弟子有心记录，是为了不忘所学、利益后来者。</p>
+  <p>这里有一层很关键的边界：言说有局限，听闻有取舍，笔录有偏差。</p>
+  <p>这不是否定文本价值，而是建立一种审慎的读法：训诂校勘，是尽量贴近当时语境；义理参悟，是超越文字，直探仁体。</p>
+  <p>刚好回应上一问：为什么本心具足，仍要听闻善言？因为习气覆蔽，需要善言作为外缘敲破迷局，善言是助缘，不是本心本身。</p>
+  <span class="num">三</span>
+  <p><b class="sec">跨典互参（老庄、般若对照）</b></p>
+  <p>· 《道德经》：上善若水，水善利万物而不争。孔子因材施教，如水随器，正是此意。言者不知，知者不言。夫子不得已而言善言，弟子不得已而记录，知不在言。</p>
+  <p>· 《庄子》寓言重言，也是借言语破执；《论语》用真人实事问答，温和切近，路径不同，皆为导人返本。：《庄子》寓言重言，也是借言语破执；《论语》用真人实事问答，温和切近，路径不同，皆为导人返本。</p>
+  <p>· 串联前文：自天地万物、七情八音、九族五伦十义建立人伦之本；转入教化讲究、训诂句读，确立治学次第；由小学升阶四书；至此，正式进入四书首部《论语》的研读，以问答启仁心。自天地万物、七情八音、九族五伦十义立本心；转入教化讲究、训诂句读，建立治学次第；由小学升阶四书；入《论语》，先明篇目，再明成书缘起——善言由夫子而发，由弟子笔录传承。</p>
+  <p>· 《庄子》：言之所以在意，得意而忘言。弟子记言，为存其意。</p>
+  <span class="num">四</span>
+  <p><b class="sec">和前面课程的张力</b></p>
+  <p>次第链条：……→ 小学终，至四书 → 论语者，二十篇 → 群弟子，记善言（完整链条见附录）</p>
+  <p>呼应“人不学，不知义”：《论语》就是义理在人事问答里的活显现；善言就是义理的活载体，由记录得以流传；</p>
+  <p>呼应“玉不琢，不成器”：借夫子的提点，打磨自身习气，涵养仁心；善言是打磨习气的工具；</p>
+  <p>呼应“教之道，贵以专”：专一在“仁”这个核心上体会，不沉迷搜罗故事、考据闲话。专于领会仁心，不在字句考据上向外追逐见闻。</p>
+  <span class="num">五</span>
+
+  <div class="doubt">
+    <div class="t">存 疑 · 留 待 深 究</div>
+    <p>1. 《论语》二十篇，篇与篇之间有无内在的递进脉络，还是单纯零散问答汇编？</p>
+    <p>2. 同样一句教诲，对甲可行，对乙不可行，如何把握“应机”的边界，而不是随意曲解经典？</p>
+    <p>3. 仁是本心，为何还需要依靠问答、听闻、学习才能显发？</p>
+    <p>4. 弟子记录时，取舍的标准是什么，是以自己的理解为准，还是夫子有统一的准则？</p>
+    <p>5. 同样一句善言，历经多代传抄，字句流变，我们以什么为核心标尺校读？</p>
+    <p>6. 善言重在对机，后世没有夫子当面答疑，如何避免错解、误用？</p>
+  </div>
+
+  <div class="folio" style="color:#B4A88F">— 147 —</div>
+</div>
+<div class="page">
+  <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第七十四课 · 孟子者</span></div>
+  <div class="lesson-no">第 七 十 四 课</div>
+  <h1>孟子者，七篇止。讲道德，说仁义。</h1>
+  <div class="sub">mèng zǐ zhě　qī piān zhǐ　jiǎng dào dé　shuō rén yì</div>
+
+  <div class="grid-block">
+      <div class="grid-cols tight">
+  <div class="col"><div class="colhead">① 先读右列</div>
+    <div class="cellwrap"><div class="py">mèng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">孟</span></div><div class="strokes">八画</div></div><div class="cellwrap"><div class="py">zǐ</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">子</span></div><div class="strokes">三画</div></div><div class="cellwrap"><div class="py">zhě</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">者</span></div><div class="strokes">八画</div></div>
+  </div>
+  <div class="col"><div class="colhead">② 再读左列</div>
+    <div class="cellwrap"><div class="py">qī</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">七</span></div><div class="strokes">二画</div></div><div class="cellwrap"><div class="py">piān</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">篇</span></div><div class="strokes">十五画</div></div><div class="cellwrap"><div class="py">zhǐ</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">止</span></div><div class="strokes">四画</div></div>
+  </div>
+  </div>
+  <div class="readnote">古法竖排：<b>自右而左，自上而下</b>。上段先读右列「孟子者」，再读左列「七篇止」。</div>
+  <div class="grid-cols tight" style="margin-top:26px">
+  <div class="col"><div class="colhead">③ 续读右列</div>
+    <div class="cellwrap"><div class="py">jiǎng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">讲</span></div><div class="strokes">六画</div></div><div class="cellwrap"><div class="py">dào</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">道</span></div><div class="strokes">十二画</div></div><div class="cellwrap"><div class="py">dé</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">德</span></div><div class="strokes">十五画</div></div>
+  </div>
+  <div class="col"><div class="colhead">④ 再读左列</div>
+    <div class="cellwrap"><div class="py">shuō</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">说</span></div><div class="strokes">九画</div></div><div class="cellwrap"><div class="py">rén</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">仁</span></div><div class="strokes">四画</div></div><div class="cellwrap"><div class="py">yì</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">义</span></div><div class="strokes">三画</div></div>
+  </div>
+  </div>
+  <div class="readnote">下段续读：先读右列「讲道德」，再读左列「说仁义」。</div>
+    <div class="note">承接《论语》，转入四书第二部《孟子》。孟子，名轲，亚圣；全书一共七篇，以此为限，故称“七篇止”。和《论语》弟子录言不同，《孟子》大体是孟子自撰，弟子辅助润色，以长篇问答、论辩、阐发为主，直陈性善、仁义、浩然之旨。</div>
+    <div class="note" style="font-size:12.5px;color:#6B6157">承接《孟子》七篇，收束孔孟一脉的核心宗旨，也是四书的总纲落点。道，是本然恒常之理，万物同归的本源；德，是自性禀受、落于身心的持守与显发；仁，本心一体之慈，浑然无隔；义，分寸裁断之正，取舍合宜。孔孟之学，不外乎讲明道德，阐说仁义，把本然之道，落实在人伦身心的日用践行之中。</div>
+  </div>
+
+  <div class="band"><span class="tag">少儿共读</span><span class="rule"></span><span class="en">读给孩子听</span></div>
+
+  <div class="kid">
+    <p class="lead">四书里第二部是《孟子》，全书一共七篇。</p>
+    <p>和《论语》不一样，大多是孟子自己与人辩论、阐发道理，再由弟子润色定稿。</p>
+    <p>孟子讲性善、讲仁义、养浩然之气。</p>
+    <p>文字论辩锋利，是为破除当时的异端邪说；我们读的时候，要抓住背后的本心，不要只学争辩。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课七十四·展卷对谈</span></div>
+      <figcaption>一案长卷，几个人对坐说话。</figcaption>
+    </figure>
+    <p>孔孟四书，归根就是讲道德、说仁义。</p>
+    <p>道是天地本来的道理，德是我们守住本心的修养；仁是心中的恻隐关爱，义是做事知道分寸、取舍端正。</p>
+    <p>不是拿来要求别人的条条框框，是用来安顿自己、待人处事的本心标尺。</p>
+    <p>讲说只是方便，要在日常里实实在在去做。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课七十四·两张素卡</span></div>
+      <figcaption>桌上两张素卡，三个人对着看。</figcaption>
+    </figure>
+    <p>落到心上理解</p>
+    <p>承接上一课存疑：没有圣人当面答疑，如何避免错解？</p>
+    <p>《论语》多是简短提点，留白多，很容易随后人见识曲解；《孟子》七篇，层层铺展、反复推明性善仁义，相当于把孔门隐而不发的内核展开。</p>
+    <p>“止”，是定本到此为止，不是义理到此停止。读《孟子》，借他的论辩帮自己勘破心中私欲、邪见；但不可贪恋辩才，以胜人为目标，辩而不执，才是无住。</p>
+    <p>另有一问：孟子雄辩何以不生我慢，守住为己之学。</p>
+    <p>辩、讲、说，都只是手段；目的是明道德、行仁义，向内打磨自己，不是向外压服他人。</p>
+    <p>道本无言，仁义无形，不得已而讲说。听懂之后，要回到自心体察：恻隐便是仁，取舍合度便是义，不向外空谈道理。知言说为筏，得意忘言，即是无住。</p>
+  </div>
+
+  <div class="two">
+    <div class="card">
+      <div class="ch2">俗 见<span>这 一 课 的 读 法</span></div>
+      <p>慕孟子雄辩，专学口舌争胜；以道德仁义为外在戒律，专门评判苛责他人</p>
+    </div>
+    <div class="card">
+      <div class="ch2">正 解<span>这 一 课 的 读 法</span></div>
+      <p>辩为破惑明义，目的是显发性善本心；道德为本心之体，仁义是自身践行的标尺，反求诸己</p>
+    </div>
+  </div>
+
+  <div class="takeaway">
+    <div class="t">成 长 小 启 示</div>
+    <ul>
+      <li>《孟子》一书，传世定本共七篇。</li>
+      <li>文体不同于《论语》，多是孟子主动论说、辩难，系统性更强。</li>
+      <li>雄辩是手段，用来扫除迷惑、显发性善。</li>
+      <li>篇目是载体，核心是体会人人本有的善性，存养浩然之气。</li>
+      <li>四书孔孟一脉，核心宗旨，便是讲明道德、阐说仁义。</li>
+      <li>道是本然之理，德是身心涵养；仁主感通，义主裁断。</li>
+      <li>这些不是用来指责别人的标准，是反观修养自己的方向。</li>
+      <li>讲说只是方便引导，真正的道德仁义，要落在一言一行之中。</li>
+    </ul>
+  </div>
+
+  <div class="parent-tip">
+    <div class="t">给 爸 爸 妈 妈 的 一 句 话 · 这 一 课 讲 什 么，慢 慢 说 给 孩 子 听</div>
+    <p><b>一、勘俗见。</b>对比《论语》成书差异，区分两部书的特质。同时说明，“七篇止”指通行定本，不是孟子说过的话只有这些。破除一个普遍误解：道德仁义不等于死板礼教。它的根源是内在本心，不是外部强加的束缚。</p>
+    <p style="margin-top:6"><b>二、现代对照。</b>如同一套系统论述的讲义，层层论证一个核心主张，和零散的问答笔记，学习方式不一样。如同内心的导航。道是底层规律，仁义是导航的方向，帮我们在选择的时候守住分寸与善意。</p>
+    <p style="margin-top:6"><b>三、承接常变主线。</b>传本篇句会有异文、校勘修订（可变之相）；性善、仁义、存心养性的宗旨不变（常）。外在仪文、表达形式可以随时代调整（可变之相）；本心的道德、仁义内核不变（常）。</p>
+    <p style="margin-top:6"><b>四、承接教与学二分。</b>师长辨析论辩背后的本心，属于施教一侧；学人借文字反观自心，不逞口舌，是自主修习。师长讲清道德仁义的本义，属于施教一侧；学人对照自心，在小事里实践，是自主修习。</p>
+    <p style="margin-top:6">承接选择力练习：读孟子，善用论辩义理破自心之惑，不执言辞胜负。</p>
+  </div>
+
+  <div class="folio">— 148 —</div>
+</div>
+<div class="adult">
+  <div class="runhead" style="border-bottom-color:#DCD0B4"><span>成人研学 · 古今汇观</span><span class="c">第七十四课 · 深度页</span></div>
+  <h2>孟子者，七篇止。讲道德，说仁义</h2>
+  <div class="meta">孟子者，七篇止。讲道德，说仁义 ｜ 少儿页＋成人页</div>
+
+  <span class="num">一</span>
+  <p><b class="sec">字义与句读</b></p>
+  <p>孟子，孟轲；七篇：《梁惠王》《公孙丑》《滕文公》《离娄》《万章》《告子》《尽心》；止，定本止于此七篇。</p>
+  <p>上句释义：《孟子》这部典籍，传世的定本为七篇，以此为限，是四书之中承接《论语》的重要典籍。</p>
+  <p>道，寂然本体，万物本然之理；德，得道而存于己，自性之显；仁，一体不忍之心；义，应事裁断之宜。</p>
+  <p>下句释义：孔孟论语、孟子七篇，其立教本旨，便是讲明大道、显发内德，阐说仁义，引导人返归本心，落在人伦践行。</p>
+  <span class="num">二</span>
+  <p><b class="sec">命题考辨</b></p>
+  <p><b>（1）孔孟之间的转进</b></p>
+  <p>孔子多是因材施教，点示仁体，少做大段体系论证；到孟子之时，杨墨之说盛行，仁义之道受到冲击，所以孟子不得已而起辩，把孔门隐微的性善之义、仁义内在，系统铺陈出来。</p>
+  <p>《论语》是“指月”，随手指点；《孟子》是画出地图，讲明路径，告诉你何以本心为善，何以扩充四端、养浩然之气。</p>
+  <p>“七篇止”，是蒙学一句平实的版本说明：我们研读四书，以这七篇为核心文本，不漫无边际搜罗杂说。</p>
+  <p><b>（2）对照当下现代语境</b></p>
+  <p>今人读《孟子》，最容易陷入两个方向：</p>
+  <p>一是欣赏辩论逻辑，学话术，用来在争论里压倒别人；</p>
+  <p>二是觉得性善之说只是一个哲学观点，放在外面评判、辩论，不肯回来看自己的恻隐、羞恶之心。</p>
+  <p>孟子的本意：辩，是为了息邪说、正人心；论说，是为了唤醒本有的善端，不是向外争胜。</p>
+  <p>今天很多人一谈道德，便生出抵触，觉得是道德绑架。根源就是本末倒置：把仁义道德变成向外审判他人的工具。</p>
+  <p>本句给出儒门原点：道德仁义，首先是为己之学，是打磨自己，不是审判别人。讲说，是启发自觉，不是居高临下的规训。</p>
+  <p><b>（3）般若范式互参</b></p>
+  <p>七篇论说，都是教化假名。</p>
+  <p>道德、仁义这些名目，都是教化假名。</p>
+  <p>联动三才五蕴太极空杯模型：性善之体如同杯中空性，本来具足；七篇文字，是详尽的指引说明，帮我们拨开后天习气遮蔽。文字说明不是空性本身，借文字唤醒自性，得意便不被篇章束缚。道如同杯中空性，本自具足；仁义之德，是空性在人事上的显化。讲说文字，是指引的路标；路标不是虚空，借路标回归自性，不执名相。</p>
+  <p>呼应“本乎数”：七为奇数，主生发，推扩向上，由四端扩充而至于仁，是生生不息之象。道一，德二，仁义成对，体用相济，阴阳和合。</p>
+  <p>延伸义理：</p>
+  <p>《金刚经》：无有定法可说，孟子立性善，也是对治当时性无善无恶、性恶等偏执的方便。离一切相而行善法，和此处仁义践行可以互参：行仁义而不执仁义之相。</p>
+  <p>《道德经》：大辩若讷。孟子之辩，是不得已之辩，非好辩。失道而后德，失德而后仁，失仁而后义，是另一层勘破；儒门立足世间，以仁义复归于道德。</p>
+  <p>《坛经》：何期自性，本自清净；和孟子性善，同是直指自性，路径一禅一儒。一行三昧，直下见性；儒门以仁义日用，循序渐进，路径不同，皆以本心为根。</p>
+  <p><b>（4）四书体系的收束</b></p>
+  <p>前面由小学筑基，入四书，先《论语》应机点示，再《孟子》系统推阐，到此一句，收拢四书大义。</p>
+  <p>《论语》多在当下人事指点仁，《孟子》立性善、扩四端，都是“讲道德，说仁义”的不同路径。</p>
+  <p>道，在儒门，不是玄虚天外之理，就在人伦日用；仁义，不是悬空理念，就是当下一念恻隐、一事取舍。</p>
+  <span class="num">三</span>
+  <p><b class="sec">跨典互参（老庄、般若对照）</b></p>
+  <p>· 《道德经》：大道废，有仁义。孟子在仁义被埋没之时，阐发仁义，是救时之论。上德不德，是以有德。正是提醒，德不可执为表象。</p>
+  <p>· 《庄子》同样好辩，而意在泯是非；孟子之辩，意在立仁义之大本。：《庄子》同样好辩，而意在泯是非；孟子之辩，意在立仁义之大本。</p>
+  <p>· 串联前文：自天地人伦立本心；建立治学次第；入四书，先读《论语》应机善言；继而转入《孟子》七篇，系统推明性善仁义，把孔门心法由提点转为体系阐发。蒙学治学次第，由识字训诂、立初学次序，升阶四书；从《论语》应机善言，到《孟子》性善辩说，至此总括宗旨——全部研读，最终都是为了明道德、行仁义。</p>
+  <p>· 《庄子》：仁义，先王之蘧庐也，止可以一宿而不可久处。是勘破仁义名相，回归大道。</p>
+  <span class="num">四</span>
+  <p><b class="sec">和前面课程的张力</b></p>
+  <p>次第链条：……→ 群弟子，记善言 → 孟子者，七篇止 → 讲道德，说仁义（完整链条见附录）</p>
+  <p>呼应“人不学，不知义”：《孟子》把仁义内在、性善之义铺展开来；学四书，就是明道德仁义之义；</p>
+  <p>呼应“玉不琢，不成器”：借七篇义理，雕琢习气，扩充善端；以道德仁义打磨心念习气；</p>
+  <p>呼应“教之道，贵以专”：专一在性善本心，不在言辞辩论上向外求胜。专一在本心仁义，不向外追逐文辞辩说。</p>
+  <span class="num">五</span>
+
+  <div class="doubt">
+    <div class="t">存 疑 · 留 待 深 究</div>
+    <p>1. 孟子言性善，是说“全善无染”，还是“有善端，可以扩充”？</p>
+    <p>2. 孟子的浩然之气，和老庄、般若所说的心性，分界在哪里？</p>
+    <p>3. 雄辩最容易生我慢，读《孟子》，如何守住“为己之学”而不向外争是非？</p>
+    <p>4. 老庄言“失道而后德，失德而后仁”，和儒门以仁义复道，二者如何圆融，而不互相冲突？</p>
+    <p>5. 仁义是本心发用，何以同样是行仁义，有人落入伪善？分界在哪？</p>
+    <p>6. 如何在权变之中，守住仁义根本，不借“变通”之名行私欲？</p>
+  </div>
+
+  <div class="folio" style="color:#B4A88F">— 149 —</div>
+</div>
+<div class="page">
+  <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第七十五课 · 作中庸</span></div>
+  <div class="lesson-no">第 七 十 五 课</div>
+  <h1>作中庸，子思笔。中不偏，庸不易。</h1>
+  <div class="sub">zuò zhōng yōng　zǐ sī bǐ　zhōng bù piān　yōng bù yì</div>
+
+  <div class="grid-block">
+      <div class="grid-cols tight">
+  <div class="col"><div class="colhead">① 先读右列</div>
+    <div class="cellwrap"><div class="py">zuò</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">作</span></div><div class="strokes">七画</div></div><div class="cellwrap"><div class="py">zhōng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">中</span></div><div class="strokes">四画</div></div><div class="cellwrap"><div class="py">yōng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">庸</span></div><div class="strokes">十一画</div></div>
+  </div>
+  <div class="col"><div class="colhead">② 再读左列</div>
+    <div class="cellwrap"><div class="py">zǐ</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">子</span></div><div class="strokes">三画</div></div><div class="cellwrap"><div class="py">sī</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">思</span></div><div class="strokes">九画</div></div><div class="cellwrap"><div class="py">bǐ</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">笔</span></div><div class="strokes">十画</div></div>
+  </div>
+  </div>
+  <div class="readnote">古法竖排：<b>自右而左，自上而下</b>。上段先读右列「作中庸」，再读左列「子思笔」。</div>
+  <div class="grid-cols tight" style="margin-top:26px">
+  <div class="col"><div class="colhead">③ 续读右列</div>
+    <div class="cellwrap"><div class="py">zhōng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">中</span></div><div class="strokes">四画</div></div><div class="cellwrap"><div class="py">bù</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">不</span></div><div class="strokes">四画</div></div><div class="cellwrap"><div class="py">piān</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">偏</span></div><div class="strokes">十一画</div></div>
+  </div>
+  <div class="col"><div class="colhead">④ 再读左列</div>
+    <div class="cellwrap"><div class="py">yōng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">庸</span></div><div class="strokes">十一画</div></div><div class="cellwrap"><div class="py">bù</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">不</span></div><div class="strokes">四画</div></div><div class="cellwrap"><div class="py">yì</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">易</span></div><div class="strokes">八画</div></div>
+  </div>
+  </div>
+  <div class="readnote">下段续读：先读右列「中不偏」，再读左列「庸不易」。</div>
+    <div class="note">承接孔孟道德仁义之旨，转入四书第三部《中庸》。《中庸》传为子思所作，子思名孔伋，孔子之孙。中庸，不是平庸、折中、和稀泥。中，不偏不倚、无过无不及，是天命自性的本体；庸，平常、恒常，日用不离，时时刻刻都在起作用。子思承孔子心法，写下此篇，把“仁义”向上溯源，直通天命、性、道，打通天人。</div>
+    <div class="note" style="font-size:12.5px;color:#6B6157">承接「作中庸，子思笔」，直释中庸二字的真义。中，本体之位，不偏倚于过、不及两端；不偏，不是静态死守一个定点，是心念取舍始终不离自性大本。庸不易，有两层要义：一为平常，道不在孤高玄远，就在日用寻常；二为恒常不变，这个大本之理，古往今来，不分时地，不会改换。不易，不是行事僵化不变，是本体恒常，作用可以权变。</div>
+  </div>
+
+  <div class="band"><span class="tag">少儿共读</span><span class="rule"></span><span class="en">读给孩子听</span></div>
+
+  <div class="kid">
+    <p class="lead">四书里的《中庸》，相传是子思写下的。</p>
+    <p>中，是不偏不倚，没有过分、也没有不及；庸，就是平常，就在我们每一天的生活里面。</p>
+    <p>它告诉我们，仁义不是遥远的高谈，根源就在天命赋予我们的本性。</p>
+    <p>不要把中庸当成圆滑，它是守住本心、分寸恰当的学问。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课七十五·一册居中</span></div>
+      <figcaption>一册端端正正，摆在案心。</figcaption>
+    </figure>
+    <p>中，就是不偏向两边，不过分、也不欠缺；</p>
+    <p>庸不易，是说这个大道平常朴素，又是恒久不变的。</p>
+    <p>不是稀奇玄妙的本事，喜怒哀乐、待人接物里都有它。</p>
+    <p>本心的中正，从古到今没有变化，只是我们容易被情绪、私欲带偏。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课七十五·方木正中</span></div>
+      <figcaption>一块方木，摆在正中。</figcaption>
+    </figure>
+    <p>落到心上理解</p>
+    <p>承接上一课存疑：行仁义何以落入伪善，权变如何不堕私欲。</p>
+    <p>《中庸》给出根柢：喜怒哀乐未发谓之中，发而皆中节谓之和。</p>
+    <p>所有仁义的抉择，源头是“中”。心先不被好恶私欲偏斜，发出来的仁义，才不是表演、不是算计。</p>
+    <p>庸，就是不离日用，不是躲进深山才可以修道。</p>
+    <p>执“中”的名相，刻意压制情绪，又是一偏；知中在自心，发而合节，在平常里持守，便是无住。</p>
+    <p>另有一问：未发之中本自具足，何以日用之间容易放逸。</p>
+    <p>“中不偏”，是提醒我们觉察心念倾斜：狂喜、暴怒、厌弃、贪求，都是偏。</p>
+    <p>“庸不易”，恰恰是对治修行里两种陷阱：一是总想去求奇特境界、玄妙体验，看不起日常；二是以为大道随情绪流转、没有定准。</p>
+    <p>本体不易，而缘起的事相万千。懂得这个分界，才不会要么僵化守死理，要么随波逐流。</p>
+    <p>持守中而不执一个不动的“中相”，在平凡日常持续觉察，即是无住。</p>
+  </div>
+
+  <div class="two">
+    <div class="card">
+      <div class="ch2">俗 见<span>这 一 课 的 读 法</span></div>
+      <p>以中庸为圆滑折中，无原则调和是非；把“不偏”理解为折中妥协、无是非</p>
+    </div>
+    <div class="card">
+      <div class="ch2">正 解<span>这 一 课 的 读 法</span></div>
+      <p>中庸是本心不偏，发而中节，取舍自有定准；不偏是本心不被私欲好恶带向两端，取舍自有正准</p>
+    </div>
+  </div>
+
+  <div class="takeaway">
+    <div class="t">成 长 小 启 示</div>
+    <ul>
+      <li>《中庸》相传为子思所作，是四书之中直通天命心性的篇章。</li>
+      <li>中：不偏不倚、无过无不及；庸：平常、恒常，不离日用。</li>
+      <li>中庸不等于妥协圆滑，是发心、行事分寸恰合本心之正。</li>
+      <li>此篇把仁义向上连通天命之性，为孔孟之道安立本体根源。</li>
+      <li>中不偏：心念、取舍远离过与不及，安于自性大本。</li>
+      <li>庸不易：道在平常日用；此一本体之理，亘古恒常。</li>
+      <li>不偏，不是没有立场，是不被私心情绪带偏。</li>
+      <li>不易的是本心本体，不是外在做事的方式。</li>
+    </ul>
+  </div>
+
+  <div class="parent-tip">
+    <div class="t">给 爸 爸 妈 妈 的 一 句 话 · 这 一 课 讲 什 么，慢 慢 说 给 孩 子 听</div>
+    <p><b>一、勘俗见。</b>重点破除“中庸=老好人”的普遍误读，区分折中苟且和“中节之和”。区分“本体不易”和“方法可变”，破除中庸就是老好人、一成不变的刻板印象。</p>
+    <p style="margin-top:6"><b>二、现代对照。</b>好比情绪与抉择的校准器，遇到事情，不冲动过头，也不冷漠回避，回到本心平衡。如同指南针，指针的中正方向永远不变（不易），但你去往东南西北，行走路线可以调整。</p>
+    <p style="margin-top:6"><b>三、承接常变主线。</b>外在行事方法可以随境调整（可变之相）；“中”这个不偏的本体内核不变（常）。自性大本、中和之理恒常（常）；处事的方案、外在仪文，可随时代因缘调整（可变之相）。</p>
+    <p style="margin-top:6"><b>四、承接教与学二分。</b>师长讲明中和的本义，区分正道与圆滑，属于施教一侧；学人在情绪起落里觉察自心，是自主修习。师长讲明体用之别，区分原则与变通，属于施教一侧；学人在情绪起伏里觉察自心偏向，是自主修习。</p>
+    <p style="margin-top:6">承接选择力练习：体会未发之中，践行庸常之道，守正而不执静态之中相。</p>
+  </div>
+
+  <div class="folio">— 150 —</div>
+</div>
+<div class="adult">
+  <div class="runhead" style="border-bottom-color:#DCD0B4"><span>成人研学 · 古今汇观</span><span class="c">第七十五课 · 深度页</span></div>
+  <h2>作中庸，子思笔。中不偏，庸不易</h2>
+  <div class="meta">作中庸，子思笔。中不偏，庸不易 ｜ 少儿页＋成人页</div>
+
+  <span class="num">一</span>
+  <p><b class="sec">字义与句读</b></p>
+  <p>子思，孔伋，孔子之孙；中庸：中为天下大本，庸为日常恒行。</p>
+  <p>上句释义：《中庸》这篇典籍，传为子思执笔所作，承接孔门心法，立“中和”为宗，连通天命、自性、人伦，是四书里的性命之论。</p>
+  <p>中，无过无不及；不偏，离两边之偏执；庸，平常；不易，恒常，不因时境而改换本体。</p>
+  <p>下句释义：子思《中庸》所传心法，中者，本心本体不偏于过、不及两端；庸者，大道行于日用平常，此理亘古恒常，是孔门性命之学的核心标尺。</p>
+  <span class="num">二</span>
+  <p><b class="sec">命题考辨</b></p>
+  <p><b>（1）四书的阶梯：论语—孟子—中庸</b></p>
+  <p>《论语》是当下指点，在问答里识仁；</p>
+  <p>《孟子》扩四端，论证性善，向外挺立仁义；</p>
+  <p>《中庸》向上回溯，仁义的根源是天命之性，未发之中是大本。</p>
+  <p>孟子重在“扩充”，是由内向外；中庸重在“复性”，是回归本然。二者一体，互为表里。</p>
+  <p><b>（2）对照当下现代语境</b></p>
+  <p>今人很容易两极：要么纵情随欲，要么严苛自苦。</p>
+  <p>中庸的中道，刚好对治两边：不放纵、不压抑。不是消灭情绪，而是情绪发动之时，能够觉察、节制，合于分寸。伪善的病根，就是心念先偏，借仁义之名满足私欲；中和之心，无私欲偏倚，仁义才真诚。</p>
+  <p>现代人很容易走向两极：一类是固守教条，不知变通，事事卡死标准；另一类是相对主义，认为没有恒定的是非，一切随境遇、情绪改变。</p>
+  <p>这句正是中道：大本有定，作用无执。良知中正这个根本不变，但处理事情，需要看时机、对象，灵活合节。</p>
+  <p><b>（3）般若范式互参</b></p>
+  <p>中和、中庸，是教化假名。</p>
+  <p>不偏、不易，是对治偏执妄心的假名。</p>
+  <p>联动三才五蕴太极空杯模型：未发之中，如同杯中空性，本来无偏无对立；喜怒哀乐、仁义践行，是空性缘起显现的影像。借庸行日用，回归不偏的本体，不执着“中”这个概念，不刻意造作一个不动的心。杯中空性，本自不偏、本自恒常，就是“中不偏、庸不易”的喻体；一切善恶、情绪、事相，是缘起影像。影像有生灭变迁，虚空本身不随之偏斜、生灭。我们借“不偏不易”回归自性，却不能把虚空固化成一个静止、孤立的相。</p>
+  <p>呼应“本乎数”：中一，庸常不息，独体而立，和而不偏。中立一，常道永续，独一而涵万象。</p>
+  <p>延伸义理：</p>
+  <p>《金刚经》：离两边而住，不落断常，和中庸不落过、不及的中道同构。离二边见，不落断常，和“不偏”同是离两边；般若不立一法，中庸立“中”为方便，路径不同。</p>
+  <p>《道德经》：多言守中，“多言数穷，不如守中”，与子思之中可以互参；老子偏重归根静默，子思贯通动静、日用。“多言数穷，不如守中”，守中与这里的中相通；老子偏于归根静默，中庸贯通动静、日用。</p>
+  <p>《坛经》：无相无念，不执取舍两边，亦是中道；中庸则在人伦喜怒哀乐之间，践行中道。自性本自不动，即是不易；无念无住，即是不偏离相。</p>
+  <p><b>（4）和前序经文的衔接</b></p>
+  <p>《论语》教人识仁，在问答中练心；《孟子》教人扩充善端，挺立仁义；到《中庸》，直接给出心法标尺：中不偏，庸不易。</p>
+  <p>仁义，是中体发出来的善用；中和，是仁义得以真诚不伪的根基。没有这个不偏的本心，仁义很容易变成表演、算计。</p>
+  <span class="num">三</span>
+  <p><b class="sec">跨典互参（老庄、般若对照）</b></p>
+  <p>· 《道德经》：冲气以为和，和与中庸之和相通。知常曰明。这个“常”，近于庸不易的恒常本体。</p>
+  <p>· 《庄子》：庸讵知吾所谓知之非不知邪？庄子泯是非，子思立大本，中道之用不同。道在稊稗，在瓦甓，正是道在庸常，不离日用。</p>
+  <p>· 串联前文：治学次第，小学筑基，四书递进；由论语善言、孟子仁义，至此上升到天命中和，把仁义安放在自性大本之上。四书次第，由小学升阶，论语、孟子，进入中庸性命之学；由书名作者，直入心法六字：中不偏，庸不易。</p>
+  <span class="num">四</span>
+  <p><b class="sec">和前面课程的张力</b></p>
+  <p>次第链条：……→ 讲道德，说仁义 → 作中庸，子思笔 → 中不偏，庸不易（完整链条见附录）</p>
+  <p>呼应“人不学，不知义”：学中庸，知仁义之本，本在天命中和；学此句，方知仁义背后，有恒常中正之大本；</p>
+  <p>呼应“玉不琢，不成器”：省察喜怒哀乐，打磨偏斜习气；时时觉察心念偏斜，打磨习气；</p>
+  <p>呼应“教之道，贵以专”：专一回归大本之中，不在外缘追逐善恶名相。专守这个不偏的本心，不在外缘追逐奇特境界。</p>
+  <span class="num">五</span>
+
+  <div class="doubt">
+    <div class="t">存 疑 · 留 待 深 究</div>
+    <p>1. “未发之中”，是一个可以刻意修出来的境界，还是本自具足，只待息妄而显？</p>
+    <p>2. 中和与般若的“不二中道”，同异边界如何划分？</p>
+    <p>3. 庸常日用，极易流于散漫，如何在平凡之中持续保任中和，而不自知放逸？</p>
+    <p>4. “不易”的本体，既然本自现成，为何还要持续修持、觉察？</p>
+    <p>5. 中是不落两边，那善恶之分，在中道里如何安放，会不会滑入无善恶？</p>
+    <p>6. 庸常容易倦怠，如何在日复一日平常之中，持续保任而不退失？</p>
+  </div>
+
+  <div class="folio" style="color:#B4A88F">— 151 —</div>
+</div>
+<div class="page">
+  <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第七十六课 · 作大学</span></div>
+  <div class="lesson-no">第 七 十 六 课</div>
+  <h1>作大学，乃曾子。自修齐，至平治。</h1>
+  <div class="sub">zuò dà xué　nǎi zēng zǐ　zì xiū qí　zhì píng zhì</div>
+
+  <div class="grid-block">
+      <div class="grid-cols tight">
+  <div class="col"><div class="colhead">① 先读右列</div>
+    <div class="cellwrap"><div class="py">zuò</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">作</span></div><div class="strokes">七画</div></div><div class="cellwrap"><div class="py">dà</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">大</span></div><div class="strokes">三画</div></div><div class="cellwrap"><div class="py">xué</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">学</span></div><div class="strokes">八画</div></div>
+  </div>
+  <div class="col"><div class="colhead">② 再读左列</div>
+    <div class="cellwrap"><div class="py">nǎi</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">乃</span></div><div class="strokes">二画</div></div><div class="cellwrap"><div class="py">zēng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">曾</span></div><div class="strokes">十二画</div></div><div class="cellwrap"><div class="py">zǐ</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">子</span></div><div class="strokes">三画</div></div>
+  </div>
+  </div>
+  <div class="readnote">古法竖排：<b>自右而左，自上而下</b>。上段先读右列「作大学」，再读左列「乃曾子」。</div>
+  <div class="grid-cols tight" style="margin-top:26px">
+  <div class="col"><div class="colhead">③ 续读右列</div>
+    <div class="cellwrap"><div class="py">zì</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">自</span></div><div class="strokes">六画</div></div><div class="cellwrap"><div class="py">xiū</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">修</span></div><div class="strokes">九画</div></div><div class="cellwrap"><div class="py">qí</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">齐</span></div><div class="strokes">六画</div></div>
+  </div>
+  <div class="col"><div class="colhead">④ 再读左列</div>
+    <div class="cellwrap"><div class="py">zhì</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">至</span></div><div class="strokes">六画</div></div><div class="cellwrap"><div class="py">píng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">平</span></div><div class="strokes">五画</div></div><div class="cellwrap"><div class="py">zhì</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">治</span></div><div class="strokes">八画</div></div>
+  </div>
+  </div>
+  <div class="readnote">下段续读：先读右列「自修齐」，再读左列「至平治」。</div>
+    <div class="note">四书最后一篇《大学》，传为曾子所作。曾子名参，孔门弟子。《大学》立儒门修学完整次第，以三纲领、八条目为骨架，把《中庸》的中和本体、孔孟的仁义本心，落实成一套由内而外、层层推进的实修路径。如果说《中庸》是明本体，《大学》就是讲功夫，告诉人如何下手，由修身推及齐家、治国、平天下。</div>
+    <div class="note" style="font-size:12.5px;color:#6B6157">承接曾子《大学》，浓缩八条目后半段的次第：修身为本，由修身而后齐家，由齐家而后治国，由治国而后平天下。这是一条由近及远、由内向外的推扩路径。不是跳过自身直接去谋求天下安定；必先在一身、一家之中把德行稳住，仁德才有向外流动的根基。明德在内，发而为家国天下的安宁秩序。</div>
+  </div>
+
+  <div class="band"><span class="tag">少儿共读</span><span class="rule"></span><span class="en">读给孩子听</span></div>
+
+  <div class="kid">
+    <p class="lead">四书最后一部是《大学》，相传出自曾子。</p>
+    <p>它给我们一套清晰的修行次序：先修好自己的心性德行，再向外影响家人、社群。</p>
+    <p>和《中庸》不一样，中庸讲本来的中正本体，大学告诉我们一步一步该怎么用功。</p>
+    <p>修学不是悬空谈理，要从念头、内心开始，由近及远。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课七十六·一圈同心</span></div>
+      <figcaption>一圈一圈，从案前向外推开。</figcaption>
+    </figure>
+    <p>《大学》的次序：先修好自己，再把家风安顿整齐；</p>
+    <p>一家和顺，才可以推而广之，去治理邦国，安定天下。</p>
+    <p>不是先去拯救世界，再回头管自己。</p>
+    <p>德行是由内往外慢慢流淌的，自己稳住了，身边的环境才容易随之和顺。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课七十六·理桌摆碗</span></div>
+      <figcaption>先理自己的桌子，再去帮家人摆碗。</figcaption>
+    </figure>
+    <p>落到心上理解</p>
+    <p>承接上一课存疑：本体本自不易，何以仍要持续修持，庸常之中如何保任不退。</p>
+    <p>答案就在《大学》的次第功夫。本体本来具足，但习气层层遮蔽，不能一悟永稳。</p>
+    <p>格物、致知、诚意、正心，就是在日常里不断觉察、清理心念的偏斜；修身是枢纽，向外齐家治国平天下，都是本心仁德的自然推扩。</p>
+    <p>功夫层层递进，却不可以执着阶位，以为要等到某一步才算成就。步步用功，而不住于功夫相，即是无住。</p>
+    <p>另有一问：事功有成败，如何于挫败之中守住内圣本心。</p>
+    <p>修齐治平的重心，不在外在功业的成败，而在“自”字。</p>
+    <p>修，是修自己；齐，先正己而后感化家人；治国平天下，是仁德自然的辐射，不是我一定要做成某个局面。</p>
+    <p>境遇不顺、事功难成，不代表修身失败。</p>
+    <p>次第是用来引导我们尽分，不是拿成果审判自己。用功在己，结果随缘，做而不执，便是无住。</p>
+  </div>
+
+  <div class="two">
+    <div class="card">
+      <div class="ch2">俗 见<span>这 一 课 的 读 法</span></div>
+      <p>视大学为外求功业的入世学问，追逐外在名望事功；一心向外求功业，想改造他人、改造世界，疏于自修</p>
+    </div>
+    <div class="card">
+      <div class="ch2">正 解<span>这 一 课 的 读 法</span></div>
+      <p>修齐治平根基在诚意正心，外王以内圣为本；一切外推的根基在修身，先正己，而后感化影响外缘</p>
+    </div>
+  </div>
+
+  <div class="takeaway">
+    <div class="t">成 长 小 启 示</div>
+    <ul>
+      <li>《大学》相传为曾子所作，是儒门实修的次第总纲。</li>
+      <li>以三纲领、八条目为核心，建立由内到外的修学路径。</li>
+      <li>内圣是根本，外王是仁德本心的自然显发。</li>
+      <li>有本体还需功夫，依靠次第持续打磨，方能在庸常之中守住中和。</li>
+      <li>自修齐至平治，是由内向外的德行推扩次序。</li>
+      <li>修身是枢纽，是齐家、治国、平天下的根基。</li>
+      <li>重点不在地位高低，而在是否以自身德行做示范、尽本分。</li>
+      <li>外在局面的成坏，由众多因缘汇合；修德的主动权，一直在自己手里。</li>
+    </ul>
+  </div>
+
+  <div class="parent-tip">
+    <div class="t">给 爸 爸 妈 妈 的 一 句 话 · 这 一 课 讲 什 么，慢 慢 说 给 孩 子 听</div>
+    <p><b>一、勘俗见。</b>区分《大学》不是做官学问，修身是根本，齐家治国平天下是德行自然向外的影响。破除“平天下=帝王治国”的刻板印象，每个人都有自己的圈层，在圈层里守德尽责，就是践行这条路径。</p>
+    <p style="margin-top:6"><b>二、现代对照。</b>如同一份修行实操手册。《中庸》告诉你目标是什么，《大学》告诉你每天从哪里下手练习。如同涟漪，圆心是自己，一圈一圈向外荡漾；圆心不稳，涟漪就是散乱的。</p>
+    <p style="margin-top:6"><b>三、承接常变主线。</b>诚意正心这个根本原则不变（常）；齐家、处事、应世的方式，随时代因缘调整（可变之相）。“以德为本、先修后推”的原则不变（常）；齐家、处事、承担的方式随时代调整（可变之相）。</p>
+    <p style="margin-top:6"><b>四、承接教与学二分。</b>师长讲明先后次第，区分内圣外王本末，属于施教一侧；学人在起心动念处省察诚意，是自主修习。师长讲明本末先后，区分能为、不能为，属于施教一侧；学人在家庭、日常关系里省察自修，是自主修习。</p>
+    <p style="margin-top:6">承接选择力练习：循大学次第炼心，本末兼顾，用功而不执着功夫相。</p>
+  </div>
+
+  <div class="folio">— 152 —</div>
+</div>
+<div class="adult">
+  <div class="runhead" style="border-bottom-color:#DCD0B4"><span>成人研学 · 古今汇观</span><span class="c">第七十六课 · 深度页</span></div>
+  <h2>作大学，乃曾子。自修齐，至平治</h2>
+  <div class="meta">作大学，乃曾子。自修齐，至平治 ｜ 少儿页＋成人页</div>
+
+  <span class="num">一</span>
+  <p><b class="sec">字义与句读</b></p>
+  <p>曾子，曾参；大学，大人之学，成就明德、新民、止于至善的修学体系。</p>
+  <p>上句释义：《大学》这篇儒门实修纲目，传为曾子所作，承接孔门心法，建立格致诚正、修齐治平的完整修行阶梯，为四书收束。</p>
+  <p>修：修身，端正自身心念言行；齐：整齐家风，和睦家人；治：治国；平：平天下。</p>
+  <p>下句释义：《大学》的实修路径，以修身作为枢纽根基；由修身而齐家，由齐家而治国，由治国而平天下，仁德由近及远，逐步推扩。</p>
+  <span class="num">二</span>
+  <p><b class="sec">命题考辨</b></p>
+  <p><b>（1）四书完整闭环</b></p>
+  <p>《论语》点仁，是火种；</p>
+  <p>《孟子》立性善、扩四端，是培火；</p>
+  <p>《中庸》明中和大本，是火源；</p>
+  <p>《大学》铺八条目，是持火、传火的完整操作。</p>
+  <p>四本合一：本体、义理、功夫、践行，全部齐备。中庸讲“是什么”，大学讲“怎么做”。</p>
+  <p><b>（2）对照当下现代语境</b></p>
+  <p>今人修行容易两头落空：要么空谈本性，不肯在念头、小事上打磨；一头扎进繁杂事务，完全没有向内省察的功夫。</p>
+  <p>《大学》的价值，就是建立本末秩序：一切外务，都以正心诚意为根基；向内修心，也不能脱离人事孤坐。内外不二，事上炼心。</p>
+  <p>今天很多人的困局：总想改变家人、改变环境，消耗巨大却收效甚微，最后身心俱疲。</p>
+  <p>儒门给出的次序是反向的：先收回改造外界的力量，回头打磨自己。自身心性安定、言行有度之后，身边的关系场自然会受到熏染。不是放弃影响他人，而是换一个根基去影响。</p>
+  <p><b>（3）般若范式互参</b></p>
+  <p>三纲领、八条目，是修行假名阶梯。</p>
+  <p>修齐治平是次第假名，是教化阶梯。</p>
+  <p>联动三才五蕴太极空杯模型：杯中空性即是明德至善的本体；格致诚正、修齐治平，是擦拭尘垢、显明虚空的过程。擦拭是功夫，虚空本来不曾增减。我们依次第用功，但不把擦拭、阶次当成虚空本身。明德自性是杯中空性；修身是擦拭尘垢；齐家治国平天下，是空性缘起的显化涟漪。涟漪有大有小、有成有散，虚空本身不增不减。我们循序尽责，但不把涟漪的形态、规模当成自性本身。</p>
+  <p>呼应“本乎数”：八条目有序递进，由内向外，层层相生，本末相贯。由一（身）向外层层相生，由近及远，同气相感。</p>
+  <p>延伸义理：</p>
+  <p>《金刚经》：应无所住而生其心，生其心即是大学明德之心，不住于功业、不住于修证。度一切众生而无有众生可度，与修齐治平而不执治平之果，可以互参。</p>
+  <p>《道德经》：修之于身，其德乃真，与修身为本相通；老子偏归根，大学主推扩。修之于身，其德乃真；修之于家，其德乃余，和这一次第同源。</p>
+  <p>《坛经》：道由心悟，不在坐禅，与大学“诚意正心”同重当下心念觉察。即心即佛，重心悟；儒门于此，重悟后起行，在人伦家国之中持续炼心。</p>
+  <p><b>（4）四书体系闭环收束</b></p>
+  <p>论语点仁、孟子扩仁义、中庸立中和大本、大学立八阶功夫；到此一句，把内圣外王完整合拢。</p>
+  <p>格致诚正，向内固本；修齐治平，向外起用。中庸回答“本体是什么”，大学回答“功夫如何次第展开”，自修齐至平治，就是功夫向外落实的总纲。</p>
+  <span class="num">三</span>
+  <p><b class="sec">跨典互参（老庄、般若对照）</b></p>
+  <p>· 《道德经》：修之于家，其德乃余，和齐家之义相通。清静为天下正，正是修己而后天下自正。</p>
+  <p>· 《庄子》内圣外王之说，正是大学学问的另一重表达。：《庄子》内圣外王之说，正是大学学问的另一重表达。</p>
+  <p>· 串联前文：四书次第走到终篇，由小学训诂入门，依次论语、孟子、中庸，到曾子《大学》，体用双备，义理与功夫圆满合拢。四书研读次第，由小学训诂入门，一路升阶，论语、孟子、中庸、大学，内圣外王义理功夫至此圆满收束。</p>
+  <p>· 《庄子》外王，亦是内圣自然之余韵，不刻意造作功业。：《庄子》外王，亦是内圣自然之余韵，不刻意造作功业。</p>
+  <span class="num">四</span>
+  <p><b class="sec">和前面课程的张力</b></p>
+  <p>次第链条：……→ 中不偏，庸不易 → 作大学，乃曾子 → 自修齐，至平治（完整链条见附录）</p>
+  <p>呼应“人不学，不知义”：学大学，知明德新民的践行次第；知外王推扩之义，本末不可倒置；</p>
+  <p>呼应“玉不琢，不成器”：以格致诚正，时时打磨心念习气；在人伦事务之中持续打磨修身；</p>
+  <p>呼应“教之道，贵以专”：专在诚意正心，依序炼心，本末不丢。专守修身为本，向外推扩而不追逐外缘成果。</p>
+  <span class="num">五</span>
+
+  <div class="doubt">
+    <div class="t">存 疑 · 留 待 深 究</div>
+    <p>1. 格物，是穷究外物之理，还是勘究心中物欲，二者如何统一？</p>
+    <p>2. 止于至善，是一个可以抵达的终点，还是持续保任的状态？</p>
+    <p>3. 外王功业有成败，如何在事功挫败之时，依然守住内圣本心不动摇？</p>
+    <p>4. 若家人顽固、外缘难化，齐家的责任，是否意味着无限迁就、消耗自己？边界何在？</p>
+    <p>5. 平天下，是趋向一个永久太平的终点，还是持续调伏、动态平衡的过程？</p>
+    <p>6. 修齐治平，如何和出世的清净、离尘的修行相融而不相妨碍？</p>
+  </div>
+
+  <div class="folio" style="color:#B4A88F">— 153 —</div>
+</div>
+<div class="page">
+  <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第七十七课 · 孝经通</span></div>
+  <div class="lesson-no">第 七 十 七 课</div>
+  <h1>孝经通，四书熟。如六经，始可读。</h1>
+  <div class="sub">xiào jīng tōng　sì shū shú　rú liù jīng　shǐ kě dú</div>
+
+  <div class="grid-block">
+      <div class="grid-cols tight">
+  <div class="col"><div class="colhead">① 先读右列</div>
+    <div class="cellwrap"><div class="py">xiào</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">孝</span></div><div class="strokes">七画</div></div><div class="cellwrap"><div class="py">jīng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">经</span></div><div class="strokes">八画</div></div><div class="cellwrap"><div class="py">tōng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">通</span></div><div class="strokes">十画</div></div>
+  </div>
+  <div class="col"><div class="colhead">② 再读左列</div>
+    <div class="cellwrap"><div class="py">sì</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">四</span></div><div class="strokes">五画</div></div><div class="cellwrap"><div class="py">shū</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">书</span></div><div class="strokes">四画</div></div><div class="cellwrap"><div class="py">shú</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">熟</span></div><div class="strokes">十五画</div></div>
+  </div>
+  </div>
+  <div class="readnote">古法竖排：<b>自右而左，自上而下</b>。上段先读右列「孝经通」，再读左列「四书熟」。</div>
+  <div class="grid-cols tight" style="margin-top:26px">
+  <div class="col"><div class="colhead">③ 续读右列</div>
+    <div class="cellwrap"><div class="py">rú</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">如</span></div><div class="strokes">六画</div></div><div class="cellwrap"><div class="py">liù</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">六</span></div><div class="strokes">四画</div></div><div class="cellwrap"><div class="py">jīng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">经</span></div><div class="strokes">八画</div></div>
+  </div>
+  <div class="col"><div class="colhead">④ 再读左列</div>
+    <div class="cellwrap"><div class="py">shǐ</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">始</span></div><div class="strokes">八画</div></div><div class="cellwrap"><div class="py">kě</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">可</span></div><div class="strokes">五画</div></div><div class="cellwrap"><div class="py">dú</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">读</span></div><div class="strokes">十画</div></div>
+  </div>
+  </div>
+  <div class="readnote">下段续读：先读右列「如六经」，再读左列「始可读」。</div>
+    <div class="note">至此，四书一轮研读收束，同时向上承接《孝经》。孝，是儒门人伦的根基原点；四书，是性命仁义、修齐治平的义理与功夫体系。孝经通，是通晓孝的本源：孝不止供养长辈、顺从亲长，更是连通天性、承续本源，是本心仁爱的第一发处。四书熟，不是背得流利，是义理贯通、知行相融，在念头、日用之中，时时拿起来观照践行，不只是纸面学问。</div>
+    <div class="note" style="font-size:12.5px;color:#6B6157">孝经通达、四书义理熟透之后，才适宜进读六经。六经即《诗》《书》《礼》《易》《乐》《春秋》（《乐经》早佚，后世多存五经）。四书是心法纲要、是判读义理的标尺；六经是上古世代留存的典章、史迹、情志、天人之学的大宗。先以四书建立本心的准则、明辨仁义中和，再去读六经，才不容易被繁杂文辞、古制旧事裹挟，懂得取舍、懂得溯源，以本心照见古人的教化，而不是沦为考据堆里的向外追逐。</div>
+  </div>
+
+  <div class="band"><span class="tag">少儿共读</span><span class="rule"></span><span class="en">读给孩子听</span></div>
+
+  <div class="kid">
+    <p class="lead">读懂《孝经》，融会贯通四书的道理。</p>
+    <p>孝，是我们与生俱来的仁爱萌芽，不是死板的规矩。</p>
+    <p>四书讲的道德、修身、爱人，源头都从这份对至亲的敬爱生发出来。</p>
+    <p>熟读不是死记，是心里明白，在日常言行里实实在在做到。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课七十七·两案六束</span></div>
+      <figcaption>前案几步，后案几步，一级一级往上。</figcaption>
+    </figure>
+    <p>把《孝经》和四书的道理融会成熟之后，才可以去研读六经。</p>
+    <p>六经记载着上古的情志、礼法、天人、史事，内容广博繁杂。</p>
+    <p>先在心里立好仁义中和的标尺，再读古书，才不容易迷失在文字典故里面。</p>
+    <p>博览不是越多越好，先要稳住自己的心法根本。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课七十七·薄册厚书</span></div>
+      <figcaption>一册薄的，插进一排厚的。</figcaption>
+    </figure>
+    <p>落到心上理解</p>
+    <p>承接上一课存疑：外缘难化之时，齐家的边界如何安放。</p>
+    <p>孝，本是一体不忍之心，不是无底线消耗自己。孝里面有敬、有分寸，和中庸“发而中节”完全相通。</p>
+    <p>四书讲的诚意、正心、仁义、中和，都要落到这一念亲亲之爱上来检验。</p>
+    <p>书读得再通透，若是这一念仁爱淡漠，便是纸上空理；一味迁就顺从，失却本心之正，便是愚孝。</p>
+    <p>通晓其义，行而不执条文相，即是无住。</p>
+    <p>另有一问：出世辞亲的修行，如何和孝为仁本圆融。</p>
+    <p>次第本身，就是护持本心的方案。</p>
+    <p>六经里面有礼制、史迹、风情、卜筮、兴亡，万象纷纭。若无四书的中和仁义做标尺，读的时候极易随文流转，或偏爱古制、或厌弃旧法，落入边见。</p>
+    <p>先熟孝经、四书，心里有主，再读六经：知古人立制，本为养人仁善中和之心；制度可以变迁，仁心之本不变。</p>
+    <p>博览而不逐相，阅尽万象而回归本心，即是无住。</p>
+  </div>
+
+  <div class="two">
+    <div class="card">
+      <div class="ch2">俗 见<span>这 一 课 的 读 法</span></div>
+      <p>将孝等同于一味顺从、压抑自我，行愚孝；读书贪多求博，未明纲领便直接研读六经，散乱无主</p>
+    </div>
+    <div class="card">
+      <div class="ch2">正 解<span>这 一 课 的 读 法</span></div>
+      <p>孝主敬爱，亦有是非分寸，和中道义一体；先立本心仁义中和之准则，再博览六经，以简驭繁</p>
+    </div>
+  </div>
+
+  <div class="takeaway">
+    <div class="t">成 长 小 启 示</div>
+    <ul>
+      <li>孝是仁爱的本源，是儒门人伦心性的起点。</li>
+      <li>《孝经》打通天性与人伦，四书铺展由孝延伸而出的整套修学路径。</li>
+      <li>“熟”重在融会于心、事上践行，不单单是文字记诵。</li>
+      <li>一切修齐治平的德行，皆从这一念亲亲敬长之心生发。</li>
+      <li>读书次第：孝经、四书打底，而后可读六经。</li>
+      <li>四书提供义理标尺，六经是上古文明的总汇，广博而多元。</li>
+      <li>博览的前提，是先建立稳定的心法主见，不被文辞史料带偏。</li>
+      <li>读经是借古人言教印证自心，而非向外追逐知识见闻。</li>
+    </ul>
+  </div>
+
+  <div class="parent-tip">
+    <div class="t">给 爸 爸 妈 妈 的 一 句 话 · 这 一 课 讲 什 么，慢 慢 说 给 孩 子 听</div>
+    <p><b>一、勘俗见。</b>区分“孝”和愚孝，孝的内核是敬爱，不是没有原则的盲从。区分“博学”和“杂学”，博学要有主线纲领，不然知识再多，只是散乱信息。</p>
+    <p style="margin-top:6"><b>二、现代对照。</b>如同种子，孝是种子，四书是种子生长成大树的完整生长蓝图。好比先校准罗盘（孝经、四书），再游历山川典籍（六经），才不容易迷路。</p>
+    <p style="margin-top:6"><b>三、承接常变主线。</b>敬爱之本不变（常）；孝的表达方式、侍奉的形式，随时代、境遇调整（可变之相）。仁义中和的本心纲领不变（常）；六经所载的古礼、古制，属于特定时代的方案，可参考而不必照搬（可变之相）。</p>
+    <p style="margin-top:6"><b>四、承接教与学二分。</b>师长讲明孝的本义，分辨合理奉养与无底线顺从，属于施教一侧；学人在和家人相处中，存敬守仁，是自主修习。师长讲明读书先后次第，区分纲领与外缘史料，属于施教一侧；学人读典之时，时时以本心仁义对照自省，是自主修习。</p>
+    <p style="margin-top:6">承接选择力练习：明孝为仁本，贯通四书义理，守敬爱而合分寸，不困于旧形式教条。</p>
+  </div>
+
+  <div class="folio">— 154 —</div>
+</div>
+<div class="adult">
+  <div class="runhead" style="border-bottom-color:#DCD0B4"><span>成人研学 · 古今汇观</span><span class="c">第七十七课 · 深度页</span></div>
+  <h2>孝经通，四书熟。如六经，始可读</h2>
+  <div class="meta">孝经通，四书熟。如六经，始可读 ｜ 少儿页＋成人页</div>
+
+  <span class="num">一</span>
+  <p><b class="sec">字义与句读</b></p>
+  <p>孝：天性亲亲之敬，仁之根；经：常道；通：义理洞达，知行相应；熟：融会贯通，随事能照，不滞文辞。</p>
+  <p>上句释义：通达《孝经》所传天性人伦之本，融会四书的仁义、中和、修齐治平之学，令根与枝干一体，知与行不二。</p>
+  <p>六经：《诗》《书》《礼》《易》《乐》《春秋》；始可读：不是不能翻看，是适宜深入研读、取其教化义理。</p>
+  <p>下句释义：待《孝经》人伦之本通达、四书性命修齐之义熟透，建立稳定的义理权衡之后，才适合深入研读六经，借上古典册印证本心、开阔教化格局。</p>
+  <span class="num">二</span>
+  <p><b class="sec">命题考辨</b></p>
+  <p><b>（1）全书结构的转折</b></p>
+  <p>前面一路，从小学训诂，升阶四书，走完论语、孟子、中庸、大学；此句回溯源头，点明整套四书的根基是《孝经》。</p>
+  <p>仁不是凭空构想出来的高尚理念，它的第一现场，就是亲子之间天然的感通。由孝扩而充之，便是孟子所说的四端，向外推扩，就是修齐治平。</p>
+  <p><b>（2）对照当下现代语境</b></p>
+  <p>现代家庭关系里，常常走向两端：一端是长辈权威压制晚辈，以孝为名控制；另一端是疏离淡漠，视亲情为负担。</p>
+  <p>《孝经》与四书合参，给出中道：孝的核心是敬，是双向的体谅与尊重，不是单向的支配或者单向的牺牲。仁爱有源头，同时仁爱有边界，与中庸不偏、大学诚意一脉相承。</p>
+  <p>现代人的信息困境，就是“先杂博，无纲领”。海量典籍、各家学说扑面而来，没有一套稳定的心性框架，今天认同这一家，明天倾倒那一说，随观点摇摆。</p>
+  <p>这套次第给的解法：先收敛，立根本，再放开博览。先把自己的良知、中和、本末判断稳住，再去接纳多元的文明记载。</p>
+  <p><b>（3）般若范式互参</b></p>
+  <p>孝、四书，都是接引的假名经教。</p>
+  <p>六经典籍，是教化假名载体。</p>
+  <p>联动三才五蕴太极空杯模型：自性虚空一体，便是孝所源自的同体本心；四书种种义理条目，是用来显发这一体之心的路径。路径再好，路径不是虚空本身；读经通达，是回归同体之仁，而不是困在文字之中。明德自性是虚空；四书是校准虚空的标尺；六经是投射在虚空之上万千历史、礼制、情志影像。影像千姿百态，虚空本身不动。我们阅六经万象，是借影像体会虚空之德，而不是抓取影像当成真实本体。</p>
+  <p>呼应“本乎数”：孝为一源，开四书四纲，一本散万殊。一纲（孝、四书）御六典，约以统博。</p>
+  <p>延伸义理：</p>
+  <p>《金刚经》：同体大悲，可以和孝的一体之心互参；孝是世间同体之始，大悲是法界同体。说法如筏喻，六经四书皆是筏；筏有大小，终归渡向自性。</p>
+  <p>《道德经》：六亲不和，有孝慈，是勘破表象孝慈，回归浑朴本源；儒门立足世间，以孝慈立仁本。博者不智，和这里“先立约、后博观”可以互参；老子偏向归约，儒门约而后博。</p>
+  <p>《坛经》：心佛众生三无差别，也是同体；儒门从最近的亲情入手，循序渐进。不立文字，不是废文字，是不执文字；此句教人有序读典，正是读而不执的前行防护。</p>
+  <p><b>（4）蒙学治学阶梯总节点</b></p>
+  <p>三字经这条脉络非常清晰：小学识字训诂 → 孝经、四书立心法定盘 → 六经博观。</p>
+  <p>四书是浓缩的判准：何为善、何为中、何为仁、何为本末；六经是历史场景下的实践样本。</p>
+  <p>同一个仁义大本，在不同时代、不同人群、不同处境，演化出诗的情志、书的政令、礼的节文、易的天人、春秋的褒贬。没有四书的标尺，读者很容易把古制当成永恒标准，或者全盘否定古教。</p>
+  <span class="num">三</span>
+  <p><b class="sec">跨典互参（老庄、般若对照）</b></p>
+  <p>· 《道德经》：孝慈为德之显，勘其迹而存其本。知其要者，一言而终；不知其要，流散无穷，正是先立纲领再博览。</p>
+  <p>· 《庄子》：仁义孝悌为人间之迹，贵在不忘其本。</p>
+  <p>· 串联前文：蒙学次第，识字、训诂、四书，至此返归仁孝本源，收束四书阶段，开启新的典籍序列。治学链条，由蒙学识字，入孝经四书，至此开启上古六经的博观阶段。</p>
+  <p>· 《庄子》六经为先王之陈迹，迹不是所以迹，与本句要义相合：读经贵见本心，不贵陈迹。</p>
+  <span class="num">四</span>
+  <p><b class="sec">和前面课程的张力</b></p>
+  <p>次第链条：……→ 自修齐，至平治 → 孝经通，四书熟 → 如六经，始可读（完整链条见附录）</p>
+  <p>呼应“人不学，不知义”：知仁义之本在孝；知读书治学先后本末之义；</p>
+  <p>呼应“玉不琢，不成器”：在亲情日用打磨这一念仁敬；以六经万象，继续打磨本心；</p>
+  <p>呼应“教之道，贵以专”：专守仁孝之本，贯通四书全部义理。专守仁义中和之纲领，博览而不散乱。</p>
+  <span class="num">五</span>
+
+  <div class="doubt">
+    <div class="t">存 疑 · 留 待 深 究</div>
+    <p>1. 孝的根基是天性，那天性会不会被后天习气遮蔽？如何护持而不使其枯萎？</p>
+    <p>2. 孝推扩为仁，这一步扩充，中间容易夹杂私情偏爱，如何勘破？</p>
+    <p>3. 出世修行，辞亲离俗，和“孝为仁本”如何圆融？</p>
+    <p>4. 《乐经》失传，我们今日读六经，如何领会乐教的内核，而不只是停留于文字？</p>
+    <p>5. 六经之中，《春秋》褒贬、《易》的占观，如何把握，不滑入权谋、术数？</p>
+    <p>6. 本心纲领已经建立，博览之时，如何避免见闻增多而生出傲慢、知见之障？</p>
+  </div>
+
+  <div class="folio" style="color:#B4A88F">— 155 —</div>
+</div>
+<div class="page">
+  <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第七十八课 · 诗书易</span></div>
+  <div class="lesson-no">第 七 十 八 课</div>
+  <h1>诗书易，礼春秋。号六经，当讲求。</h1>
+  <div class="sub">shī shū yì　lǐ chūn qiū　hào liù jīng　dāng jiǎng qiú</div>
+
+  <div class="grid-block">
+      <div class="grid-cols tight">
+  <div class="col"><div class="colhead">① 先读右列</div>
+    <div class="cellwrap"><div class="py">shī</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">诗</span></div><div class="strokes">八画</div></div><div class="cellwrap"><div class="py">shū</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">书</span></div><div class="strokes">四画</div></div><div class="cellwrap"><div class="py">yì</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">易</span></div><div class="strokes">八画</div></div>
+  </div>
+  <div class="col"><div class="colhead">② 再读左列</div>
+    <div class="cellwrap"><div class="py">lǐ</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">礼</span></div><div class="strokes">五画</div></div><div class="cellwrap"><div class="py">chūn</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">春</span></div><div class="strokes">九画</div></div><div class="cellwrap"><div class="py">qiū</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">秋</span></div><div class="strokes">九画</div></div>
+  </div>
+  </div>
+  <div class="readnote">古法竖排：<b>自右而左，自上而下</b>。上段先读右列「诗书易」，再读左列「礼春秋」。</div>
+  <div class="grid-cols tight" style="margin-top:26px">
+  <div class="col"><div class="colhead">③ 续读右列</div>
+    <div class="cellwrap"><div class="py">hào</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">号</span></div><div class="strokes">五画</div></div><div class="cellwrap"><div class="py">liù</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">六</span></div><div class="strokes">四画</div></div><div class="cellwrap"><div class="py">jīng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">经</span></div><div class="strokes">八画</div></div>
+  </div>
+  <div class="col"><div class="colhead">④ 再读左列</div>
+    <div class="cellwrap"><div class="py">dāng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">当</span></div><div class="strokes">六画</div></div><div class="cellwrap"><div class="py">jiǎng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">讲</span></div><div class="strokes">六画</div></div><div class="cellwrap"><div class="py">qiú</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">求</span></div><div class="strokes">七画</div></div>
+  </div>
+  </div>
+  <div class="readnote">下段续读：先读右列「号六经」，再读左列「当讲求」。</div>
+    <div class="note">此句列出五经篇目，承接上句“如六经，始可读”。古本六经含《乐经》，乐经早亡，后世通行五经便是《诗》《书》《易》《礼》《春秋》。五者各有教化侧重：《诗》主性情，导人情志归于温厚；《书》主政事，载上古圣王治道；《易》主天人，明阴阳变易、吉凶时宜；《礼》主节序，立言行分寸、人伦仪轨；《春秋》主褒贬，辨是非善恶、存万世公论。五部互为配套，以不同维度护持仁义中和之心。</div>
+    <div class="note" style="font-size:12.5px;color:#6B6157">承接上句诗书易礼春秋，补上失传的《乐经》，合称六经；讲求，不是泛泛浏览，是反复讲习、推究义理。讲，是剖白文义、彼此印证；求，是向内探求本心、在日用里勘验。六经之所以称为“经”，在于它是恒常之道的载体，不是仅供收藏、诵读的古书。读过、记过不算完成，必须讲习辨析、反求诸己，让经义落到心性与行事上。</div>
+  </div>
+
+  <div class="band"><span class="tag">少儿共读</span><span class="rule"></span><span class="en">读给孩子听</span></div>
+
+  <div class="kid">
+    <p class="lead">五经，就是诗、书、易、礼、春秋。</p>
+    <p>《诗》调养人的性情，温柔敦厚；</p>
+    <p>《书》记载上古圣王治国的大道；</p>
+    <p>《易》观察天地阴阳的变化规律；</p>
+    <p>《礼》教会我们待人接物的分寸；</p>
+    <p>《春秋》分辨是非善恶，留下公论。</p>
+    <p>它们从不同方向，帮我们守住仁敬、中正的心。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课七十八·六束并列</span></div>
+      <figcaption>六束简卷，一案并列。</figcaption>
+    </figure>
+    <p>诗、书、礼、易、春秋，加上失传的《乐经》，合叫六经。</p>
+    <p>读六经，不只是读一读、背一背，要用心讲习、细细推求。</p>
+    <p>讲，是把道理说明白，互相印证；</p>
+    <p>求，是回头看自己的心，在生活里对照检验。</p>
+    <p>六经讲的恒常大道，要落在自己的一言一行之中。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课七十八·六本摊开</span></div>
+      <figcaption>六本厚薄不一，摊开对着看。</figcaption>
+    </figure>
+    <p>落到心上理解</p>
+    <p>承接上一课存疑：博览典籍之后，容易增长知见傲慢。</p>
+    <p>五经各有对治的习气。</p>
+    <p>《诗》对治干枯刻板，令仁心流动有情；《礼》对治放逸散漫，令言行有节；《书》对治空想空谈，懂得治事有次第；《春秋》对治善恶模糊，心中保有明辨；《易》对治执着定相，明白一切都在时变之中，守大本而善权变。</p>
+    <p>五经合参，正是中庸“中不偏、庸不易”的落地：大本仁义不变，而应事、抒情、治理、判断，都要顺应时机。</p>
+    <p>阅经而不取文字相，知是借文见心，即是无住。</p>
+    <p>另有一问：《易》讲变易，如何守住恒定善恶，不落相对主义。</p>
+    <p>讲求，正是对治这个隐患的法门。</p>
+    <p>讲，与人对勘，避免自己一个人闭门乱想，把私见当成大道；求，向内心勘验，不把道理停留在口头。</p>
+    <p>五经各有偏重：诗主情、礼主节、书主政、春秋主断、易主变，全靠乐教的“和”来调和。讲求之时，一边辨析文义，一边体察自心：我的明辨会不会变成苛察？我的通达权变会不会滑入无原则？</p>
+    <p>经义是标尺，自心是勘验场，讲以正见，求以证心，论而不执，察而不迷，即是无住。</p>
+  </div>
+
+  <div class="two">
+    <div class="card">
+      <div class="ch2">俗 见<span>这 一 课 的 读 法</span></div>
+      <p>视五经仅为古史、古礼制文献，只做考据；讲求等同于考据辩论，好胜争理，向外求胜</p>
+    </div>
+    <div class="card">
+      <div class="ch2">正 解<span>这 一 课 的 读 法</span></div>
+      <p>五经核心是心性教化，史料典制只是载体；讲以明义，求以观心，辩论只为校正知见，不执胜负</p>
+    </div>
+  </div>
+
+  <div class="takeaway">
+    <div class="t">成 长 小 启 示</div>
+    <ul>
+      <li>《诗》涵养性情，温柔敦厚；</li>
+      <li>《书》观圣王政道，知治之本；</li>
+      <li>《易》明阴阳时变，知常达变；</li>
+      <li>《礼》立节文分寸，约束身心；</li>
+      <li>《春秋》辨善恶是非，存公道之心。</li>
+      <li>五经协同，从情志、事、天、行、断五个维度护持本心。</li>
+      <li>六经，包含《诗》《书》《礼》《易》《春秋》与《乐经》。</li>
+      <li>“讲求”分两层：讲习辨析，明文字义理；反求诸己，日用勘验本心。</li>
+      <li>乐教的内核是“和”，贯通五经，调和性情、是非、权变之间的张力。</li>
+      <li>读经贵在知行相勘，不是收藏知识、博取谈资。</li>
+    </ul>
+  </div>
+
+  <div class="parent-tip">
+    <div class="t">给 爸 爸 妈 妈 的 一 句 话 · 这 一 课 讲 什 么，慢 慢 说 给 孩 子 听</div>
+    <p><b>一、勘俗见。</b>区分《易》的大道和术数占卦，读易首要学的是知变守中，不是算命。区分研讨辩论和抬杠争胜，讲求的目标是明道自省，不是赢过别人。</p>
+    <p style="margin-top:6"><b>二、现代对照。</b>如同五套练习方案，分别训练情绪、做事、应变、规矩、判断力，共同塑造一个中正仁厚的人格。如同实验研讨，“讲”是一起讨论实验原理，“求”是亲自上手实验、观察自己的状态。</p>
+    <p style="margin-top:6"><b>三、承接常变主线。</b>仁义中和之本恒常不变（常）；五经所载的古礼、古政令，属于当时的适配方案，可以参考，不必照搬（可变之相）。仁义中和的常道不变（常）；对经文的注解、研讨方式，可以随人、随时调整（可变之相）。</p>
+    <p style="margin-top:6"><b>四、承接教与学二分。</b>师长讲明五经各自教化重心，区分教化本意与时代外壳，属于施教一侧；学人读经之时，反观自己的性情、取舍，是自主修习。师长组织讲习、辨析异同，属于施教一侧；学人听完之后，回自身对照反省，是自主修习。</p>
+    <p style="margin-top:6">承接选择力练习：分领五经教化，调情志、知时变、明是非，博观而不生知见傲慢。</p>
+  </div>
+
+  <div class="folio">— 156 —</div>
+</div>
+<div class="adult">
+  <div class="runhead" style="border-bottom-color:#DCD0B4"><span>成人研学 · 古今汇观</span><span class="c">第七十八课 · 深度页</span></div>
+  <h2>诗书易，礼春秋。号六经，当讲求</h2>
+  <div class="meta">诗书易，礼春秋。号六经，当讲求 ｜ 少儿页＋成人页</div>
+
+  <span class="num">一</span>
+  <p><b class="sec">字义与句读</b></p>
+  <p>诗：《诗经》；书：《尚书》；易：《周易》；礼：多指《礼记》、《仪礼》；春秋：鲁《春秋》。</p>
+  <p>上句释义：六经之中《乐经》失传，后世治学以《诗》《书》《易》《礼》《春秋》五经为核心典籍，各设教化维度，相辅而成完整的修学体系。</p>
+  <p>号：称名，合称；六经：诗、书、礼、易、春秋、乐；讲求：讲论辨析，推究义理，反求于心。</p>
+  <p>下句释义：此五篇加《乐经》，合称为六经；六经为恒常之道的载体，学者应当讲习辨析、推究义理，并且向内反求，在身心日用之中勘验印证。</p>
+  <span class="num">二</span>
+  <p><b class="sec">命题考辨</b></p>
+  <p><b>（1）五经分工的体系价值</b></p>
+  <p>《诗》言志，主情。情若无疏导节制，便会泛滥或者压抑，诗教使人情归于温厚；</p>
+  <p>《书》载先王政事，主治。看古人如何安天下，明白治理根基在明德、安民；</p>
+  <p>《易》穷理尽性，主天人变化。一切世事没有固定不变的方案，唯有大本不变，随时调整；</p>
+  <p>《礼》定节文，主行。内心仁德，要在言行上有分寸，不放肆、不粗疏；</p>
+  <p>《春秋》别善恶，主断。世道是非容易混淆，需要有公心，知取舍，不随流俗颠倒善恶。</p>
+  <p>五者不可偏废：有情无礼则荡，有礼无情则枯；知变无是非则滑，有是非不知时变则固，能治而无性情仁德则苛。</p>
+  <p><b>（2）对照当下现代语境</b></p>
+  <p>今人读书常常偏好单一路径：要么只喜欢谈玄论变（偏重易），要么死守规矩（偏重礼），或是习惯评判他人（类春秋苛察）。</p>
+  <p>五经并举，恰好是一套平衡方案：既要内心有情，又要有边界分寸；要明辨善恶，又要懂得时机权变；能做事，又不丢失温柔敦厚的底色。</p>
+  <p>今天很多读书两种极端：一类是考据派，一辈子埋在文献字句里，争论注释优劣，心性毫无长进；一类是“感悟派”，只读自己喜欢的句子，闭门自悟，把个人情绪、偏好当成圣道。</p>
+  <p>“号六经，当讲求”恰好双向纠偏：要有文本、义理的客观参照（讲），又必须落到身心上验证（求），二者不可偏废。</p>
+  <p><b>（3）般若范式互参</b></p>
+  <p>五经为教化假名，五镜照一心。</p>
+  <p>讲习探求，是方便法门。</p>
+  <p>联动三才五蕴太极空杯模型：虚空自性是明德本体；诗、书、易、礼、春秋，如同五面不同角度的镜子，从情志、政事、时变、仪轨、善恶判断，映照同一个自性。镜子样式不同，能照的虚空没有分别。我们借镜观心，而不执着镜面纹路。自性虚空是常道本体；六经文字是标月之指；讲求，就是循着指头、互相校正，回头看见月亮。讲习、考据、讨论都是指头的辅助，不能把指头本身当成月亮。</p>
+  <p>呼应“本乎数”：五经配五常，仁义礼智信，一一呼应。六为六经，内外讲求，阴阳成对。</p>
+  <p>延伸义理：</p>
+  <p>《金刚经》：离相无住，五经教人在情志、礼法、是非、世事变化之中练无住之心。无诤，讲习而不起诤心，正是讲求的底线。</p>
+  <p>《道德经》：知常曰明，近于《易》“不易”之常；老子偏于归静，五经动静并举。和光同尘，近乐教之和；老子偏静默，六经讲求主动静相济。</p>
+  <p>《坛经》：即心即佛，不立文字；五经是“借文字炼心”的阶梯，和禅法可以互为补助。论“如人饮水冷暖自知”，即是“求”的一层；但不废讲习印证，防自欺。</p>
+  <p><b>（4）六经体系的收束与用功法门</b></p>
+  <p>前面一句铺陈五经，此句收纳《乐经》，复原六经的完整名目，同时给出读经心法。</p>
+  <p>五经是分相：情、政、行、变、是非；乐是统相，是和。若无“和”的贯通，读经之人容易偏倚：重礼则拘、重易则滑、重春秋则刻。讲求，就是持续的校准机制：讲，破孤陋之蔽；求，破空谈之弊。</p>
+  <p>儒门的经学，从来不是纯书斋之学，讲求即是知行接口。</p>
+  <span class="num">三</span>
+  <p><b class="sec">跨典互参（老庄、般若对照）</b></p>
+  <p>· 《道德经》：礼者忠信之薄，是勘破礼的外在形式，非废弃礼之本的诚敬，和本句礼教互补。知者不言，勘破浮华口舌之讲，而不废真实向内之求。</p>
+  <p>· 《庄子》：诗以道志，书以道事，礼以道行，易以道阴阳，春秋以道名分，正是此句古注同源。</p>
+  <p>· 串联前文：治学次第，小学→孝经四书→六经，至此展开五经各自教化格局。蒙学治学阶梯，小学→孝经四书→六经篇目，至此点明六经研读的核心功夫。</p>
+  <p>· 《庄子》六经为陈迹，讲求是借迹会心，不滞于迹。：《庄子》六经为陈迹，讲求是借迹会心，不滞于迹。</p>
+  <span class="num">四</span>
+  <p><b class="sec">和前面课程的张力</b></p>
+  <p>次第链条：……→ 如六经，始可读 → 诗书易，礼春秋 → 号六经，当讲求（完整链条见附录）</p>
+  <p>呼应“人不学，不知义”：知五经分教，调和性情、通达时宜之义；知读经讲求、内外互勘之义；</p>
+  <p>呼应“玉不琢，不成器”：以五部经典，多方位打磨本心；以讲习、内求持续打磨心性；</p>
+  <p>呼应“教之道，贵以专”：专守仁义中和大本，分领五经教化而不迷。专守中和大本，讲求而不起诤、不滞文辞。</p>
+  <span class="num">五</span>
+
+  <div class="doubt">
+    <div class="t">存 疑 · 留 待 深 究</div>
+    <p>1. 《乐经》失传，乐教“和”的内核，如何不靠古经文去体会、践行？</p>
+    <p>2. 《春秋》褒贬容易流入苛责，如何把握“明是非”和宽厚容人的边界？</p>
+    <p>3. 《易》讲变易，会不会让人滑入相对主义，失去恒定的善恶准则？</p>
+    <p>4. 乐经文本失传，讲求乐教，除了古乐，还有哪些日常入手的路径体会“和”？</p>
+    <p>5. 讲习极易演变成诤论，有没有简单的标尺，一出现就该止息辩论？</p>
+    <p>6. 向内反求，如何区分是本心流露，还是潜意识里自我美化的幻象？</p>
+  </div>
+
+  <div class="folio" style="color:#B4A88F">— 157 —</div>
+</div>
+<div class="page">
+  <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第七十九课 · 有连山</span></div>
+  <div class="lesson-no">第 七 十 九 课</div>
+  <h1>有连山，有归藏。有周易，三易详。</h1>
+  <div class="sub">yǒu lián shān　yǒu guī cáng　yǒu zhōu yì　sān yì xiáng</div>
+
+  <div class="grid-block">
+      <div class="grid-cols tight">
+  <div class="col"><div class="colhead">① 先读右列</div>
+    <div class="cellwrap"><div class="py">yǒu</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">有</span></div><div class="strokes">六画</div></div><div class="cellwrap"><div class="py">lián</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">连</span></div><div class="strokes">七画</div></div><div class="cellwrap"><div class="py">shān</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">山</span></div><div class="strokes">三画</div></div>
+  </div>
+  <div class="col"><div class="colhead">② 再读左列</div>
+    <div class="cellwrap"><div class="py">yǒu</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">有</span></div><div class="strokes">六画</div></div><div class="cellwrap"><div class="py">guī</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">归</span></div><div class="strokes">五画</div></div><div class="cellwrap"><div class="py">cáng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">藏</span></div><div class="strokes">十七画</div></div>
+  </div>
+  </div>
+  <div class="readnote">古法竖排：<b>自右而左，自上而下</b>。上段先读右列「有连山」，再读左列「有归藏」。</div>
+  <div class="grid-cols tight" style="margin-top:26px">
+  <div class="col"><div class="colhead">③ 续读右列</div>
+    <div class="cellwrap"><div class="py">yǒu</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">有</span></div><div class="strokes">六画</div></div><div class="cellwrap"><div class="py">zhōu</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">周</span></div><div class="strokes">八画</div></div><div class="cellwrap"><div class="py">yì</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">易</span></div><div class="strokes">八画</div></div>
+  </div>
+  <div class="col"><div class="colhead">④ 再读左列</div>
+    <div class="cellwrap"><div class="py">sān</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">三</span></div><div class="strokes">三画</div></div><div class="cellwrap"><div class="py">yì</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">易</span></div><div class="strokes">八画</div></div><div class="cellwrap"><div class="py">xiáng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">详</span></div><div class="strokes">十画</div></div>
+  </div>
+  </div>
+  <div class="readnote">下段续读：先读右列「有周易」，再读左列「三易详」。</div>
+    <div class="note">承接六经之《易》，点出上古三代《易》学的前两种体系——连山易、归藏易，再加上后世通行的周易，合称三易。连山为夏代之易，以艮卦为首，艮为山，如山岭连绵不绝，故名连山；归藏为商代之易，以坤卦为首，坤为地、为藏，万物归根敛藏，故名归藏。三者同是阴阳变易的框架，只是立卦的起点、教化侧重不同：连山重始、重接续；归藏重敛、重归根；周易则兼赅始终，流通变化。</div>
+    <div class="note" style="font-size:12.5px;color:#6B6157">承接上句连山、归藏，补足第三部易，合为三易，以此详明易道全体。夏《连山》首艮，主生生接续；商《归藏》首坤，主归根敛藏；周《周易》首乾、次坤，乾坤并建，开合相循，把连山的“生续”、归藏的“敛藏”收摄在一套周流循环的体系之内。详，不是文字繁细，是义理周全、本末兼备：既有创始健行之乾，又有承载含藏之坤；既有动而持续，又有静而归根，往来循环，穷尽阴阳变易的种种情态。</div>
+  </div>
+
+  <div class="band"><span class="tag">少儿共读</span><span class="rule"></span><span class="en">读给孩子听</span></div>
+
+  <div class="kid">
+    <p class="lead">上古的易，分连山、归藏、周易三套体系。</p>
+    <p>连山易以艮山开头，取山峦连绵、生生接续之意；</p>
+    <p>归藏易以坤地开头，取万物归根、敛藏静养之意。</p>
+    <p>它们和周易一样，都是观察阴阳变化的框架，只是着眼的方向不一样。</p>
+    <p>易的根本，是看清动静、生藏的规律，不是占卜求吉凶。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课七十九·三叠古简</span></div>
+      <figcaption>两包一叠，三样古简错落一案。</figcaption>
+    </figure>
+    <p>加上《周易》，三易的道理就完备周全了。</p>
+    <p>连山讲连绵生长，归藏讲收敛静养；</p>
+    <p>周易以乾、坤为纲领，健行开创、厚德含藏，</p>
+    <p>把生发和归藏合在一起，循环流转。</p>
+    <p>易道，就是懂得什么时候向前，什么时候静守，合乎中道。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课七十九·三张素卡</span></div>
+      <figcaption>三张素卡，一张一张翻开。</figcaption>
+    </figure>
+    <p>落到心上理解</p>
+    <p>承接上一课存疑：向内反求，如何区分本心流露，还是自我美化的幻象。</p>
+    <p>三易的差异，恰好提供参照。</p>
+    <p>连山，看生生不断，适合我们精进、接续修行，在绵延日用里护持善念；归藏，看归根静默，适合我们收敛浮躁、静下来自省，勘破表面的情绪、念头，看清底层的自己。</p>
+    <p>周易是流行周变，兼顾动与静。</p>
+    <p>只学周易，容易一味求变通、向外周旋；知晓连山、归藏，便懂得：生起之时有接续，躁动之时宜归藏。观象是外缘，回来看自己心念的生、续、收、藏，才是易教本意。取象而不执象，便是无住。</p>
+    <p>另有一问：归藏重坤藏，如何避免消极退守、回避担当。</p>
+    <p>周易乾坤并建，恰好破此边见。</p>
+    <p>乾，是担当、精进、持续开创，对应连山生生；坤，是承载、含藏、反省静养，对应归藏敛藏。二者不可拆分：没有乾的健行，坤藏便成枯寂逃避；没有坤的收纳沉淀，乾行容易躁动耗散。</p>
+    <p>我们修行处事，就是在这两者之间拿捏分寸：该担当向前时，取乾健连山之义；该自省收敛、蓄养力量时，取坤厚归藏之义。周易的周全，在于不偏一边，随流转而切换，中道义就在其中。观象而不住于动静二相，即是无住。</p>
+  </div>
+
+  <div class="two">
+    <div class="card">
+      <div class="ch2">俗 见<span>这 一 课 的 读 法</span></div>
+      <p>追捧连山归藏，执着秘传、术数预言，追逐神通；厚古薄今，独尊连山归藏，轻视周易</p>
+    </div>
+    <div class="card">
+      <div class="ch2">正 解<span>这 一 课 的 读 法</span></div>
+      <p>三易核心是观变修心，术数只是附属外缘；周易统摄生藏，义理最周详，是三易的总纲</p>
+    </div>
+  </div>
+
+  <div class="takeaway">
+    <div class="t">成 长 小 启 示</div>
+    <ul>
+      <li>三易：连山（夏，艮为首，连绵接续）、归藏（商，坤为首，归根敛藏）、周易（周，乾坤为首，周流变化）。</li>
+      <li>连山侧重生生相续，适合长养善根、持续精进；</li>
+      <li>归藏侧重静守归根，适合止妄息躁、反省沉淀；</li>
+      <li>易道的重心，是借象观察生、住、收、藏的规律，重在修心，而非占验祸福。</li>
+      <li>三易：连山、归藏、周易，至此体系完备。</li>
+      <li>连山主艮止而生生相续；归藏主坤藏而厚德含容；周易乾坤并建，周流循环。</li>
+      <li>周易的价值，在于统摄动静，开创与涵养并重，不偏于一端。</li>
+      <li>学易，是学会在健行与静藏之间守持中道，随时合宜。</li>
+    </ul>
+  </div>
+
+  <div class="parent-tip">
+    <div class="t">给 爸 爸 妈 妈 的 一 句 话 · 这 一 课 讲 什 么，慢 慢 说 给 孩 子 听</div>
+    <p><b>一、勘俗见。</b>不要把连山归藏当成神秘算命秘法，本质是古人观察动静变化的思维框架。不要以为越古老的典籍就越高级，周易是三易的汇总，义理最周全。</p>
+    <p style="margin-top:6"><b>二、现代对照。</b>如同两种训练模式，连山是持续稳定的正向积累；归藏是定期复盘、静心沉淀，搭配周易的灵活应变。如同完整的作息节奏，乾是白天劳作成长，坤是夜晚静养复盘，缺一不可。</p>
+    <p style="margin-top:6"><b>三、承接常变主线。</b>阴阳动静的大道恒常不变（常）；三易的卦序、取用方式，是不同时代的教化设计（可变之相）。阴阳生藏的大道恒常不变（常）；三易的首卦、教化切入方式，是随时代设置的方便（可变之相）。</p>
+    <p style="margin-top:6"><b>四、承接教与学二分。</b>师长讲清三易源流、旨趣，区分义理和术数，属于施教一侧；学人对照自身状态，知何时当进、何时当敛，是自主修习。师长讲明三易源流、乾坤互根的义理，属于施教一侧；学人觉察自身状态，知进知止，是自主修习。</p>
+    <p style="margin-top:6">承接选择力练习：明三易取教之别，知生续、归藏之机，动静合度，不迷古秘。</p>
+  </div>
+
+  <div class="folio">— 158 —</div>
+</div>
+<div class="adult">
+  <div class="runhead" style="border-bottom-color:#DCD0B4"><span>成人研学 · 古今汇观</span><span class="c">第七十九课 · 深度页</span></div>
+  <h2>有连山，有归藏。有周易，三易详</h2>
+  <div class="meta">有连山，有归藏。有周易，三易详 ｜ 少儿页＋成人页</div>
+
+  <span class="num">一</span>
+  <p><b class="sec">字义与句读</b></p>
+  <p>连山：夏易，首艮；艮为山，山山相连，生生不绝；归藏：商易，首坤；坤为地，万物归地而藏。</p>
+  <p>上句释义：上古有《连山》《归藏》两套易道体系，与《周易》合称三易；取象不同，用以昭示万物生生接续、归根敛藏两大根本态。</p>
+  <p>三易：连山、归藏、周易；详：义理详备，本末、动静、生藏兼备，全体圆显。</p>
+  <p>下句释义：有《周易》以乾坤为纲领，开合周流，于是连山、归藏所昭示的生生、归藏之义，一并得以周全阐明，三易之道完备显发。</p>
+  <span class="num">二</span>
+  <p><b class="sec">命题考辨</b></p>
+  <p><b>（1）易道的源头分流</b></p>
+  <p>很多人学易，直接从乾坤开篇的周易入手，以为这就是易的全貌。</p>
+  <p>连山首艮，艮为止、为始。一山接一山，前一个终点，就是下一个起点，讲的是因果相续、绵延不绝；</p>
+  <p>归藏首坤，坤为藏、为母，万物生长之后，终归大地，收敛涵容，讲的是归根复命。</p>
+  <p>周易首乾次坤，乾健坤顺，一辟一阖，周流循环，把“续”与“藏”收纳在一套流转体系之中。</p>
+  <p>三易不是三种不同的大道，是同一阴阳大道，从不同的观察切面建立教化。</p>
+  <p><b>（2）对照当下现代语境</b></p>
+  <p>现代人的通病：要么一直向外追逐、持续消耗，不懂收敛归藏；要么一味枯静、躺平封闭，失去生生接续的活力。</p>
+  <p>连山教我们：善念、修行、事业，贵在持续相续，不要一曝十寒；</p>
+  <p>归藏教我们：喧嚣之后，一定要回到内在沉淀，不然所有向外的获取，都会变成负担。</p>
+  <p>一动一静，一伸一屈，刚好平衡。</p>
+  <p>现代人的生活两种极端：一种永不停歇，内卷消耗，不懂停下来休养；一种躺平退守，回避责任，放弃生长。</p>
+  <p>周易乾坤并建的模型，给出中道：积极创造、承担责任（乾），同时懂得接纳局限、定期沉淀、涵养根基（坤）。进取不是盲冲，静养不是逃避，二者互为根基。</p>
+  <p><b>（3）般若范式互参</b></p>
+  <p>三易之象，皆是假名设施。</p>
+  <p>三易卦象，皆是标月之指。</p>
+  <p>联动三才五蕴太极空杯模型：自性虚空，是不变的易之本体；连山、归藏、周易，是三种不同角度的光影投射。光影形态不同，虚空不受影响。我们借三易的象，观察念头的生起、持续、收敛、沉寂，而不被象困住。自性虚空，是不变的易体；连山、归藏、周易，是从不同切面描述心念与万象的生灭循环。周易的周流，即是在生、住、异、灭之中，不取生相、不取灭相，行于中道。</p>
+  <p>呼应“本乎数”：三易，对应生、藏、周流三态。三易成全体，乾坤为二元，阴阳循环。</p>
+  <p>延伸义理：</p>
+  <p>《金刚经》：不住生灭，连山见生而不住生，归藏入静而不住静。应无所住而生其心，乾是生其心，坤是无所住，周易正是二者并行。</p>
+  <p>《道德经》：夫物芸芸，各复归其根，正是归藏的内核；连山则近于“生生不息”。归根复命是归藏，道生万物是连山，道德经统此二者，和周易格局相通。</p>
+  <p>《坛经》：动静一如，不偏于动，不溺于静，是统摄三易的本心。动静一如，不执动，不溺静，与周易乾坤互根的中道义契合。</p>
+  <p><b>（4）三易体系收束</b></p>
+  <p>连山，重在“始”，山山相连，前终后始，持续不断；</p>
+  <p>归藏，重在“藏”，万物归根，敛蓄涵容；</p>
+  <p>周易，重在“循环”，乾开辟，坤收纳，由生而藏，藏而复生，环转无休。</p>
+  <p>单讲连山，容易一往无前，不知停歇；单讲归藏，容易沉守静境，失去生机。周易把两端合为一体，所以说“三易详”。后世独传周易，也正是因为它的框架最完备，可以兼容前二易的教化作用。</p>
+  <span class="num">三</span>
+  <p><b class="sec">跨典互参（老庄、般若对照）</b></p>
+  <p>· 《道德经》归根曰静，和归藏宗旨高度契合；持续生生，即是连山之旨。：《道德经》归根曰静，和归藏宗旨高度契合；持续生生，即是连山之旨。</p>
+  <p>· 《庄子》万物有乎出，有乎入，出入无见其形，是谓天门，贯通连山、归藏的生藏之机。：《庄子》万物有乎出，有乎入，出入无见其形，是谓天门，贯通连山、归藏的生藏之机。</p>
+  <p>· 串联前文：六经讲求，深入《易》学，溯源三易体系，拓展易道格局。六经体系之内，深入《易》学，完成三易源流的完整铺陈。</p>
+  <p>· 《道德经》：道生万物，归根曰静，一乾一坤，即是三易的总旨。</p>
+  <p>· 《庄子》：消息盈虚，终则有始，正是周易周流、统摄生藏的写照。</p>
+  <span class="num">四</span>
+  <p><b class="sec">和前面课程的张力</b></p>
+  <p>次第链条：……→ 号六经，当讲求 → 有连山，有归藏 → 有周易，三易详（完整链条见附录）</p>
+  <p>呼应“人不学，不知义”：知易道生、续、归、藏的动静之义；知乾坤互根、生藏循环之中道义；</p>
+  <p>呼应“玉不琢，不成器”：借三易之象，打磨自心动静的分寸；借周易周流之理，打磨自心动静的分寸；</p>
+  <p>呼应“教之道，贵以专”：专守中和本心，随机选用生藏之教，不猎奇迷秘。专守中和，进退动静两相平衡。</p>
+  <span class="num">五</span>
+
+  <div class="doubt">
+    <div class="t">存 疑 · 留 待 深 究</div>
+    <p>1. 连山、归藏文本残缺，仅存名目与零星佚文，如何把握边界，不凭空杜撰发挥？</p>
+    <p>2. 归藏重坤藏，会不会落入消极退守、回避担当的误区？</p>
+    <p>3. 三易和先后天八卦，应当如何搭配参看，而不混杂紊乱？</p>
+    <p>4. 周易文本里面，卦辞爻辞多有吉凶占断，如何区分占验之用和修心本义？</p>
+    <p>5. 乾坤并建，乾元为首，会不会隐含阳尊阴卑的固化偏见，该如何善读？</p>
+    <p>6. 三易之后，如何把这套动静模型，和四书的仁义、孝经的仁本融合为一体？</p>
+  </div>
+
+  <div class="folio" style="color:#B4A88F">— 159 —</div>
+</div>
+<div class="page">
+  <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第八十课 · 典谟训</span></div>
+  <div class="lesson-no">第 八 十 课</div>
+  <h1>典谟训，诰誓命。号周书，七十篇。</h1>
+  <div class="sub">diǎn mó xùn　gào shì mìng　hào zhōu shū　qī shí piān</div>
+
+  <div class="grid-block">
+      <div class="grid-cols tight">
+  <div class="col"><div class="colhead">① 先读右列</div>
+    <div class="cellwrap"><div class="py">diǎn</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">典</span></div><div class="strokes">八画</div></div><div class="cellwrap"><div class="py">mó</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">谟</span></div><div class="strokes">十二画</div></div><div class="cellwrap"><div class="py">xùn</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">训</span></div><div class="strokes">五画</div></div>
+  </div>
+  <div class="col"><div class="colhead">② 再读左列</div>
+    <div class="cellwrap"><div class="py">gào</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">诰</span></div><div class="strokes">九画</div></div><div class="cellwrap"><div class="py">shì</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">誓</span></div><div class="strokes">十四画</div></div><div class="cellwrap"><div class="py">mìng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">命</span></div><div class="strokes">八画</div></div>
+  </div>
+  </div>
+  <div class="readnote">古法竖排：<b>自右而左，自上而下</b>。上段先读右列「典谟训」，再读左列「诰誓命」。</div>
+  <div class="grid-cols tight" style="margin-top:26px">
+  <div class="col"><div class="colhead">③ 续读右列</div>
+    <div class="cellwrap"><div class="py">hào</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">号</span></div><div class="strokes">五画</div></div><div class="cellwrap"><div class="py">zhōu</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">周</span></div><div class="strokes">八画</div></div><div class="cellwrap"><div class="py">shū</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">书</span></div><div class="strokes">四画</div></div>
+  </div>
+  <div class="col"><div class="colhead">④ 再读左列</div>
+    <div class="cellwrap"><div class="py">qī</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">七</span></div><div class="strokes">二画</div></div><div class="cellwrap"><div class="py">shí</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">十</span></div><div class="strokes">二画</div></div><div class="cellwrap"><div class="py">piān</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">篇</span></div><div class="strokes">十五画</div></div>
+  </div>
+  </div>
+  <div class="readnote">下段续读：先读右列「号周书」，再读左列「七十篇」。</div>
+    <div class="note">此六者，是《尚书》文体总纲，承接六经体系里的《书经》。典、谟、训、诰、誓、命，为上古圣王君臣的文书品类。典，常道大典，记载根本法度；谟，君臣谋议、治国方略；训，臣下训导、规劝君上；诰，布告天下、晓谕万民；誓，誓师戒众、明约束；命，君王颁授、敕令委任。六体，是上古治道言语的载体，圣王不是凭空立教，而是在议事、训导、宣令、誓众、授官的场景中，把明德安民的大道落实到政事之中。</div>
+    <div class="note" style="font-size:12.5px;color:#6B6157">承接上句典谟训诰誓命六体，点明我们常研习的这部《尚书》，又称《周书》，古传篇目总数为七十篇（含序）。这里的“周书”，不是单指周代篇章，是后世对这部上古圣王书诰汇编的统称；七十篇为旧传总目，后世历经散佚、真伪辨析，今本篇目与之有出入。三字经此句，重在立纲目：六体所载的明德治道，尽数收在此七十篇之中。不必困于版本字句之争，要抓住全书宗旨——以先王言行、政教典则，示人修身安民、内圣外王的路径。</div>
+  </div>
+
+  <div class="band"><span class="tag">少儿共读</span><span class="rule"></span><span class="en">读给孩子听</span></div>
+
+  <div class="kid">
+    <p class="lead">这六类，是《尚书》里面的六种文书体裁。</p>
+    <p>典，是恒久不变的根本大典；</p>
+    <p>谟，君臣一起商量治国的谋略；</p>
+    <p>训，臣子规劝、训导君王；</p>
+    <p>诰，向天下百姓宣告道理；</p>
+    <p>誓，出征前立誓、定下公约；</p>
+    <p>命，君王下达委任与敕令。</p>
+    <p>这些文字，核心都在一件事：为政以德，安定百姓。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课八十·一捆厚简</span></div>
+      <figcaption>一捆厚简，绳束得紧。</figcaption>
+    </figure>
+    <p>这部收录典、谟、训、诰、誓、命的典籍，又叫《周书》，古来相传一共七十篇。</p>
+    <p>里面收录尧舜到商周时代，圣王君臣的教化话语、治国轨则。</p>
+    <p>读它，不是记古老故事，而是学习以德立身、待人处事、担当责任的道理。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课八十·卡片归盒</span></div>
+      <figcaption>一张一张，各归其格。</figcaption>
+    </figure>
+    <p>落到心上理解</p>
+    <p>承接上一课存疑：乾坤并建，乾元为首，如何避开阳尊阴卑的固化偏见。</p>
+    <p>《尚书》六体，恰好提供参照：</p>
+    <p>典是常道，不分君臣上下，明德是共同准则；谟是君臣共议，不是君王独断；训，是下位者向上规劝，说明大道不是上位者专属的权威。</p>
+    <p>誓、诰、命，是向外推行；谟、训，是向内商量、自省匡正。</p>
+    <p>放到我们身上：我们自身也有这六层功夫。“典”是自己守住不变的良知底线；“谟”是静下来谋划取舍；“训”是自我反省、规劝自己；“诰”是把善的理念传递出去；“誓”是给自己立约束、守戒律；“命”是承担起自己本分的使命。</p>
+    <p>一切文书、号令，目的都是护持明德；文辞只是工具，不被文辞、名分困住，即是无住。</p>
+    <p>另有一问：今古文《尚书》版本繁杂，如何不陷入无休止考据争论。</p>
+    <p>“号周书，七十篇”，本身就是一道分界标尺。</p>
+    <p>篇目、文字、版本，属于外缘载体，是“迹”；贯穿七十篇不变的，是明德、敬诚、安民、自省的内核，这才是“道”。</p>
+    <p>对应到我们自身：我们每一个人，也有属于自己的“七十篇”——就是过往的经历、言行、自省记录。不必执着过往的细节对错、字句得失，而是从中提炼诚敬、宽厚、自省的本心。</p>
+    <p>借典籍文字，反照自己的存心；知文是筏，不被文字版本困住，便是无住。</p>
+  </div>
+
+  <div class="two">
+    <div class="card">
+      <div class="ch2">俗 见<span>这 一 课 的 读 法</span></div>
+      <p>只读《尚书》只考据史迹，不见德教内核；专研版本、篇目真伪，辩论不休，忘失德教宗旨</p>
+    </div>
+    <div class="card">
+      <div class="ch2">正 解<span>这 一 课 的 读 法</span></div>
+      <p>六体所载，一切政事文书，以明德安民为本；篇目是容器，核心是明德安民的教化</p>
+    </div>
+  </div>
+
+  <div class="takeaway">
+    <div class="t">成 长 小 启 示</div>
+    <ul>
+      <li>典：万世常法，垂教后世；</li>
+      <li>谟：君臣筹谋，共商治道；</li>
+      <li>训：匡正规劝，谏过修德；</li>
+      <li>诰：布告天下，晓喻教化；</li>
+      <li>誓：立约自警，合众守规；</li>
+      <li>命：授职委任，各承本分。</li>
+      <li>《尚书》别称《周书》，古传总目七十篇；</li>
+      <li>全书收录典、谟、训、诰、誓、命六类政教文本；</li>
+      <li>跨越尧舜、夏、商、周，主线始终是“为政以德”；</li>
+      <li>读书以义理存心为先，不困于版本、篇数的考据之争。</li>
+    </ul>
+  </div>
+
+  <div class="parent-tip">
+    <div class="t">给 爸 爸 妈 妈 的 一 句 话 · 这 一 课 讲 什 么，慢 慢 说 给 孩 子 听</div>
+    <p><b>一、勘俗见。</b>不要觉得上古圣王是独断专制，书中“训”这一体，本身就包含规劝、纠错的通道。不要觉得古文典籍越高古、版本越神秘就越好，读的重心是里面教人诚敬、自省、宽厚的道理。</p>
+    <p style="margin-top:6"><b>二、现代对照。</b>如同一个团队的沟通范式，典是团队底线宗旨；谟是集体研讨；训是互相提醒纠偏；诰是全员通知；誓是共同约定；命是分工委任。如同一套前人沉淀下来的成长案例集，里面有规划、自省、约定、分工、劝诫，可供我们参照。</p>
+    <p style="margin-top:6"><b>三、承接常变主线。</b>明德安民的大本恒常不变（常）；典谟训诰的文书形式、治理制度，是适配上古时代的方案，可以随时代调整（可变之相）。诚敬明德的大本恒常不变（常）；篇目、文字、古制，是适配上古时代的载体（可变之相）。</p>
+    <p style="margin-top:6"><b>四、承接教与学二分。</b>师长讲明六体的功用，区分古制外壳与明德内核，属于施教一侧；学人对照自身，建立自我约束、自省、担当的习惯，是自主修习。师长说明版本源流，区分考据外缘与义理内核，属于施教一侧；学人对照经文，反省自身存心，是自主修习。</p>
+    <p style="margin-top:6">承接选择力练习：以明德为本，知谋、知谏、知戒、知任，内外相辅。</p>
+  </div>
+
+  <div class="folio">— 160 —</div>
+</div>
+<div class="adult">
+  <div class="runhead" style="border-bottom-color:#DCD0B4"><span>成人研学 · 古今汇观</span><span class="c">第八十课 · 深度页</span></div>
+  <h2>典谟训，诰誓命。号周书，七十篇</h2>
+  <div class="meta">典谟训，诰誓命。号周书，七十篇 ｜ 少儿页＋成人页</div>
+
+  <span class="num">一</span>
+  <p><b class="sec">字义与句读</b></p>
+  <p>典：常典，恒久法度；谟：谋议；训：训导、谏劝；诰：布告；誓：盟誓、誓约；命：敕命、委任。</p>
+  <p>上句释义：《尚书》所载，分为典、谟、训、诰、誓、命六类文体；上古圣王君臣，借这六种言说形式，在不同场景中推行明德教化、安定生民。</p>
+  <p>周书：《尚书》别称；七十篇：古传全书含序合计七十篇，后世流传版本篇目多有缺损、分合差异。</p>
+  <p>下句释义：载录典谟训诰誓命六体的这部典籍，世号《周书》，古传篇目共计七十篇；圣王德教，尽萃于此。</p>
+  <span class="num">二</span>
+  <p><b class="sec">命题考辨</b></p>
+  <p><b>（1）《尚书》的教化骨架</b></p>
+  <p>六经之中，《易》谈天人，《书》谈人治。</p>
+  <p>很多人读《尚书》，困在上古历史、帝王谱系。三字经这句，直接拎出阅读纲领：全书不是帝王事迹流水账，而是一套政教言说体系。</p>
+  <p>典，立根本，相当于全书的总宪章；</p>
+  <p>谟，庙堂集体决策，反对独断；</p>
+  <p>训，谏诤机制，允许下对上纠正过失；</p>
+  <p>诰，面向大众的教化宣导；</p>
+  <p>誓，共同体的公约戒律；</p>
+  <p>命，岗位分工，各尽其责。</p>
+  <p>整套治理，有根本、有商议、有错纠、有宣传、有公约、有分工，以德作为贯穿的主轴。</p>
+  <p><b>（2）对照当下现代语境</b></p>
+  <p>放到今天，这套结构依然可用：个人修身，典是自己不变的良知准则；谟是静思规划；训是自我反省；诰是正向表达分享；誓是自律戒条；命是认领自己的责任。</p>
+  <p>治理社群、组织也是同理：要有根本宗旨，要有研讨，要有纠错通道，要有公开宣导，要有共同约定，要有分工授权。缺了其中一环，体系就容易偏斜：只有命令没有规劝，容易独断；只有议论没有底线，容易散乱。</p>
+  <p>很多人读古籍容易两种极端：要么盲目崇古，认为古书每一句都是金科玉律，不敢质疑；要么发现版本有异、文字存疑，便全盘否定典籍价值。</p>
+  <p>此句的启发：载体可以有缺损、流变，但是其中安顿人心、治理社群的底层原则，依然有参考价值。放到个人身上，我们过往的经历、笔记、反思，也不必字字死守，重在提炼其中的成长教训。</p>
+  <p><b>（3）般若范式互参</b></p>
+  <p>六类文体，是教化假名。</p>
+  <p>篇章文字，是标月之指。</p>
+  <p>联动三才五蕴太极空杯模型：明德自性是空杯之中本自具足的本体；典谟训诰誓命，是用来护持、显发明德的不同外缘工具。工具样式不同，明德本体不增不减。明德自性是空杯之中本自具足之体；七十篇文字，是指引我们回归明德的外缘路标。路标有磨损、传抄有异，不影响月亮本身。</p>
+  <p>呼应“本乎数”：六体，对应六项政教功夫，内外阴阳成对。七十为篇目之数，六体为用，体用相合。</p>
+  <p>延伸义理：</p>
+  <p>《金刚经》：离相，虽行教化、宣说诰令，而不执着我相、君相、民相。无住，读周书而不取文字、古圣之相，正是不住于法。</p>
+  <p>《道德经》：不言之教，是勘破诰言文辞之相，不废教化之本。知止，书中“敬慎、保民”，即是知止的德教。</p>
+  <p>《坛经》：说自性自度，对应“训”的自省，一切外在诰令，最终都要回归自心明德。自性自度，《周书》一切诰训，最终要人反求自心之明德。</p>
+  <p><b>（4）《尚书》的定位</b></p>
+  <p>三字经这一句，是给初学设的方便法门。</p>
+  <p>它不细究今古文、真伪篇的复杂考据，先给学人建立一个整体认知：这七十篇，是上古政教的总集。从尧的克明俊德，到商周君臣的诰训，一以贯之：上位者首在修德，然后安民。</p>
+  <p>典是常法，谟是谋议，训是谏过，诰是宣导，誓是立戒，命是授任，全部收在这部《周书》之内。</p>
+  <p>后世学者皓首穷经，在篇目、文字上辨析，属于文献层面的外缘功夫；义理层面，明德、敬天、保民、自省，是全书不变的主线。</p>
+  <span class="num">三</span>
+  <p><b class="sec">跨典互参（老庄、般若对照）</b></p>
+  <p>· 《道德经》：国之利器不可以示人，勘破诰命威势之相，而不离安民之本。爱民治国，能无为乎，正是《周书》保民、慎刑、敬德的内核。</p>
+  <p>· 《庄子》：古之所谓道术者，在于内圣外王，典谟训诰，即是外王的言语载体。古之道术有在于是者，《周书》便是外王之道的文字留存。</p>
+  <p>· 串联前文：六经次第，讲完《易》之天人，转入《尚书》人世治道。六经次第，《易》明天道，《书》明人道政教，至此完成《尚书》纲目铺陈。</p>
+  <span class="num">四</span>
+  <p><b class="sec">和前面课程的张力</b></p>
+  <p>次第链条：……→ 有周易，三易详 → 典谟训，诰誓命 → 号周书，七十篇（完整链条见附录）</p>
+  <p>呼应“人不学，不知义”：知政教言教、明德安民之义；知载道之文，明德安民之义；</p>
+  <p>呼应“玉不琢，不成器”：借六体之教，打磨自心，谋、戒、省、任；借圣王训诰，打磨诚敬自省之心；</p>
+  <p>呼应“教之道，贵以专”：专守明德大本，随境选用六类言教，不执文诰。专守明德，不沉溺版本篇目之辩。</p>
+  <span class="num">五</span>
+
+  <div class="doubt">
+    <div class="t">存 疑 · 留 待 深 究</div>
+    <p>1. 《尚书》今文、古文之争纷繁，读的时候，如何把握义理，不陷入版本考据的无休止辩论？</p>
+    <p>2. 誓、诰多带有盟誓、赏罚，如何区分教化引导与威逼约束的边界？</p>
+    <p>3. 这套上古政教范式，如何和四书的修身、孝悌的仁本贯通一体？</p>
+    <p>4. 七十篇之中不少篇目后世判定为晚出伪作，初学如何把握取舍边界？</p>
+    <p>5. 《周书》多讲君德治民，如何转化为普通人日常修身的落地功夫？</p>
+    <p>6. 《周书》敬天思想，如何和《易》的阴阳变易体系相融，而不落入神道迷信？</p>
+  </div>
+
+  <div class="folio" style="color:#B4A88F">— 161 —</div>
+</div>
+<div class="page">
+  <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第八十一课 · 有国风</span></div>
+  <div class="lesson-no">第 八 十 一 课</div>
+  <h1>有国风，有雅颂。号四诗，当讽咏。</h1>
+  <div class="sub">yǒu guó fēng　yǒu yǎ sòng　hào sì shī　dāng fěng yǒng</div>
+
+  <div class="grid-block">
+      <div class="grid-cols tight">
+  <div class="col"><div class="colhead">① 先读右列</div>
+    <div class="cellwrap"><div class="py">yǒu</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">有</span></div><div class="strokes">六画</div></div><div class="cellwrap"><div class="py">guó</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">国</span></div><div class="strokes">八画</div></div><div class="cellwrap"><div class="py">fēng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">风</span></div><div class="strokes">九画</div></div>
+  </div>
+  <div class="col"><div class="colhead">② 再读左列</div>
+    <div class="cellwrap"><div class="py">yǒu</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">有</span></div><div class="strokes">六画</div></div><div class="cellwrap"><div class="py">yǎ</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">雅</span></div><div class="strokes">十二画</div></div><div class="cellwrap"><div class="py">sòng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">颂</span></div><div class="strokes">十画</div></div>
+  </div>
+  </div>
+  <div class="readnote">古法竖排：<b>自右而左，自上而下</b>。上段先读右列「有国风」，再读左列「有雅颂」。</div>
+  <div class="grid-cols tight" style="margin-top:26px">
+  <div class="col"><div class="colhead">③ 续读右列</div>
+    <div class="cellwrap"><div class="py">hào</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">号</span></div><div class="strokes">五画</div></div><div class="cellwrap"><div class="py">sì</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">四</span></div><div class="strokes">五画</div></div><div class="cellwrap"><div class="py">shī</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">诗</span></div><div class="strokes">八画</div></div>
+  </div>
+  <div class="col"><div class="colhead">④ 再读左列</div>
+    <div class="cellwrap"><div class="py">dāng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">当</span></div><div class="strokes">六画</div></div><div class="cellwrap"><div class="py">fěng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">讽</span></div><div class="strokes">七画</div></div><div class="cellwrap"><div class="py">yǒng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">咏</span></div><div class="strokes">八画</div></div>
+  </div>
+  </div>
+  <div class="readnote">下段续读：先读右列「号四诗」，再读左列「当讽咏」。</div>
+    <div class="note">此句转入六经之《诗经》，标举诗之三体——风、雅、颂，配套赋比兴三法，是诗教总纲。国风，是列国乡土民间的歌谣，采自四方民俗民情，多是百姓喜怒、劳役、情爱、讽谏之声；雅分大雅、小雅，是朝廷宴飨、朝会、君臣酬答、讽喻劝诫之乐，为士大夫、朝堂之音；颂，是宗庙祭祀、告慰先祖、赞美功德的乐章，庄严肃穆，沟通人祖、敬慎追远。风观民情，雅明朝序，颂通祖德，三者合起来，构成一套完整的诗教体系，以温柔含蓄的情志涵养人心。</div>
+    <div class="note" style="font-size:12.5px;color:#6B6157">承接上句国风、雅、颂，补足四诗之目——国风、大雅、小雅、颂，合称“四诗”。讽咏，不是高声诵读了事：讽，是低声涵咏、沉心思索，含蓄体会诗句里的情志深意；咏，是拉长声韵、依声吟唱，借音声之气调，把文义沁入内心。四诗承载温柔敦厚的诗教，不靠理智强行记诵，而以讽咏的音声法门，反复浸润，让义理与情志慢慢内化于心。</div>
+  </div>
+
+  <div class="band"><span class="tag">少儿共读</span><span class="rule"></span><span class="en">读给孩子听</span></div>
+
+  <div class="kid">
+    <p class="lead">《诗经》分风、雅、颂三类。</p>
+    <p>国风，是各地民间百姓传唱的歌谣；</p>
+    <p>雅，是朝堂宴会、君臣劝诫的乐歌；</p>
+    <p>颂，是宗庙祭祀、怀念先祖的庄重乐章。</p>
+    <p>诗教的本意，是让人心柔和敦厚，懂得共情、知分寸。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课八十一·一卷讽咏</span></div>
+      <figcaption>一卷摊开，低声念着，孩子在旁听。</figcaption>
+    </figure>
+    <p>国风、大雅、小雅、颂，合称为四诗。</p>
+    <p>读诗，重在讽咏：沉下心，伴着舒缓的声韵反复吟唱体会。</p>
+    <p>不是为了背下来应付考核，而是在吟咏之间，学会共情，养出柔和宽厚的心地。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课八十一·念给家人</span></div>
+      <figcaption>念给家里人听。</figcaption>
+    </figure>
+    <p>落到心上理解</p>
+    <p>承接上一课存疑：《周书》多是上位者训诫，如何转化为普通人修身功夫。</p>
+    <p>诗教，恰好补上这一层。</p>
+    <p>《尚书》是直接告诉你何为善、何为戒；《诗经》是先唤醒共情。国风，看见普通人的悲欢，体恤众生之苦乐；雅，学习相处、言语往来的分寸，委婉劝善，不伤人尊严；颂，懂得溯源知本，感念来路，常怀敬慎。</p>
+    <p>放到自心：我们的念头情绪，也有三类。国风，是自然流露的情绪感受，不加掩饰；雅，是对情绪做调伏，委婉自持；颂，是沉静自省，回归本心本源。</p>
+    <p>吟咏诗章，是借外缘感发，练一颗敦厚柔软的心；欣赏情志而不沉溺情绪、不执着文辞，即是无住。</p>
+    <p>另有一问：诗教温柔，会不会缺少刚毅持守的力量。</p>
+    <p>讽咏的功夫，刚好平衡这一点。</p>
+    <p>单纯讲道理，容易落在头脑认知，听过就散；讽咏是音声入气，反复熏习。国风的共情、大雅的持正、小雅的讽谏、颂的诚敬，在一呼一吸、一抑一扬之间，持续打磨心念。</p>
+    <p>温柔不是软弱。在讽咏的沉静里，我们体察人情，同时守住分寸；感而不泛滥，悲而不消沉，乐而不放逸。</p>
+    <p>吟咏只是外缘，借音声调伏情绪，回归敦厚本心；吟咏而不耽于声韵文辞，即是无住。</p>
+  </div>
+
+  <div class="two">
+    <div class="card">
+      <div class="ch2">俗 见<span>这 一 课 的 读 法</span></div>
+      <p>只重文学审美，视诗经为诗文选集，舍弃诗教；读诗只求背诵，重记忆而无体会</p>
+    </div>
+    <div class="card">
+      <div class="ch2">正 解<span>这 一 课 的 读 法</span></div>
+      <p>风、雅、颂承载温柔敦厚的教化；讽咏重在涵咏内化，情志与义理相融</p>
+    </div>
+  </div>
+
+  <div class="takeaway">
+    <div class="t">成 长 小 启 示</div>
+    <ul>
+      <li>国风：列国风土，民间情志，观民情、通共情；</li>
+      <li>雅（大雅、小雅）：朝堂士大夫之乐，酬答讽劝，明人伦次序；</li>
+      <li>颂：宗庙祭祀乐章，追念先祖，存诚敬、固本溯源；</li>
+      <li>诗教核心：温柔敦厚，情理兼顾，含蓄而不失真诚。</li>
+      <li>四诗：国风、大雅、小雅、颂；</li>
+      <li>讽：静思细味，沉潜体察诗意；</li>
+      <li>咏：依声长吟，以气韵浸润内心；</li>
+      <li>诗教的落地，贵在反复熏习，让宽厚、诚敬、共情之心自然养成。</li>
+    </ul>
+  </div>
+
+  <div class="parent-tip">
+    <div class="t">给 爸 爸 妈 妈 的 一 句 话 · 这 一 课 讲 什 么，慢 慢 说 给 孩 子 听</div>
+    <p><b>一、勘俗见。</b>不必把诗经读成枯燥的道德课本，它尊重人的真实情绪，再引导情志归于平和。不要把讽咏当成背诵任务，重点是孩子在慢的吟咏里感受情绪、懂得体谅他人。</p>
+    <p style="margin-top:6"><b>二、现代对照。</b>如同情绪教养，国风接纳真实感受，雅学习得体表达，颂用来静心自省、常怀感恩。类似正念诵读，用舒缓的声音节奏，平复浮躁，让道理慢慢走进心里。</p>
+    <p style="margin-top:6"><b>三、承接常变主线。</b>敦厚诚敬的本心恒常不变（常）；歌谣体裁、上古礼乐场景，是当时教化的载体（可变之相）。敦厚本心恒常不变（常）；讽咏的曲调、诵读方式，属于可调整的方便（可变之相）。</p>
+    <p style="margin-top:6"><b>四、承接教与学二分。</b>师长讲清风、雅、颂的场景，区分文辞美感与教化内核，属于施教一侧；诵读吟咏，体察自身情绪，是自主修习。师长示范讽咏的节奏，引导体会诗意，属于施教一侧；自主吟咏、反观自心，是修习功夫。</p>
+    <p style="margin-top:6">承接选择力练习：吟咏养和，情而不流，婉而有节。</p>
+  </div>
+
+  <div class="folio">— 162 —</div>
+</div>
+<div class="adult">
+  <div class="runhead" style="border-bottom-color:#DCD0B4"><span>成人研学 · 古今汇观</span><span class="c">第八十一课 · 深度页</span></div>
+  <h2>有国风，有雅颂。号四诗，当讽咏</h2>
+  <div class="meta">有国风，有雅颂。号四诗，当讽咏 ｜ 少儿页＋成人页</div>
+
+  <span class="num">一</span>
+  <p><b class="sec">字义与句读</b></p>
+  <p>国风：各诸侯国的乡土歌谣；雅：分大小雅，朝廷朝会宴乐之诗；颂：宗庙祭祀、报功追远的乐歌。</p>
+  <p>上句释义：《诗经》篇目，分为国风、大雅小雅、颂三体，以乐诗承载温柔敦厚之教，感发善性，涵养人情。</p>
+  <p>四诗：国风、大雅、小雅、颂；讽：隐诵深思，沉味其意；咏：引声长歌，以声养气。</p>
+  <p>下句释义：风、大雅、小雅、颂，号为四诗；修习之法，当以讽咏涵咏，借音声熏习，化诗意入于心性。</p>
+  <span class="num">二</span>
+  <p><b class="sec">命题考辨</b></p>
+  <p><b>（1）诗教的定位，承接《尚书》</b></p>
+  <p>《尚书》是刚性的法度训诫，《诗经》是柔性的浸润教化。</p>
+  <p>风，采自民间，圣王藉此知民间疾苦、风俗好恶，不是居高临下评判百姓，而是倾听民情；</p>
+  <p>雅，朝堂之间，有赞美，也有委婉的批评，讽谏不直言刺伤，保留体面；</p>
+  <p>颂，不是夸耀功德，是饮水思源，不忘先祖开创、养育的恩德，以诚敬收摄浮躁之心。</p>
+  <p>风、雅、颂三体搭配，让教化不再是生硬命令，而是以共情入心。这也是儒家“诗可以兴，可以观，可以群，可以怨”的根基。</p>
+  <p><b>（2）对照当下现代语境</b></p>
+  <p>现代人最缺的正是这种“温柔的分寸”：表达情绪要么压抑不说，要么激烈宣泄。</p>
+  <p>诗教的训练，就是国风一般接纳感受，雅一般委婉得体地表达，颂一般定期沉静、自省归本。既有真情，又不放任情绪泛滥；能够共情他人，也懂得自持。</p>
+  <p>现代人杂念纷飞，读经典常常看过即忘，道理和生活脱节。讽咏的价值，就是建立身心的链接：声音、呼吸、念头同步，反复熏习。不是靠强力说服自己向善，而是在舒缓的节奏里，慢慢把宽厚、共情、知止的品质养出来。温柔之中自有定力，便是刚柔相济。</p>
+  <p><b>（3）般若范式互参</b></p>
+  <p>诗篇意象，是标月之指。</p>
+  <p>诗篇吟咏，是标月之指。</p>
+  <p>联动三才五蕴太极空杯模型：敦厚自性是空杯之中本自具足的本体；风、雅、颂的诗篇、比兴意象，是用来唤醒这份本心的外缘。文采意象虽美，不可流连攀缘、沉湎情志。敦厚自性是空杯本具之体；四诗、讽咏音声，是外缘熏修的方便。好听的声韵、优美诗句，都只是舟筏，不可耽乐其中。</p>
+  <p>呼应“本乎数”：三体，对应情、序、敬三层功夫。四诗为体，讽咏一敛一舒，阴阳成对。</p>
+  <p>延伸义理：</p>
+  <p>《金刚经》：应无所住而生其心，诗兴即是生其心，敦厚而不沉溺情志，便是无住。应无所住而生其心，讽咏之时，因声起兴，而不住于声、不住于诗境。</p>
+  <p>《道德经》：含德之厚，比于赤子，正是诗教敦厚的底色。大音希声，讽咏是有声之音，向无声之本心回归。</p>
+  <p>《坛经》：道由心悟，诗的感发，就是借外缘启发自心本有的善性。道由心悟，讽咏只是外缘，悟入敦厚自性，方是诗教归宿。</p>
+  <p><b>（4）四诗与讽咏，是诗教的实修法门</b></p>
+  <p>上一句是“知道有什么”，这一句是“怎么用功”。</p>
+  <p>分而言之：国风多民风哀乐，讽咏以共情；小雅多讽喻伤时，讽咏以自省；大雅多朝廷正大之音，讽咏以立持守；颂多追远报本，讽咏以养诚敬。</p>
+  <p>讽，偏于止、向内收；咏，偏于发、向外舒。一收一放，和前面阴阳太和框架完全契合。不同于《尚书》直陈训诫，诗走情志、气息的路径，是潜移默化。</p>
+  <span class="num">三</span>
+  <p><b class="sec">跨典互参（老庄、般若对照）</b></p>
+  <p>· 《道德经》：乐与饵，过客止，勘破声乐文辞的诱惑，而取其和心之用。乐与饵，过客止，警示不要沉溺音声之乐，而取讽咏和心之用。</p>
+  <p>· 《庄子》《齐物》，哀乐不入于心，正是风雅颂的上层境界：感而不染。</p>
+  <p>· 串联前文：六经次第，《书》立政教，《诗》启情志，刚柔互济。六经次第，《诗》立情志之教，讽咏为下手功夫。</p>
+  <p>· 《庄子》：吾丧我，可于讽咏的浑然气韵之中，体会物我相融的诗境。</p>
+  <span class="num">四</span>
+  <p><b class="sec">和前面课程的张力</b></p>
+  <p>次第链条：……→ 号周书，七十篇 → 有国风，有雅颂 → 号四诗，当讽咏（完整链条见附录）</p>
+  <p>呼应“人不学，不知义”：知情志涵养、温柔中和之义；知音声熏修、情志中和之义；</p>
+  <p>呼应“玉不琢，不成器”：借诗乐兴发，打磨情志，不纵情、不压抑；借讽咏舒敛之气，打磨情知心念；</p>
+  <p>呼应“教之道，贵以专”：专守敦厚本心，吟咏感发而不耽文辞。专守敦厚，吟咏而不耽声韵文辞。</p>
+  <span class="num">五</span>
+
+  <div class="doubt">
+    <div class="t">存 疑 · 留 待 深 究</div>
+    <p>1. 国风多有男女情爱之诗，如何把握解读边界，既不曲解，又不流于俗情？</p>
+    <p>2. 雅颂依托上古礼乐祭祀，礼乐失传之后，今人如何体会其中诚敬，不流于形式？</p>
+    <p>3. 诗教的温柔，会不会失之于软，缺少《尚书》那种刚毅持守的力量？</p>
+    <p>4. 讽咏和颂钵、音声法门是否同源？如何区分诗教讽咏与禅修音声的边界？</p>
+    <p>5. 性情偏于内向沉静之人，讽咏容易昏沉，该如何调整用功方式？</p>
+    <p>6. 四诗之中，小雅多哀怨之音，长期讽咏会不会引生沉郁感伤？</p>
+  </div>
+
+  <div class="folio" style="color:#B4A88F">— 163 —</div>
+</div>
+<div class="page">
+  <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第八十二课 · 诗既亡</span></div>
+  <div class="lesson-no">第 八 十 二 课</div>
+  <h1>诗既亡，春秋作。寓褒贬，别善恶。</h1>
+  <div class="sub">shī jì wáng　chūn qiū zuò　yù bāo biǎn　bié shàn è</div>
+
+  <div class="grid-block">
+      <div class="grid-cols tight">
+  <div class="col"><div class="colhead">① 先读右列</div>
+    <div class="cellwrap"><div class="py">shī</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">诗</span></div><div class="strokes">八画</div></div><div class="cellwrap"><div class="py">jì</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">既</span></div><div class="strokes">九画</div></div><div class="cellwrap"><div class="py">wáng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">亡</span></div><div class="strokes">三画</div></div>
+  </div>
+  <div class="col"><div class="colhead">② 再读左列</div>
+    <div class="cellwrap"><div class="py">chūn</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">春</span></div><div class="strokes">九画</div></div><div class="cellwrap"><div class="py">qiū</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">秋</span></div><div class="strokes">十一画</div></div><div class="cellwrap"><div class="py">zuò</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">作</span></div><div class="strokes">七画</div></div>
+  </div>
+  </div>
+  <div class="readnote">古法竖排：<b>自右而左，自上而下</b>。上段先读右列「诗既亡」，再读左列「春秋作」。</div>
+  <div class="grid-cols tight" style="margin-top:26px">
+  <div class="col"><div class="colhead">③ 续读右列</div>
+    <div class="cellwrap"><div class="py">yù</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">寓</span></div><div class="strokes">十二画</div></div><div class="cellwrap"><div class="py">bāo</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">褒</span></div><div class="strokes">十五画</div></div><div class="cellwrap"><div class="py">biǎn</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">贬</span></div><div class="strokes">十画</div></div>
+  </div>
+  <div class="col"><div class="colhead">④ 再读左列</div>
+    <div class="cellwrap"><div class="py">bié</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">别</span></div><div class="strokes">七画</div></div><div class="cellwrap"><div class="py">shàn</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">善</span></div><div class="strokes">十二画</div></div><div class="cellwrap"><div class="py">è</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">恶</span></div><div class="strokes">十二画</div></div>
+  </div>
+  </div>
+  <div class="readnote">下段续读：先读右列「寓褒贬」，再读左列「别善恶」。</div>
+    <div class="note">承接四诗讽咏的诗教体系，转入六经之《春秋》。此处“诗亡”，不是《诗经》文本消失，而是诗教的教化功用衰微。列国崩坏，礼义松弛，温柔含蓄、托物讽谏的诗教，已经无力匡正世道人心。当委婉的情志劝诫不再起效，孔子于是作《春秋》，以史笔褒贬善恶、明定是非。诗教是委婉含蓄、感发于心；《春秋》是直裁其事、以赏罚之义垂教。一柔一刚，一隐一显，为六经教化的另一重关键转关。</div>
+    <div class="note" style="font-size:12.5px;color:#6B6157">承接上句《春秋》之作，点明此书笔法内核。寓，是寄托、暗藏，不直白高声评判；褒是扬善、肯定正道，贬是抑过、警示邪曲。孔子修《春秋》，不在文外另加评语，把对人事的褒扬与贬抑，藏在极简的记事文字之中，借记事的取舍、称谓、用字，悄悄分出善恶正邪。不妄作议论，而大义自见，这便是后世所说“春秋笔法，微言大义”。诗教是含蓄感发；《春秋》的含蓄，是藏是非于史笔，简约克制，一字之中自有权衡。</div>
+  </div>
+
+  <div class="band"><span class="tag">少儿共读</span><span class="rule"></span><span class="en">读给孩子听</span></div>
+
+  <div class="kid">
+    <p class="lead">当温柔含蓄的诗教，难以约束乱世乱象，孔子便作《春秋》。</p>
+    <p>它用史书的笔法，记录事迹、明辨善恶是非。</p>
+    <p>教化有两种方式：温和感化，或是直接立定准则，劝善戒恶。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课八十二·两点相待</span></div>
+      <figcaption>卷子收拢，纸上留一红一墨两点。</figcaption>
+    </figure>
+    <p>《春秋》的文字里面，藏着褒扬与劝诫。</p>
+    <p>不用直白大声地评判，靠简约记事，分清何为善、何为恶。</p>
+    <p>明白是非，但是不刻薄指责，心存宽厚，守住中正的分寸。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课八十二·两只素碟</span></div>
+      <figcaption>两件小事，分放两只碟。</figcaption>
+    </figure>
+    <p>落到心上理解</p>
+    <p>承接上一课存疑：小雅多哀怨，长期讽咏会不会沉郁感伤。</p>
+    <p>诗教重在共情包容，接纳人情的悲欢；但包容不等于没有底线。</p>
+    <p>“诗既亡，春秋作”，恰好提示这个边界：温柔敦厚，不是无原则的姑息。当包容、委婉的劝导无法止恶，就需要清晰的是非准则，明辨取舍。</p>
+    <p>放到自心上：我们内在也有两套功夫。讽咏诗教，是体谅自身、接纳情绪；《春秋》之义，是觉察念头、分辨善恶取舍。体谅情绪，但不随恶念流转；包容人心，但是守住本心的中正。</p>
+    <p>知善恶而不执着评判、不生厌憎对立，即是无住。</p>
+    <p>另有一问：读史容易生出居高临下评判古人的我慢。</p>
+    <p>“寓”字，正是破这个习气的关键。</p>
+    <p>褒贬不是外放的批判，是向内建立标尺。我们看外在人事、审视自身念头，也是这套功夫：分辨念头里的善与不善，但是不激烈厌弃、攻击自己的恶念。知其为恶，只是收敛、转归正道，不陷入自我苛责、对立内耗。</p>
+    <p>《春秋》藏义于文，不张扬斥责；我们守正于心，明取舍而不生嗔恨。知善恶、能抉择，又不住在善恶对立之中，便是无住。</p>
+  </div>
+
+  <div class="two">
+    <div class="card">
+      <div class="ch2">俗 见<span>这 一 课 的 读 法</span></div>
+      <p>把“诗亡”理解为《诗经》文本失传；把褒贬当成肆意批评、指责他人</p>
+    </div>
+    <div class="card">
+      <div class="ch2">正 解<span>这 一 课 的 读 法</span></div>
+      <p>诗亡，是温柔讽谏的教化功用衰微；褒贬是内敛的权衡，重在立自身准则</p>
+    </div>
+  </div>
+
+  <div class="takeaway">
+    <div class="t">成 长 小 启 示</div>
+    <ul>
+      <li>诗教衰微，委婉讽劝难以救世，孔子方作《春秋》；</li>
+      <li>诗以情化人，春秋以义正人；</li>
+      <li>温柔包容，与明辨是非，二者不可偏废；</li>
+      <li>读《春秋》，学的是心中有准则，待人有底线。</li>
+      <li>寓：藏义于文字，不直白张扬评判；</li>
+      <li>褒：表彰善举，见贤思齐；</li>
+      <li>贬：警诫过恶，知过而改；</li>
+      <li>春秋笔法贵在克制：明是非，有分寸，宽厚而不失底线。</li>
+    </ul>
+  </div>
+
+  <div class="parent-tip">
+    <div class="t">给 爸 爸 妈 妈 的 一 句 话 · 这 一 课 讲 什 么，慢 慢 说 给 孩 子 听</div>
+    <p><b>一、勘俗见。</b>温柔宽厚不等于没有原则，《春秋》就是教孩子懂得分辨对错，守住底线。分辨对错不等于刻薄指责，重点是心里建立标尺，学会自省，而不是盯着别人挑错。</p>
+    <p style="margin-top:6"><b>二、现代对照。</b>好比教养，平时包容疏导情绪；当行为越界，就要清晰立规矩。就像自我觉察，看清念头好坏，及时调整，但不一直苛责自己。</p>
+    <p style="margin-top:6"><b>三、承接常变主线。</b>中正向善的本心恒常不变（常）；诗教、史笔，是随时代选用的教化方便（可变之相）。向善守正的本心恒常不变（常）；褒贬的文字、评判的标准，是随场景调整的教化方便（可变之相）。</p>
+    <p style="margin-top:6"><b>四、承接教与学二分。</b>师长讲明诗教与春秋的法门差异，属于施教一侧；学人反观自心，包容而守正，是自主修习。师长讲明微言克制之义，引导不生苛责对立，属于施教一侧；学人以此反观自心，择善改过，是自主修习。</p>
+    <p style="margin-top:6">承接选择力练习：情能容，义能断，刚柔相济。</p>
+  </div>
+
+  <div class="folio">— 164 —</div>
+</div>
+<div class="adult">
+  <div class="runhead" style="border-bottom-color:#DCD0B4"><span>成人研学 · 古今汇观</span><span class="c">第八十二课 · 深度页</span></div>
+  <h2>诗既亡，春秋作。寓褒贬，别善恶</h2>
+  <div class="meta">诗既亡，春秋作。寓褒贬，别善恶 ｜ 少儿页＋成人页</div>
+
+  <span class="num">一</span>
+  <p><b class="sec">字义与句读</b></p>
+  <p>诗既亡：温柔讽谏的诗教之道衰微；春秋作：孔子笔削鲁史，成《春秋》一经，以史载事、寓褒贬。</p>
+  <p>上句释义：委婉含蓄、感发人心的诗教化道衰微，不足以匡正乱世，孔子因而作《春秋》，以史笔明善恶、定是非，垂万世之义法。</p>
+  <p>寓：寄托、蕴藏；褒：扬善；贬：抑恶；别：分辨、甄别取舍。</p>
+  <p>下句释义：《春秋》记事，将扬善、警过的大义暗藏于简约文辞之间，以此分辨善恶正邪，立万世取舍之准，不另出断语，而大义自显。</p>
+  <span class="num">二</span>
+  <p><b class="sec">命题考辨</b></p>
+  <p><b>（1）六经教化的刚柔转关</b></p>
+  <p>诗教是阴柔之化，主兴、主感，让人自发向善；适合风俗淳厚、人尚有廉耻之时。</p>
+  <p>当世道陵迟，诸侯僭越、臣弑君、子弑父，廉耻之心淡薄，委婉的讽咏、情志感化已经无力约束。此时需要一套明确的是非标尺，这便是《春秋》。</p>
+  <p>诗是劝，春秋是裁；诗是润，春秋是衡。二者不是对立，是教化的两套互补方案。</p>
+  <p><b>（2）对照当下现代语境</b></p>
+  <p>很多人会陷入两端：一味共情包容，失去边界；或是严苛评判，处处是非对立。</p>
+  <p>这一句给出中道：优先感化包容；当感化无效，必须明定是非。知是非，但不陷于苛责、憎恨。能包容，也能决断，这才是完整的心性。</p>
+  <p>很多人两种极端：要么模糊善恶，空谈包容；要么是非分明，言辞锋利，处处与人对立。</p>
+  <p>“寓褒贬，别善恶”给出中道：心里有清晰的标尺，外在表达含蓄克制。明辨是非是内在的抉择，不必化为向外的攻击指责。觉察念头、处事待人，都适用这个分寸。</p>
+  <p><b>（3）般若范式互参</b></p>
+  <p>史事褒贬，是标月之指。</p>
+  <p>善恶褒贬，是标月之指。</p>
+  <p>联动三才五蕴太极空杯模型：中正自性是空杯之中本自具足之体；诗教、春秋褒贬，是应机教化的外缘。明善恶，而不住善恶之相，不被评判心困住。中正自性是空杯之中本自具足之体；褒贬别善恶，是用来校准心念的外缘工具。知善恶、做取舍，而不攀缘善恶相、不起憎爱。</p>
+  <p>呼应“本乎数”：诗阴、春秋阳，一柔一刚，阴阳成对。褒阳、贬阴，善恶一对，藏显互依。</p>
+  <p>延伸义理：</p>
+  <p>《金刚经》：无住，明善恶而不执着善恶相，正是春秋大义的上层境界。无住，知善恶而不住善恶相，正是春秋大义的般若落点。</p>
+  <p>《道德经》：知雄守雌，诗是守雌之柔，春秋是知雄之义。知雄守雌，明善恶决断之雄，持宽厚不伐之雌。</p>
+  <p>《坛经》：善恶莫思量，思量即不中，正是超越褒贬对立的本心。不思善不思恶，正是超越善恶对立，回归本心的境界。</p>
+  <p><b>（4）微言大义的核心，在“寓”</b></p>
+  <p>上一句讲《春秋》因乱世而作，这一句讲它独特的教化方式：不直接下判决书。</p>
+  <p>孔子不跳出史事之外大声评判，只用记事的用字、称谓、记载的详略，暗暗传递价值取向。</p>
+  <p>为什么要“寓”？一是存厚道，不刻薄诛责；二是留空间，让读者自己体察、自省，而不是被动接受一个强制结论。这和诗教含蓄一脉相通，只是诗在感，春秋在断。</p>
+  <p>温柔的诗教感化无效之后，启用这套克制、内敛的义裁，刚而不暴。</p>
+  <span class="num">三</span>
+  <p><b class="sec">跨典互参（老庄、般若对照）</b></p>
+  <p>· 《道德经》：和光同尘，是诗教包容；天地不仁，以万物为刍狗，是春秋大公的裁断。善者吾善之，不善者吾亦善之，是包容底色；春秋别善恶，是包容之中的取舍准则。</p>
+  <p>· 《庄子》：是非之彰也，道之所以亏也，勘破刻意褒贬的边见，回归道体。是非之涂，樊然殽乱，勘破执着是非名相的边见，不废取舍之用。</p>
+  <p>· 串联前文：六经次第，《诗》主情志感化，《春秋》主义理裁断，刚柔相配。六经次第，诗主含蓄感化，春秋主含蓄义裁，刚柔合一。</p>
+  <span class="num">四</span>
+  <p><b class="sec">和前面课程的张力</b></p>
+  <p>次第链条：……→ 号四诗，当讽咏 → 诗既亡，春秋作 → 寓褒贬，别善恶（完整链条见附录）</p>
+  <p>呼应“人不学，不知义”：知感化与裁断、刚柔相济之义；知微言藏义、明善别恶而不苛责之义；</p>
+  <p>呼应“玉不琢，不成器”：借春秋大义，打磨自心，包容而有准则；借春秋微义，打磨自心，明断而存宽厚；</p>
+  <p>呼应“教之道，贵以专”：专守中正，感而不滥，断而不苛。专守中正，辨善恶而不住憎爱之相。</p>
+  <span class="num">五</span>
+
+  <div class="doubt">
+    <div class="t">存 疑 · 留 待 深 究</div>
+    <p>1. 《春秋》褒贬依托周天子名分，时代变迁之后，这套评判框架如何转化为普适的是非观？</p>
+    <p>2. 褒贬容易滋生我慢，如何在读史之时，避开居高临下评判古人的习气？</p>
+    <p>3. 诗教、春秋之后，《礼经》如何承接这套刚柔教化，完成六经闭环？</p>
+    <p>4. 时代变迁，古史的评判标尺如何取舍，不被古制束缚？</p>
+    <p>5. 微言隐晦，不同人读《春秋》解读不一，如何避免主观臆断？</p>
+    <p>6. 诗、春秋之后，《礼》如何承接这套刚柔教化，完成六经闭环？</p>
+  </div>
+
+  <div class="folio" style="color:#B4A88F">— 165 —</div>
+</div>
+<div class="page">
+  <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第八十三课 · 三传者</span></div>
+  <div class="lesson-no">第 八 十 三 课</div>
+  <h1>三传者，有公羊。有左氏，有谷梁。</h1>
+  <div class="sub">sān zhuàn zhě　yǒu gōng yáng　yǒu zuǒ shì　yǒu gǔ liáng</div>
+
+  <div class="grid-block">
+      <div class="grid-cols tight">
+  <div class="col"><div class="colhead">① 先读右列</div>
+    <div class="cellwrap"><div class="py">sān</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">三</span></div><div class="strokes">三画</div></div><div class="cellwrap"><div class="py">zhuàn</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">传</span></div><div class="strokes">六画</div></div><div class="cellwrap"><div class="py">zhě</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">者</span></div><div class="strokes">八画</div></div>
+  </div>
+  <div class="col"><div class="colhead">② 再读左列</div>
+    <div class="cellwrap"><div class="py">yǒu</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">有</span></div><div class="strokes">六画</div></div><div class="cellwrap"><div class="py">gōng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">公</span></div><div class="strokes">四画</div></div><div class="cellwrap"><div class="py">yáng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">羊</span></div><div class="strokes">六画</div></div>
+  </div>
+  </div>
+  <div class="readnote">古法竖排：<b>自右而左，自上而下</b>。上段先读右列「三传者」，再读左列「有公羊」。</div>
+  <div class="grid-cols tight" style="margin-top:26px">
+  <div class="col"><div class="colhead">③ 续读右列</div>
+    <div class="cellwrap"><div class="py">yǒu</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">有</span></div><div class="strokes">六画</div></div><div class="cellwrap"><div class="py">zuǒ</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">左</span></div><div class="strokes">五画</div></div><div class="cellwrap"><div class="py">shì</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">氏</span></div><div class="strokes">四画</div></div>
+  </div>
+  <div class="col"><div class="colhead">④ 再读左列</div>
+    <div class="cellwrap"><div class="py">yǒu</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">有</span></div><div class="strokes">六画</div></div><div class="cellwrap"><div class="py">gǔ</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">谷</span></div><div class="strokes">七画</div></div><div class="cellwrap"><div class="py">liáng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">梁</span></div><div class="strokes">十一画</div></div>
+  </div>
+  </div>
+  <div class="readnote">下段续读：先读右列「有左氏」，再读左列「有谷梁」。</div>
+    <div class="note">承接《春秋》经文。经文极简，微言深藏，文意隐晦，后世学者依经文作传，疏通大义、阐发褒贬之旨，最知名即《春秋》三传：《公羊传》《谷梁传》《左传》，本课先论《公羊传》。公羊，指公羊高，为《公羊传》之祖。公羊一脉重在阐发大义、改制、大一统、拨乱反正，偏于义理发挥，探求孔子作《春秋》背后垂法后世的宗旨，不拘泥于事件细节考据。</div>
+    <div class="note" style="font-size:12.5px;color:#6B6157">承接上句公羊，补全《春秋》三传余下二家：《左传》（左氏）、《谷梁传》。三传同是注解《春秋》，而取向各有侧重。左氏，即左丘明，《左传》重在补叙史实，铺陈事件始末、人物情状，以故事载大义，让人看见褒贬背后完整的世事脉络；谷梁，谷梁赤，《谷梁传》偏于审断义理、辨析名份、斟酌辞气，细密克制，在字句分寸之间明善恶、定伦序。公羊重改制大旨，左氏重事相脉络，谷梁重名分分寸，三条路径互为参照，一同撑起《春秋》微言的解读框架。</div>
+  </div>
+
+  <div class="band"><span class="tag">少儿共读</span><span class="rule"></span><span class="en">读给孩子听</span></div>
+
+  <div class="kid">
+    <p class="lead">《春秋》经文简短深奥，后人作三部传文来解读它，称为三传，第一部便是《公羊传》。</p>
+    <p>公羊之学重在探明大义，明白圣人褒贬取舍、拨乱归正的本心。</p>
+    <p>注解是桥梁，目的是读懂经文，守住中正的准则。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课八十三·三册注本</span></div>
+      <figcaption>两册摊开，一卷在中，气脉连成一线。</figcaption>
+    </figure>
+    <p>《春秋》三传，除公羊之外，还有《左传》与《谷梁传》。</p>
+    <p>左传多记录完整故事，看清事情的来龙去脉；</p>
+    <p>谷梁仔细斟酌文字，分辨名分、守住分寸。</p>
+    <p>三家注解互为参照，帮助我们周全地读懂经文，不偏执单一角度。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课八十三·三人对照</span></div>
+      <figcaption>三个人，各拿一册，对着同一张卡纸。</figcaption>
+    </figure>
+    <p>落到心上理解</p>
+    <p>承接上一课存疑：经文微言隐晦，各人解读不一，容易主观臆断。</p>
+    <p>三传，就是古人搭建的参照标尺，公羊是其中一条路径。</p>
+    <p>但要分清主次：经文是本源，传是向导。向导的解说，是为了带你看见经文里面的中正之义，向导的话不等于道本身。</p>
+    <p>对应修心：各类教法、注解、善知识开示，如同传。可以拿来参照、校准心念，但不能把某一家言说死死当成唯一标准。依义不依语，明取舍、守中正，而不困在注解文字里，便是无住。</p>
+    <p>另有一问：三家义理不同，阅读如何权衡取舍。</p>
+    <p>三传并存，本身就是示范一种修行方式：多角度参照，而不孤守一个视角。</p>
+    <p>公羊教我们立定大方向、守住根本宗旨；左传提醒我们，所有是非评判，都不能脱离真实的人事背景；谷梁教我们在细微之处审慎，不粗疏、不武断。</p>
+    <p>放在心上用功：我们觉察心念、判断取舍，既要有坚定的根本准则（公羊），也要看清因缘处境、前因后果（左氏），还要在起心动念的细微处审察分寸（谷梁）。多方参照，明断而不武断，广博而不迷失根本，即是无住。</p>
+  </div>
+
+  <div class="two">
+    <div class="card">
+      <div class="ch2">俗 见<span>这 一 课 的 读 法</span></div>
+      <p>以传代经，把公羊说法等同于圣人本意；独尊一传，排斥另外两家</p>
+    </div>
+    <div class="card">
+      <div class="ch2">正 解<span>这 一 课 的 读 法</span></div>
+      <p>传是解经的津梁，经文才是根本；三传各有所长，宜互参互补</p>
+    </div>
+  </div>
+
+  <div class="takeaway">
+    <div class="t">成 长 小 启 示</div>
+    <ul>
+      <li>三传：公羊、谷梁、左氏；本课先述《公羊传》；</li>
+      <li>公羊之学，重心在大义、拨乱反正、大一统；</li>
+      <li>经为本体，传是疏通经文的桥梁；</li>
+      <li>读书原则：依经取义，不被注解文字束缚。</li>
+      <li>左氏《左传》：详载史实，还原事件本末；</li>
+      <li>谷梁《谷梁传》：精审名分，辨析文辞分寸；</li>
+      <li>公羊、左氏、谷梁，三条路径相辅相成；</li>
+      <li>读传心法：经文为根，多传互参，周全而不失宗旨。</li>
+    </ul>
+  </div>
+
+  <div class="parent-tip">
+    <div class="t">给 爸 爸 妈 妈 的 一 句 话 · 这 一 课 讲 什 么，慢 慢 说 给 孩 子 听</div>
+    <p><b>一、勘俗见。</b>别人的解读、参考资料是帮我们理解原文，不能直接当成原文本身。看待一件事，可以多听不同角度的说法，但是要有自己稳定的是非底线。</p>
+    <p style="margin-top:6"><b>二、现代对照。</b>如同解析文章的导读，导读帮你读懂正文，但导读不等于正文。如同看待一件纠纷，既听完整经过，也看细微分寸，同时守住大原则。</p>
+    <p style="margin-top:6"><b>三、承接常变主线。</b>守正的本心恒常不变（常）；各家传注、解读视角，是帮助理解的方便（可变之相）。守正的本心恒常不变（常）；三家传注、解读视角，是辅助理解的方便（可变之相）。</p>
+    <p style="margin-top:6"><b>四、承接教与学二分。</b>师长区分经文与传注的主次，引导依经明义，属于施教一侧；学人参考传文，反观自心，择善而从，是自主修习。师长讲清三家侧重点，引导对比参读，属于施教一侧；学人博观众说，反观自心，择善而取，是自主修习。</p>
+    <p style="margin-top:6">承接选择力练习：传以通经，依义不依文。</p>
+  </div>
+
+  <div class="folio">— 166 —</div>
+</div>
+<div class="adult">
+  <div class="runhead" style="border-bottom-color:#DCD0B4"><span>成人研学 · 古今汇观</span><span class="c">第八十三课 · 深度页</span></div>
+  <h2>三传者，有公羊。有左氏，有谷梁</h2>
+  <div class="meta">三传者，有公羊。有左氏，有谷梁 ｜ 少儿页＋成人页</div>
+
+  <span class="num">一</span>
+  <p><b class="sec">字义与句读</b></p>
+  <p>三传：解释《春秋》的三部传书，公羊、谷梁、左氏；公羊：公羊高，《公羊传》的开创者，此传偏重阐发经文背后的义理法度、改制大义。</p>
+  <p>上句释义：疏通《春秋》经文，有三部传书，其一便是《公羊传》，专推明圣人微言大义、拨乱反正之旨。</p>
+  <p>左氏：左丘明，《左传》；谷梁：谷梁赤，《谷梁传》。三传分工：公羊明大义改制，左氏述事载史，谷梁审名分、裁断细微辞旨。</p>
+  <p>下句释义：《春秋》三传，除《公羊传》之外，又有《左传》、《谷梁传》，三家各持路径，一同疏通经文微言，供学人对照参究。</p>
+  <span class="num">二</span>
+  <p><b class="sec">命题考辨</b></p>
+  <p><b>（1）经与传的关系</b></p>
+  <p>《春秋》经文极简，常常一句话，背后藏一代褒贬法度，初学者很难直读契入。若无传，很容易望文生义，随意附会。</p>
+  <p>公羊一路，和左传、谷梁有清晰分野：</p>
+  <p>《左传》偏重于补充史实，把事件的来龙去脉交代清楚；</p>
+  <p>《公羊传》不重在铺陈故事，重在提炼义法：大一统、尊王、夷夏之辨、经权、拨乱反正。它关心的不是“发生了什么”，而是这件事里，圣人要给后世立下什么法度。</p>
+  <p>这也是本课的重点：公羊是义理之传。</p>
+  <p><b>（2）对照当下现代语境</b></p>
+  <p>我们学习经典，很容易两种偏失：一是盲从注解，人云亦云；二是轻视古注，完全自我发挥。</p>
+  <p>“三传者，有公羊”提示中道：注解是重要参考，降低误读风险；同时注解只是路标，最终要回归经文本身的义理，以本心的中正去印证。</p>
+  <p>很多人的思维容易单向化：要么执着宏大理念，不顾现实人情复杂；要么只看故事细节，失去根本原则；又或者拘泥细枝末节，格局狭隘。</p>
+  <p>三传并存，给出一个平衡模型：心中有根本宗旨，眼中有现实因缘，念中有细微分寸。</p>
+  <p><b>（3）般若范式互参</b></p>
+  <p>传注言说，是标月之指。</p>
+  <p>诸家传注，是标月之指。</p>
+  <p>联动三才五蕴太极空杯模型：中正自性是空杯本具之体；公羊传、各家注解，都是指月的手指。看手指是为了看见月亮，不可把手指当成月亮本身。中正自性是空杯本具之体；公羊、左氏、谷梁三家言说，是三种不同指向的指月之手。手不同，指向的月亮是同一个，不可执一手为唯一。</p>
+  <p>呼应“本乎数”：经为一，传分三，一体多解。一经而三解，一体三用。</p>
+  <p>延伸义理：</p>
+  <p>《金刚经》：依义不依语，正是读传的准则，借言说通达实义，不执着文字。依义不依语，三家都是语言方便，取其义而不困于言说。</p>
+  <p>《道德经》：道可道非常道，传中所有言说，都是权便开示。多言数穷，不如守中，三传互参，正是守中的读法。</p>
+  <p>《坛经》：经诵万部，不如明心见性，读传最终要回归自心印证。法门无数，归向一心，诸传异说，同以经义印证本心。</p>
+  <p><b>（4）三传格局完整对照</b></p>
+  <p>公羊：义理型。着眼大经大法、拨乱反正、大一统、权变之道，面向后世立法。</p>
+  <p>左氏：史事型。不以抽象义理为先，把经文短短一句背后的人际、邦国、战争、会盟完整铺展，让褒贬落在鲜活的世事之中。脱离实事空谈大义，容易流入空疏。</p>
+  <p>谷梁：审断型。介于二者之间，字句抠得细，重名位、秩序、边界，警惕越分、僭越，克制、严谨，防止大义在落实时失了分寸。</p>
+  <p>三者恰好构成一套闭环：立宗旨、见实事、审分寸。</p>
+  <span class="num">三</span>
+  <p><b class="sec">跨典互参（老庄、般若对照）</b></p>
+  <p>· 《道德经》：知人者智，自知者明，读公羊之大义，向外知法度，向内明自心取舍。大成若缺，三传各有长短，互参之后方近周全。</p>
+  <p>· 《庄子》：吾生也有涯，而知也无涯，提醒我们不要沉溺各家传注的辨析而迷失根本。物无非彼，物无非是，不执一家之是，方能见大道全貌。</p>
+  <p>· 串联前文：春秋立褒贬之经，三传开疏通之路，公羊首明大义。春秋经文立褒贬之纲，三传分途疏通，公羊、左氏、谷梁合而义备。</p>
+  <span class="num">四</span>
+  <p><b class="sec">和前面课程的张力</b></p>
+  <p>次第链条：……→ 寓褒贬，别善恶 → 三传者，有公羊 → 有左氏，有谷梁（完整链条见附录）</p>
+  <p>呼应“人不学，不知义”：知经传主次、借传通经之义；知多传互参、博观而有宗主之义；</p>
+  <p>呼应“玉不琢，不成器”：借公羊大义，打磨自心，明法度而不困于注解；借三家之论，打磨自心，宏大而察细，守义而通事；</p>
+  <p>呼应“教之道，贵以专”：专守中正，依义不依传注言说。专守中正，遍览诸解而不迷失本心。</p>
+  <span class="num">五</span>
+
+  <div class="doubt">
+    <div class="t">存 疑 · 留 待 深 究</div>
+    <p>1. 公羊学的“大一统”“夷夏之辨”，如何在今天重新理解，不生封闭对立？</p>
+    <p>2. 公羊、谷梁、左传三家义理不同，阅读时如何权衡取舍？</p>
+    <p>3. 三传讲毕之后，如何转入《礼经》，收束六经体系？</p>
+    <p>4. 三传讲毕，如何转入《礼经》，收束六经的教化闭环？</p>
+    <p>5. 礼有周礼、仪礼、礼记，三者如何定位，承接前面诗、春秋刚柔之教？</p>
+  </div>
+
+  <div class="folio" style="color:#B4A88F">— 167 —</div>
+</div>
+<div class="page">
+  <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第八十四课 · 经既明</span></div>
+  <div class="lesson-no">第 八 十 四 课</div>
+  <h1>经既明，方读子。撮其要，记其事。</h1>
+  <div class="sub">jīng jì míng　fāng dú zǐ　cuō qí yào　jì qí shì</div>
+
+  <div class="grid-block">
+      <div class="grid-cols tight">
+  <div class="col"><div class="colhead">① 先读右列</div>
+    <div class="cellwrap"><div class="py">jīng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">经</span></div><div class="strokes">八画</div></div><div class="cellwrap"><div class="py">jì</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">既</span></div><div class="strokes">九画</div></div><div class="cellwrap"><div class="py">míng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">明</span></div><div class="strokes">八画</div></div>
+  </div>
+  <div class="col"><div class="colhead">② 再读左列</div>
+    <div class="cellwrap"><div class="py">fāng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">方</span></div><div class="strokes">四画</div></div><div class="cellwrap"><div class="py">dú</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">读</span></div><div class="strokes">十画</div></div><div class="cellwrap"><div class="py">zǐ</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">子</span></div><div class="strokes">三画</div></div>
+  </div>
+  </div>
+  <div class="readnote">古法竖排：<b>自右而左，自上而下</b>。上段先读右列「经既明」，再读左列「方读子」。</div>
+  <div class="grid-cols tight" style="margin-top:26px">
+  <div class="col"><div class="colhead">③ 续读右列</div>
+    <div class="cellwrap"><div class="py">cuō</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">撮</span></div><div class="strokes">十五画</div></div><div class="cellwrap"><div class="py">qí</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">其</span></div><div class="strokes">八画</div></div><div class="cellwrap"><div class="py">yào</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">要</span></div><div class="strokes">九画</div></div>
+  </div>
+  <div class="col"><div class="colhead">④ 再读左列</div>
+    <div class="cellwrap"><div class="py">jì</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">记</span></div><div class="strokes">五画</div></div><div class="cellwrap"><div class="py">qí</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">其</span></div><div class="strokes">八画</div></div><div class="cellwrap"><div class="py">shì</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">事</span></div><div class="strokes">八画</div></div>
+  </div>
+  </div>
+  <div class="readnote">下段续读：先读右列「撮其要」，再读左列「记其事」。</div>
+    <div class="note">六经体系至此收束，这一句是治学次第的转关。经，指儒家六经；既明，不是字字考据穷尽，而是六经的宗旨、法度、教化大义已经在心中立定根基，明白圣贤立教的中正标尺。子，指诸子百家之书。先把经的纲骨吃透，建立稳定的价值宗主，而后再读诸子，博采众家之长。先立本，后博观；先有不变之中正，再接纳各家的方便善巧，才不容易被异说裹挟、散乱失宗。</div>
+    <div class="note" style="font-size:12.5px;color:#6B6157">承接上句“经既明，方读子”，是读诸子之法。撮，提取、拣择；要，核心宗旨、关键义理；事，诸子立说的缘起、背景、事迹、施行之案例。诸子书多，文辞浩杂，不可逐字死记、全盘收纳。读子的要领，不在于背诵文句，而是提炼每一家的核心要义，同时记住其立论对应的事迹、时势，明白这一套学说，是为何事、为何世而发。知宗旨，知缘起，才不会脱离语境，把一时权宜之论当成万古常道。</div>
+  </div>
+
+  <div class="band"><span class="tag">少儿共读</span><span class="rule"></span><span class="en">读给孩子听</span></div>
+
+  <div class="kid">
+    <p class="lead">六经的圣贤大义，在心里面明白了、立定根基之后，才可以去读诸子百家的典籍。</p>
+    <p>六经是我们判断取舍的标尺；诸子是不同的思路与方法。</p>
+    <p>先稳住根本，再广泛参看各家说法，就不容易被各种新奇见解带偏。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课八十四·厚册散简</span></div>
+      <figcaption>厚册归在案右，散简摆在案左，撮其要落笔。</figcaption>
+    </figure>
+    <p>读诸子百家，要学会提炼它最核心的道理，同时记住这套学说因何而起、对应什么样的世事。</p>
+    <p>抓住主干，不纠缠繁杂文字；看清缘起，明白每一种方法都有它适用的场景。</p>
+    <p>博学不是死记硬背，是抓重点、知来由，懂得灵活选用。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课八十四·留三张卡</span></div>
+      <figcaption>卡片写好了，只留三张，其余收进盒子。</figcaption>
+    </figure>
+    <p>落到心上理解</p>
+    <p>承接上一课存疑：六经闭环之后，如何向外拓展学问。</p>
+    <p>这句次第，是心性修学极重要的保护机制。</p>
+    <p>六经教给我们的，是大中至正的底层标尺：包容而有底线，感化而能裁断，知权变而不离根本。</p>
+    <p>诸子百家，各从一个侧面切入大道，有的偏治、有的偏术、有的偏出世、有的偏权谋。如果标尺未定，很容易被某一家的长处吸引，拿局部当全体。</p>
+    <p>对应用功：我们广泛接触各种学问、法门、观点，心中先要保有稳定的中正基准。可以借鉴各家方便，但不把局部之法当成究竟大道。博学多闻，而时时回归本心校准，即是无住。</p>
+    <p>另有一问：诸子繁多，如何择取、如何读。</p>
+    <p>“撮其要，记其事”，是一套筛选、消化外来见解的修行功夫。</p>
+    <p>“撮其要”，对应我们听闻各类法门、观念时，第一重觉察：剥离华丽辞藻，看见它核心主张是什么，这个主张的底层逻辑是什么。</p>
+    <p>“记其事”，是第二重觉察：这套说法，当初是用来解决什么问题？是对治哪一类弊病而生？换一个处境，还合不合适？</p>
+    <p>我们常常犯两种毛病：被精妙的道理打动，直接照搬，忽略它本来对应的因缘；或是沉迷各种故事案例，只看热闹，不去提炼背后可以借鉴的法则。</p>
+    <p>以六经中正为标尺，提取各家要义，看清缘起边界，择善而用，不生执着，即是无住。</p>
+  </div>
+
+  <div class="two">
+    <div class="card">
+      <div class="ch2">俗 见<span>这 一 课 的 读 法</span></div>
+      <p>闭塞不学，排斥诸子百家；泛览杂记，枝叶繁多，抓不住核心宗旨</p>
+    </div>
+    <div class="card">
+      <div class="ch2">正 解<span>这 一 课 的 读 法</span></div>
+      <p>诸子有可取之处，可以辅翼大道；读子首在撮要，提纲挈领</p>
+    </div>
+  </div>
+
+  <div class="takeaway">
+    <div class="t">成 长 小 启 示</div>
+    <ul>
+      <li>经为宗主，是大中至正的常道；</li>
+      <li>子为旁参，是各家阐发的权变思路；</li>
+      <li>治学次序：先明经、立标尺，再读子、广见闻；</li>
+      <li>博采众长，前提是不偏离大中至正的本心。</li>
+      <li>撮其要：提炼一家学说核心宗旨，抓主干，弃繁枝；</li>
+      <li>记其事：记住学说缘起、时代背景、所对治的世事弊病；</li>
+      <li>要义为内核，实事为参照，知其所长，亦知其局限；</li>
+      <li>博观诸子，贵在善简择，不盲从、不照搬。</li>
+    </ul>
+  </div>
+
+  <div class="parent-tip">
+    <div class="t">给 爸 爸 妈 妈 的 一 句 话 · 这 一 课 讲 什 么，慢 慢 说 给 孩 子 听</div>
+    <p><b>一、勘俗见。</b>多看书、多听观点很好，但先要建立稳定的是非底线，不然很容易被各种说法带偏。学习别人的方法，先要明白它核心思路，还要看清这个方法原本适合什么情况，不能直接全盘照搬。</p>
+    <p style="margin-top:6"><b>二、现代对照。</b>好比学习各种方法技巧，先要明白自己的初心与底线，不然手段再多，容易走偏。就像学一个解决问题的技巧，先抓住核心步骤，再了解它适用和不适用的场景。</p>
+    <p style="margin-top:6"><b>三、承接常变主线。</b>中正本心恒常不变（常）；诸子各家学说，是应事的方便（可变之相）。中正本心恒常不变（常）；诸子各家义理方案，是对治世事的权宜方便（可变之相）。</p>
+    <p style="margin-top:6"><b>四、承接教与学二分。</b>师长讲明经主子宾的次第，属于施教一侧；学人以经衡子，博学而守中，是自主修习。师长示范提纲撮要、对照缘起的读法，属于施教一侧；学人以此法阅子，简择取舍，是自主修习。</p>
+    <p style="margin-top:6">承接选择力练习：立本为先，博而有宗。</p>
+  </div>
+
+  <div class="folio">— 168 —</div>
+</div>
+<div class="adult">
+  <div class="runhead" style="border-bottom-color:#DCD0B4"><span>成人研学 · 古今汇观</span><span class="c">第八十四课 · 深度页</span></div>
+  <h2>经既明，方读子。撮其要，记其事</h2>
+  <div class="meta">经既明，方读子。撮其要，记其事 ｜ 少儿页＋成人页</div>
+
+  <span class="num">一</span>
+  <p><b class="sec">字义与句读</b></p>
+  <p>经既明：六经的教化大义、大中至正的准则，已经了然于心，作为取舍的基准；方读子：而后再研读诸子百家之书，博采各家所长。</p>
+  <p>上句释义：六经常道大义已经明晓、本心有了取舍宗主，这之后，才适宜研读诸子典籍，参照各家见解，广拓见识，以辅大道。</p>
+  <p>撮：拣取、提摄；要：一家学说的核心纲领；事：立说的缘起、时弊、施行案例与时代背景。</p>
+  <p>下句释义：研读诸子典籍，应当提炼各家核心宗旨纲要，同时记下其立论所对应的世事因缘，明了学说兴起的来由、适用边界，善加简择，不盲信照搬。</p>
+  <span class="num">二</span>
+  <p><b class="sec">命题考辨</b></p>
+  <p><b>（1）经主子宾的次第深意</b></p>
+  <p>前面九十六课一路铺排，从四书到六经，《易》《书》《诗》《礼》《春秋》次第讲完，建立一套完整、中和的教化体系。到这一课，治学向外打开一扇门，但设下门槛：门槛就是“经既明”。</p>
+  <p>六经回答的是：什么是恒久不变的大中至正；诸子回答的是：面对不同时势、不同根器，有哪些路径、方法、视角。</p>
+  <p>诸子每一家，往往是取道之一偏：或重刑名、或重黄老、或重谋略、或重辩说。单取一偏，也能见效，却不可作为全体大道。所以要先以六经中和之道为秤，称量诸子，取其善、舍其偏。</p>
+  <p><b>（2）对照当下现代语境</b></p>
+  <p>今人读书最大的问题，就是没有次第。海量知识、各路学说扑面而来，先接触哪一家，就被哪一家绑定。</p>
+  <p>“经既明，方读子”给出的方案，不是封闭保守，而是建立一套认知免疫系统：先掌握中和、圆融、兼顾刚柔的底层标尺，再去浏览各种专门之学、小众思想，知其长处，同时看见它的局限。</p>
+  <p>信息时代，人人都在接收各类观点、方法论、思想体系。很多人追逐新理论、新范式，不加甄别，本质就是不会“撮其要，记其事”。</p>
+  <p>不会撮要，就被概念堆砌裹挟；不会记事，就忽略这套理论当初诞生的土壤，强行移植到完全不同的环境，最后水土不服。</p>
+  <p><b>（3）般若范式互参</b></p>
+  <p>诸家子书言说，是标月之指。</p>
+  <p>诸家义理方案，是标月之指。</p>
+  <p>联动三才五蕴太极空杯模型：中正自性是空杯本具之体；六经是校准的标尺，诸子是多方不同的指月之手。手有万千，月只一个；借多方手指望月，而不执着任意一指为月。中正自性是空杯本具之体；诸子纲要、世事因缘，都是应病与药的方便。知药能治病，而不执着某一方为万病通用之药。</p>
+  <p>呼应“本乎数”：经一，子多，一主多宾。要为一，事为多，一理应多事。</p>
+  <p>延伸义理：</p>
+  <p>《金刚经》：不取于相，读诸子，取其义而不执其言说相。无住生心，取用各家要义而不执理相，随事调整。</p>
+  <p>《道德经》：知常曰明，经即是“常”，知常之后，方可观万物之变。执古之道，以御今之有，正是察古事、取纲要，用来应对当下。</p>
+  <p>《坛经》：法门无定，一切方便，皆以明心为归宿，不被法门束缚。随方解缚，一切教法，都是解缚之工具，缚解即不用固守工具。</p>
+  <p><b>（4）读子的两层功夫</b></p>
+  <p>“经既明”建立标尺，这一句提供读子的操作方法。</p>
+  <p>诸子之学，多是救世之方。老庄、管晏、申韩、孙吴，各有靶向。</p>
+  <p>“撮其要”是理上功夫：从长篇文辞里，提炼它的核心主张。不逐句背诵，不被文采迷惑，一眼看见它要解决什么、主张什么。</p>
+  <p>“记其事”是境上功夫：这套主张，诞生于什么样的乱世、什么样的社会弊病？它在当时如何施行，成效如何，流弊又是什么。</p>
+  <p>只撮要不记事，容易变成脱离现实的空谈；只记事不撮要，只是一堆零散故事，提炼不出可以借鉴的智慧。二者并举，方是活的学问。</p>
+  <span class="num">三</span>
+  <p><b class="sec">跨典互参（老庄、般若对照）</b></p>
+  <p>· 《道德经》：抱一为天下式，经即是“一”，诸子是天下万式。抱一，而后可观万式。</p>
+  <p>· 《庄子》：百家往而不返，必不合矣，正是警示执子废经、以偏概全的弊病。</p>
+  <p>· 串联前文：六经立中和常道为本，而后开启诸子博观之路。经立中正之衡，读子以撮要记事为法，博观而善择。</p>
+  <p>· 《道德经》少则得，多则惑，撮要便是守少得本，不被繁多言说迷惑。：《道德经》少则得，多则惑，撮要便是守少得本，不被繁多言说迷惑。</p>
+  <p>· 《庄子》论古之道术，皆有其所对，正是“记其事”，看清每一道术兴起的缘由。：《庄子》论古之道术，皆有其所对，正是“记其事”，看清每一道术兴起的缘由。</p>
+  <span class="num">四</span>
+  <p><b class="sec">和前面课程的张力</b></p>
+  <p>次第链条：……→ 有左氏，有谷梁 → 经既明，方读子 → 撮其要，记其事（完整链条见附录）</p>
+  <p>呼应“人不学，不知义”：知立本博观、经主子宾之义；知提要察缘、活用权宜之义；</p>
+  <p>呼应“玉不琢，不成器”：以六经中和打磨自心，广览百家而不偏离中道；以此法打磨自心，博观诸子而不迷于杂说；</p>
+  <p>呼应“教之道，贵以专”：专守中正，博览诸子而不随异说流转。专守中正，简择百家，取其纲要、明其缘起。</p>
+  <span class="num">五</span>
+
+  <div class="doubt">
+    <div class="t">存 疑 · 留 待 深 究</div>
+    <p>1. 诸子繁多，以何次序阅读？哪些为先，哪些宜后，哪些当审慎简择？</p>
+    <p>2. 子书读完之后，如何转入读史，完成整套治学闭环？</p>
+    <p>3. 诸子简阅之后，转入读史，读史的次第与心法如何承接这一套“撮要记事”？</p>
+    <p>4. 史、子之间，如何区分边界，避免读史又落入故事杂记？</p>
+  </div>
+
+  <div class="folio" style="color:#B4A88F">— 169 —</div>
+</div>
+<div class="page">
+  <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第八十五课 · 五子者</span></div>
+  <div class="lesson-no">第 八 十 五 课</div>
+  <h1>五子者，有荀扬。文中子，及老庄。</h1>
+  <div class="sub">wǔ zǐ zhě　yǒu xún yáng　wén zhōng zǐ　jí lǎo zhuāng</div>
+
+  <div class="grid-block">
+      <div class="grid-cols tight">
+  <div class="col"><div class="colhead">① 先读右列</div>
+    <div class="cellwrap"><div class="py">wǔ</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">五</span></div><div class="strokes">四画</div></div><div class="cellwrap"><div class="py">zǐ</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">子</span></div><div class="strokes">三画</div></div><div class="cellwrap"><div class="py">zhě</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">者</span></div><div class="strokes">八画</div></div>
+  </div>
+  <div class="col"><div class="colhead">② 再读左列</div>
+    <div class="cellwrap"><div class="py">yǒu</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">有</span></div><div class="strokes">六画</div></div><div class="cellwrap"><div class="py">xún</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">荀</span></div><div class="strokes">九画</div></div><div class="cellwrap"><div class="py">yáng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">扬</span></div><div class="strokes">六画</div></div>
+  </div>
+  </div>
+  <div class="readnote">古法竖排：<b>自右而左，自上而下</b>。上段先读右列「五子者」，再读左列「有荀扬」。</div>
+  <div class="grid-cols tight" style="margin-top:26px">
+  <div class="col"><div class="colhead">③ 续读右列</div>
+    <div class="cellwrap"><div class="py">wén</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">文</span></div><div class="strokes">四画</div></div><div class="cellwrap"><div class="py">zhōng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">中</span></div><div class="strokes">四画</div></div><div class="cellwrap"><div class="py">zǐ</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">子</span></div><div class="strokes">三画</div></div>
+  </div>
+  <div class="col"><div class="colhead">④ 再读左列</div>
+    <div class="cellwrap"><div class="py">jí</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">及</span></div><div class="strokes">三画</div></div><div class="cellwrap"><div class="py">lǎo</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">老</span></div><div class="strokes">六画</div></div><div class="cellwrap"><div class="py">zhuāng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">庄</span></div><div class="strokes">十画</div></div>
+  </div>
+  </div>
+  <div class="readnote">下段续读：先读右列「文中子」，再读左列「及老庄」。</div>
+    <div class="note">承接上句“撮其要，记其事”，正式开启诸子代表性人物的研读。五子，是《三字经》划定的五位先秦至汉的代表子家：荀卿、扬雄、文中子、老子、庄子，本课先述荀卿（荀子）、扬雄。荀即荀况，荀子；扬即扬雄，字子云。二人学说取向有别：荀子重礼义教化、外王之治，隆礼重法，以礼制规范人心、安顿群体秩序；扬雄仿经而作《太玄》《法言》，融儒道，以玄统理，在两汉经学之外另立义理框架，以玄道贯通人事。</div>
+    <div class="note" style="font-size:12.5px;color:#6B6157">承接上一课“五子者，有荀扬”，补全五子余下三位：文中子、老子、庄子，至此五子全部齐备。文中子即王通，隋代大儒，弟子众多，其语录集为《中说》，宗旨是续六经、明王道，融儒而兼采诸家，以王道安顿世道，希望在乱世重建大中至正的政教秩序；老子立无为之道，重归根守静，以“常道”观天地万物，教人离妄执、返本源；庄子阐逍遥之旨，破名相拘缚，齐是非、同物我，于尘网之中得自在。荀扬重礼序玄理，文中子主王道经世，老庄明自然无为、逍遥无待。五子合观：有礼法建制，有玄理统贯，有王道救世，有归根守静，有逍遥破执，构成一套完备的内圣外王参照体系。</div>
+  </div>
+
+  <div class="band"><span class="tag">少儿共读</span><span class="rule"></span><span class="en">读给孩子听</span></div>
+
+  <div class="kid">
+    <p class="lead">诸子之中，有五位代表性先贤，首举荀子与扬雄。</p>
+    <p>荀子重在以礼教化，建立秩序、安顿人群；</p>
+    <p>扬雄融通儒道，以玄理观照天地人事。</p>
+    <p>读他们，要抓住核心主张，看清他们所处时代的弊病，择取可用之处。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课八十五·同案并置</span></div>
+      <figcaption>五册五样，一案并放。</figcaption>
+    </figure>
+    <p>五子之中，余下三位是文中子、老子、庄子。</p>
+    <p>文中子主张推行王道，以中道教化安顿乱世；</p>
+    <p>老子教我们守静归根，回归清净本源；</p>
+    <p>庄子破除执念分别，在世事之中自在逍遥。</p>
+    <p>读这三家，要抓住宗旨，看清各自适合的场景，互相参照，不偏一端。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课八十五·架前平视</span></div>
+      <figcaption>架上的书并排，孩子在架前平视。</figcaption>
+    </figure>
+    <p>落到心上理解</p>
+    <p>承接上一课存疑：如何以“撮其要、记其事”的方法，实操读子。</p>
+    <p>荀、扬，正是这套读书法的样板。</p>
+    <p>荀子看见人性容易放逸相争，所以立礼，用清晰的边界、秩序来调伏、引导，重在群体共守的规范；扬雄看见礼之外，还有更深一层造化、幽微的大道，所以作《太玄》，用玄理把天地、心性、人事收拢贯通。</p>
+    <p>对应修心：我们的心念，一面需要规矩、觉察的标尺（荀之礼），约束散乱放逸；一面需要虚静玄观，回归本源，不被纷繁外事裹挟（扬之玄）。</p>
+    <p>二者不可偏废：只守规矩，容易拘谨僵化；只谈玄理，容易空荡无根。以六经中正为衡，取两家所长，知其时代局限，善用而不执着，即是无住。</p>
+    <p>另有一问：荀扬之后，如何接续体用格局。</p>
+    <p>文中子、老子、庄子，补足了修学里最关键的三层。</p>
+    <p>文中子，是“入世的中道”：心中守六经仁义，在纷乱环境里做建设、立秩序，不逃避，也不随波逐流。</p>
+    <p>老子，是“收摄的功夫”：万事纷繁之时，懂得止、静、归根，不向外追逐不休，守住自己本心的常。</p>
+    <p>庄子，是“解脱的眼光”：所有是非、荣辱、得失，都是临时分别，不被评价、标签、立场捆住，虽在人间，心无牢笼。</p>
+    <p>对照整套五子：荀子立规矩，扬雄探玄理，文中子行王道，老子守本根，庄子破执念。</p>
+    <p>放在心上用功：可以积极做事、建立秩序（荀、文中子），同时懂得静下来回归本源（老子），更不被成败毁誉困住（庄子）。有为而不执着，归静而不消极，这便是无住。</p>
+  </div>
+
+  <div class="two">
+    <div class="card">
+      <div class="ch2">俗 见<span>这 一 课 的 读 法</span></div>
+      <p>把荀子归为法家，忽略儒礼根基；老庄等于消极避世、不问世事</p>
+    </div>
+    <div class="card">
+      <div class="ch2">正 解<span>这 一 课 的 读 法</span></div>
+      <p>荀学以儒为本，隆礼为核心；老庄是向内破执，非逃避人伦责任</p>
+    </div>
+  </div>
+
+  <div class="takeaway">
+    <div class="t">成 长 小 启 示</div>
+    <ul>
+      <li>荀子：隆礼劝学，重教化、秩序、外王之治；</li>
+      <li>扬雄：《太玄》《法言》，融通儒道，以玄贯人事；</li>
+      <li>五子为读子范本，荀扬是开篇两组对照；</li>
+      <li>读法：撮纲要，记时弊，知所长，知局限。</li>
+      <li>文中子王通：续明王道，以中道教化，救乱世、安天下；</li>
+      <li>老子：归根守静，体自然常道，息外驰、返本源；</li>
+      <li>庄子：齐物逍遥，破是非分别，离相缚、得自在；</li>
+      <li>五子齐备：荀、扬、文中子、老、庄，构成完整内圣外王参照；</li>
+      <li>读法依旧：撮其要，记其事，明所长，知边界。</li>
+    </ul>
+  </div>
+
+  <div class="parent-tip">
+    <div class="t">给 爸 爸 妈 妈 的 一 句 话 · 这 一 课 讲 什 么，慢 慢 说 给 孩 子 听</div>
+    <p><b>一、勘俗见。</b>规矩约束和静心观照，二者都需要。只守条条框框容易刻板，一味空想玄理容易脱离现实。积极承担责任、守规矩，和内心松弛自在并不冲突。认真做事，但不被结果、别人评价困住。</p>
+    <p style="margin-top:6"><b>二、现代对照。</b>就像自我管理，既有清晰的底线规范，也留空间向内沉静反省。如同认真经营生活、承担责任，同时保有内心的安宁，不被得失焦虑裹挟。</p>
+    <p style="margin-top:6"><b>三、承接常变主线。</b>中正本心恒常不变（常）；荀的礼制、扬的玄论，都是对治时代弊病的权宜方便（可变之相）。中正本心恒常不变（常）；王道、守静、逍遥，都是应机调心、应世的方便（可变之相）。</p>
+    <p style="margin-top:6"><b>四、承接教与学二分。</b>师长示范对荀、扬提要察缘，区分体用，属于施教一侧；学人以此例读其余诸子，简择取舍，是自主修习。师长示范对照三家宗旨，区分经世、归根、破执，属于施教一侧；学人以五子为镜，调伏自心，是自主修习。</p>
+    <p style="margin-top:6">承接选择力练习：礼立其用，玄涵其体。</p>
+  </div>
+
+  <div class="folio">— 170 —</div>
+</div>
+<div class="adult">
+  <div class="runhead" style="border-bottom-color:#DCD0B4"><span>成人研学 · 古今汇观</span><span class="c">第八十五课 · 深度页</span></div>
+  <h2>五子者，有荀扬。文中子，及老庄</h2>
+  <div class="meta">五子者，有荀扬。文中子，及老庄 ｜ 少儿页＋成人页</div>
+
+  <span class="num">一</span>
+  <p><b class="sec">字义与句读</b></p>
+  <p>五子：荀卿、扬雄、文中子、老子、庄子；本课先讲荀、扬。荀，荀况荀子；扬，扬雄。荀子主隆礼劝学、礼义之治；扬雄作《太玄》《法言》，融合儒道，以玄理贯通世间伦常。</p>
+  <p>上句释义：初学读子，标杆有五子，首先是荀子、扬雄二子，作为样本，练习“撮其要，记其事”的读子心法。</p>
+  <p>五子：荀卿、扬雄、文中子、老子、庄子，至此五子齐全。文中子，王通；老、庄即老子、庄子。文中子明王道，续六经；老子言无为归根；庄子倡齐物逍遥。</p>
+  <p>下句释义：五子的代表，还有文中子，以及老子、庄子。以此三家，和荀扬相配，作为读子的标杆范例，练习撮要、记事、简择取舍。</p>
+  <span class="num">二</span>
+  <p><b class="sec">命题考辨</b></p>
+  <p><b>（1）荀、扬对照的深意</b></p>
+  <p>荀子身处战国末世，战乱不休，人性逐利相争，百家蜂起而秩序崩坏。他不取空谈性天之妙，转而建立一套可落地的教化体系：礼。礼不是单纯束缚，是安顿群体、疏导性情的轨道，所以劝学、隆礼，重外王事功。</p>
+  <p>扬雄处在西汉末年，经学繁琐支离，儒道分流。他不想舍儒谈仙、弃人事而独往山林，于是借《易》的框架作《太玄》，把玄作为本体，统摄世间礼法、日用、吉凶，打通出世玄思与入世纲常。</p>
+  <p>荀子解决的是“群体如何有序”；扬雄解决的是“秩序背后，那个更深的本源是什么”。一面向经世，一面向上穷源，刚好构成一组体用对照。</p>
+  <p><b>（2）对照当下现代语境</b></p>
+  <p>今人常两极：一类只讲制度、规则、管控，缺少内在精神安顿；一类空谈灵性、玄虚，回避现实秩序、责任边界。</p>
+  <p>荀扬这一组，刚好矫正两边：规矩秩序（荀）要有，同时，所有秩序的设立，最终要回归那个清净本源（扬之玄），不能把规则本身当成终极。</p>
+  <p>现代人的常见困境两端：</p>
+  <p>一端是强进取、内卷追逐，不停建立、规划、争夺，没有归根歇脚的功夫；</p>
+  <p>一端是向往松弛、躺平、避世，不愿承担责任，把逍遥当成逃避。</p>
+  <p>五子这套框架刚好调和：可以积极行道、建立秩序（荀、文中子），懂得适时归根静养（老子），同时不被成败、名声、自我价值感牢牢捆缚（庄子）。</p>
+  <p><b>（3）般若范式互参</b></p>
+  <p>二子言说，是标月之指。</p>
+  <p>诸家言说，都是指月之指。</p>
+  <p>联动三才五蕴太极空杯模型：中正自性是空杯本具之体；荀之礼法、扬之玄论，都是调心、应世的工具。用工具，而不把工具当成本心。中正自性是空杯本具之体；王道、归根、逍遥，都是调心的工具。用工具，而不把工具当成本心。</p>
+  <p>呼应“本乎数”：荀为阳、扬为阴，体用一对。荀扬为一对，文中子、老庄一组，体用、入世出世互成。</p>
+  <p>延伸义理：</p>
+  <p>《金刚经》：应无所住而生其心，依礼而行，而不执礼相；观玄悟道，而不滞空玄。应无所住而生其心：文中子是生其心，老庄是无所住。生心而不住，恰好合于此句。</p>
+  <p>《道德经》：知常曰明，扬雄之玄即是求“常”，荀子之礼是守常之用。知常曰明，老子之学，即是知常；文中子以常道治世。</p>
+  <p>《坛经》：佛法在世间，不离世间觉，荀入世立礼，扬于世间探玄，不离当下。入世修行，不离世间觉，正是文中子与老庄合参的宗旨。</p>
+  <p><b>（4）五子整体格局收束</b></p>
+  <p>前面一课荀扬，搭建“礼序—玄理”；本课三家，补足三层维度：</p>
+  <p>文中子是六经王道在后世的延续。春秋之后王道衰微，王通的志向，就是重新把大中至正的政教推行于世，用中道调和各方，安顿生民。他不是空谈道理，而是面向乱世做教化建设。</p>
+  <p>老子，是从纷繁事务中收回来的法门。万物芸芸，各复归其根，教人放下向外无休止的攀缘，看见那个不变的常道。这是一切入世事业的根基，若无归根之静，所有作为都会变成向外消耗。</p>
+  <p>庄子，是最后一重解脱：即便行善、行王道、守静，依然容易生出“我在行道、我在守道”的执念。齐物、逍遥，就是连这一层能修、能证的相也要放下。</p>
+  <p>五家放在一起：荀子（建制）、扬雄（玄统）、文中子（行道）、老子（归根）、庄子（离执），由外到内，层层递进，圆成内圣外王。</p>
+  <span class="num">三</span>
+  <p><b class="sec">跨典互参（老庄、般若对照）</b></p>
+  <p>· 《道德经》朴散则为器：扬雄探“朴”之玄，荀子立“器”之礼，一脉相承。</p>
+  <p>· 《庄子》礼有常辞，道有常体，正是荀扬格局，礼为用，玄道为体。：《庄子》礼有常辞，道有常体，正是荀扬格局，礼为用，玄道为体。</p>
+  <p>· 串联前文：读子以撮要记事为法，以五子为范例，首观荀扬体用对照。五子范例全部齐备，经明而后读子，撮要记事，以此五家为样板。</p>
+  <p>· 《道德经》道常无为而无不为：文中子行王道，是无不为；老子守静，是无为。</p>
+  <p>· 《庄子》至人无己：逍遥的内核，即是破我执，和般若离相相通。</p>
+  <span class="num">四</span>
+  <p><b class="sec">和前面课程的张力</b></p>
+  <p>次第链条：……→ 撮其要，记其事 → 五子者，有荀扬 → 文中子，及老庄（完整链条见附录）</p>
+  <p>呼应“人不学，不知义”：知礼玄体用、经世探源之义；知经世、归根、离执一体之义；</p>
+  <p>呼应“玉不琢，不成器”：以荀扬之学打磨自心，守礼而不拘，观玄而不空；以五子之学打磨自心，有为而不执，归静而不废；</p>
+  <p>呼应“教之道，贵以专”：专守中正，借二子为样本，练习读子简择之功。专守六经之中正，博览五子，善择方便。</p>
+  <span class="num">五</span>
+  <p>五子范例讲毕，子学样板收束，下一段转入读史，读史的次第、心法如何承接“撮其要，记其事”？</p>
+
+  <div class="doubt">
+    <div class="t">存 疑 · 留 待 深 究</div>
+    <p>1. 荀扬之后，下一位文中子，其定位如何承接荀扬的体用格局？</p>
+    <p>2. 五子读完之后，如何转入读史，贯通经、子、史？</p>
+    <p>3. 五子范例讲毕，子学样板收束，下一段转入读史，读史的次第、心法如何承接“撮其要，记其事”？</p>
+  </div>
+
+  <div class="folio" style="color:#B4A88F">— 171 —</div>
+</div>
+<div class="page">
+  <div class="runhead"><span>润泽少儿启蒙国学 · 三字经</span><span class="c">第八十六课 · 经子通</span></div>
+  <div class="lesson-no">第 八 十 六 课</div>
+  <h1>经子通，读诸史。考世系，知终始。</h1>
+  <div class="sub">jīng zǐ tōng　dú zhū shǐ　kǎo shì xì　zhī zhōng shǐ</div>
+
+  <div class="grid-block">
+      <div class="grid-cols tight">
+  <div class="col"><div class="colhead">① 先读右列</div>
+    <div class="cellwrap"><div class="py">jīng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">经</span></div><div class="strokes">八画</div></div><div class="cellwrap"><div class="py">zǐ</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">子</span></div><div class="strokes">三画</div></div><div class="cellwrap"><div class="py">tōng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">通</span></div><div class="strokes">十画</div></div>
+  </div>
+  <div class="col"><div class="colhead">② 再读左列</div>
+    <div class="cellwrap"><div class="py">dú</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">读</span></div><div class="strokes">十画</div></div><div class="cellwrap"><div class="py">zhū</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">诸</span></div><div class="strokes">十画</div></div><div class="cellwrap"><div class="py">shǐ</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">史</span></div><div class="strokes">五画</div></div>
+  </div>
+  </div>
+  <div class="readnote">古法竖排：<b>自右而左，自上而下</b>。上段先读右列「经子通」，再读左列「读诸史」。</div>
+  <div class="grid-cols tight" style="margin-top:26px">
+  <div class="col"><div class="colhead">③ 续读右列</div>
+    <div class="cellwrap"><div class="py">kǎo</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">考</span></div><div class="strokes">六画</div></div><div class="cellwrap"><div class="py">shì</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">世</span></div><div class="strokes">五画</div></div><div class="cellwrap"><div class="py">xì</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">系</span></div><div class="strokes">七画</div></div>
+  </div>
+  <div class="col"><div class="colhead">④ 再读左列</div>
+    <div class="cellwrap"><div class="py">zhī</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">知</span></div><div class="strokes">八画</div></div><div class="cellwrap"><div class="py">zhōng</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">终</span></div><div class="strokes">八画</div></div><div class="cellwrap"><div class="py">shǐ</div><div class="grid"><svg class="cross" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="50" x2="100" y2="50"/><line x1="50" y1="0" x2="50" y2="100"/></svg><span class="ch">始</span></div><div class="strokes">八画</div></div>
+  </div>
+  </div>
+  <div class="readnote">下段续读：先读右列「考世系」，再读左列「知终始」。</div>
+    <div class="note">承接前文五子收束，是整套治学次第再一次重大转关。经，六经大中至正之常道；子，诸子百家权变之论。经子通达，不是穷尽所有字句考据，而是心中已经立住中正标尺，同时懂得分辨各家学说的宗旨、缘起、适用边界。到此根基稳固，方可研读历代史书。史书所载，是古往今来真实人事的成败治乱，是大道落在世间的实践台账。经子是义理、模型、药方；诸史是千百年来真实的临床试验记录。以经子之义理为标尺，去衡量历史兴衰、人物得失，方能从史实之中提炼教训，而不只是看热闹、记故事。</div>
+    <div class="note" style="font-size:12.5px;color:#6B6157">承接上句“经子通，读诸史”，是读史第一层核心功夫。考，稽考、推究；世系，在这里不只是帝王血脉谱系，更是世代相续的脉络、制度文脉、民心风俗的传承链条。终始，是一代、一治、一乱的开端与收尾，一件大事缘起、发展、盛极、衰败的完整周期。读史不是零散看孤立故事，而是推求这条连续脉络：从何处而起，因何而兴，盛在何处，弊从何生，何时走向崩解，终局归于何方。顺着世代脉络，看清一件大事、一个王朝、一种教化的完整周期，明白盛衰不是骤然降临，是层层积累而成。</div>
+  </div>
+
+  <div class="band"><span class="tag">少儿共读</span><span class="rule"></span><span class="en">读给孩子听</span></div>
+
+  <div class="kid">
+    <p class="lead">六经与诸子的道理融会通达之后，才适合去读各类史书。</p>
+    <p>经子是判断是非、治乱的标尺；史书是古人真实做出来的成败案例。</p>
+    <p>拿着道理对照史实，看懂兴衰背后的缘由，吸取教训，不单纯把历史当成故事来消遣。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课八十六·世系长卷</span></div>
+      <figcaption>一条长卷，从右铺到左。</figcaption>
+    </figure>
+    <p>读史书，要推究世代传承的脉络，理清兴衰的完整始末。</p>
+    <p>明白治乱不是突然发生的，从开端兴盛，到弊病积累、走向衰败，有一条连贯的因果长线。</p>
+    <p>顺着这条脉络看历史，才不容易用单一事件片面评判得失。</p>
+    <figure class="figempty">
+      <div class="ph">图暂空<span class="f">课八十六·从头看到尾</span></div>
+      <figcaption>把书放回架上，摊开长页，从头看到尾。</figcaption>
+    </figure>
+    <p>落到心上理解</p>
+    <p>承接上一课存疑：五子完毕，如何承接这套心法转入读史。</p>
+    <p>“经子通，读诸史”，是修行和治学里极关键的一层闭环。</p>
+    <p>经，给我们稳定的是非基准：什么是仁义中道，什么是秩序边界，什么是长久之道。</p>
+    <p>诸子，教会我们应变：在不同困境下，有哪些法门、路径，各有什么长处与弊病。</p>
+    <p>史书，就是把这套道理放到真实人世间去检验。同样的初心，不同的抉择，会引出兴盛或者败亡；同样的治法，换一个时代，效果与流弊全然不同。</p>
+    <p>对应心念用功：我们心中有中正的准则，也懂各种调心、处事的方便法门，再去回看过往经历、旁人案例，就能看清：哪一次起心动念合道而安稳，哪一念贪着偏斜而招苦。借鉴过往，校准当下，知常，也知变。明理而不空谈，阅事而不随境迷失，即是无住。</p>
+    <p>另有一问：读史如何落地实操，延续撮要记事的读法。</p>
+    <p>“考世系，知终始”，放到心性修持上，就是觉察心念的长线因果。</p>
+    <p>我们常常只看见当下一念、一件事的结果，却忘了追溯这条心念脉络从何时发端，如何一步步发展，何时开始偏斜，什么时候积重难返。</p>
+    <p>世系，就是心念、习气代代延续的脉络；终始，就是这一轮念头、一桩外缘事件，从起心动念，滋长繁盛，生出贪着，最后走向疲惫、烦恼消散的完整周期。</p>
+    <p>以六经中正为标尺，回看这条长线：看清善念如何持续滋养自身，妄念如何层层缠绕、酿成困扰。知其始，护持善根；察其渐，及时纠偏，不等到积弊深重才仓促应对。历事炼心，追溯源流、观其周期，即是无住。</p>
+  </div>
+
+  <div class="two">
+    <div class="card">
+      <div class="ch2">俗 见<span>这 一 课 的 读 法</span></div>
+      <p>读史只看热闹故事、欣赏权谋巧计；碎片化读史，孤立看待历史事件</p>
+    </div>
+    <div class="card">
+      <div class="ch2">正 解<span>这 一 课 的 读 法</span></div>
+      <p>读史核心是观得失、取鉴戒；以世系为线，串联前后因果</p>
+    </div>
+  </div>
+
+  <div class="takeaway">
+    <div class="t">成 长 小 启 示</div>
+    <ul>
+      <li>经：立恒久不变的大中至正准则；</li>
+      <li>子：明应对变局的各家权变方便；</li>
+      <li>史：记录历代人事治乱兴衰，作为验证参照；</li>
+      <li>读史心法延续“撮其要，记其事”：提炼一代兴衰纲要，记住时代因缘，明得失，知戒惧。</li>
+      <li>考世系：推究世代文脉、制度、风俗一脉相承的传承线索；</li>
+      <li>知终始：看清一治一乱、一事一物从起始、兴盛到衰败的完整周期；</li>
+      <li>读史心法：依旧撮取世代纲要，记下时代因缘，长线观因果，不执片段表象；</li>
+      <li>知终始，不是宿命论，是看见渐变，懂得防微杜渐。</li>
+    </ul>
+  </div>
+
+  <div class="parent-tip">
+    <div class="t">给 爸 爸 妈 妈 的 一 句 话 · 这 一 课 讲 什 么，慢 慢 说 给 孩 子 听</div>
+    <p><b>一、勘俗见。</b>懂得道理，还要看道理在真实事情里如何生效、如何出问题，不能纸上谈兵。很多结果不是突然出现的，是长期一点点积累出来的，要学会往前追溯源头，看见变化的过程。</p>
+    <p style="margin-top:6"><b>二、现代对照。</b>如同掌握一套做事原则与方法之后，再参考前人真实的成败案例，预判风险、调整方案。就像观察一个习惯的养成，从最初的一念，慢慢反复强化，最后形成稳定的习性，懂得在早期调整。</p>
+    <p style="margin-top:6"><b>三、承接常变主线。</b>中正本心恒常不变（常）；历代治乱兴衰，都是因缘变化显现的事相（可变之相）。中正本心恒常不变（常）；世代兴衰、文脉流转，都是因缘变化显现的周期相（可变之相）。</p>
+    <p style="margin-top:6"><b>四、承接教与学二分。</b>师长示范以经子义理衡断史事得失，属于施教一侧；学人阅史反观自心，以往事为鉴，是自主修习。师长示范沿着世代脉络，梳理兴衰始末，属于施教一侧；学人以此反观自身习气流转，是自主修习。</p>
+    <p style="margin-top:6">承接选择力练习：理为衡，史为鉴，理事双彰。</p>
+  </div>
+
+  <div class="folio">— 172 —</div>
+</div>
+<div class="adult">
+  <div class="runhead" style="border-bottom-color:#DCD0B4"><span>成人研学 · 古今汇观</span><span class="c">第八十六课 · 深度页</span></div>
+  <h2>经子通，读诸史。考世系，知终始</h2>
+  <div class="meta">经子通，读诸史。考世系，知终始 ｜ 少儿页＋成人页</div>
+
+  <span class="num">一</span>
+  <p><b class="sec">字义与句读</b></p>
+  <p>经子通：六经常道、诸子权变之义理，融会通达，心中建立稳定的取舍标尺；读诸史：进而研读历代史书，以义理衡量史实，观察治乱兴衰、人事得失，以史为鉴。</p>
+  <p>上句释义：六经与诸子的义理融会通达、知其边界、善其取舍之后，才适宜研读各类史书，以义理之衡，观历代兴亡之迹，事理互证。</p>
+  <p>考：推究、稽察；世系：世代传承的脉络，包含血脉、制度、教化、风俗的延续链条；终始：一事、一代的缘起、发展、盛极、衰亡的完整周期。</p>
+  <p>下句释义：读史之时，推究世代传承的脉络，理清治乱兴衰的完整始末，看见长期积累的因果次第，不以片段史实轻下论断。</p>
+  <span class="num">二</span>
+  <p><b class="sec">命题考辨</b></p>
+  <p><b>（1）经子在前、读史在后的防护意义</b></p>
+  <p>很多人读书顺序颠倒，先读史。史书之中，霸术、阴谋、诡功、一时的成功案例极多，极易让人误以为“能成功即是正道”，以成败论是非。</p>
+  <p>先明经子，就是预先建立价值防火墙：成功不等于合道，一时得利不等于长久，权变手段有它的适用场景，不可当作常道。</p>
+  <p>经子回答“什么是对、什么是根本”；史书回答“这么做，在这样的因缘下，会走向什么结果”。</p>
+  <p><b>（2）读史延续“撮其要，记其事”</b></p>
+  <p>读子是抓取一家学说纲要、记其立说缘起；读史则是抓取一代一朝治乱纲要，记住当时的天时、民心、制度因缘。不是去背诵繁杂年号、细碎掌故，而是看：</p>
+  <p>治世，往往是哪些举措契合中道；乱世，往往是在哪一个环节偏离根本、积弊难返。</p>
+  <p><b>（3）对照当下现代语境</b></p>
+  <p>我们接收大量的案例、行业故事、他人的成功经验，本质就是在读“当代之史”。</p>
+  <p>很多人直接照搬别人的路径，忽略背后的时代、资源、机缘，就是缺少经子这套底层标尺：分不清哪些是恒久的底层原则，哪些只是当时因缘下的临时手段。</p>
+  <p>做项目、经营事业、自我成长，都有“终始周期”。</p>
+  <p>起步初心很好，中期规模扩大，随之滋生流程冗余、人心懈怠等弊病，若不能持续校准回归根本，最后走向衰败。懂得“考世系、知终始”，就是建立周期视角，懂得在兴盛之时便开始防弊，而不是等到崩溃才补救。</p>
+  <p><b>（4）般若范式互参</b></p>
+  <p>史迹往事，都是指月之筏。</p>
+  <p>世间一切有为法，皆有终始周期。老子“夫物芸芸，各复归其根”，正是这层终始循环的观察。</p>
+  <p>放在我们这套统一框架：经是不变的中道标尺；子是应对时局的权宜方案；史是一代代方案落地之后，完整的演化台账。考世系，就是翻阅台账的长线脉络。</p>
+  <p>世代沿革，是指月之筏。</p>
+  <p>联动三才五蕴太极空杯模型：中正自性是空杯本具之体；经子是衡鉴之标尺，历代史事是流转的事相。观往事而不恋往事、不仿旧迹，取其戒而随当下因缘抉择。中正自性是空杯本具之体；历代世系、兴衰周期，都是因缘生灭的流转相。观察周期，而不被周期束缚，不执着某一个时代形态为永恒。</p>
+  <p>呼应“本乎数”：经子为理（一），诸史为事（多），一理照多事。世系为长线（连续），终始为循环（往复），连续之中含往复。</p>
+  <p>延伸义理：</p>
+  <p>《金刚经》：不取于相：看待历史兴亡，不执着古制为唯一标准答案。凡所有相，皆是虚妄：王朝、教化的兴盛衰败，都是因缘生灭之相，有始有终。</p>
+  <p>《道德经》：以史观复：反复看见兴衰循环，知返归根本。归根曰静：看见终始循环，方能知返本，不随盛衰起伏而心神动荡。</p>
+  <p>《坛经》：历事炼心：世事变迁都是道场，在成败故事里打磨心性。于念而无念：看清心念、世事的生灭周期，虽在流转之中，本心不随之沉浮。</p>
+  <p><b>（5）读史的长线视角</b></p>
+  <p>“撮其要，记其事”是单点功夫，抓取一件事、一家学说的核心与缘起；“考世系，知终始”是长线功夫，把无数单点串联成一条时间长河。</p>
+  <p>一件政策、一种风气，刚推行之时，往往对症有效；时移世易，环境、人心改变，原本的良法慢慢滋生弊病，积久之后，便会倾覆。这就是终始之理。</p>
+  <p>如果只截取中间某一段盛世，便以为这套制度永久可行，便是见始不见终；只看见末年的崩坏，便全盘否定最初教化的初心，便是见终不见始。</p>
+  <span class="num">三</span>
+  <p><b class="sec">跨典互参（老庄、般若对照）</b></p>
+  <p>· 《道德经》知古之道，以御今之有：正是经子为本体，史书为过往之迹，用来驾驭当下。</p>
+  <p>· 《庄子》古之道术有在于是者：每一段历史，都是某一种道术的实践展演。</p>
+  <p>· 串联前文：经立宗主，子开权变，至此开启史鉴之路。经子立衡鉴，读史以考世系、察周期，长线观因果。</p>
+  <p>· 《道德经》万物并作，吾以观复：观复，即是观终始循环。</p>
+  <p>· 《庄子》时命有终始：世事时序，自有缘起和穷尽，不恋盛世，不惧衰微。</p>
+  <span class="num">四</span>
+  <p><b class="sec">和前面课程的张力</b></p>
+  <p>次第链条：……→ 文中子，及老庄 → 经子通，读诸史 → 考世系，知终始（完整链条见附录）</p>
+  <p>呼应“人不学，不知义”：知理事相证、以史为鉴之义；知世代源流、周期终始、渐变积习之义；</p>
+  <p>呼应“玉不琢，不成器”：以历代兴衰打磨自心，见成败而不动偏曲；以历代兴衰周期打磨自心，见起伏而守本不移；</p>
+  <p>呼应“教之道，贵以专”：专守中正，阅历代变迁而不迷失根本。专守中正，长线观流变，知循环而善护初心。</p>
+  <span class="num">五</span>
+  <p>读史既启，读史的次序如何安排？从哪一段古史入手，如何区分通史、断代史，延续这套“撮其要，记其事”的读法？</p>
+  <p>长线周期既明，接下来，史书的阅读顺序如何安排，自上古而下，如何选取篇目，继续沿用这套“考世系，知终始”的读法？</p>
+
+  <div class="doubt">
+    <div class="t">存 疑 · 留 待 深 究</div>
+    <p>1. 读史既启，读史的次序如何安排？从哪一段古史入手，如何区分通史、断代史，延续这套“撮其要，记其事”的读法？</p>
+    <p>2. 长线周期既明，接下来，史书的阅读顺序如何安排，自上古而下，如何选取篇目，继续沿用这套“考世系，知终始”的读法？</p>
+  </div>
+
+  <div class="folio" style="color:#B4A88F">— 173 —</div>
+</div>
+
+</div>
+
+</body>
+</html>
