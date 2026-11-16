@@ -94,16 +94,18 @@
 ```
 润泽说-少儿国学/
 ├── SPEC.md                      ← 本文件
-├── 三字经·第N课样张.html          ← 单课样张（含少儿页+成人页）
-├── 三字经·样书·五课合览.html       ← 合册（随课数增长重拼）
-├── assets/                      ← 插图源图（jpg）
-├── tools/                       ← build.py / build_book.py（装配器）＋ lessons_*.py（内容）＋ toc_plan.py（目录分段与续编存目）
+├── 三字经·样书·二百零一课合览.html        ← 现行合览（201 制）
+├── 三字经·样书·二百零一课合览（单文件）.html ← 同内容单文件版，gitignore 不进仓
+├── assets/                      ← 插图源图（jpg），课页引用的图都从这里进
+├── tools/                       ← build.py / build_book.py / patch_201.py / first5.py 装配器 ＋ lessons_*.py 内容 ＋ toc_plan.py 目录
+├── docs/                        ← 线上阅读版：book.html、index.html、lesson01–201.html、assets/
+├── _archive/                    ← 历史样张与旧课数样书，只存不删，不属现行书
 └── _shots/                      ← 自检截图，非交付物
 ```
 
-仓库：`daokedao-sanzijing`，Pages 走 `main:/docs`；`docs/book.html` 为线上阅读版，`docs/index.html` 为入口。
+仓库：`daodedao-sanzijing`，Pages 走 `main:/docs`；`docs/book.html` 为线上阅读版，`docs/index.html` 为入口。
 
-`docs/` 下另备 `lesson01.html`–`lesson36.html` 三十六份单课页（与根目录样张逐一 md5 同源），入口页每课右侧「读 单 课」直链对应页；增课时须把新样张一并复制进 `docs/`，勿只留根目录。
+单课页一律以 `docs/lessonNNN.html` 为准，201 课齐；根目录不再散放样张（旧样张已归 `_archive/旧样张与旧课数样书/`）。
 
 ## 九、验收清单（每课必过）
 
