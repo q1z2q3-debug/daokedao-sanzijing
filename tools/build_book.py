@@ -114,6 +114,43 @@ SEARCH_JS = r"""
 </script>
 """
 
+NAV_CSS = """
+.page.land{outline:2px solid rgba(162,80,59,.45);outline-offset:1px}
+"""
+
+NAV_JS = r"""
+<script>
+(function(){
+  var seq=0;
+  function go(id){
+    var t=document.getElementById(id);
+    if(!t)return;
+    var my=++seq, n=0;
+    (function step(){
+      if(my!==seq)return;
+      t.scrollIntoView({block:'start'});
+      if(n++>10)return;
+      setTimeout(step,160);
+    })();
+    t.classList.add('land');
+    setTimeout(function(){t.classList.remove('land');},1500);
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest?e.target.closest('a[href^="#"]'):null;
+    if(!a)return;
+    var id=a.getAttribute('href').slice(1);
+    if(!id||!document.getElementById(id))return;
+    e.preventDefault();
+    go(id);
+    if(history.replaceState)history.replaceState(null,'','#'+id);
+  },false);
+  if(location.hash&&location.hash.length>1){
+    var id0=location.hash.slice(1);
+    if(document.getElementById(id0))setTimeout(function(){go(id0);},60);
+  }
+})();
+</script>
+"""
 CN = '〇一二三四五六七八九'
 
 
@@ -267,13 +304,13 @@ def assemble(lessons, css):
 
     body = re.sub(r'<div class="page">', _anch, body)
     body += ('\n<div class="go-toc"><a href="#toc">目 录</a><a href="#toc2">续 编</a>'
-             '<a href="#k%d">末 课</a></div>\n' % len(lessons)) + SEARCH_JS
+             '<a href="#k%d">末 课</a></div>\n' % int(lessons[-1]['n'])) + SEARCH_JS + NAV_JS
     return B.head('三字经·%s课合览（样书 %s）' % (cn_num(len(lessons) + 5), meta_from_changelog()[0]), '三', css) + body + B.TAIL
 
 
 def main():
     lessons = load_lessons()
-    css = B.read_css() + PH_CSS + TOC_CSS
+    css = B.read_css() + PH_CSS + TOC_CSS + NAV_CSS
     html = assemble(lessons, css)
     n = len(lessons)
     total = n + 5

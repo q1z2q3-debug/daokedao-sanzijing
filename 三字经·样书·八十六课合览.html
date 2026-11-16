@@ -179,6 +179,8 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
 .go-toc a:hover{color:var(--ochre)}
 @media(max-width:760px){.toc,.toc2{padding:40px 22px 34px}.toc .cols,.toc2 .cols{column-count:1}.go-toc{right:8px;bottom:8px}}
 
+.page.land{outline:2px solid rgba(162,80,59,.45);outline-offset:1px}
+
 .grid-cols.tight{gap:34px}
 .tight .grid{width:74px;height:74px}
 .tight .grid .ch{font-size:44px}
@@ -10138,7 +10140,7 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
   <div class="folio" style="color:#B4A88F">— 173 —</div>
 </div>
 
-<div class="go-toc"><a href="#toc">目 录</a><a href="#toc2">续 编</a><a href="#k81">末 课</a></div>
+<div class="go-toc"><a href="#toc">目 录</a><a href="#toc2">续 编</a><a href="#k86">末 课</a></div>
 
 <script>
 (function(){
@@ -10184,6 +10186,38 @@ figure.ph .phbox .f{font-family:"Noto Serif SC",serif;font-size:15px;color:#8C7F
   q.addEventListener('keydown',function(e){
     if(e.key==='Enter'){var a=hits.querySelector('a');if(a){location.hash=a.getAttribute('href');}}
   });
+})();
+</script>
+
+<script>
+(function(){
+  var seq=0;
+  function go(id){
+    var t=document.getElementById(id);
+    if(!t)return;
+    var my=++seq, n=0;
+    (function step(){
+      if(my!==seq)return;
+      t.scrollIntoView({block:'start'});
+      if(n++>10)return;
+      setTimeout(step,160);
+    })();
+    t.classList.add('land');
+    setTimeout(function(){t.classList.remove('land');},1500);
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest?e.target.closest('a[href^="#"]'):null;
+    if(!a)return;
+    var id=a.getAttribute('href').slice(1);
+    if(!id||!document.getElementById(id))return;
+    e.preventDefault();
+    go(id);
+    if(history.replaceState)history.replaceState(null,'','#'+id);
+  },false);
+  if(location.hash&&location.hash.length>1){
+    var id0=location.hash.slice(1);
+    if(document.getElementById(id0))setTimeout(function(){go(id0);},60);
+  }
 })();
 </script>
 
