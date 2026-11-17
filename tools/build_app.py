@@ -78,6 +78,8 @@ def main():
         title = title.replace('<h1>', '').replace('</h1>', '').strip()
         lessons.append({'n': n, 'no': no.group(1).strip() if no else '', 'h1': title, 'html': pg})
 
+    cover = page_of(s, 'cover')
+    frontis = page_of(s, 'frontis')
     guide = page_of(s, 'guide')
 
     meta = []
@@ -103,6 +105,8 @@ def main():
     app_js = open(os.path.join(HERE, 'app_shell.js'), encoding='utf-8').read()
 
     body = ('<div class="book-wrap" id="bookWrap">' +
+            '<section class="ls" data-aux="cover">' + cover + '</section>' +
+            '<section class="ls" data-aux="frontis">' + frontis + '</section>' +
             ''.join('<section class="ls" data-n="%d">%s</section>' % (l['n'], l['html']) for l in lessons) +
             '<section class="ls" data-aux="guide">' + guide + '</section>' +
             '<section class="ls" data-aux="appendix">' + appendix + '</section>' +

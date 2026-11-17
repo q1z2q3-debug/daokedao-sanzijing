@@ -3,20 +3,6 @@
 <head>
 <meta charset="utf-8">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- seo:begin -->
 <meta name="description" content="《三字经》第 99 课「夏有禹，商有汤」：田字格与字源、少儿共读、成人研学·古今汇观，附配图与课前次第。">
 <meta name="robots" content="index,follow,max-image-preview:large">
@@ -173,6 +159,38 @@ td.k{color:var(--ochre);font-weight:600;white-space:nowrap}
 .card p{font-family:"Noto Sans SC",sans-serif;font-size:13px;line-height:1.9;color:var(--ink2);margin:0}
 .age td:first-child{white-space:nowrap;color:var(--ochre);font-weight:600}
 .nodrop::first-letter{font-size:16px !important;color:var(--muted) !important;font-weight:400 !important;padding-right:0 !important}
+.page.cover{position:relative;min-height:700px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:70px 60px;background:radial-gradient(circle at 50% 38%,#FCF8EF 0%,#F8F3E6 60%,#F1E8D6 100%)}
+.page.cover .frame{position:absolute;inset:24px;border:1px solid #E0D5BD;pointer-events:none}
+.page.cover .frame:after{content:"";position:absolute;inset:6px;border:1px solid rgba(162,80,59,.32)}
+.page.cover .cv-brand{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;letter-spacing:.42em;color:#8A8074}
+.page.cover .cv-main{display:flex;align-items:center;gap:54px;margin:36px 0 26px}
+.page.cover .cv-gatha{writing-mode:vertical-rl;text-orientation:upright;font-size:17px;line-height:2.1;letter-spacing:.24em;color:#6F6A5F}
+.page.cover .cv-title{writing-mode:vertical-rl;text-orientation:upright;font-size:62px;line-height:1.1;letter-spacing:.14em;color:#2F2A24;font-weight:600}
+.page.cover .cv-seal{width:46px;height:46px;background:#A2503B;color:#FBF6E9;font-size:20px;line-height:46px;text-align:center;border-radius:3px;box-shadow:inset 0 0 0 3px rgba(251,246,233,.5);margin-left:6px}
+.page.cover .cv-sub{font-size:14.5px;letter-spacing:.26em;color:#7B6E5C}
+.page.cover .cv-rule{width:176px;border-top:1px solid #D8CCB4;margin:26px 0 20px}
+.page.cover .cv-base{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;line-height:2.1;letter-spacing:.1em;color:#8A8074;text-align:center}
+.page.cover .cv-base b{font-weight:500;color:#6B6152;letter-spacing:.14em}
+.page.frontis{padding:92px 64px;min-height:640px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.fr-series{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;letter-spacing:.34em;color:#8A8074}
+.fr-title{font-size:50px;letter-spacing:.3em;margin:28px 0 10px;color:#2F2A24;font-weight:600}
+.fr-sub{font-size:13.5px;letter-spacing:.2em;color:#7C6E5C}
+.fr-rule{width:210px;border-top:1px solid #DCD0B8;margin:30px 0 22px}
+.fr-author{font-size:15.5px;letter-spacing:.34em;color:#3B352F}
+.fr-meta{font-family:"Noto Sans SC",sans-serif;font-size:12.5px;line-height:2.35;letter-spacing:.08em;color:#8A8074;margin-top:26px}
+.fr-meta span{display:block}
+.fr-meta b{font-weight:500;color:#6B6152;letter-spacing:.14em}
+.fr-seal{margin-top:30px;width:50px;height:50px;border:1px solid #A2503B;color:#A2503B;font-size:20px;line-height:50px;border-radius:3px}
+@media(max-width:640px){
+ .page.cover{padding:46px 22px;min-height:560px}
+ .page.cover .cv-gatha{display:none}
+ .page.cover .cv-main{gap:0;margin:26px 0 18px}
+ .page.cover .cv-title{writing-mode:horizontal-tb;font-size:38px;letter-spacing:.24em}
+ .page.cover .cv-seal{margin:14px 0 0}
+ .fr-title{font-size:34px;letter-spacing:.24em}
+ .page.frontis{padding:56px 26px;min-height:520px}
+}
+
 figure.ph .phbox{width:100%;aspect-ratio:4/3;border:1px dashed #D6C9AE;background:#FBF7EC;
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
 figure.ph .phbox .k{font-family:"Noto Sans SC",sans-serif;font-size:11px;letter-spacing:.28em;color:#BCAF93}

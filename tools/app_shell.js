@@ -71,9 +71,18 @@
     secs.forEach(function (s) { s.style.display = 'none'; });
     var el = aux[k]; if (!el) return;
     el.style.display = '';
-    document.getElementById('nowNo').textContent = k === 'guide' ? '读法' : '附录';
-    document.getElementById('nowTi').textContent = k === 'guide' ? '三类读法' : '次第链条与经文对照';
+    var LAB = { cover: ['封面', '三字经 · 二零一课'], frontis: ['扉页', '润泽说 道可道 · 少儿启蒙国学'], guide: ['读法', '三类读法'], appendix: ['附录', '次第链条与经文对照'] };
+    var lb = LAB[k] || ['', ''];
+    state.n = 0;
+    document.getElementById('nowNo').textContent = lb[0];
+    document.getElementById('nowTi').textContent = lb[1];
+    document.getElementById('pgnNum').textContent = '';
+    document.getElementById('prev').disabled = true;
+    document.getElementById('next').disabled = false;
+    document.getElementById('favIc').textContent = '☆';
+    document.getElementById('favIc').className = 'ic';
     window.scrollTo(0, 0);
+    markCurrentInToc();
     closeSheets();
   }
 
@@ -180,9 +189,16 @@
       b.classList.add('on'); tab = b.dataset.tab; buildToc();
     });
   });
-  document.getElementById('prev').addEventListener('click', function () { show(state.n - 1); });
+  document.getElementById('prev').addEventListener('click', function () { if (state.n > 0) show(state.n - 1); });
   document.getElementById('next').addEventListener('click', function () { show(state.n + 1); });
+  ['cover', 'frontis'].forEach(function (k) {
+    var el = aux[k];
+    if (el) { el.style.cursor = 'pointer'; el.addEventListener('click', function (e) { if (e.target.closest('a')) return; show(1); }); }
+  });
+  var coverNext = document.querySelector('.cv-next');
+  if (coverNext) coverNext.addEventListener('click', function (e) { e.stopPropagation(); show(1); });
   document.getElementById('btnFav').addEventListener('click', function () {
+    if (state.n === 0) { toast('封面页不可收藏'); return; }
     if (state.fav[state.n]) { delete state.fav[state.n]; toast('已取消收藏'); }
     else { state.fav[state.n] = 1; toast('已收藏 · 第 ' + state.n + ' 课'); }
     LS.set('fav', state.fav);
@@ -225,7 +241,8 @@
   };
 
   /* 首屏 */
-  applyNight(); applyZoom(); show(state.n, true);
+  applyNight(); applyZoom();
+  if (LS.get('n')) show(state.n, true); else showAux('cover');
   if (state.night) document.querySelector('[data-act="night"]').classList.add('active');
   doSearch('');
   document.addEventListener('click', function (e) {

@@ -239,20 +239,84 @@ def meta_from_changelog():
     return 'v' + ver, ''.join(CN[int(c)] for c in y) + '年' + ym[int(mo)] + '月'
 
 
+
+CV_CSS = """
+.page.cover{position:relative;min-height:700px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:70px 60px;background:radial-gradient(circle at 50% 38%,#FCF8EF 0%,#F8F3E6 60%,#F1E8D6 100%)}
+.page.cover .frame{position:absolute;inset:24px;border:1px solid #E0D5BD;pointer-events:none}
+.page.cover .frame:after{content:"";position:absolute;inset:6px;border:1px solid rgba(162,80,59,.32)}
+.page.cover .cv-brand{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;letter-spacing:.42em;color:#8A8074}
+.page.cover .cv-main{display:flex;align-items:center;gap:54px;margin:36px 0 26px}
+.page.cover .cv-gatha{display:flex;flex-direction:column;align-items:center;font-size:17px;color:#6F6A5F;flex:none}
+.page.cover .cv-gatha .c{line-height:1.95}
+.page.cover .cv-gatha .sp{height:1.1em}
+.page.cover .cv-title{display:flex;flex-direction:column;align-items:center;font-size:62px;line-height:1.12;color:#2F2A24;flex:none}
+.page.cover .cv-title .c{font-weight:600}
+.page.cover .cv-seal{width:46px;height:46px;background:#A2503B;color:#FBF6E9;font-size:20px;line-height:46px;text-align:center;border-radius:3px;box-shadow:inset 0 0 0 3px rgba(251,246,233,.5);margin-left:6px}
+.page.cover .cv-sub{font-size:14.5px;letter-spacing:.26em;color:#7B6E5C}
+.page.cover .cv-rule{width:176px;border-top:1px solid #D8CCB4;margin:26px 0 20px}
+.page.cover .cv-base{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;line-height:2.1;letter-spacing:.1em;color:#8A8074;text-align:center}
+.page.cover .cv-base b{font-weight:500;color:#6B6152;letter-spacing:.14em}
+.page.frontis{padding:92px 64px;min-height:640px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.fr-series{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;letter-spacing:.34em;color:#8A8074}
+.fr-title{font-size:50px;letter-spacing:.3em;margin:28px 0 10px;color:#2F2A24;font-weight:600}
+.fr-sub{font-size:13.5px;letter-spacing:.2em;color:#7C6E5C}
+.fr-rule{width:210px;border-top:1px solid #DCD0B8;margin:30px 0 22px}
+.fr-author{font-size:15.5px;letter-spacing:.34em;color:#3B352F}
+.fr-meta{font-family:"Noto Sans SC",sans-serif;font-size:12.5px;line-height:2.35;letter-spacing:.08em;color:#8A8074;margin-top:26px;max-width:600px}
+.fr-meta span{display:block}
+.fr-meta b{font-weight:500;color:#6B6152;letter-spacing:.14em}
+.fr-seal{margin-top:30px;width:50px;height:50px;border:1px solid #A2503B;color:#A2503B;font-size:20px;line-height:50px;border-radius:3px}
+@media(max-width:640px){
+ .page.cover{padding:46px 22px;min-height:560px}
+ .page.cover .cv-gatha{display:none}
+ .page.cover .cv-main{gap:0;margin:26px 0 18px}
+ .page.cover .cv-title{flex-direction:row;font-size:38px;gap:.08em}
+ .page.cover .cv-title .c{letter-spacing:.06em}
+ .page.cover .cv-seal{margin:14px 0 0}
+ .fr-title{font-size:34px;letter-spacing:.24em}
+ .page.frontis{padding:56px 26px;min-height:520px}
+}
+"""
+
+def V(t):
+    return ''.join('<span class="c">%s</span>' % ch for ch in t)
+
+
 def cover_for(lessons):
-    last = lessons[-1]['line_plain']
-    m = re.search(r'<h1>([^<，]+)，', open(BASE, encoding='utf-8').read())
-    head = m.group(1) if m else lessons[0]['line_plain'].split('，')[0]
-    tail = last.split('，')[-1]
     ver, ym = meta_from_changelog()
-    n = len(lessons) + 5
-    return ('<div class="page cover">\n'
-            '  <div class="s">润 泽 少 儿 启 蒙 国 学</div>\n'
-            '  <h1>三 字 经</h1>\n'
-            '  <div class="t2">一句一故事 · 一图一世界</div>\n'
-            '  <div class="line"></div>\n'
-            '  <div class="info">第一课至第%s课　·　%s　至　%s<br>亲子共读 4–9 岁　·　每课双页：少儿读本 ／ 成人研学<br>样书　%s　·　%s</div>\n'
-            '</div>' % (cn_num(n), head, tail, ver, ym))
+    n = len(lessons) + 6
+    return ('<div class="page cover" id="cover">\n'
+            '  <div class="frame"></div>\n'
+            '  <div class="cv-brand">润 泽 说 · 少 儿 启 蒙 国 学</div>\n'
+            '  <div class="cv-main">\n'
+            '    <div class="cv-gatha">%s</div>\n'
+            '    <div class="cv-title">%s</div>\n'
+            '    <div class="cv-gatha">%s</div>\n'
+            '    <div class="cv-seal">蒙</div>\n'
+            '  </div>\n'
+            '  <div class="cv-sub">一句一故事　一图一世界</div>\n'
+            '  <div class="cv-rule"></div>\n'
+            '  <div class="cv-base"><b>底本</b>　通行增补本　　<b>体例</b>　二百零一课，一课两页　　<b>读者</b>　亲子共读 4–9 岁<br>%s　·　%s</div>\n'
+            '</div>' % (V('教之道') + '<i class="sp"></i>' + V('贵以专'),
+                        V('三字经'), V('人之初') + '<i class="sp"></i>' + V('性本善'), ver, ym))
+
+
+def frontis_for(lessons):
+    ver, ym = meta_from_changelog()
+    return ('<div class="page frontis" id="frontis">\n'
+            '  <div class="fr-series">润 泽 说 　道 可 道 · 少 儿 启 蒙 国 学</div>\n'
+            '  <div class="fr-title">三 字 经</div>\n'
+            '  <div class="fr-sub">一句一故事　一图一世界</div>\n'
+            '  <div class="fr-rule"></div>\n'
+            '  <div class="fr-author">润 泽　著</div>\n'
+            '  <div class="fr-meta">'
+            '<span><b>底本</b>　通行增补本，补十八课、复元三处、并二课、删一课，成二百零一课</span>'
+            '<span><b>体例</b>　一课两页：少儿读本（田字格 · 共读）／ 成人研学（字义 · 考辨 · 存疑）</span>'
+            '<span><b>参证</b>　三才五蕴太极空杯模型 · 金刚般若范式 · 老庄与历代注疏</span>'
+            '<span><b>版本</b>　v%s　·　%s</span>'
+            '</div>\n'
+            '  <div class="fr-seal">蒙</div>\n'
+            '</div>' % (ver, ym))
 
 
 def toc_entries(lessons):
@@ -443,7 +507,7 @@ def render_pages(lessons):
 def assemble(lessons, css):
     head = head_pages()
     pages = render_pages(lessons)
-    parts = [cover_for(lessons), toc_page(lessons), guide_page(lessons), toc_page_next(), head]
+    parts = [cover_for(lessons), frontis_for(lessons), toc_page(lessons), guide_page(lessons), toc_page_next(), head]
     body = '\n'.join(p for p in parts if p) + ''.join(
         '\n\n<!-- 第 %s 课 -->\n%s' % (d['n'], pages[d['n']]) for d in lessons)
     body = re.sub(r'\n{3,}(?=<!-- 第 \d+ 课 -->)', '\n\n', body)
@@ -462,11 +526,11 @@ def assemble(lessons, css):
 
 def main():
     lessons = load_lessons()
-    css = B.read_css() + PH_CSS + TOC_CSS + NAV_CSS
+    css = B.read_css() + CV_CSS + PH_CSS + TOC_CSS + NAV_CSS
     html = assemble(lessons, css)
     n = len(lessons)
-    total = n + 5
-    name = '三字经·样书·%s课合览.html' % cn_num(total)
+    total = n + 6
+    name = '三字经·样书·%s课合览.html' % cn_num(n + 5)
     out_book = os.path.join(ROOT, name)
     docs_book = os.path.join(DOCS, 'book.html')
 
@@ -492,7 +556,7 @@ def main():
           % (os.path.relpath(out_book, ROOT), os.path.getsize(out_book) / 1048576, len(used)))
 
     # 单文件离线版：base64 全内嵌，供转发，不进仓
-    offline = os.path.join(ROOT, '三字经·样书·%s课合览（单文件）.html' % cn_num(total))
+    offline = os.path.join(ROOT, '三字经·样书·%s课合览（单文件）.html' % cn_num(n + 5))
     open(offline, 'w', encoding='utf-8').write(html)
     print('%-46s %8.1f MB（离线转发用）'
           % (os.path.relpath(offline, ROOT), os.path.getsize(offline) / 1048576))
