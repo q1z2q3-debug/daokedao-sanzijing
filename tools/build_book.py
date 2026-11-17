@@ -24,6 +24,8 @@ import toc_plan as T
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(ROOT, 'docs')
 BASE = os.path.join(ROOT, '三字经·样书·五课合览.html')
+if not os.path.exists(BASE):
+    BASE = os.path.join(ROOT, '_archive', '旧样张与旧课数样书', '三字经·样书·五课合览.html')
 
 PH_CSS = """
 figure.ph .phbox{width:100%;aspect-ratio:4/3;border:1px dashed #D6C9AE;background:#FBF7EC;

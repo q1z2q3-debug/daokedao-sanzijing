@@ -15,6 +15,8 @@ import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REF = os.path.join(ROOT, '三字经·第五课样张.html')
+if not os.path.exists(REF):  # v3.2 续四把根目录旧样张归了档
+    REF = os.path.join(ROOT, '_archive', '旧样张与旧课数样书', '三字经·第五课样张.html')
 BOOK_5 = os.path.join(ROOT, '三字经·样书·五课合览.html')
 DOCS = os.path.join(ROOT, 'docs')
 ASSETS = os.path.join(ROOT, 'assets')
