@@ -8,7 +8,10 @@
 - 附录（次第链条与经文对照）：https://q1z2q3-debug.github.io/daokedao-sanzijing/appendix.html
 - 单课页：https://q1z2q3-debug.github.io/daokedao-sanzijing/lesson01.html … lesson201.html（两位数补零，如 lesson05.html）
 - 仓库：https://github.com/q1z2q3-debug/daokedao-sanzijing
-- 安卓阅读版：APK 见仓库 Releases／文稿库
+- APK 下载页：https://q1z2q3-debug.github.io/daokedao-sanzijing/apk.html
+- APK 直链（22.3 MB，Android 5.0+，无权限、离线）：https://github.com/q1z2q3-debug/daokedao-sanzijing/releases/download/v3.2/sanzijing-3.2.apk
+- APK 压缩包（含安装说明与 SHA256）：https://github.com/q1z2q3-debug/daokedao-sanzijing/releases/download/v3.2/sanzijing-3.2-apk.zip
+- 安装包 SHA256：6645ef80e78445ededbe128b23f463bd144e067b97661d77822fe531b469b40a
 
 ## 三类骨架
 - 立人（1–78）：蒙以养正、孝悌为先、三才五常、六谷六畜、七情八音、九族十义等
