@@ -50,6 +50,7 @@ def _adult(secs):
 
 
 FIGS = json.load(open(os.path.join(ROOT, 'tools', 'figs_patch.json'), encoding='utf-8'))
+FIGS_ONE = json.load(open(os.path.join(ROOT, 'tools', 'figs_one.json'), encoding='utf-8'))
 
 
 def _figs(d):
@@ -70,13 +71,29 @@ def _figs(d):
     return out
 
 
+def _figs_one(kid, n):
+    """新课缺图补入：按新课次挂单图，只顶替第一个空图位，余位仍留空。"""
+    fixed = FIGS_ONE.get(str(n))
+    if not fixed:
+        return kid
+    out, done = [], False
+    for b in kid:
+        if b[0] == 'ph' and not done:
+            f = fixed[0]
+            out.append(('fig', f[0], f[1], f[2]))
+            done = True
+        else:
+            out.append(b)
+    return out
+
+
 def _wrap(d):
     return dict(
         n=d.get('n', '0'), no_cn=d.get('no_cn', ''), no_short=d.get('no_short', ''), runhead=d.get('runhead', ''),
         fav=d['fav'], line=d['line'], line_plain=d['line_plain'], pinyin_line=d['pinyin'],
         grid_split=d['grid_split'], readnote=d.get('readnote', ''), note=d.get('note', ''),
         note2=d.get('note2', ''),
-        kid=_figs(d), cards=d['cards'], takeaways=d['takes'],
+        kid=_figs_one(_figs(d), d.get('n','0')), cards=d['cards'], takeaways=d['takes'],
         tip_title='给 爸 爸 妈 妈 的 一 句 话 · 这 一 课 讲 什 么，慢 慢 说 给 孩 子 听',
         tips=d['tips'],
         h2=d['h2'], meta=d['meta'], adult=_adult(d['adult']), doubt=d['doubt'],
@@ -113,6 +130,8 @@ def apply(out):
         d['no_short'] = '第%s课' % cn
         d['no_cn'] = ' '.join('第%s课' % cn)
         d['runhead'] = '%s · %s' % (d['no_short'], re.split('，', d['line'])[0])
+        # 新课已出图者，按新课次挂单图（只顶代第一个空图位）
+        d['kid'] = _figs_one(d['kid'], d['n'])
     return new
 
 
