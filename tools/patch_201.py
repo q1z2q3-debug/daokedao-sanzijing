@@ -76,12 +76,11 @@ def _figs_one(kid, n):
     fixed = FIGS_ONE.get(str(n))
     if not fixed:
         return kid
-    out, done = [], False
+    out, rest = [], list(fixed)
     for b in kid:
-        if b[0] == 'ph' and not done:
-            f = fixed[0]
+        if b[0] == 'ph' and rest:
+            f = rest.pop(0)
             out.append(('fig', f[0], f[1], f[2]))
-            done = True
         else:
             out.append(b)
     return out
