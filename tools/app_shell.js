@@ -4,21 +4,20 @@
     get: function (k, d) { try { var v = localStorage.getItem('szj.' + k); return v ? JSON.parse(v) : d; } catch (e) { return d; } },
     set: function (k, v) { try { localStorage.setItem('szj.' + k, JSON.stringify(v)); } catch (e) {} }
   };
-  var pages = Array.prototype.slice.call(document.querySelectorAll('.page'));
-  var byN = {};
-  pages.forEach(function (p) {
-    var m = /id="k(\d+)"/.exec(p.id ? 'id="' + p.id + '"' : '');
-    if (m) byN[+m[1]] = p;
+  var secs = Array.prototype.slice.call(document.querySelectorAll('.ls'));
+  var byN = {}, aux = {};
+  secs.forEach(function (s) {
+    var n = s.dataset.n ? +s.dataset.n : 0;
+    if (n) byN[n] = s;
+    else if (s.dataset.aux) aux[s.dataset.aux] = s;
   });
+  var pages = Array.prototype.slice.call(document.querySelectorAll('.page'));
   var total = 201;
   var state = {
     n: LS.get('n', 1), zoom: LS.get('zoom', 1), night: LS.get('night', 0),
     read: LS.get('read', {}), fav: LS.get('fav', {}), y: LS.get('y', {})
   };
-  var pagesByIdx = {};
-  ['guide', 'appendix'].forEach(function (k) {
-    var el = document.getElementById(k); if (el) pagesByIdx[k] = el;
-  });
+
 
   /* ---------- 工具 ---------- */
   function bridge() { return (window.App && typeof window.App === 'object') ? window.App : null; }
@@ -47,13 +46,14 @@
   /* ---------- 显示 ---------- */
   function show(n, keepScroll) {
     n = Math.max(1, Math.min(total, n));
-    pages.forEach(function (p) { p.style.display = 'none'; });
+    secs.forEach(function (s) { s.style.display = 'none'; });
     var page = byN[n] || byN[1];
     if (!page) return;
     page.style.display = '';
     state.n = n;
     LS.set('n', n);
-    document.getElementById('nowNo').textContent = page.querySelector('.lesson-no') ? page.querySelector('.lesson-no').textContent : ('第 ' + n + ' 课');
+    var lno = page.querySelector('.lesson-no');
+    document.getElementById('nowNo').textContent = lno ? lno.textContent : ('第 ' + n + ' 课');
     var h1 = page.querySelector('h1');
     document.getElementById('nowTi').textContent = h1 ? h1.textContent : '';
     document.getElementById('pgnNum').textContent = String(n);
@@ -68,8 +68,8 @@
     markCurrentInToc();
   }
   function showAux(k) {
-    pages.forEach(function (p) { p.style.display = 'none'; });
-    var el = pagesByIdx[k]; if (!el) return;
+    secs.forEach(function (s) { s.style.display = 'none'; });
+    var el = aux[k]; if (!el) return;
     el.style.display = '';
     document.getElementById('nowNo').textContent = k === 'guide' ? '读法' : '附录';
     document.getElementById('nowTi').textContent = k === 'guide' ? '三类读法' : '次第链条与经文对照';
@@ -139,9 +139,8 @@
   var indexed = null;
   function index() {
     if (indexed) return indexed;
-    indexed = pages.map(function (p) {
-      var m = /k(\d+)/.exec(p.id || '');
-      return { n: m ? +m[1] : 0, el: p, txt: (p.textContent || '').replace(/\s+/g, ' ') };
+    indexed = secs.map(function (s) {
+      return { n: s.dataset.n ? +s.dataset.n : 0, el: s, txt: (s.textContent || '').replace(/\s+/g, ' ') };
     });
     return indexed;
   }
@@ -158,7 +157,7 @@
       var pre = (s > 0 ? '…' : '') + it.txt.slice(s, pos);
       var hit = it.txt.slice(pos, pos + q.length);
       var post = it.txt.slice(pos + q.length, e) + (e < it.txt.length ? '…' : '');
-      hits.push({ n: it.n, html: '<div class="rc" data-n="' + it.n + '"><div class="t">第 ' + it.n + ' 课 · ' + (TOC[it.n - 1] ? TOC[it.n - 1][2] : '') + '</div><div class="s">' + esc(pre) + '<em>' + esc(hit) + '</em>' + esc(post) + '</div></div>' });
+      hits.push('<div class="rc" data-n="' + it.n + '"><div class="t">第 ' + it.n + ' 课 · ' + (TOC[it.n - 1] ? TOC[it.n - 1][2] : '') + '</div><div class="s">' + esc(pre) + '<em>' + esc(hit) + '</em>' + esc(post) + '</div></div>');
     }
     res.innerHTML = hits.length ? hits.slice(0, 60).join('') : '<div class="empty">没有找到「' + esc(q) + '」。</div>';
     res.querySelectorAll('.rc').forEach(function (c) {

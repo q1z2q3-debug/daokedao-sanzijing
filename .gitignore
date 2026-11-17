@@ -10,3 +10,6 @@ __pycache__/
 # 离线单文件版（构建产物，不进仓）
 *（单文件）.html
 _backup/
+app/assets/app.html
+app/build/
+app/assets/_shots/

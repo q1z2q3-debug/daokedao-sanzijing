@@ -72,8 +72,11 @@ def main():
             raise SystemExit('缺页 k%d' % n)
         pg = re.sub(r'src="(assets/p[0-9a-f]+\.jpg)"', repl, pg)
         no = re.search(r'<div class="lesson-no">([^<]*)</div>', pg)
-        h1 = re.search(r'<h1>([^<]*)</h1>', pg)
-        lessons.append({'n': n, 'no': no.group(1).strip() if no else '', 'h1': h1.group(1).strip() if h1 else '', 'html': pg})
+        h1 = re.search(r'<h1>[\s\S]*?</h1>', pg)
+        title = re.sub(r'<[^>]+>', '', h1.group(0))[4:-5] if h1 else ''
+        title = re.sub(r'<[^>]+>', '', h1.group(0)) if h1 else ''
+        title = title.replace('<h1>', '').replace('</h1>', '').strip()
+        lessons.append({'n': n, 'no': no.group(1).strip() if no else '', 'h1': title, 'html': pg})
 
     guide = page_of(s, 'guide')
 
@@ -99,7 +102,11 @@ def main():
     app_css = open(os.path.join(HERE, 'app_shell.css'), encoding='utf-8').read()
     app_js = open(os.path.join(HERE, 'app_shell.js'), encoding='utf-8').read()
 
-    body = ('<div class="book-wrap" id="bookWrap">' + ''.join(l['html'] for l in lessons) + guide + appendix + '</div>')
+    body = ('<div class="book-wrap" id="bookWrap">' +
+            ''.join('<section class="ls" data-n="%d">%s</section>' % (l['n'], l['html']) for l in lessons) +
+            '<section class="ls" data-aux="guide">' + guide + '</section>' +
+            '<section class="ls" data-aux="appendix">' + appendix + '</section>' +
+            '</div>')
 
     html = '''<!DOCTYPE html>
 <html lang="zh-Hans" class="theme-paper">
