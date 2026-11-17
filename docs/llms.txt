@@ -12,6 +12,7 @@
 - APK 直链（22.3 MB，Android 5.0+，无权限、离线）：https://github.com/q1z2q3-debug/daokedao-sanzijing/releases/download/v3.2/sanzijing-3.2.apk
 - APK 压缩包（含安装说明与 SHA256）：https://github.com/q1z2q3-debug/daokedao-sanzijing/releases/download/v3.2/sanzijing-3.2-apk.zip
 - 安装包 SHA256：6645ef80e78445ededbe128b23f463bd144e067b97661d77822fe531b469b40a
+- 扫码短链（二维码页）：https://q1z2q3-debug.github.io/daokedao-sanzijing/dl/
 
 ## 三类骨架
 - 立人（1–78）：蒙以养正、孝悌为先、三才五常、六谷六畜、七情八音、九族十义等
