@@ -251,11 +251,12 @@ CV_CSS = """
 .page.cover .cv-gatha .sp{height:1.1em}
 .page.cover .cv-title{display:flex;flex-direction:column;align-items:center;font-size:62px;line-height:1.12;color:#2F2A24;flex:none}
 .page.cover .cv-title .c{font-weight:600}
-.page.cover .cv-seal{width:46px;height:46px;background:#A2503B;color:#FBF6E9;font-size:20px;line-height:46px;text-align:center;border-radius:3px;box-shadow:inset 0 0 0 3px rgba(251,246,233,.5);margin-left:6px}
+.page.cover .cv-seal{position:absolute;right:76px;bottom:74px;width:46px;height:46px;background:#A2503B;color:#FBF6E9;font-size:20px;line-height:46px;text-align:center;border-radius:3px;box-shadow:inset 0 0 0 3px rgba(251,246,233,.5);margin-left:6px}
 .page.cover .cv-sub{font-size:14.5px;letter-spacing:.26em;color:#7B6E5C}
 .page.cover .cv-rule{width:176px;border-top:1px solid #D8CCB4;margin:26px 0 20px}
 .page.cover .cv-base{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;line-height:2.1;letter-spacing:.1em;color:#8A8074;text-align:center}
 .page.cover .cv-base b{font-weight:500;color:#6B6152;letter-spacing:.14em}
+.page.cover .cv-base .kv{display:inline-block;white-space:nowrap;margin:0 14px}
 .page.frontis{padding:92px 64px;min-height:640px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
 .fr-series{font-family:"Noto Sans SC",sans-serif;font-size:11.5px;letter-spacing:.34em;color:#8A8074}
 .fr-title{font-size:50px;letter-spacing:.3em;margin:28px 0 10px;color:#2F2A24;font-weight:600}
@@ -265,6 +266,7 @@ CV_CSS = """
 .fr-meta{font-family:"Noto Sans SC",sans-serif;font-size:12.5px;line-height:2.35;letter-spacing:.08em;color:#8A8074;margin-top:26px;max-width:600px}
 .fr-meta span{display:block}
 .fr-meta b{font-weight:500;color:#6B6152;letter-spacing:.14em}
+.fr-meta .mb{display:none}
 .fr-seal{margin-top:30px;width:50px;height:50px;border:1px solid #A2503B;color:#A2503B;font-size:20px;line-height:50px;border-radius:3px}
 @media(max-width:640px){
  .page.cover{padding:46px 22px;min-height:560px}
@@ -272,8 +274,13 @@ CV_CSS = """
  .page.cover .cv-main{gap:0;margin:26px 0 18px}
  .page.cover .cv-title{flex-direction:row;font-size:38px;gap:.08em}
  .page.cover .cv-title .c{letter-spacing:.06em}
- .page.cover .cv-seal{margin:14px 0 0}
+ .page.cover .cv-main{flex-direction:column;gap:14px;justify-content:center}
+ .page.cover .cv-seal{position:static;margin:0}
+ .page.cover .cv-base .kv{display:block;margin:3px 0}
+ .page.cover .cv-base{font-size:12.5px}
  .fr-title{font-size:34px;letter-spacing:.24em}
+ .fr-meta{font-size:13.5px;max-width:100%}
+ .fr-meta .mb{display:block}
  .page.frontis{padding:56px 26px;min-height:520px}
 }
 """
@@ -296,7 +303,7 @@ def cover_for(lessons):
             '  </div>\n'
             '  <div class="cv-sub">一句一故事　一图一世界</div>\n'
             '  <div class="cv-rule"></div>\n'
-            '  <div class="cv-base"><b>底本</b>　通行增补本　　<b>体例</b>　二百零一课，一课两页　　<b>读者</b>　亲子共读 4–9 岁<br>%s　·　%s</div>\n'
+            '  <div class="cv-base"><span class="kv"><b>底本</b>　通行增补本</span><span class="kv"><b>体例</b>　二百零一课，一课两页</span><span class="kv"><b>读者</b>　亲子共读 4–9 岁</span><span class="kv">%s　·　%s</span></div>\n'
             '</div>' % (V('教之道') + '<i class="sp"></i>' + V('贵以专'),
                         V('三字经'), V('人之初') + '<i class="sp"></i>' + V('性本善'), ver, ym))
 
@@ -310,10 +317,10 @@ def frontis_for(lessons):
             '  <div class="fr-rule"></div>\n'
             '  <div class="fr-author">润 泽　著</div>\n'
             '  <div class="fr-meta">'
-            '<span><b>底本</b>　通行增补本，补十八课、复元三处、并二课、删一课，成二百零一课</span>'
-            '<span><b>体例</b>　一课两页：少儿读本（田字格 · 共读）／ 成人研学（字义 · 考辨 · 存疑）</span>'
-            '<span><b>参证</b>　三才五蕴太极空杯模型 · 金刚般若范式 · 老庄与历代注疏</span>'
-            '<span><b>版本</b>　v%s　·　%s</span>'
+            '<span><b>底本</b>　通行增补本，补十八、复三、并二、删一，<br class="mb">成二百零一课</span>'
+            '<span><b>体例</b>　一课两页：少儿读本（田字格 · 共读）／<br class="mb">成人研学（考辨 · 存疑）</span>'
+            '<span><b>参证</b>　三才五蕴太极空杯模型 · 金刚般若范式 ·<br class="mb">老庄与历代注疏</span>'
+            '<span><b>版本</b>　%s　·　%s</span>'
             '</div>\n'
             '  <div class="fr-seal">蒙</div>\n'
             '</div>' % (ver, ym))
