@@ -1,0 +1,16 @@
+# 润泽说 少儿启蒙国学读本《三字经》
+
+> 以「立人 1–78／知世 79–154／劝学 155–201」三类、十二段次第重排通行本《三字经》，共 201 课、402 图位、页码 2–403。每课含田字格（古法竖排）、字源小课堂、少儿共读、成人研学·古今汇观、双卡对照、家长栏与配图。
+
+## 入口
+- 首页（201 课目录）：https://q1z2q3-debug.github.io/daokedao-sanzijing/
+- 全本单文件：https://q1z2q3-debug.github.io/daokedao-sanzijing/book.html
+- 附录（次第链条与经文对照）：https://q1z2q3-debug.github.io/daokedao-sanzijing/appendix.html
+- 单课页：https://q1z2q3-debug.github.io/daokedao-sanzijing/lesson01.html … lesson201.html（两位数补零，如 lesson05.html）
+- 仓库：https://github.com/q1z2q3-debug/daokedao-sanzijing
+- 安卓阅读版：APK 见仓库 Releases／文稿库
+
+## 三类骨架
+- 立人（1–78）：蒙以养正、孝悌为先、三才五常、六谷六畜、七情八音、九族十义等
+- 知世（79–154）：训蒙讲究、四书六经、诸子、读史（含读史续编 149–154）
+- 劝学（155–201）：勤学故事与劝勉，收于「有为者，亦若是」
