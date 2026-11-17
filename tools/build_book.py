@@ -372,29 +372,27 @@ def toc_page_next():
 
 
 def head_pages(count=5):
-    """取第 1–5 课原页：优先现有 docs/book.html（已经过编辑定稿），退回五课合览。
+    """取第 1–5 课原页（不重排）。
 
-    页内注释保留，页间批次注释与空行剥掉。
+    以 `<div class="lesson-no">` 定位每课页首，向前回退到所在 page 的开标签；
+    封面、目录页不含 lesson-no，故不会被误取。源优先五课合览（原页定稿）。
     """
-    src = os.path.join(DOCS, 'book.html')
-    text = open(src, encoding='utf-8').read() if os.path.exists(src) else ''
-    if 'base64' not in text:      # 轻册已把图外置，头五课回五课合览取原页
-        src = BASE
-        text = open(src, encoding='utf-8').read()
-    starts = [m.start() for m in re.finditer(r'<div class="page"(?: id="k\d+")?>', text)]
-    if len(starts) < count:
+    src = BASE if os.path.exists(BASE) else os.path.join(DOCS, 'book.html')
+    text = open(src, encoding='utf-8').read()
+    marks = [m.start() for m in re.finditer(r'<div class="lesson-no">', text)]
+    if len(marks) < count:
         raise SystemExit('五课合览中课页不足 %d 个' % count)
-    if len(starts) > count:
-        ends = starts[1:count + 1]
-    else:
-        ends = starts[1:count] + [text.rindex('</body>')]
+    starts = []
+    for mk in marks[:count]:
+        a = text.rfind('<div class="page', 0, mk)
+        starts.append(a)
+    starts.append(marks[count] if len(marks) > count else text.rindex('</body>'))
     blocks = []
-    for a, b in zip(starts[:count], ends):
+    for a, b in zip(starts[:count], starts[1:]):
         block = text[a:b].rstrip()
-        # 只剥页尾的批次/分段注释，保留页内注释
         while block.endswith('-->'):
             block = block[:block.rindex('<!--')].rstrip()
-        block = re.sub(r'<div class="page" id="k\d+">', '<div class="page">', block, count=1)
+        block = re.sub(r'<div class="page[^>]*>', '<div class="page">', block, count=1)
         blocks.append(block)
     return '\n'.join(blocks)
 
@@ -456,7 +454,7 @@ def assemble(lessons, css):
         cnt['i'] += 1
         return '<div class="page" id="k%d">' % cnt['i']
 
-    body = re.sub(r'<div class="page">', _anch, body)
+    body = re.sub(r'<div class="page(?: long)?">', _anch, body)
     body += ('\n<div class="go-toc"><a href="#toc">目 录</a>%s<a href="#k%d">末 课</a></div>\n'
              % ('<a href="#toc2">续 编</a>' if T.NEXT else '', int(lessons[-1]['n'])) + SEARCH_JS + NAV_JS)
     return B.head('三字经·%s课合览（样书 %s）' % (cn_num(len(lessons) + 5), meta_from_changelog()[0]), '三', css) + body + B.TAIL
