@@ -1,5 +1,12 @@
 # 变更记录
 
+## 安装包 v3.3 · 2026-11-27（源码重出，历代包归档）
+
+- 正文由 `tools/build_app.py` 从 `docs/book.html` 重新生成（402 图缩 900px WebP 内嵌、201 课），`assets/app.html` 与原 3.2 包逐字节一致（`0d87fd48…`），只重做打包与图标。
+- 图标用「童蒙诵读」自适应层：`mipmap-anydpi-v26`（前景＋单色＋纸底 `#F7F4EE`）＋ `mipmap-xxxhdpi` 前景/单色 + 四档 legacy，全部编入 `resources.arsc`；versionCode 34。
+- 签名 `runze-release`（RSA 4096，`AB46BEAD…`）。
+- 新建 `apk/versions/` 只增不删：3.2 原始包（旧调试证书）、3.2 换图重签、3.2 r33 自适应、3.3 源码重出，附 `MANIFEST.md` 与 `SHA256SUMS`。
+
 ## v3.2 — 2026-11-17（续二十三·成书：封面与扉页）
 
 - 新增封面页（`class="page cover" id="cover"`）：双线框、竖排书名「三字经」、右列偈语「人之初　性本善」／左列「教之道　贵以专」（右先读）、赭底白字印「蒙」、副题「一句一故事　一图一世界」、底本／体例／读者三行与版本年月。
