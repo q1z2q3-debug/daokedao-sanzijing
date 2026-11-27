@@ -41,7 +41,7 @@ def card(path, qr_path):
     d.text((W // 2, 78), '润 泽 说  ·  少 儿 启 蒙 国 学', font=t, fill=PAPER, anchor='mm')
 
     d.text((W // 2, 210), '三 字 经', font=font(SERIF, 76), fill=INK, anchor='mm')
-    d.text((W // 2, 280), '安卓离线阅读版 · v3.2', font=font(SANS, 28), fill=(123, 110, 92), anchor='mm')
+    d.text((W // 2, 280), '安卓离线阅读版 · v3.3', font=font(SANS, 28), fill=(123, 110, 92), anchor='mm')
     d.text((W // 2, 322), '201 课 · 402 图 · 一课两页', font=font(SANS, 26), fill=(123, 110, 92), anchor='mm')
 
     qr = Image.open(qr_path).convert('RGB')
